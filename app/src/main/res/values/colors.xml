@@ -3,4 +3,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="ultra_claro">#FFF2EAE4</color>
+    <color name="mas_claro">#D8BDF2</color>
+    <color name="claro">#AD6CD9</color>
+    <color name="neutro">#8124BF</color>
+    <color name="oscuro">#7404BF</color>
 </resources>

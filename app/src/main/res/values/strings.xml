@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Prototipo Banco</string>
+    <string name="fondo_superior0" />
+    <string name="fondo_superior_promociones">promociones</string>
+    <string name="dk_capital_">DK Capital Bank</string>
+    <string name="subitulo_inicio">Tus ingresos, tu capital</string>
 </resources>
