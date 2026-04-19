@@ -47,6 +47,7 @@
 
     <ImageView
         android:id="@+id/acceso_biometrico"
+        android:clickable="true"
         android:layout_width="85dp"
         android:layout_height="85dp"
         android:layout_marginBottom="70dp"
@@ -73,8 +74,8 @@
     <ImageView
         android:id="@+id/fondo_formulario"
         android:layout_width="320dp"
-        android:layout_height="320dp"
-        android:layout_marginBottom="70dp"
+        android:layout_height="330dp"
+        android:layout_marginBottom="60dp"
         android:importantForAccessibility="no"
         app:layout_constraintBottom_toTopOf="@id/acceso_biometrico"
         app:layout_constraintEnd_toEndOf="parent"
@@ -163,7 +164,7 @@
         android:clickable="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:text="¿Olvidaste tu contraseña?"
         android:textSize="16sp"
         android:textAppearance="@font/inter"
