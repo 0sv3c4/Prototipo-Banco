@@ -15,4 +15,7 @@
     <string name="bienvenido">Bienvenido</string>
     <string name="descrip_biometria">Acceso por biometría</string>
     <string name="pedir_contra">Introduzca su contraseña</string>
+    <string name="iniciar_sesion">Iniciar Sesión</string>
+    <string name="contra_olvidada">¿Olvidaste tu contraseña?</string>
+    <string name="funcion_ojo">Revelar contraseña</string>
 </resources>

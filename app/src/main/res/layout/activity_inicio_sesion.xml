@@ -17,18 +17,18 @@
         android:layout_marginTop="20dp"
         android:layout_marginStart="40dp"
         android:text="@string/accesibilidad"
-        app:icon="@drawable/svg_config"
+        app:icon="@drawable/ic_config"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/boton_contacto"
         style="@style/BotonBase"
-        android:layout_width="360dp"
+        android:layout_width="320dp"
         android:layout_height="48dp"
         android:layout_marginBottom="20dp"
         android:text="@string/contactanos"
-        app:icon="@drawable/svg_tfno"
+        app:icon="@drawable/ic_tfno"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -36,11 +36,11 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/boton_mapa"
         style="@style/BotonBase"
-        android:layout_width="360dp"
+        android:layout_width="320dp"
         android:layout_height="48dp"
         android:layout_marginBottom="20dp"
         android:text="@string/cajeros"
-        app:icon="@drawable/svg_map"
+        app:icon="@drawable/ic_map"
         app:layout_constraintBottom_toTopOf="@+id/boton_contacto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -104,6 +104,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="50dp"
         android:autofillHints="DNI,NIF"
+        android:inputType="textAutoComplete"
         android:hint="@string/pedir_dni"
         android:labelFor="@id/NIF"
         app:layout_constraintEnd_toEndOf="@id/fondo_formulario"
@@ -129,13 +130,28 @@
         android:layout_width="280dp"
         android:layout_height="50dp"
         android:layout_marginTop="50dp"
-        android:autofillHints="DNI,NIF"
+        android:importantForAutofill="no"
+        android:inputType="numberPassword"
         android:hint="@string/pedir_contra"
-        android:labelFor="@id/NIF"
+        android:labelFor="@id/contraseña"
+        android:ems="10"
         app:layout_constraintEnd_toEndOf="@+id/fondo_formulario"
         app:layout_constraintStart_toStartOf="@+id/fondo_formulario"
         app:layout_constraintTop_toBottomOf="@id/introduzcaNIF"
         tools:ignore="RtlSymmetry" />
+
+    <ImageView
+        android:id="@+id/btn_ver_contrasena"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:clickable="true"
+        android:contentDescription="@string/funcion_ojo"
+        android:focusable="true"
+        android:src="@drawable/ic_ojo_abierto"
+        app:layout_constraintBottom_toBottomOf="@+id/introduzca_contra"
+        app:layout_constraintEnd_toEndOf="@+id/introduzca_contra"
+        app:layout_constraintTop_toTopOf="@+id/introduzca_contra" />
 
     <TextView
         android:id="@+id/contraseña"
@@ -154,7 +170,7 @@
         android:layout_width="280dp"
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
-        android:text="Iniciar Sesión"
+        android:text="@string/iniciar_sesion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/introduzca_contra" />
@@ -163,11 +179,12 @@
         android:id="@+id/textView3"
         android:clickable="true"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="¿Olvidaste tu contraseña?"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/contra_olvidada"
         android:textSize="16sp"
         android:textAppearance="@font/inter"
+        android:gravity="center"
         android:textColor="@color/oscuro"
         app:layout_constraintStart_toStartOf="@+id/boton_inciarses"
         app:layout_constraintTop_toBottomOf="@+id/boton_inciarses" />

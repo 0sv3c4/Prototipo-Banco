@@ -52,7 +52,6 @@
 
     <style name="cuadrado_rellenable">
         <item name="android:background">@drawable/bg_rellenables</item>
-        <item name="android:inputType">text</item>
         <item name="android:paddingStart">10dp</item>
         <item name="android:textAppearance">@style/rellenable</item>
         <item name="android:textColor">@color/grisaceo</item>
