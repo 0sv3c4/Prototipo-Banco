@@ -8,21 +8,167 @@
     tools:context=".Inicio_Sesion"
     android:background="@drawable/fondo_inicio_sesion">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="180dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="40dp"
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/boton_accesibilidad"
+        style="@style/BotonBase"
+        android:layout_width="160dp"
+        android:layout_height="48dp"
         android:layout_marginTop="40dp"
+        android:layout_marginStart="40dp"
         android:text="@string/accesibilidad"
-        android:textAppearance="@style/boton_llamativo"
-        android:background="@drawable/base_boton_cuadrado"
-        android:drawableTint="@color/white"
-        android:drawablePadding="12dp"
-        android:drawableStart="@drawable/config"
+        app:icon="@drawable/svg_config"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/boton_contacto"
+        style="@style/BotonBase"
+        android:layout_width="360dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/contactanos"
+        app:icon="@drawable/svg_tfno"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/boton_mapa"
+        style="@style/BotonBase"
+        android:layout_width="360dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/cajeros"
+        app:icon="@drawable/svg_map"
+        app:layout_constraintBottom_toTopOf="@+id/boton_contacto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/acceso_biometrico"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginBottom="70dp"
+        android:contentDescription="@string/descrip_biometria"
+        app:layout_constraintBottom_toTopOf="@+id/boton_mapa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/acceso_biometrico" />
+
+
+    <TextView
+        android:id="@+id/prox_eventos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/acceso_bio"
+        android:textAppearance="@style/titulo_seccion"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/acceso_biometrico" />
+
+    <ImageView
+        android:id="@+id/fondo_formulario"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_marginBottom="70dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toTopOf="@id/acceso_biometrico"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/bg_formulario_inicio_sesion" />
+
+    <TextView
+        android:id="@+id/dk_capital_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/bienvenido"
+        android:textColor="@color/ultra_claro"
+        android:textAppearance="@style/titulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/fondo_formulario" />
+
+    <!-- Inicio de Sesión -->
+
+    <EditText
+        android:id="@+id/introduzcaNIF"
+        style="@style/cuadrado_rellenable"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:autofillHints="DNI,NIF"
+        android:hint="@string/pedir_dni"
+        android:labelFor="@id/NIF"
+        app:layout_constraintEnd_toEndOf="@id/fondo_formulario"
+        app:layout_constraintStart_toStartOf="@id/fondo_formulario"
+        app:layout_constraintTop_toTopOf="@+id/fondo_formulario"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/NIF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:text="@string/nif"
+        android:textAppearance="@style/boton_llamativo"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/introduzcaNIF"
+        app:layout_constraintStart_toStartOf="@+id/introduzcaNIF" />
+
+
+    <EditText
+        android:id="@id/introduzca_contra"
+        style="@style/cuadrado_rellenable"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:autofillHints="DNI,NIF"
+        android:hint="@string/pedir_contra"
+        android:labelFor="@id/NIF"
+        app:layout_constraintEnd_toEndOf="@+id/fondo_formulario"
+        app:layout_constraintStart_toStartOf="@+id/fondo_formulario"
+        app:layout_constraintTop_toBottomOf="@id/introduzcaNIF"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/contraseña"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:text="@string/contra"
+        android:textAppearance="@style/boton_llamativo"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/introduzca_contra"
+        app:layout_constraintStart_toStartOf="@+id/introduzca_contra" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/boton_inciarses"
+        style="@style/BotonBase"
+        android:layout_width="280dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:text="Iniciar Sesión"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/introduzca_contra" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="¿Olvidaste tu contraseña?"
+        android:textSize="16sp"
+        android:textAppearance="@font/inter"
+        android:textColor="@color/oscuro"
+        app:layout_constraintStart_toStartOf="@+id/boton_inciarses"
+        app:layout_constraintTop_toBottomOf="@+id/boton_inciarses" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,4 +6,13 @@
     <string name="subitulo_inicio">Tus ingresos, tu capital</string>
     <string name="mej_ofertas">Nuestras mejores ofertas:</string>
     <string name="accesibilidad">Accesibilidad</string>
+    <string name="contactanos">Contáctanos</string>
+    <string name="cajeros">Mapa de cajeros</string>
+    <string name="acceso_bio">Acceso biométrico</string>
+    <string name="pedir_dni">Introduzca su NIF o DNI</string>
+    <string name="nif">NIF</string>
+    <string name="contra">Contraseña</string>
+    <string name="bienvenido">Bienvenido</string>
+    <string name="descrip_biometria">Acceso por biometría</string>
+    <string name="pedir_contra">Introduzca su contraseña</string>
 </resources>
