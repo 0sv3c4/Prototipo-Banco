@@ -24,7 +24,6 @@
         android:layout_marginTop="32dp"
         android:gravity="center_horizontal|top"
         android:text="@string/dk_capital_"
-        android:textStyle="bold"
         android:textAppearance="@style/titulo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

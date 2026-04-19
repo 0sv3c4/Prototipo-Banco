@@ -18,7 +18,7 @@ import com.google.android.material.button.MaterialButton;
 
 public class Inicio_Sesion extends AppCompatActivity {
 
-    public static final int NUM_NIF=8;
+    public static final int NUM_NIF=9;
 
     //Valores de la letra que debe tener el dni según su módulo
     private enum LetraDNI {T, R, W, A, G, M, Y, F, P, D, X, B, N, J, Z, S, Q, V, H, L, C, K, E}
@@ -61,13 +61,23 @@ public class Inicio_Sesion extends AppCompatActivity {
         EditText escribeNIF = findViewById(R.id.introduzca_NIF);
 
         btnIniciarSesion.setOnClickListener(v ->{
-            String nifRevisar = escribeNIF.getText().toString().trim();//quedarnos con los digitos solo
+            String nifRevisar = escribeNIF.getText().toString().trim().toUpperCase();//quedarnos con los digitos solo
             boolean datoErroneo =false;
             int numeroDni;
             try{
-                if(nifRevisar.length()!=NUM_NIF+1) {
+                if(nifRevisar.length()!=NUM_NIF) {
                     datoErroneo=true; //debe tener 8 dígitos más la letra
                 } else {
+                    switch (nifRevisar.charAt(0)){ //en caso de que sea un NIF extranjero
+                        case 'X':
+                            nifRevisar = nifRevisar.replaceFirst("X","0");
+                            break;
+                        case 'Y':
+                            nifRevisar = nifRevisar.replaceFirst("Y","1");
+                            break;
+                        case 'Z':
+                            nifRevisar = nifRevisar.replaceFirst("Z","2");
+                    }
                     numeroDni = Integer.parseInt(nifRevisar.substring(0,8));
                     String letra = nifRevisar.substring(8);
                     if(!LetraDNI.values()[numeroDni%23].toString().equals(letra)){
