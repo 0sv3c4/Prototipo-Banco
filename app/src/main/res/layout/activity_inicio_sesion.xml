@@ -98,7 +98,7 @@
     <!-- Inicio de Sesión -->
 
     <EditText
-        android:id="@+id/introduzcaNIF"
+        android:id="@+id/introduzca_NIF"
         style="@style/cuadrado_rellenable"
         android:layout_width="280dp"
         android:layout_height="50dp"
@@ -120,8 +120,8 @@
         android:text="@string/nif"
         android:textAppearance="@style/boton_llamativo"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/introduzcaNIF"
-        app:layout_constraintStart_toStartOf="@+id/introduzcaNIF" />
+        app:layout_constraintBottom_toTopOf="@+id/introduzca_NIF"
+        app:layout_constraintStart_toStartOf="@+id/introduzca_NIF" />
 
 
     <EditText
@@ -137,7 +137,7 @@
         android:ems="10"
         app:layout_constraintEnd_toEndOf="@+id/fondo_formulario"
         app:layout_constraintStart_toStartOf="@+id/fondo_formulario"
-        app:layout_constraintTop_toBottomOf="@id/introduzcaNIF"
+        app:layout_constraintTop_toBottomOf="@id/introduzca_NIF"
         tools:ignore="RtlSymmetry" />
 
     <ImageView
@@ -165,7 +165,7 @@
         app:layout_constraintStart_toStartOf="@+id/introduzca_contra" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/boton_inciarses"
+        android:id="@+id/btn_iniciar_sesion"
         style="@style/BotonBase"
         android:layout_width="280dp"
         android:layout_height="48dp"
@@ -186,7 +186,7 @@
         android:textAppearance="@font/inter"
         android:gravity="center"
         android:textColor="@color/oscuro"
-        app:layout_constraintStart_toStartOf="@+id/boton_inciarses"
-        app:layout_constraintTop_toBottomOf="@+id/boton_inciarses" />
+        app:layout_constraintStart_toStartOf="@+id/btn_iniciar_sesion"
+        app:layout_constraintTop_toBottomOf="@+id/btn_iniciar_sesion" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
