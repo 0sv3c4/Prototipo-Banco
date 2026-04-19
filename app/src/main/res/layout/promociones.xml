@@ -24,6 +24,7 @@
         android:layout_marginTop="32dp"
         android:gravity="center_horizontal|top"
         android:text="@string/dk_capital_"
+        android:textStyle="bold"
         android:textAppearance="@style/titulo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -45,6 +46,8 @@
 
     <ImageView
         android:id="@+id/inicio_sesion"
+        android:clickable="true"
+        android:focusable="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="148dp"

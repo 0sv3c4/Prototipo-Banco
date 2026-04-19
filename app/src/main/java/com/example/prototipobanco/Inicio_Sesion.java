@@ -23,11 +23,5 @@ public class Inicio_Sesion extends AppCompatActivity {
             return insets;
         });
 
-        Button btnIniciarSesion = findViewById(R.id.inicio_sesion);
-
-        btnIniciarSesion.setOnClickListener(v -> {
-            Intent intent = new Intent(this, Inicio_Sesion.class);
-            startActivity(intent);
-        });
     }
 }

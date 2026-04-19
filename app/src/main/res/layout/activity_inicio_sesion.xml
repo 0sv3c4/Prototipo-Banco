@@ -14,7 +14,7 @@
         style="@style/BotonBase"
         android:layout_width="160dp"
         android:layout_height="48dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:layout_marginStart="40dp"
         android:text="@string/accesibilidad"
         app:icon="@drawable/svg_config"
