@@ -25,7 +25,6 @@ import java.util.concurrent.Executor;
 
 
 public class Inicio_Sesion extends AppCompatActivity {
-    //Hola es una prueba
     public static final int NUM_NIF=9;
 
 
@@ -84,7 +83,6 @@ public class Inicio_Sesion extends AppCompatActivity {
         //btnBiometria.setOnClickListener(this::accesoBiometria);
     }
 
-    //prueba pull
     /*private void accesoBiometria(View view){
         Executor executor = ContextCompat.getMainExecutor(this);
         //EN REVISIÓN
