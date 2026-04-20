@@ -25,7 +25,7 @@ import java.util.concurrent.Executor;
 
 
 public class Inicio_Sesion extends AppCompatActivity {
-//blabla
+
     public static final int NUM_NIF=9;
 
 
