@@ -84,6 +84,7 @@ public class Inicio_Sesion extends AppCompatActivity {
         //btnBiometria.setOnClickListener(this::accesoBiometria);
     }
 
+    //prueba pull
     /*private void accesoBiometria(View view){
         Executor executor = ContextCompat.getMainExecutor(this);
         //EN REVISIÓN
