@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PrototipoBanco">
         <activity
+            android:name=".Contacto_clientes"
+            android:exported="false" />
+        <activity
             android:name=".Inicio_Sesion"
             android:exported="false" />
         <activity
