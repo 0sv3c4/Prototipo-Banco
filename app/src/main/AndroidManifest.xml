@@ -15,6 +15,9 @@
             android:name=".Contacto_clientes"
             android:exported="false" />
         <activity
+            android:name=".Transferencias"
+            android:exported="false" />
+        <activity
             android:name=".Inicio_Sesion"
             android:exported="false" />
         <activity
