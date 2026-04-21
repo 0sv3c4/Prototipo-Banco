@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- TOOLBAR SUPERIOR -->
+    <include
+        android:id="@+id/toolbar_superior_acc"
+        layout="@layout/toolbar_superior"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- CONTENIDO -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/include_bottom_toolbar"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_superior_acc">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- VISIÓN -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_extrabold"
+                android:text="Visión"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="8dp"
+                android:background="@color/grisaceo" />
+
+            <include
+                layout="@layout/item_setting_switch"
+                app:title="Alto contraste"
+                app:description="Mayor legibilidad del texto" />
+
+            <include
+                layout="@layout/item_setting_switch"
+                app:title="Texto más grande"
+                app:description="Aumenta el tamaño de fuente" />
+
+            <include
+                layout="@layout/item_setting_switch"
+                app:title="Reducir movimiento"
+                app:description="Desactiva las animaciones entre pantallas" />
+
+            <include
+                layout="@layout/item_setting_switch"
+                app:title="Modo oscuro"
+                app:description="Fondo oscuro para cuidado de los ojos" />
+
+            <!-- AUDICIÓN -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/inter_extrabold"
+                android:text="Audición"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="8dp"
+                android:background="@color/grisaceo" />
+
+            <include
+                layout="@layout/item_setting_switch"
+                app:title="Lectura en voz alta"
+                app:description="Narra el contenido de la pantalla" />
+
+            <include
+                layout="@layout/item_setting_switch"
+                app:title="Alertas sonoras"
+                app:description="Notificaciones con sonido" />
+
+            <!-- INTERACCIÓN -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/inter_extrabold"
+                android:text="Interacción"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="8dp"
+                android:background="@color/grisaceo" />
+
+            <include
+                layout="@layout/item_setting_switch"
+                app:title="Botones grandes"
+                app:description="Área de toque ampliada" />
+
+            <include
+                layout="@layout/item_setting_switch"
+                app:title="Vibración táctil"
+                app:description="Activa la vibración al pulsar" />
+
+            <!-- BOTÓN CENTRAL -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_reset"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="32dp"
+                android:text="Reestablecer ajustes predeterminados"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/inter_extrabold"
+                app:backgroundTint="@color/mas_claro"
+                app:cornerRadius="30dp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- TOOLBAR INFERIOR -->
+    <include
+        android:id="@+id/include_bottom_toolbar"
+        layout="@layout/toolbar_inferior_todos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
