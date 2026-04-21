@@ -2,7 +2,7 @@ package com.example.prototipobanco;
 
 import android.app.AlertDialog;
 import android.content.Intent;
-import android.hardware.biometrics.BiometricPrompt;
+//import android.hardware.biometrics.BiometricPrompt;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
@@ -12,16 +12,16 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
-import androidx.annotation.NonNull;
+//import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
+//import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.button.MaterialButton;
 
-import java.util.concurrent.Executor;
+//import java.util.concurrent.Executor;
 
 
 public class Inicio_Sesion extends AppCompatActivity {
@@ -36,8 +36,8 @@ public class Inicio_Sesion extends AppCompatActivity {
     private EditText escribeContra;
     private ImageView btnVerContra;
     private EditText escribeNIF;
-    private ImageView btnBiometria;
-    private MaterialButton btnIniciarSesion;
+    //private ImageView btnBiometria;
+    private MaterialButton btnIniciarSesion, btnAccesibilidad;
 
     public Inicio_Sesion(){
 
@@ -59,6 +59,7 @@ public class Inicio_Sesion extends AppCompatActivity {
         btnVerContra = findViewById(R.id.btn_ver_contrasena);
         escribeNIF = findViewById(R.id.introduzca_NIF);
         btnIniciarSesion = findViewById(R.id.btn_iniciar_sesion);
+        btnAccesibilidad = findViewById(R.id.boton_accesibilidad);
 
 
         /*Función para la modification de la visibilidad de la contraseña.*/
@@ -79,6 +80,11 @@ public class Inicio_Sesion extends AppCompatActivity {
         );
 
         btnIniciarSesion.setOnClickListener(this::controlAcceso);
+
+        btnAccesibilidad.setOnClickListener(v ->{
+            Intent intent = new Intent(this, Accesibilidad.class);
+            startActivity(intent);
+        });
 
         //btnBiometria.setOnClickListener(this::accesoBiometria);
     }
