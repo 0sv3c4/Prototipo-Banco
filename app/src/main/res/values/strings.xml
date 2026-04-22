@@ -18,8 +18,27 @@
     <string name="iniciar_sesion">Iniciar Sesión</string>
     <string name="contra_olvidada">¿Olvidaste tu contraseña?</string>
     <string name="funcion_ojo">Revelar contraseña</string>
-    <string name="volver">Volver</string>
     <string name="def_seguros">Consulta/Contrata seguros con un asesor personal (L-V 9:00-21:00)</string>
     <string name="def_urgencias">Solicita ayuda gratuita ante robos de tarjetas, emergencias con cuentas bancarias... (L-D, 24h, también disponible desde el extranjero)</string>
     <string name="def_atencion_cliente">Resuelve tus dudas con este número gratuito (L-V 8:00-22:00)</string>
+
+    <!-- Bizum strings -->
+    <string name="bizum">Bizum</string>
+    <string name="acciones_rapidas">Acciones rápidas:</string>
+    <string name="enviar_dinero">Enviar dinero</string>
+    <string name="solicitar_dinero">Solicitar dinero</string>
+    <string name="contactos_recientes">Contactos recientes:</string>
+    <string name="ver_todos">Ver todos -></string>
+    <string name="destinatario">Destinatario</string>
+    <string name="introduce_contacto">Introduce un contacto</string>
+    <string name="seleccionar_cantidad">Seleccionar cantidad</string>
+    <string name="saldo">Saldo</string>
+    <string name="concepto_opcional">Concepto (opcional)</string>
+    <string name="escribe_mensaje">Escribe un mensaje...</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="volver">Volver</string>
+    <string name="manuel_a">Manuel A.</string>
+    <string name="claudia_c">Claudia C.</string>
+    <string name="juan_m">Juan M.</string>
+    <string name="oscar_t">Óscar T.</string>
 </resources>

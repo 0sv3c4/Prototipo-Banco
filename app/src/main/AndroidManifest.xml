@@ -21,6 +21,9 @@
             android:name=".Transferencias"
             android:exported="false" />
         <activity
+            android:name=".Bizum"
+            android:exported="false" />
+        <activity
             android:name=".Inicio_Sesion"
             android:exported="false" />
         <activity
