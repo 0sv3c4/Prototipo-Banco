@@ -6,7 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -15,6 +17,7 @@ import androidx.activity.EdgeToEdge;
 //import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 //import androidx.core.content.ContextCompat;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -136,11 +139,7 @@ public class Inicio_Sesion extends AppCompatActivity {
             datoValido=false;
         }
         if(!datoValido){
-            new AlertDialog.Builder(this)
-                    .setTitle("El NIF no es válido")
-                    .setMessage("El formato introducido es incorrecto")
-                    .setPositiveButton("Aceptar", (dialog, which) -> dialog.dismiss())
-                    .show();
+            mensajeError();
         } else {
             Toast.makeText(this, "¡Bienvenido!", Toast.LENGTH_SHORT).show();
         }
@@ -174,5 +173,19 @@ public class Inicio_Sesion extends AppCompatActivity {
             }
         }
         return datoValido;
+    }
+    private void mensajeError(){
+        ConstraintLayout error = findViewById(R.id.alerta_error);
+        View view = LayoutInflater.from(this).inflate(R.layout.mensaje_error, error);
+        Button aceptarError = view.findViewById(R.id.btn_aceptar_alerta);
+
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(view);
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+
+        aceptarError.setOnClickListener(v -> alertDialog.dismiss());
+
     }
 }

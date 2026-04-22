@@ -8,4 +8,5 @@
     <color name="neutro">#8124BF</color>
     <color name="oscuro">#7404BF</color>
     <color name="grisaceo">#8D8D8D</color>
+    <color name="error">#AA0000</color>
 </resources>
