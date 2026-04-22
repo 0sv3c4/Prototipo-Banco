@@ -37,7 +37,7 @@ public class Inicio_Sesion extends AppCompatActivity {
     private ImageView btnVerContra;
     private EditText escribeNIF;
     //private ImageView btnBiometria;
-    private MaterialButton btnIniciarSesion, btnAccesibilidad;
+    private MaterialButton btnIniciarSesion, btnAccesibilidad, btnContacto;
 
     public Inicio_Sesion(){
 
@@ -60,6 +60,7 @@ public class Inicio_Sesion extends AppCompatActivity {
         escribeNIF = findViewById(R.id.introduzca_NIF);
         btnIniciarSesion = findViewById(R.id.btn_iniciar_sesion);
         btnAccesibilidad = findViewById(R.id.boton_accesibilidad);
+        btnContacto = findViewById(R.id.boton_contacto);
 
 
         /*Función para la modification de la visibilidad de la contraseña.*/
@@ -83,6 +84,11 @@ public class Inicio_Sesion extends AppCompatActivity {
 
         btnAccesibilidad.setOnClickListener(v ->{
             Intent intent = new Intent(this, Accesibilidad.class);
+            startActivity(intent);
+        });
+
+        btnContacto.setOnClickListener(v ->{
+            Intent intent = new Intent(this, Contacto_clientes.class);
             startActivity(intent);
         });
 

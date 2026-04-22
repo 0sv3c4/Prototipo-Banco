@@ -5,6 +5,190 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Contacto_clientes">
+
+    <!-- Header Superior -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header_oficina"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ultra_claro"
+        android:padding="20dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_tu_oficina"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_extrabold"
+            android:text="Tu oficina más\ncercana es:"
+            android:textColor="@color/oscuro"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.6" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_tu_oficina"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_bold"
+                android:text="Río Vena (Burgos)"
+                android:textColor="@color/neutro"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_bold"
+                android:text="C/Melancolía, 7"
+                android:textColor="@color/neutro"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_bold"
+                android:text="947000000"
+                android:textColor="@color/claro"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/header_oficina">
+
+        <!-- Atención al cliente -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_bold"
+            android:text="Atención al cliente"
+            android:textColor="@color/neutro"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/inter_medium"
+            android:text="@string/def_atencion_cliente"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_tel_atencion"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/inter_extrabold"
+            android:text="900 000 000"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:backgroundTint="@color/mas_claro"
+            app:cornerRadius="35dp"
+            app:icon="@drawable/ic_tfno"
+            app:iconGravity="textStart"
+            app:iconPadding="12dp"
+            app:iconSize="32dp"
+            app:iconTint="@color/black" />
+
+        <!-- Urgencias -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_bold"
+            android:text="Urgencias"
+            android:textColor="@color/neutro"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/inter_medium"
+            android:text="@string/def_urgencias"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_tel_urgencias"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/inter_extrabold"
+            android:text="900 000 001"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:backgroundTint="@color/mas_claro"
+            app:cornerRadius="35dp"
+            app:icon="@drawable/ic_tfno"
+            app:iconGravity="textStart"
+            app:iconPadding="12dp"
+            app:iconSize="32dp"
+            app:iconTint="@color/black" />
+
+        <!-- Seguros -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_bold"
+            android:text="Seguros"
+            android:textColor="@color/neutro"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/inter_medium"
+            android:text="@string/def_seguros"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_tel_seguros"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/inter_extrabold"
+            android:text="910 000 000"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:backgroundTint="@color/mas_claro"
+            app:cornerRadius="35dp"
+            app:icon="@drawable/ic_tfno"
+            app:iconGravity="textStart"
+            app:iconPadding="12dp"
+            app:iconSize="32dp"
+            app:iconTint="@color/black" />
+
+    </LinearLayout>
+
+    <!-- Toolbar Inferior -->
+    <include
+        android:id="@+id/include_bottom_toolbar"
+        layout="@layout/toolbar_inferior_todos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -25,10 +25,16 @@ public class Promociones extends AppCompatActivity {
 
         //Atts a utilizar
         ImageView btnIniciarSesion = findViewById(R.id.inicio_sesion);
+        ImageView btnContactanos = findViewById(R.id.contactanos);
 
         //Redireccionar
         btnIniciarSesion.setOnClickListener(v -> {
             Intent intent = new Intent(this, Inicio_Sesion.class);
+            startActivity(intent);
+        });
+
+        btnContactanos.setOnClickListener(v ->{
+            Intent intent = new Intent(this, Contacto_clientes.class);
             startActivity(intent);
         });
     }
