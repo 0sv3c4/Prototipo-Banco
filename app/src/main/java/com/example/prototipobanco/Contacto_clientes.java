@@ -30,10 +30,21 @@ public class Contacto_clientes extends AppCompatActivity {
         tfnoSeguros = findViewById(R.id.btn_tel_seguros);
 
         tfnoCliente.setOnClickListener(v ->{
-                    Intent intent = new Intent(Intent.ACTION_DIAL);
-                    intent.setData(Uri.parse("tel:900000000"));
-                    startActivity(intent);
-                }
-                );
+            Intent intent = new Intent(Intent.ACTION_DIAL);
+            intent.setData(Uri.parse("tel:+34900000000"));
+            startActivity(intent);
+        });
+
+        tfnoUrgencias.setOnClickListener(v ->{
+            Intent intent = new Intent(Intent.ACTION_DIAL);
+            intent.setData(Uri.parse("tel:+34900000001"));
+            startActivity(intent);
+        });
+
+        tfnoSeguros.setOnClickListener(v ->{
+            Intent intent = new Intent(Intent.ACTION_DIAL);
+            intent.setData(Uri.parse("tel:+34910000000"));
+            startActivity(intent);
+        });
     }
 }
