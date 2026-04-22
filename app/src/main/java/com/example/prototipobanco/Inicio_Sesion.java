@@ -185,6 +185,10 @@ public class Inicio_Sesion extends AppCompatActivity {
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
 
+        if (alertDialog.getWindow() != null) {
+            alertDialog.getWindow().setBackgroundDrawable(new android.graphics.drawable.ColorDrawable(android.graphics.Color.TRANSPARENT));
+        }
+
         aceptarError.setOnClickListener(v -> alertDialog.dismiss());
 
     }
