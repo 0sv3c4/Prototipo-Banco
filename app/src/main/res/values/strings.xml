@@ -18,4 +18,5 @@
     <string name="iniciar_sesion">Iniciar Sesión</string>
     <string name="contra_olvidada">¿Olvidaste tu contraseña?</string>
     <string name="funcion_ojo">Revelar contraseña</string>
+    <string name="volver">Volver</string>
 </resources>

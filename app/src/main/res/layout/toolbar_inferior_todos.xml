@@ -6,6 +6,7 @@
     android:background="@android:color/transparent">
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:gravity="top|center"
@@ -37,7 +38,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginEnd="30dp"
             android:fontFamily="@font/inter_semibold"
-            android:text="Volver"
+            android:text="@string/volver"
             android:textColor="@color/ultra_claro"
             android:textSize="24sp"
             app:backgroundTint="@color/claro"
