@@ -87,7 +87,7 @@ public class Inicio_Sesion extends AppCompatActivity {
         btnIniciarSesion.setOnClickListener(this::controlAcceso);
 
         btnAccesibilidad.setOnClickListener(v ->{
-            Intent intent = new Intent(this, BaseActivityClientes.class);
+            Intent intent = new Intent(this, Accesibilidad.class);
             startActivity(intent);
         });
 
