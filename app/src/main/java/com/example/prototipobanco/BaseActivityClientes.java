@@ -3,7 +3,9 @@ package com.example.prototipobanco;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.imageview.ShapeableImageView;
 import com.google.android.material.navigation.NavigationView;
 
 public class BaseActivityClientes extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -30,17 +33,35 @@ public class BaseActivityClientes extends AppCompatActivity implements Navigatio
             return insets;
         });
 
-        configuracionDrawer();
+        configuracionDrawerToolbar("Prueba");
         marchaAtras();
     }
 
     /**
      * Método para configurar el drawer.
+     * @param titulo Título de la toolbar.
      */
-    protected void configuracionDrawer(){
+    protected void configuracionDrawerToolbar(String titulo){
         drawerLayout = findViewById(R.id.main);
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        TextView tituloToolbar = findViewById(R.id.titulo_toolbar);
+        tituloToolbar.setText(titulo);
+
+        //Botón para acceder a las notificaciones
+        FrameLayout btnNotif = findViewById(R.id.btn_notificaciones);
+        btnNotif.setOnClickListener(v -> {
+            Intent intent = new Intent(this, Contacto_clientes.class); //TODO
+            startActivity(intent);
+        });
+
+        //Botón para acceder al perfil
+        ShapeableImageView btnPerfil = findViewById(R.id.btn_perfil);
+        btnPerfil.setOnClickListener(v -> {
+            Intent intent = new Intent(this, Contacto_clientes.class); //TODO
+            startActivity(intent);
+        });
 
         // Buscamos el ImageView que definiste en ic_menu_hamburguesa.xml dentro de la toolbar
         ImageView btnMenu = findViewById(R.id.btn_menu);
