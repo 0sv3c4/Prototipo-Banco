@@ -63,4 +63,5 @@
         <item name="android:textColor">@color/error</item>
         <item name="android:fontFamily">@font/inter_bold</item>
     </style>
+
 </resources>
