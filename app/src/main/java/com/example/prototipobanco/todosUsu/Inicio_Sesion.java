@@ -22,7 +22,6 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.prototipobanco.BaseActivityClientes;
 import com.example.prototipobanco.R;
 import com.google.android.material.button.MaterialButton;
 
@@ -61,10 +60,11 @@ public class Inicio_Sesion extends AppCompatActivity {
         escribeContra = findViewById(R.id.introduzca_contra);
         btnVerContra = findViewById(R.id.btn_ver_contrasena);
         escribeNIF = findViewById(R.id.introduzca_NIF);
-        //private ImageView btnBiometria;
+        ImageView btnBiometria = findViewById(R.id.acceso_biometrico);
         MaterialButton btnIniciarSesion = findViewById(R.id.btn_iniciar_sesion);
         MaterialButton btnAccesibilidad = findViewById(R.id.boton_accesibilidad);
         MaterialButton btnContacto = findViewById(R.id.boton_contacto);
+        MaterialButton btnMapa = findViewById(R.id.boton_mapa);
 
 
         /*Función para la modification de la visibilidad de la contraseña.*/
@@ -93,6 +93,16 @@ public class Inicio_Sesion extends AppCompatActivity {
 
         btnContacto.setOnClickListener(v ->{
             Intent intent = new Intent(this, Contacto_clientes.class);
+            startActivity(intent);
+        });
+
+        btnMapa.setOnClickListener(v ->{
+            Intent intent = new Intent(this, Mapa_cajeros.class);
+            startActivity(intent);
+        });
+
+        btnBiometria.setOnClickListener(v ->{
+            Intent intent = new Intent(this, Mapa_cajeros.class); //TODO
             startActivity(intent);
         });
 
@@ -142,7 +152,7 @@ public class Inicio_Sesion extends AppCompatActivity {
         if(!datoValido){
             mensajeError();
         } else {
-            Toast.makeText(this, "¡Bienvenido!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "¡Bienvenido!", Toast.LENGTH_SHORT).show(); //TODO
         }
     }
 

@@ -10,7 +10,7 @@
     <style name="subtitulo">
         <item name="android:textSize">20sp</item>
         <item name="android:letterSpacing">-0.01</item>
-        <item name="android:textColor">#7404BF</item>
+        <item name="android:textColor">@color/oscuro</item>
         <item name="android:fontFamily">@font/inter_bold</item>
     </style>
 

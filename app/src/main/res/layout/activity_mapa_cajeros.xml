@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".todosUsu.Mapa_cajeros">
+
+    <!-- Header Superior -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header_oficina"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ultra_claro"
+        android:padding="20dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cajeros y oficinas por su zona"
+                android:textAppearance="@style/subtitulo"
+                android:textSize="24sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Encuentra tu cajero más cercano"
+                android:textAppearance="@style/titulo_seccion"
+                android:textColor="@color/claro"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:id="@+id/activar_ubicacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_oficina">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:text="Activar la ubicación"
+            android:textAppearance="@style/subtitulo"
+            android:textSize="24sp" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switch_widget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            app:thumbTint="@color/white"
+            app:trackTint="@color/selector_color_switch" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_buscar_cajero"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_rellenables"
+        android:backgroundTint="@color/claro"
+        android:drawableStart="@drawable/ic_map"
+        android:autofillHints="PostalAddress"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/inter_medium"
+        android:hint="Inserte para filtrar por ciudad o CP..."
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingHorizontal="20dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/ultra_claro"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/activar_ubicacion"
+        tools:layout_editor_absoluteX="24dp" />
+
+    <WebView
+        android:id="@+id/visor_mapa"
+        android:layout_width="340dp"
+        android:layout_height="340dp"
+        app:layout_constraintBottom_toTopOf="@id/include_bottom_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_buscar_cajero" />
+
+    <!-- Toolbar Inferior -->
+    <include
+        android:id="@+id/include_bottom_toolbar"
+        layout="@layout/toolbar_inferior_todos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

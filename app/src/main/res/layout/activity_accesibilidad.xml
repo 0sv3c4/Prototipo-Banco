@@ -36,11 +36,6 @@
                 android:textColor="@color/black"
                 android:textSize="24sp" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginVertical="8dp"
-                android:background="@color/grisaceo" />
 
             <include
                 android:id="@+id/item_alto_contraste"
@@ -58,6 +53,11 @@
                 android:id="@+id/item_modo_oscuro"
                 layout="@layout/item_setting_switch" />
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grisaceo" />
+
             <!-- AUDICIÓN -->
             <TextView
                 android:layout_width="wrap_content"
@@ -68,12 +68,6 @@
                 android:textColor="@color/black"
                 android:textSize="24sp" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginVertical="8dp"
-                android:background="@color/grisaceo" />
-
             <include
                 android:id="@+id/item_lectura_voz"
                 layout="@layout/item_setting_switch" />
@@ -81,6 +75,11 @@
             <include
                 android:id="@+id/item_alertas_sonoras"
                 layout="@layout/item_setting_switch" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grisaceo" />
 
             <!-- INTERACCIÓN -->
             <TextView
@@ -91,12 +90,6 @@
                 android:text="Interacción"
                 android:textColor="@color/black"
                 android:textSize="24sp" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginVertical="8dp"
-                android:background="@color/grisaceo" />
 
             <include
                 android:id="@+id/item_botones_grandes"

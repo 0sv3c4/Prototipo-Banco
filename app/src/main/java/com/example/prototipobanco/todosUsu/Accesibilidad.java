@@ -3,14 +3,14 @@ package com.example.prototipobanco.todosUsu;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.prototipobanco.R;
+import com.google.android.material.button.MaterialButton;
 
-public class Accesibilidad extends AppCompatActivity {
+public class Accesibilidad extends BaseActivityTodos {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,5 +22,10 @@ public class Accesibilidad extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        MaterialButton btnAtras = findViewById(R.id.btn_volver);
+
+        btnAtras.setOnClickListener(v -> finish());
+        btnChat.setOnClickListener(v -> generarChat());
     }
 }
