@@ -1,20 +1,20 @@
-package com.example.prototipobanco;
+package com.example.prototipobanco.todosUsu;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.prototipobanco.R;
 import com.google.android.material.button.MaterialButton;
 
-public class Contacto_clientes extends AppCompatActivity {
+public class Contacto_clientes extends BaseActivityTodos {
 
-    MaterialButton tfnoCliente, tfnoUrgencias, tfnoSeguros, btnAtras, btnChat;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,13 +25,13 @@ public class Contacto_clientes extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        tfnoCliente = findViewById(R.id.btn_tel_atencion);
-        tfnoUrgencias = findViewById(R.id.btn_tel_urgencias);
-        tfnoSeguros = findViewById(R.id.btn_tel_seguros);
-        btnAtras = findViewById(R.id.btn_volver);
-        btnChat = findViewById(R.id.btn_chat_bottom);
+        MaterialButton tfnoCliente = findViewById(R.id.btn_tel_atencion);
+        MaterialButton tfnoUrgencias = findViewById(R.id.btn_tel_urgencias);
+        MaterialButton tfnoSeguros = findViewById(R.id.btn_tel_seguros);
+        MaterialButton btnAtras = findViewById(R.id.btn_volver);
 
         btnAtras.setOnClickListener(v -> finish());
+        btnChat.setOnClickListener(v -> generarChat());
 
         tfnoCliente.setOnClickListener(v ->{
             Intent intent = new Intent(Intent.ACTION_DIAL);
@@ -51,4 +51,6 @@ public class Contacto_clientes extends AppCompatActivity {
             startActivity(intent);
         });
     }
+
+
 }

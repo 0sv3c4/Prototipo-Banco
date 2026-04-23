@@ -1,4 +1,4 @@
-package com.example.prototipobanco;
+package com.example.prototipobanco.todosUsu;
 
 import android.app.AlertDialog;
 import android.content.Intent;
@@ -22,6 +22,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.prototipobanco.BaseActivityClientes;
+import com.example.prototipobanco.R;
 import com.google.android.material.button.MaterialButton;
 
 //import java.util.concurrent.Executor;

@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="360dp"
-    android:layout_height="460dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="400dp"
+    android:id="@+id/chat_soporte"
     android:background="@android:color/transparent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="365dp"
         android:id="@+id/contenido_chat"
         android:background="@drawable/bg_formulario_inicio_sesion"
         android:backgroundTint="@color/ultra_claro"
@@ -22,8 +24,8 @@
 
                 <ImageView
                     android:id="@+id/iv_avatar"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:src="@drawable/ic_admin"
                     app:layout_constraintBottom_toBottomOf="@+id/burbuja_texto"
                     app:layout_constraintStart_toStartOf="parent" />
@@ -50,11 +52,11 @@
                         android:textSize="15sp" />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="134dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:fontFamily="@font/inter_medium"
-                        android:text="¿En qué podemos\nayudarte?"
+                        android:text="¿En qué podemos ayudarte?"
                         android:textColor="@color/black"
                         android:textSize="15sp" />
 
@@ -104,7 +106,7 @@
     <View
         android:id="@+id/cabecera_chat"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="70dp"
         android:background="@drawable/bg_chat_input"
         android:backgroundTint="@color/claro"
         android:rotation="180"
@@ -117,9 +119,10 @@
         android:layout_height="wrap_content"
         android:text="Chat de atención al cliente"
         android:textAppearance="@style/boton_llamativo"
-        android:textSize="22sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/cabecera_chat"
         app:layout_constraintEnd_toEndOf="@id/cabecera_chat"
         app:layout_constraintStart_toStartOf="@id/cabecera_chat"
         app:layout_constraintTop_toTopOf="@id/cabecera_chat" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

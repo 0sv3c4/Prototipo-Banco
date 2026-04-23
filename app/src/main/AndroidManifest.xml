@@ -11,13 +11,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PrototipoBanco">
         <activity
+            android:name=".todosUsu.BaseActivityTodos"
+            android:exported="false" />
+        <activity
             android:name=".BaseActivityClientes"
             android:exported="false" />
         <activity
-            android:name=".Accesibilidad"
+            android:name=".todosUsu.Accesibilidad"
             android:exported="false" />
         <activity
-            android:name=".Contacto_clientes"
+            android:name=".todosUsu.Contacto_clientes"
             android:exported="false" />
         <activity
             android:name=".Transferencias"
@@ -26,10 +29,10 @@
             android:name=".Bizum"
             android:exported="false" />
         <activity
-            android:name=".Inicio_Sesion"
+            android:name=".todosUsu.Inicio_Sesion"
             android:exported="false" />
         <activity
-            android:name=".Promociones"
+            android:name=".todosUsu.Promociones"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

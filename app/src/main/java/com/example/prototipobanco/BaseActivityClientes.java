@@ -15,6 +15,11 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+
+import com.example.prototipobanco.todosUsu.Accesibilidad;
+import com.example.prototipobanco.todosUsu.Contacto_clientes;
+import com.example.prototipobanco.todosUsu.Inicio_Sesion;
+import com.example.prototipobanco.todosUsu.Promociones;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.imageview.ShapeableImageView;
 import com.google.android.material.navigation.NavigationView;
