@@ -43,4 +43,5 @@
     <string name="oscar_t">Óscar T.</string>
     <string name="nombre_cliente">Eufrasio Martínez</string>
     <string name="valor_saldo">5.777,23€</string>
+    <string name="titulo_toolbar_base">Prueba</string>
 </resources>

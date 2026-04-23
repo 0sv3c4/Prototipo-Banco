@@ -33,7 +33,7 @@ public class BaseActivityClientes extends AppCompatActivity implements Navigatio
             return insets;
         });
 
-        configuracionDrawerToolbar("Prueba");
+        configuracionDrawerToolbar(getString(R.string.titulo_toolbar_base));
         marchaAtras();
     }
 
