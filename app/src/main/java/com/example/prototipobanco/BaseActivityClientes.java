@@ -13,6 +13,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.navigation.NavigationView;
 
 public class BaseActivityClientes extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -29,6 +30,14 @@ public class BaseActivityClientes extends AppCompatActivity implements Navigatio
             return insets;
         });
 
+        configuracionDrawer();
+        marchaAtras();
+    }
+
+    /**
+     * Método para configurar el drawer.
+     */
+    protected void configuracionDrawer(){
         drawerLayout = findViewById(R.id.main);
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -42,9 +51,12 @@ public class BaseActivityClientes extends AppCompatActivity implements Navigatio
                 drawerLayout.openDrawer(GravityCompat.START);
             }
         });
-
     }
 
+    protected void marchaAtras(){
+        MaterialButton btnVolver = findViewById(R.id.btn_volver);
+        btnVolver.setOnClickListener(v -> finish());
+    }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
