@@ -14,7 +14,7 @@ import com.google.android.material.button.MaterialButton;
 
 public class Contacto_clientes extends AppCompatActivity {
 
-    MaterialButton tfnoCliente, tfnoUrgencias, tfnoSeguros;
+    MaterialButton tfnoCliente, tfnoUrgencias, tfnoSeguros, btnAtras, btnChat;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +28,10 @@ public class Contacto_clientes extends AppCompatActivity {
         tfnoCliente = findViewById(R.id.btn_tel_atencion);
         tfnoUrgencias = findViewById(R.id.btn_tel_urgencias);
         tfnoSeguros = findViewById(R.id.btn_tel_seguros);
+        btnAtras = findViewById(R.id.btn_volver);
+        btnChat = findViewById(R.id.btn_chat_bottom);
+
+        btnAtras.setOnClickListener(v -> finish());
 
         tfnoCliente.setOnClickListener(v ->{
             Intent intent = new Intent(Intent.ACTION_DIAL);
