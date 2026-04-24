@@ -46,7 +46,6 @@ public class Mapa_cajeros extends BaseActivityTodos {
         MaterialButton btnAtras = findViewById(R.id.btn_volver);
         btnAtras.setOnClickListener(v -> finish());
 
-        btnChat = findViewById(R.id.btn_chat_bottom);
         btnChat.setOnClickListener(v -> generarChat());
 
         WebView webViewMapa = findViewById(R.id.visor_mapa);
