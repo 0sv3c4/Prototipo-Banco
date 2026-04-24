@@ -8,7 +8,6 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.prototipobanco.R;
-import com.google.android.material.button.MaterialButton;
 
 public class Accesibilidad extends BaseActivityTodos {
 
@@ -22,6 +21,9 @@ public class Accesibilidad extends BaseActivityTodos {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        btnChat = findViewById(R.id.btn_chat_bottom);
+        btnAtras = findViewById(R.id.btn_volver);
 
         btnAtras.setOnClickListener(v -> finish());
         btnChat.setOnClickListener(v -> generarChat());
