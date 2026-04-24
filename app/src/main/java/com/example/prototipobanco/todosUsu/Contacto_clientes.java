@@ -28,7 +28,6 @@ public class Contacto_clientes extends BaseActivityTodos {
         MaterialButton tfnoCliente = findViewById(R.id.btn_tel_atencion);
         MaterialButton tfnoUrgencias = findViewById(R.id.btn_tel_urgencias);
         MaterialButton tfnoSeguros = findViewById(R.id.btn_tel_seguros);
-        MaterialButton btnAtras = findViewById(R.id.btn_volver);
 
         btnAtras.setOnClickListener(v -> finish());
         btnChat.setOnClickListener(v -> generarChat());

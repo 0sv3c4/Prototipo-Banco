@@ -18,6 +18,7 @@ import com.google.android.material.button.MaterialButton;
 public class BaseActivityTodos extends AppCompatActivity {
 
     final protected MaterialButton btnChat = findViewById(R.id.btn_chat_bottom);
+    final protected MaterialButton btnAtras = findViewById(R.id.btn_volver);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

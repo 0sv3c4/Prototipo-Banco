@@ -42,7 +42,7 @@
             android:name=".todosUsu.Inicio_Sesion"
             android:exported="false" />
         <activity
-            android:name=".todosUsu.Promociones"
+            android:name=".todosUsu.Pantalla_inicial"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

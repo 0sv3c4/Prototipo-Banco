@@ -23,8 +23,6 @@ public class Accesibilidad extends BaseActivityTodos {
             return insets;
         });
 
-        MaterialButton btnAtras = findViewById(R.id.btn_volver);
-
         btnAtras.setOnClickListener(v -> finish());
         btnChat.setOnClickListener(v -> generarChat());
     }

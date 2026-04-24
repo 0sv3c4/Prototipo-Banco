@@ -13,13 +13,13 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.prototipobanco.R;
 
-public class Promociones extends AppCompatActivity {
+public class Pantalla_inicial extends AppCompatActivity {
     //otraprueba2
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_promociones);
+        setContentView(R.layout.activity_pantalla_inicial);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -30,7 +30,7 @@ public class Promociones extends AppCompatActivity {
         getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
                     @Override
                     public void handleOnBackPressed() {
-                        Intent intent = new Intent(Promociones.this, Promociones.class);
+                        Intent intent = new Intent(Pantalla_inicial.this, Pantalla_inicial.class);
                         startActivity(intent);
                     }
                 }

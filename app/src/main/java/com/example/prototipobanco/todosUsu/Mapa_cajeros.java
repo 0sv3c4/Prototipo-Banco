@@ -52,7 +52,7 @@ public class Mapa_cajeros extends BaseActivityTodos {
 
         // Configurar WebView
         WebSettings configuracionWeb = webViewMapa.getSettings();
-        configuracionWeb.setJavaScriptEnabled(true);
+        configuracionWeb.setJavaScriptEnabled(true); // Habilitar JavaScript si es necesario
 
         webViewMapa.setWebViewClient(new WebViewClient());
         String iframeMapa = "<iframe src=\"https://www.google.com/maps/d/u/0/embed?mid=1QnPoMEKZq5XpyYZ8jozW_gjkwoBNTI4&ehbc=2E312F\" " +

@@ -116,7 +116,7 @@ public class Inicio_Sesion extends AppCompatActivity {
             @Override
             public void onAuthenticationSucceeded(@NonNull BiometricPrompt.AuthenticationResult result) {
                 super.onAuthenticationSucceeded(result);
-                startActivity(new Intent(Inicio_Sesion.this, Promociones.class));
+                startActivity(new Intent(Inicio_Sesion.this, Pantalla_inicial.class));
             }
             @Override
             public void onAuthenticationError(int errorCode, @NonNull CharSequence errString) {
