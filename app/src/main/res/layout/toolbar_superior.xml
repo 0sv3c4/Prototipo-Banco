@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar_superior"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/ultra_claro"
-    app:elevation="0dp">
+    android:background="@color/ultra_claro">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -23,29 +23,30 @@
             app:tint="@color/black" />
 
         <TextView
-            android:id="@+id/toolbar_title"
+            android:id="@+id/titulo_toolbar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Accesibilidad"
             android:textAppearance="@style/titulo"
             android:textSize="26sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/btn_notifications"
+            app:layout_constraintEnd_toStartOf="@+id/btn_notificaciones"
             app:layout_constraintStart_toEndOf="@+id/btn_menu"
             app:layout_constraintTop_toTopOf="parent" />
 
         <FrameLayout
-            android:id="@+id/btn_notifications"
+            android:id="@+id/btn_notificaciones"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="12dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/btn_profile"
+            app:layout_constraintEnd_toStartOf="@+id/btn_perfil"
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:layout_width="38dp"
                 android:layout_height="38dp"
+                android:contentDescription="notificaciones"
                 android:src="@drawable/ic_notif"
                 app:tint="@color/black" />
 
@@ -60,11 +61,13 @@
         </FrameLayout>
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/btn_profile"
+            android:id="@+id/btn_perfil"
             android:layout_width="46dp"
             android:layout_height="46dp"
             android:src="@drawable/ic_cliente"
             android:padding="2dp"
+            android:background="@drawable/bg_titulo"
+            android:backgroundTint="@color/mas_claro"
             app:strokeWidth="1dp"
             app:strokeColor="@color/grisaceo"
             app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"

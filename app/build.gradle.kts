@@ -8,6 +8,9 @@ android {
         version = release(36)
     }
 
+    buildFeatures {
+        dataBinding = true    }
+
     defaultConfig {
         applicationId = "com.example.prototipobanco"
         minSdk = 33
@@ -39,6 +42,8 @@ dependencies {
     implementation(libs.activity)
     implementation(libs.constraintlayout)
     implementation(libs.biometric)
+    implementation(libs.play.services.maps)
+    implementation(libs.games.activity)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

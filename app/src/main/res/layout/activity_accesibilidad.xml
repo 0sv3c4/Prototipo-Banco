@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Accesibilidad"
+    tools:context=".todosUsu.Accesibilidad"
     android:background="@color/white">
 
     <!-- TOOLBAR SUPERIOR -->
@@ -18,7 +18,7 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/include_bottom_toolbar"
+        app:layout_constraintBottom_toBottomOf="@+id/include_bottom_toolbar"
         app:layout_constraintTop_toBottomOf="@id/toolbar_superior_acc">
 
         <LinearLayout
@@ -36,11 +36,6 @@
                 android:textColor="@color/black"
                 android:textSize="24sp" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginVertical="8dp"
-                android:background="@color/grisaceo" />
 
             <include
                 android:id="@+id/item_alto_contraste"
@@ -58,6 +53,11 @@
                 android:id="@+id/item_modo_oscuro"
                 layout="@layout/item_setting_switch" />
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grisaceo" />
+
             <!-- AUDICIÓN -->
             <TextView
                 android:layout_width="wrap_content"
@@ -68,12 +68,6 @@
                 android:textColor="@color/black"
                 android:textSize="24sp" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginVertical="8dp"
-                android:background="@color/grisaceo" />
-
             <include
                 android:id="@+id/item_lectura_voz"
                 layout="@layout/item_setting_switch" />
@@ -81,6 +75,11 @@
             <include
                 android:id="@+id/item_alertas_sonoras"
                 layout="@layout/item_setting_switch" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grisaceo" />
 
             <!-- INTERACCIÓN -->
             <TextView
@@ -91,12 +90,6 @@
                 android:text="Interacción"
                 android:textColor="@color/black"
                 android:textSize="24sp" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginVertical="8dp"
-                android:background="@color/grisaceo" />
 
             <include
                 android:id="@+id/item_botones_grandes"
@@ -121,6 +114,11 @@
                 app:backgroundTint="@color/claro"
                 app:cornerRadius="30dp" />
 
+            <!-- Para que se pueda ver todas las opciones-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="150dp"/>
+
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
@@ -131,5 +129,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

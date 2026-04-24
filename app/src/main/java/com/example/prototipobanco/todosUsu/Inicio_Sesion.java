@@ -1,4 +1,4 @@
-package com.example.prototipobanco;
+package com.example.prototipobanco.todosUsu;
 
 import android.app.AlertDialog;
 import android.content.Intent;
@@ -6,7 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -15,10 +17,12 @@ import androidx.activity.EdgeToEdge;
 //import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 //import androidx.core.content.ContextCompat;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.prototipobanco.R;
 import com.google.android.material.button.MaterialButton;
 
 //import java.util.concurrent.Executor;
@@ -36,8 +40,6 @@ public class Inicio_Sesion extends AppCompatActivity {
     private EditText escribeContra;
     private ImageView btnVerContra;
     private EditText escribeNIF;
-    //private ImageView btnBiometria;
-    private MaterialButton btnIniciarSesion, btnAccesibilidad, btnContacto;
 
     public Inicio_Sesion(){
 
@@ -58,9 +60,11 @@ public class Inicio_Sesion extends AppCompatActivity {
         escribeContra = findViewById(R.id.introduzca_contra);
         btnVerContra = findViewById(R.id.btn_ver_contrasena);
         escribeNIF = findViewById(R.id.introduzca_NIF);
-        btnIniciarSesion = findViewById(R.id.btn_iniciar_sesion);
-        btnAccesibilidad = findViewById(R.id.boton_accesibilidad);
-        btnContacto = findViewById(R.id.boton_contacto);
+        ImageView btnBiometria = findViewById(R.id.acceso_biometrico);
+        MaterialButton btnIniciarSesion = findViewById(R.id.btn_iniciar_sesion);
+        MaterialButton btnAccesibilidad = findViewById(R.id.boton_accesibilidad);
+        MaterialButton btnContacto = findViewById(R.id.boton_contacto);
+        MaterialButton btnMapa = findViewById(R.id.boton_mapa);
 
 
         /*Función para la modification de la visibilidad de la contraseña.*/
@@ -89,6 +93,16 @@ public class Inicio_Sesion extends AppCompatActivity {
 
         btnContacto.setOnClickListener(v ->{
             Intent intent = new Intent(this, Contacto_clientes.class);
+            startActivity(intent);
+        });
+
+        btnMapa.setOnClickListener(v ->{
+            Intent intent = new Intent(this, Mapa_cajeros.class);
+            startActivity(intent);
+        });
+
+        btnBiometria.setOnClickListener(v ->{
+            Intent intent = new Intent(this, Mapa_cajeros.class); //TODO
             startActivity(intent);
         });
 
@@ -136,13 +150,9 @@ public class Inicio_Sesion extends AppCompatActivity {
             datoValido=false;
         }
         if(!datoValido){
-            new AlertDialog.Builder(this)
-                    .setTitle("El NIF no es válido")
-                    .setMessage("El formato introducido es incorrecto")
-                    .setPositiveButton("Aceptar", (dialog, which) -> dialog.dismiss())
-                    .show();
+            mensajeError();
         } else {
-            Toast.makeText(this, "¡Bienvenido!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "¡Bienvenido!", Toast.LENGTH_SHORT).show(); //TODO
         }
     }
 
@@ -174,5 +184,23 @@ public class Inicio_Sesion extends AppCompatActivity {
             }
         }
         return datoValido;
+    }
+    private void mensajeError(){
+        ConstraintLayout error = findViewById(R.id.alerta_error);
+        View view = LayoutInflater.from(this).inflate(R.layout.mensaje_error, error);
+        Button aceptarError = view.findViewById(R.id.btn_aceptar_alerta);
+
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(view);
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+
+        if (alertDialog.getWindow() != null) {
+            alertDialog.getWindow().setBackgroundDrawable(new android.graphics.drawable.ColorDrawable(android.graphics.Color.TRANSPARENT));
+        }
+
+        aceptarError.setOnClickListener(v -> alertDialog.dismiss());
+
     }
 }
