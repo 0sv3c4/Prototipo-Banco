@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PrototipoBanco">
         <activity
-            android:name=".Promociones_banco"
+            android:name=".todosUsu.Promociones_banco"
             android:exported="false" />
         <activity
             android:name=".todosUsu.Mapa_cajeros"
