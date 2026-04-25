@@ -31,16 +31,18 @@
             android:layout_height="510dp"
             android:layout_marginEnd="-10dp"
             android:background="@drawable/bg_cabecera_drawer"
-            android:backgroundTint="@color/ultra_claro"/>
+            android:backgroundTint="@color/ultra_claro"
+            tools:ignore="VisualLintBounds" />
 
     </LinearLayout>
 
+    <!-- títulos -->
     <TextView
         android:id="@+id/titulo_promociones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Promociones"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginStart="30dp"
         android:textAppearance="@style/titulo"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,6 +58,251 @@
         app:layout_constraintStart_toStartOf="@+id/titulo_promociones"
         app:layout_constraintTop_toBottomOf="@+id/titulo_promociones" />
 
+    <!-- Card de Promoción -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tarjeta_promocion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/bg_promocion"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <TextView
+            android:id="@+id/titulo_tarjeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Tarjeta especial"
+            android:textColor="@color/ultra_claro"
+            android:textAppearance="@style/titulo_seccion"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/descripcion_tarjeta"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+
+            android:text="5% de cashback en todas tus compras."
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/iv_tarjeta"
+            app:layout_constraintStart_toStartOf="@+id/titulo_tarjeta"
+            app:layout_constraintTop_toBottomOf="@+id/titulo_tarjeta" />
+
+
+        <TextView
+            android:id="@+id/boton_contratar"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_promocion"
+            android:backgroundTint="@color/mas_claro"
+            android:gravity="center"
+            android:text="Contratar"
+            android:fontFamily="@font/inter_bold"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/descripcion_tarjeta"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descripcion_tarjeta" />
+
+
+        <ImageView
+            android:id="@+id/iv_tarjeta"
+            android:layout_width="160dp"
+            android:layout_height="100dp"
+            android:contentDescription="ejemplo de tarjeta"
+            android:scaleType="centerInside"
+            android:src="@drawable/foto_ejemplo_tarjeta"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tarjeta_promocion2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/bg_promocion"
+        android:backgroundTint="@color/mas_claro"
+        android:padding="15dp"
+        android:paddingEnd="25dp"
+        android:paddingStart="25dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tarjeta_promocion">
+
+        <TextView
+            android:id="@id/titulo_tarjeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Cuenta Joven"
+            android:textColor="@color/white"
+            android:textAppearance="@style/titulo_seccion"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@id/descripcion_tarjeta"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Sin comisiones.\n Hasta 26 años."
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titulo_tarjeta" />
+
+
+        <TextView
+            android:id="@id/boton_contratar"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_promocion"
+            android:backgroundTint="@color/claro"
+            android:gravity="center"
+            android:text="Contratar"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:fontFamily="@font/inter_bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descripcion_tarjeta" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tarjeta_promocion3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/bg_promocion"
+        android:backgroundTint="@color/mas_claro"
+        android:padding="15dp"
+        android:paddingEnd="25dp"
+        android:paddingStart="25dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tarjeta_promocion">
+
+        <TextView
+            android:id="@id/titulo_tarjeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Ahorro Plus"
+            android:textColor="@color/white"
+            android:textAppearance="@style/titulo_seccion"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@id/descripcion_tarjeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="3,5% TAE \nsin permanencia."
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titulo_tarjeta" />
+
+
+        <TextView
+            android:id="@id/boton_contratar"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_promocion"
+            android:backgroundTint="@color/claro"
+            android:gravity="center"
+            android:text="Contratar"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:fontFamily="@font/inter_bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descripcion_tarjeta" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tarjeta_promocion4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/bg_promocion"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tarjeta_promocion2">
+
+        <TextView
+            android:id="@id/titulo_tarjeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Prestamo no avalado"
+            android:textColor="@color/ultra_claro"
+            android:textAppearance="@style/titulo_seccion"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@id/descripcion_tarjeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+
+            android:text="Hasta 20.000€"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_lereles"
+            app:layout_constraintTop_toBottomOf="@+id/titulo_tarjeta" />
+
+
+        <TextView
+            android:id="@id/boton_contratar"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_promocion"
+            android:backgroundTint="@color/mas_claro"
+            android:gravity="center"
+            android:text="Contratar"
+            android:fontFamily="@font/inter_bold"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_lereles"
+            app:layout_constraintTop_toBottomOf="@+id/descripcion_tarjeta" />
+
+
+        <ImageView
+            android:id="@+id/iv_lereles"
+            android:layout_width="160dp"
+            android:layout_height="100dp"
+            android:contentDescription="ejemplo de tarjeta"
+            android:scaleType="centerInside"
+            android:src="@drawable/foto_ejemplo_tarjeta"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!-- Toolbar Inferior -->
     <include
