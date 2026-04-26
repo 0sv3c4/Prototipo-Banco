@@ -19,6 +19,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import com.example.prototipobanco.todosUsu.Accesibilidad;
 import com.example.prototipobanco.todosUsu.Contacto_clientes;
 import com.example.prototipobanco.todosUsu.Inicio_Sesion;
+import com.example.prototipobanco.todosUsu.Mapa_cajeros;
 import com.example.prototipobanco.todosUsu.Pantalla_inicial;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.imageview.ShapeableImageView;
@@ -99,7 +100,7 @@ public class BaseActivityClientes extends AppCompatActivity implements Navigatio
             intent = new Intent(this, Contacto_clientes.class);
             startActivity(intent);
         } else if (id == R.id.nav_mapa) {
-            intent = new Intent(this, Contacto_clientes.class); //TODO
+            intent = new Intent(this, Mapa_cajeros.class);
             startActivity(intent);
         } else if (id == R.id.nav_servicios){
             intent = new Intent(this, Contacto_clientes.class);//TODO

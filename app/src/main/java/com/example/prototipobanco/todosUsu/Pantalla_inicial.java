@@ -27,15 +27,13 @@ public class Pantalla_inicial extends AppCompatActivity {
             return insets;
         });
 
-        //Hacer que al salir única y exclusivamente puedas ir hacia atrás a la pantalla de inicio
+        // Configuración para cerrar la app al pulsar atrás
         getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
-                    @Override
-                    public void handleOnBackPressed() {
-                        Intent intent = new Intent(Pantalla_inicial.this, Pantalla_inicial.class);
-                        startActivity(intent);
-                    }
-                }
-        );
+            @Override
+            public void handleOnBackPressed() {
+                finishAffinity();
+            }
+        });
 
         //Atts a utilizar
         ImageView btnIniciarSesion = findViewById(R.id.inicio_sesion);
