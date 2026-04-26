@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -96,7 +97,7 @@
 
 
         <TextView
-            android:id="@+id/boton_contratar"
+            android:id="@+id/boton_contratar1"
             android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -165,7 +166,7 @@
 
 
         <TextView
-            android:id="@id/boton_contratar"
+            android:id="@+id/boton_contratar2"
             android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -221,7 +222,7 @@
 
 
         <TextView
-            android:id="@id/boton_contratar"
+            android:id="@+id/boton_contratar3"
             android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -244,7 +245,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:background="@drawable/bg_promocion"
-        android:padding="20dp"
+        android:backgroundTint="@color/neutro"
+        android:paddingTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tarjeta_promocion2">
@@ -254,10 +256,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:text="Prestamo no avalado"
-            android:textColor="@color/ultra_claro"
+            android:text="Seguro de viaje"
             android:textAppearance="@style/titulo_seccion"
+            android:textColor="@color/ultra_claro"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_palmeras"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -266,38 +269,38 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
 
-            android:text="Hasta 20.000€"
+            android:text="Viaja protegido.\nDesde 2,99€/mes"
             android:textColor="@color/white"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/iv_lereles"
+            app:layout_constraintStart_toEndOf="@+id/iv_palmeras"
             app:layout_constraintTop_toBottomOf="@+id/titulo_tarjeta" />
 
 
         <TextView
-            android:id="@id/boton_contratar"
+            android:id="@+id/boton_contratar4"
             android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:background="@drawable/bg_promocion"
-            android:backgroundTint="@color/mas_claro"
+            android:backgroundTint="@color/claro"
             android:gravity="center"
             android:text="Contratar"
             android:fontFamily="@font/inter_bold"
             android:textColor="@color/white"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/iv_lereles"
+            app:layout_constraintStart_toEndOf="@+id/iv_palmeras"
             app:layout_constraintTop_toBottomOf="@+id/descripcion_tarjeta" />
 
 
         <ImageView
-            android:id="@+id/iv_lereles"
-            android:layout_width="160dp"
-            android:layout_height="100dp"
+            android:id="@+id/iv_palmeras"
+            android:layout_width="200dp"
+            android:layout_height="130dp"
             android:contentDescription="ejemplo de tarjeta"
             android:scaleType="centerInside"
-            android:src="@drawable/foto_ejemplo_tarjeta"
+            android:src="@drawable/ic_palmeras"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

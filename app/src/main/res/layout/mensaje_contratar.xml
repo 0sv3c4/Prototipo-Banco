@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/alerta_exito"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/fondo_alerta"
+        android:background="@drawable/bg_formulario_inicio_sesion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/titulo_exito"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¡Enhorabuena!"
+            android:paddingTop="28dp"
+            android:gravity="center_horizontal"
+            android:textAppearance="@style/mensajeFaillido"
+            android:textColor="#007700"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/fondo_alerta" />
+
+        <TextView
+            android:id="@+id/mensaje_exito"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:gravity="center_horizontal"
+            android:text="@string/descripción_contrato"
+            android:textColor="#757575"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/titulo_exito"
+            app:layout_constraintBottom_toTopOf="@id/btn_aceptar_alerta"/>
+
+        <Button
+            android:id="@+id/btn_aceptar_alerta"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/exito"
+            android:text="¡Entendido!"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mensaje_exito" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ImageView
+        android:id="@+id/icono_exito"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_exito"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/fondo_alerta"
+        app:layout_constraintBottom_toTopOf="@id/fondo_alerta"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

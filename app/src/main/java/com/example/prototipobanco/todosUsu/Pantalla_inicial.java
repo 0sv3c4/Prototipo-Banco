@@ -3,6 +3,7 @@ package com.example.prototipobanco.todosUsu;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import androidx.activity.EdgeToEdge;
 import androidx.activity.OnBackPressedCallback;
@@ -40,6 +41,9 @@ public class Pantalla_inicial extends AppCompatActivity {
         ImageView btnIniciarSesion = findViewById(R.id.inicio_sesion);
         ImageView btnContactanos = findViewById(R.id.contactanos);
 
+        LinearLayout btnOfertas = findViewById(R.id.clicakble_ofertas);
+        LinearLayout btnEventos = findViewById(R.id.clickable_eventos);
+
         //Redireccionar
         btnIniciarSesion.setOnClickListener(v -> {
             Intent intent = new Intent(this, Inicio_Sesion.class);
@@ -50,5 +54,16 @@ public class Pantalla_inicial extends AppCompatActivity {
             Intent intent = new Intent(this, Contacto_clientes.class);
             startActivity(intent);
         });
+
+        btnOfertas.setOnClickListener(v ->{
+            Intent intent = new Intent(this, Promociones_banco.class);
+            startActivity(intent);
+        });
+
+        btnEventos.setOnClickListener(v ->{
+            Intent intent = new Intent(this, Promociones_banco.class);
+            startActivity(intent);
+        });
+
     }
 }
