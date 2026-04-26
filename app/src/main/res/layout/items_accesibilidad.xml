@@ -23,7 +23,7 @@
             app:layout_constraintBottom_toBottomOf="parent">
 
             <TextView
-                android:id="@+id/tv_title"
+                android:id="@+id/titulo_opcion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/inter_bold"
@@ -33,7 +33,7 @@
                 tools:text="Lol"/>
 
             <TextView
-                android:id="@+id/tv_description"
+                android:id="@+id/descripcion_opcion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/inter"

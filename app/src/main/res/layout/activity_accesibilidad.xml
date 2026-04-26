@@ -53,19 +53,19 @@
 
             <include
                 android:id="@+id/item_alto_contraste"
-                layout="@layout/item_setting_switch" />
+                layout="@layout/items_accesibilidad" />
 
             <include
                 android:id="@+id/item_texto_grande"
-                layout="@layout/item_setting_switch" />
+                layout="@layout/items_accesibilidad" />
 
             <include
                 android:id="@+id/item_reducir_movimiento"
-                layout="@layout/item_setting_switch" />
+                layout="@layout/items_accesibilidad" />
 
             <include
                 android:id="@+id/item_modo_oscuro"
-                layout="@layout/item_setting_switch" />
+                layout="@layout/items_accesibilidad" />
 
             <View
                 android:layout_width="match_parent"
@@ -84,11 +84,11 @@
 
             <include
                 android:id="@+id/item_lectura_voz"
-                layout="@layout/item_setting_switch" />
+                layout="@layout/items_accesibilidad" />
 
             <include
                 android:id="@+id/item_alertas_sonoras"
-                layout="@layout/item_setting_switch" />
+                layout="@layout/items_accesibilidad" />
 
             <View
                 android:layout_width="match_parent"
@@ -107,11 +107,11 @@
 
             <include
                 android:id="@+id/item_botones_grandes"
-                layout="@layout/item_setting_switch" />
+                layout="@layout/items_accesibilidad" />
 
             <include
                 android:id="@+id/item_vibracion_tactil"
-                layout="@layout/item_setting_switch" />
+                layout="@layout/items_accesibilidad" />
 
             <!-- BOTÓN CENTRAL -->
             <com.google.android.material.button.MaterialButton
