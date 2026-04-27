@@ -11,36 +11,44 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingVertical="8dp">
+        android:paddingVertical="4dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grisaceo"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout3" />
 
         <LinearLayout
+            android:id="@+id/linearLayout3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/switch_widget"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/tv_title"
+                android:id="@+id/titulo_opcion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/inter_bold"
                 android:text="@{titulo}"
                 android:textColor="@color/neutro"
                 android:textSize="18sp"
-                tools:text="Lol"/>
+                tools:text="Lol" />
 
             <TextView
-                android:id="@+id/tv_description"
+                android:id="@+id/descripcion_opcion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/inter"
                 android:text="@{descripcion}"
                 android:textColor="@color/grisaceo"
                 android:textSize="14sp"
-                tools:text="El fin se acerca"/>
+                tools:text="El fin se acerca" />
         </LinearLayout>
 
         <com.google.android.material.materialswitch.MaterialSwitch

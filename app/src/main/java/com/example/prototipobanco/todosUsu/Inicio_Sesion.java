@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 //import androidx.annotation.NonNull;
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 //import androidx.core.content.ContextCompat;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -22,6 +23,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.prototipobanco.BaseActivityClientes;
 import com.example.prototipobanco.R;
 import com.google.android.material.button.MaterialButton;
 
@@ -84,6 +86,16 @@ public class Inicio_Sesion extends AppCompatActivity {
         }
         );
 
+        //Hacer que al salir única y exclusivamente puedas ir hacia atrás a la pantalla de inicio
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+                    @Override
+                    public void handleOnBackPressed() {
+                        Intent intent = new Intent(Inicio_Sesion.this, Pantalla_inicial.class);
+                        startActivity(intent);
+                    }
+                }
+        );
+
         btnIniciarSesion.setOnClickListener(this::controlAcceso);
 
         btnAccesibilidad.setOnClickListener(v ->{
@@ -116,7 +128,7 @@ public class Inicio_Sesion extends AppCompatActivity {
             @Override
             public void onAuthenticationSucceeded(@NonNull BiometricPrompt.AuthenticationResult result) {
                 super.onAuthenticationSucceeded(result);
-                startActivity(new Intent(Inicio_Sesion.this, Promociones.class));
+                startActivity(new Intent(Inicio_Sesion.this, Pantalla_inicial.class));
             }
             @Override
             public void onAuthenticationError(int errorCode, @NonNull CharSequence errString) {
@@ -153,6 +165,8 @@ public class Inicio_Sesion extends AppCompatActivity {
             mensajeError();
         } else {
             Toast.makeText(this, "¡Bienvenido!", Toast.LENGTH_SHORT).show(); //TODO
+            Intent intent = new Intent(this, BaseActivityClientes.class);
+            startActivity(intent);
         }
     }
 

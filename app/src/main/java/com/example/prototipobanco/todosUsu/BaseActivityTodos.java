@@ -4,6 +4,8 @@ import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageButton;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,6 +20,7 @@ import com.google.android.material.button.MaterialButton;
 public class BaseActivityTodos extends AppCompatActivity {
 
     protected MaterialButton btnChat;
+    protected MaterialButton btnAtras;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,10 +33,10 @@ public class BaseActivityTodos extends AppCompatActivity {
             return insets;
         });
 
-        MaterialButton btnAtras = findViewById(R.id.btn_volver);
-        btnAtras.setOnClickListener(v -> finish());
-
         btnChat = findViewById(R.id.btn_chat_bottom);
+        btnAtras = findViewById(R.id.btn_volver);
+
+        btnAtras.setOnClickListener(v -> finish());
         btnChat.setOnClickListener(v -> generarChat());
     }
 
@@ -47,19 +50,26 @@ public class BaseActivityTodos extends AppCompatActivity {
         alertDialog.show();
 
 
+        //Corregir cómo se ve el chat
+
         android.view.Window window = alertDialog.getWindow();
         assert window != null;
-        window.setGravity(android.view.Gravity.BOTTOM | android.view.Gravity.END);
+        window.setGravity(android.view.Gravity.BOTTOM | android.view.Gravity.END); //aparecer abajo a la derecha
         window.clearFlags(android.view.WindowManager.LayoutParams.FLAG_DIM_BEHIND);
         android.view.WindowManager.LayoutParams params = window.getAttributes();
-        params.width = (int) (getResources().getDisplayMetrics().widthPixels * 0.75);
-        params.height = (int) (getResources().getDisplayMetrics().heightPixels * 0.5);
+        //intenté hacer esta parte con píxeles, pero funciona mucho mejor con proporcionee
+        params.width = (int) (getResources().getDisplayMetrics().widthPixels * 0.75); //redimensionar ancho
+        params.height = (int) (getResources().getDisplayMetrics().heightPixels * 0.5); //redimensionar alto
         params.x = 20; // Margen derecho
         params.y = 20; // Margen inferior
 
         window.setAttributes(params);
 
         window.setBackgroundDrawableResource(android.R.color.transparent);
+
+        ImageButton envioMensaje = view.findViewById(R.id.btn_enviar);
+
+        envioMensaje.setOnClickListener(v -> Toast.makeText(this, "Mensaje Enviado", Toast.LENGTH_SHORT).show());
 
     }
 }

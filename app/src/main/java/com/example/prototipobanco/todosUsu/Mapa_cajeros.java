@@ -18,7 +18,6 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.prototipobanco.R;
 
-import com.google.android.material.button.MaterialButton;
 import com.google.android.material.materialswitch.MaterialSwitch;
 
 public class Mapa_cajeros extends BaseActivityTodos {
@@ -43,17 +42,17 @@ public class Mapa_cajeros extends BaseActivityTodos {
             return insets;
         });
 
-        MaterialButton btnAtras = findViewById(R.id.btn_volver);
-        btnAtras.setOnClickListener(v -> finish());
-
         btnChat = findViewById(R.id.btn_chat_bottom);
+        btnAtras = findViewById(R.id.btn_volver);
+
+        btnAtras.setOnClickListener(v -> finish());
         btnChat.setOnClickListener(v -> generarChat());
 
         WebView webViewMapa = findViewById(R.id.visor_mapa);
 
         // Configurar WebView
         WebSettings configuracionWeb = webViewMapa.getSettings();
-        configuracionWeb.setJavaScriptEnabled(true);
+        configuracionWeb.setJavaScriptEnabled(true); // Habilitar JavaScript si es necesario
 
         webViewMapa.setWebViewClient(new WebViewClient());
         String iframeMapa = "<iframe src=\"https://www.google.com/maps/d/u/0/embed?mid=1QnPoMEKZq5XpyYZ8jozW_gjkwoBNTI4&ehbc=2E312F\" " +
