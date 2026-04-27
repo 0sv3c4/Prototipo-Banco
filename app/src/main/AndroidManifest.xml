@@ -18,6 +18,9 @@
             android:name=".Pantalla_principal"
             android:exported="false" />
         <activity
+            android:name=".InformacionClientes"
+            android:exported="false" />
+        <activity
             android:name=".todosUsu.Promociones_banco"
             android:exported="false" />
         <activity
