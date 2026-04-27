@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PrototipoBanco">
         <activity
+            android:name=".Pantalla_principal"
+            android:exported="false" />
+        <activity
             android:name=".todosUsu.Promociones_banco"
             android:exported="false" />
         <activity

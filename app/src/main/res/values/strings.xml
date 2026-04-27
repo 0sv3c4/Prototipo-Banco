@@ -44,5 +44,6 @@
     <string name="nombre_cliente">Eufrasio Martínez</string>
     <string name="valor_saldo">5.777,23€</string>
     <string name="titulo_toolbar_base">Prueba</string>
+    <string name="vacio">\0</string>
     <string name="descripción_contrato">Has contratado este servicio correctamente, en breve nos pondremos en contacto contigo</string>
 </resources>

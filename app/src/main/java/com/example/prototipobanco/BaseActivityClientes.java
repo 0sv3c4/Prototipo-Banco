@@ -20,14 +20,13 @@ import com.example.prototipobanco.todosUsu.Accesibilidad;
 import com.example.prototipobanco.todosUsu.Contacto_clientes;
 import com.example.prototipobanco.todosUsu.Inicio_Sesion;
 import com.example.prototipobanco.todosUsu.Mapa_cajeros;
-import com.example.prototipobanco.todosUsu.Pantalla_inicial;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.imageview.ShapeableImageView;
 import com.google.android.material.navigation.NavigationView;
 
 public class BaseActivityClientes extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    private DrawerLayout drawerLayout;
+    protected DrawerLayout drawerLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,7 +105,7 @@ public class BaseActivityClientes extends AppCompatActivity implements Navigatio
             intent = new Intent(this, Contacto_clientes.class);//TODO
             startActivity(intent);
         } else if (id == R.id.nav_menu) {
-            intent = new Intent(this, Pantalla_inicial.class); //TODO
+            intent = new Intent(this, Pantalla_principal.class);
             startActivity(intent);
         } else if (id==R.id.nav_logout) {
             intent = new Intent(this, Inicio_Sesion.class);
