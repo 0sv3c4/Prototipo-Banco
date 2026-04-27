@@ -39,7 +39,7 @@ public class Bizum extends AppCompatActivity {
                     Toast.makeText(Bizum.this, mensaje, Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(Bizum.this, "Por favor, rellena los campos obligatorios", Toast.LENGTH_SHORT).show();
-                }
+                 }
             }
         });
 
