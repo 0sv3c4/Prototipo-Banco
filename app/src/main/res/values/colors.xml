@@ -10,4 +10,5 @@
     <color name="grisaceo">#8D8D8D</color>
     <color name="error">#AA0000</color>
     <color name="exito">#00AA00</color>
+    <color name="info">#0077FF</color>
 </resources>

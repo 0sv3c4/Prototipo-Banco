@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -68,6 +69,7 @@ public class Inicio_Sesion extends AppCompatActivity {
         MaterialButton btnAccesibilidad = findViewById(R.id.boton_accesibilidad);
         MaterialButton btnContacto = findViewById(R.id.boton_contacto);
         MaterialButton btnMapa = findViewById(R.id.boton_mapa);
+        TextView btnOlvidoContra = findViewById(R.id.recuperar_contrasena);
 
 
         /*Función para la modification de la visibilidad de la contraseña.*/
@@ -118,6 +120,8 @@ public class Inicio_Sesion extends AppCompatActivity {
             Intent intent = new Intent(this, Pantalla_principal.class);
             startActivity(intent);
         });
+
+        btnOlvidoContra.setOnClickListener(v -> mensajeInfo());
 
         //btnBiometria.setOnClickListener(this::accesoBiometria);
     }
@@ -217,5 +221,30 @@ public class Inicio_Sesion extends AppCompatActivity {
 
         aceptarError.setOnClickListener(v -> alertDialog.dismiss());
 
+    }
+
+    private void mensajeInfo(){
+        ConstraintLayout recuperarContra = findViewById(R.id.alerta_contra);
+        View view = LayoutInflater.from(this).inflate(R.layout.mensaje_olvido_contrasena, recuperarContra);
+        Button enviarSolicitud = view.findViewById(R.id.btn_aceptar_alerta);
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(view);
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+
+        if (alertDialog.getWindow() != null) {
+            alertDialog.getWindow().setBackgroundDrawable(new android.graphics.drawable.ColorDrawable(android.graphics.Color.TRANSPARENT));
+        }
+        EditText nifRecuperar = view.findViewById(R.id.introduzca_NIF);
+
+        enviarSolicitud.setOnClickListener(v -> {
+            if(comprobarNIF(nifRecuperar.getText().toString().trim().toUpperCase())){
+                Toast.makeText(this, "¡Solicitud enviada! Revisa tu correo", Toast.LENGTH_LONG).show();
+                alertDialog.dismiss();
+            } else {
+                mensajeError();
+            }
+        });
     }
 }

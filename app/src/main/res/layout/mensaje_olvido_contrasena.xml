@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/alerta_exito"
+    android:id="@+id/alerta_contra"
     android:layout_width="300dp"
     android:layout_height="wrap_content">
 
@@ -19,11 +19,11 @@
             android:id="@+id/titulo_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="¡Enhorabuena!"
+            android:text="@string/Contraseña_olvidada"
             android:paddingTop="28dp"
             android:gravity="center_horizontal"
             android:textAppearance="@style/mensajeFaillido"
-            android:textColor="#007700"
+            android:textColor="#0077FF"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/fondo_alerta" />
@@ -36,26 +36,41 @@
             android:layout_marginEnd="20dp"
             android:layout_marginStart="20dp"
             android:gravity="center_horizontal"
-            android:text="@string/descripción_contrato"
+            android:text="Introduce tu DNI o NIF y te enviaremos un enlace para restablecer tu contraseña"
             android:textColor="#757575"
             android:textSize="16sp"
             app:layout_constraintTop_toBottomOf="@id/titulo_info"
-            app:layout_constraintBottom_toTopOf="@id/btn_aceptar_alerta"/>
+            app:layout_constraintBottom_toTopOf="@id/introduzca_NIF"/>
+
+        <EditText
+            android:id="@+id/introduzca_NIF"
+            style="@style/cuadrado_rellenable"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:autofillHints="DNI,NIF"
+            android:inputType="textAutoComplete"
+            android:hint="@string/pedir_dni"
+            android:labelFor="@id/NIF"
+            android:maxLength="9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mensaje_info" />
 
         <Button
             android:id="@+id/btn_aceptar_alerta"
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:layout_marginTop="12dp"
-            android:backgroundTint="@color/exito"
-            android:text="¡Entendido!"
+            android:backgroundTint="@color/info"
+            android:text="Solicitar"
             android:textColor="@android:color/white"
             android:textSize="16sp"
             android:textStyle="bold"
             app:cornerRadius="12dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/mensaje_info" />
+            app:layout_constraintTop_toBottomOf="@id/introduzca_NIF" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -64,7 +79,8 @@
         android:id="@+id/icono_info"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:src="@drawable/ic_exito"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_info"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/fondo_alerta"

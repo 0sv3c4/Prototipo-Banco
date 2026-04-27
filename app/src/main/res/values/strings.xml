@@ -46,4 +46,5 @@
     <string name="titulo_toolbar_base">Prueba</string>
     <string name="vacio">\0</string>
     <string name="descripción_contrato">Has contratado este servicio correctamente, en breve nos pondremos en contacto contigo</string>
+    <string name="Contraseña_olvidada">¿Has olvidado tu contraseña?</string>
 </resources>
