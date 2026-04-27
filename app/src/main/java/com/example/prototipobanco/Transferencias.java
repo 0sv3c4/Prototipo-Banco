@@ -2,12 +2,11 @@ package com.example.prototipobanco;
 
 import android.os.Bundle;
 import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Transferencias extends AppCompatActivity {
+public class Transferencias extends BaseActivityClientes {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,5 +17,8 @@ public class Transferencias extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        configuracionDrawerToolbar("");
+        marchaAtras();
     }
 }

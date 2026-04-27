@@ -77,10 +77,10 @@
         android:layout_height="60dp"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="20dp"
+        android:autofillHints="PostalAddress"
         android:background="@drawable/bg_rellenables"
         android:backgroundTint="@color/claro"
         android:drawableStart="@drawable/ic_map"
-        android:autofillHints="PostalAddress"
         android:drawablePadding="10dp"
         android:fontFamily="@font/inter_medium"
         android:hint="Inserte para filtrar por ciudad o CP..."
@@ -90,8 +90,9 @@
         android:textColor="@color/white"
         android:textColorHint="@color/ultra_claro"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@+id/activar_ubicacion"
-        tools:layout_editor_absoluteX="24dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activar_ubicacion" />
 
     <WebView
         android:id="@+id/visor_mapa"
