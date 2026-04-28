@@ -9,6 +9,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.materialswitch.MaterialSwitch;
+import com.google.android.material.navigation.NavigationView;
 
 public class Pantalla_principal extends BaseActivityClientes {
 
@@ -35,15 +36,21 @@ public class Pantalla_principal extends BaseActivityClientes {
         tvIban = findViewById(R.id.tv_iban);
         switchVisibilidad = findViewById(R.id.switch_visibilidad);
 
+        NavigationView navView = findViewById(R.id.nav_view);
+        View headerView = navView.getHeaderView(0);
+        TextView tvSaldoNav = headerView.findViewById(R.id.tv_saldo_nav);
+
         // Lógica para alternar la visibilidad de los datos sensibles
         if (switchVisibilidad != null) {
             switchVisibilidad.setOnCheckedChangeListener((buttonView, isChecked) -> {
                 if (isChecked) {
                     tvSaldo.setText(R.string.fondos);
                     tvIban.setText(R.string.IBAN);
+                    if (tvSaldoNav != null) tvSaldoNav.setText(R.string.valor_saldo);
                 } else {
                     tvSaldo.setText("*******€");
                     tvIban.setText("ES13 **** **** **** **** 8129");
+                    if (tvSaldoNav != null) tvSaldoNav.setText("*******€");
                 }
             });
         }
