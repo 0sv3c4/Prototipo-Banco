@@ -47,4 +47,5 @@
     <string name="vacio">\0</string>
     <string name="descripción_contrato">Has contratado este servicio correctamente, en breve nos pondremos en contacto contigo</string>
     <string name="Contraseña_olvidada">¿Has olvidado tu contraseña?</string>
+    <string name="fondos">5.777,23€</string>
 </resources>
