@@ -24,7 +24,6 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.prototipobanco.BaseActivityClientes;
 import com.example.prototipobanco.Pantalla_principal;
 import com.example.prototipobanco.R;
 import com.google.android.material.button.MaterialButton;
@@ -170,7 +169,7 @@ public class Inicio_Sesion extends AppCompatActivity {
             mensajeError();
         } else {
             Toast.makeText(this, "¡Bienvenido!", Toast.LENGTH_SHORT).show(); //TODO
-            Intent intent = new Intent(this, BaseActivityClientes.class);
+            Intent intent = new Intent(this, Pantalla_principal.class);
             startActivity(intent);
         }
     }
