@@ -55,9 +55,8 @@
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:background="@drawable/bg_circle_light_purple"
-                            android:padding="15dp"
-                            android:src="@drawable/ic_send_white"
-                            app:tint="@color/oscuro" />
+                            android:padding="6dp"
+                            android:src="@drawable/ic_bizum" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -78,9 +77,8 @@
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:background="@drawable/bg_circle_light_purple"
-                            android:padding="15dp"
-                            android:src="@drawable/ic_map"
-                            app:tint="@color/oscuro" />
+                            android:padding="6dp"
+                            android:src="@drawable/ic_transferir" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -101,9 +99,8 @@
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:background="@drawable/bg_circle_light_purple"
-                            android:padding="15dp"
-                            android:src="@drawable/ic_config"
-                            app:tint="@color/oscuro" />
+                            android:padding="6dp"
+                            android:src="@drawable/ic_balance" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -122,13 +119,14 @@
                     android:layout_marginTop="24dp"
                     android:textSize="20sp"/>
 
-                <!-- Tarjeta -->
+                <!-- Tarjeta Actualizada -->
                 <ImageView
+                    android:id="@+id/iv_tarjeta"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="220dp"
                     android:layout_marginTop="12dp"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/foto_ejemplo_tarjeta" />
+                    android:src="@drawable/foto_tarjeta" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -156,8 +154,8 @@
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:background="@drawable/bg_circle_light_purple"
-                            android:padding="12dp"
-                            android:src="@drawable/ic_cliente" />
+                            android:padding="0dp"
+                            android:src="@drawable/ic_cartera" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -175,8 +173,8 @@
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:background="@drawable/bg_circle_light_purple"
-                            android:padding="12dp"
-                            android:src="@drawable/ic_cliente" />
+                            android:padding="0dp"
+                            android:src="@drawable/ic_cartera" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -193,9 +191,9 @@
                         <ImageView
                             android:layout_width="60dp"
                             android:layout_height="60dp"
-                            android:background="@color/white"
+                            android:background="@android:color/white"
                             android:elevation="2dp"
-                            android:padding="12dp"
+                            android:padding="0dp"
                             android:src="@android:drawable/ic_input_add"
                             app:tint="@color/claro" />
                         <TextView
@@ -299,8 +297,6 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-    <!--
     <com.google.android.material.navigation.NavigationView
         android:layout_width="290dp"
         android:layout_height="match_parent"
@@ -311,5 +307,5 @@
         android:foregroundGravity="center"
         app:itemTextColor="@color/oscuro"
         app:itemTextAppearance="@style/boton_llamativo"/>
-    -->
+
 </androidx.drawerlayout.widget.DrawerLayout>
