@@ -40,7 +40,7 @@ public class Pantalla_principal extends BaseActivityClientes {
             switchVisibilidad.setOnCheckedChangeListener((buttonView, isChecked) -> {
                 if (isChecked) {
                     tvSaldo.setText(R.string.fondos);
-                    tvIban.setText("ES13 0230 7800 8394 0948 8129");
+                    tvIban.setText(R.string.IBAN);
                 } else {
                     tvSaldo.setText("*******€");
                     tvIban.setText("ES13 **** **** **** **** 8129");
@@ -48,14 +48,7 @@ public class Pantalla_principal extends BaseActivityClientes {
             });
         }
 
-        // En la pantalla principal no mostramos el botón de volver de la toolbar inferior
-        ocultarBotonVolver();
     }
 
-    private void ocultarBotonVolver() {
-        View btnVolver = findViewById(R.id.btn_volver);
-        if (btnVolver != null) {
-            btnVolver.setVisibility(View.GONE);
-        }
-    }
+
 }

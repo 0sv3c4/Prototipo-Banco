@@ -105,7 +105,7 @@
                         android:id="@+id/tv_iban"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="ES13 0230 7800 8394 0948 8129"
+                        android:text="@string/IBAN"
                         android:textColor="@color/white"
                         android:textSize="17sp"
                         android:layout_marginTop="4dp"
@@ -325,7 +325,7 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Navigation Drawer
+    <!-- Navigation Drawer -->
     <com.google.android.material.navigation.NavigationView
         android:layout_width="290dp"
         android:layout_height="match_parent"
@@ -336,5 +336,5 @@
         android:foregroundGravity="center"
         app:itemTextColor="@color/oscuro"
         app:itemTextAppearance="@style/boton_llamativo"/>
-    -->
+
 </androidx.drawerlayout.widget.DrawerLayout>
