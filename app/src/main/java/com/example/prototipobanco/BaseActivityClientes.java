@@ -3,6 +3,7 @@ package com.example.prototipobanco;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -50,6 +51,13 @@ public class BaseActivityClientes extends AppCompatActivity implements Navigatio
         drawerLayout = findViewById(R.id.main);
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        //Acceso a perfil
+        View headerView = navigationView.getHeaderView(0);
+        headerView.setOnClickListener(v->{
+            Intent intent = new Intent(this, Accesibilidad.class); //TODO
+            startActivity(intent);
+        });
 
         TextView tituloToolbar = findViewById(R.id.titulo_toolbar);
         tituloToolbar.setText(titulo);
