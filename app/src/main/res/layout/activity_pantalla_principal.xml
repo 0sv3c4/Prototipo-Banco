@@ -71,7 +71,7 @@
                     android:layout_height="wrap_content"
                     android:checked="true"
                     app:thumbTint="@color/white"
-                    app:trackTint="@color/neutro"/>
+                    app:trackTint="@color/selector_color_switch"/>
             </LinearLayout>
 
             <!-- Tarjeta Cuenta Principal - MÁS ESTRECHA ARRIBA Y ABAJO -->
