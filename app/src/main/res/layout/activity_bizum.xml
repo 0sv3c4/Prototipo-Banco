@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    tools:openDrawer="start"
+    tools:context=".Bizum">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <!-- Header con Logo (Ovalado) -->
+        <View
+            android:id="@+id/bizum_header"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="@drawable/bg_bottom_curve"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/toolbar_superior_acc"
+            layout="@layout/toolbar_superior"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_logo_bizum"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:src="@drawable/logo_bizum"
+            app:layout_constraintBottom_toBottomOf="@+id/bizum_header"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_superior_acc" />
+
+        <!-- CONTENIDO -->
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/include_bottom_toolbar"
+            app:layout_constraintTop_toBottomOf="@id/bizum_header">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="24dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Acciones rápidas:"
+                    android:textAppearance="@style/titulo_seccion"
+                    android:textSize="20sp"
+                    android:textColor="@color/oscuro" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/bg_circle_light_purple"
+                            android:padding="15dp"
+                            android:src="@android:drawable/ic_menu_send"
+                            app:tint="@color/oscuro" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Enviar dinero"
+                            android:layout_marginTop="8dp"
+                            android:textColor="@color/oscuro"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/bg_circle_light_purple"
+                            android:padding="15dp"
+                            android:src="@android:drawable/ic_input_add"
+                            app:tint="@color/oscuro" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Solicitar dinero"
+                            android:layout_marginTop="8dp"
+                            android:textColor="@color/oscuro"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Contactos recientes:"
+                        android:textAppearance="@style/titulo_seccion"
+                        android:textSize="20sp"
+                        android:textColor="@color/oscuro" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ver todos \u2192"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/oscuro"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <!-- Lista de contactos horizontales -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="16dp"
+                    android:weightSum="4">
+                    <!-- Ejemplo Contacto -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+                        <TextView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/bg_circle_light_purple"
+                            android:gravity="center"
+                            android:text="M"
+                            android:textSize="24sp"
+                            android:textColor="@color/black" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Manuel A."
+                            android:textSize="12sp"
+                            android:layout_marginTop="4dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+                        <TextView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/bg_circle_light_purple"
+                            android:gravity="center"
+                            android:text="C"
+                            android:textSize="24sp"
+                            android:textColor="@color/black" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Claudia C."
+                            android:textSize="12sp"
+                            android:layout_marginTop="4dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+                        <TextView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/bg_circle_light_purple"
+                            android:gravity="center"
+                            android:text="J"
+                            android:textSize="24sp"
+                            android:textColor="@color/black" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Juan M."
+                            android:textSize="12sp"
+                            android:layout_marginTop="4dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+                        <TextView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/bg_circle_light_purple"
+                            android:gravity="center"
+                            android:text="\u00d3"
+                            android:textSize="24sp"
+                            android:textColor="@color/black" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="\u00d3scar T."
+                            android:textSize="12sp"
+                            android:layout_marginTop="4dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Formulario -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Destinatario"
+                    android:layout_marginTop="24dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+                <EditText
+                    android:id="@+id/et_destinatario_bizum"
+                    style="@style/cuadrado_rellenable"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:hint="Introduce un contacto"
+                    android:inputType="text"
+                    android:textColorHint="@color/claro" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Seleccionar cantidad"
+                    android:layout_marginTop="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+                <EditText
+                    android:id="@+id/et_cantidad_bizum"
+                    style="@style/cuadrado_rellenable"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:hint="Saldo"
+                    android:inputType="numberDecimal"
+                    android:textColorHint="@color/claro" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Concepto (opcional)"
+                    android:layout_marginTop="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+                <EditText
+                    android:id="@+id/et_concepto_bizum"
+                    style="@style/cuadrado_rellenable"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:hint="Escribe un mensaje..."
+                    android:inputType="text"
+                    android:textColorHint="@color/claro" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_confirmar_bizum"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Confirmar"
+                    android:textColor="@color/white"
+                    app:backgroundTint="@color/oscuro"
+                    app:cornerRadius="30dp"
+                    android:fontFamily="@font/inter_bold"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <!-- TOOLBAR INFERIOR, BOTÓN DE VOLVER -->
+        <include
+            android:id="@+id/include_bottom_toolbar"
+            layout="@layout/toolbar_inferior_clientes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="290dp"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_view"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_cabecera"
+        app:menu="@menu/nav_menu"
+        android:foregroundGravity="center"
+        app:itemTextColor="@color/oscuro"
+        app:itemTextAppearance="@style/boton_llamativo"/>
+-->
+</androidx.drawerlayout.widget.DrawerLayout>
