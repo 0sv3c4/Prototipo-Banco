@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    tools:openDrawer="start"
+    tools:context=".BalanceGeneral">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <!-- HEADER OVALADO (Estilo Bizum) -->
+        <LinearLayout
+            android:id="@+id/balance_header_container"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:gravity="bottom|center"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_superior_acc">
+
+            <View
+                android:id="@+id/fondo_redondo"
+                android:layout_width="600dp"
+                android:layout_height="510dp"
+                android:background="@drawable/bg_cabecera_drawer"
+                android:backgroundTint="@color/ultra_claro"
+                tools:ignore="VisualLintBounds" />
+        </LinearLayout>
+
+        <include
+            android:id="@+id/toolbar_superior_acc"
+            layout="@layout/toolbar_superior"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- TITULOS DENTRO DEL HEADER -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@+id/balance_header_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_superior_acc">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Balance General"
+                android:textAppearance="@style/titulo"
+                android:textSize="38sp"
+                android:textColor="@color/oscuro" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comparativa Financiera"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/neutro"
+                android:layout_marginTop="-4dp"/>
+        </LinearLayout>
+
+        <!-- CONTENIDO -->
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/include_bottom_toolbar"
+            app:layout_constraintTop_toBottomOf="@id/balance_header_container">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="24dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="24dp">
+
+                <!-- Tabs -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/bg_rellenables"
+                    android:backgroundTint="@color/mas_claro"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:id="@+id/tab_anual"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Anual"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:textColor="@color/oscuro"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tab_mensual"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Mensual"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:background="@drawable/bg_rellenables"
+                        android:backgroundTint="@color/mas_claro"
+                        android:textColor="@color/oscuro"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tab_semanal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Semanal"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:textColor="@color/oscuro"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <!-- Tarjeta Gráfico -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:layout_marginTop="32dp"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/mas_claro"
+                    app:strokeWidth="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Balance"
+                                android:textColor="@color/neutro"
+                                android:textStyle="bold"
+                                android:textSize="16sp"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+                                <View
+                                    android:layout_width="12dp"
+                                    android:layout_height="2dp"
+                                    android:background="@color/claro"
+                                    android:layout_marginEnd="4dp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="GASTOS"
+                                    android:textSize="10sp"
+                                    android:textColor="@color/oscuro"
+                                    android:layout_marginEnd="12dp"/>
+                                <View
+                                    android:layout_width="12dp"
+                                    android:layout_height="2dp"
+                                    android:background="@color/neutro"
+                                    android:layout_marginEnd="4dp"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="INGRESOS"
+                                    android:textSize="10sp"
+                                    android:textColor="@color/claro"/>
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <!-- Imagen del gráfico -->
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="8dp"
+                            android:alpha="0.3"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/logo_bizum" />
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Filtros -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/mas_claro">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="24dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:text="Desde:"
+                                android:textColor="@color/neutro"
+                                android:textSize="20sp"
+                                android:textStyle="bold"/>
+
+                            <Spinner
+                                android:id="@+id/spinner_mes_desde"
+                                android:layout_width="0dp"
+                                android:layout_height="45dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/bg_rellenables"
+                                android:backgroundTint="@color/white"
+                                android:layout_marginEnd="8dp"/>
+
+                            <Spinner
+                                android:id="@+id/spinner_anio_desde"
+                                android:layout_width="0dp"
+                                android:layout_height="45dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/bg_rellenables"
+                                android:backgroundTint="@color/white"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="20dp">
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:text="Hasta:"
+                                android:textColor="@color/neutro"
+                                android:textSize="20sp"
+                                android:textStyle="bold"/>
+
+                            <Spinner
+                                android:id="@+id/spinner_mes_hasta"
+                                android:layout_width="0dp"
+                                android:layout_height="45dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/bg_rellenables"
+                                android:backgroundTint="@color/white"
+                                android:layout_marginEnd="8dp"/>
+
+                            <Spinner
+                                android:id="@+id/spinner_anio_hasta"
+                                android:layout_width="0dp"
+                                android:layout_height="45dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/bg_rellenables"
+                                android:backgroundTint="@color/white"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <!-- TOOLBAR INFERIOR -->
+        <include
+            android:id="@+id/include_bottom_toolbar"
+            layout="@layout/toolbar_inferior_clientes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="290dp"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_view"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_cabecera"
+        app:menu="@menu/nav_menu"
+        android:foregroundGravity="center"
+        app:itemTextColor="@color/oscuro"
+        app:itemTextAppearance="@style/boton_llamativo"/>
+-->
+</androidx.drawerlayout.widget.DrawerLayout>

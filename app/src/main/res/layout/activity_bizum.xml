@@ -14,28 +14,40 @@
         android:layout_height="match_parent"
         android:background="@color/white">
 
-        <!-- Header con Logo (Ovalado) -->
-        <View
-            android:id="@+id/bizum_header"
-            android:layout_width="match_parent"
-            android:layout_height="220dp"
-            android:background="@drawable/bg_bottom_curve"
-            app:layout_constraintTop_toTopOf="parent" />
 
-        <include
-            android:id="@+id/toolbar_superior_acc"
-            layout="@layout/toolbar_superior"
-            app:layout_constraintTop_toTopOf="parent" />
+            <LinearLayout
+                android:id="@+id/bizum_header"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:gravity="bottom|center"
+                android:backgroundTint="@android:color/transparent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar_superior_acc">
+
+                <View
+                    android:id="@+id/fondo_redondo"
+                    android:layout_width="600dp"
+                    android:layout_height="510dp"
+                    android:background="@drawable/bg_cabecera_drawer"
+                    android:backgroundTint="@color/ultra_claro"
+                    tools:ignore="VisualLintBounds" />
+
+            </LinearLayout>
 
         <ImageView
             android:id="@+id/iv_logo_bizum"
             android:layout_width="250dp"
             android:layout_height="80dp"
             android:src="@drawable/logo_bizum"
-            app:layout_constraintBottom_toBottomOf="@+id/bizum_header"
+            android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar_superior_acc" />
+            app:layout_constraintTop_toTopOf="@id/bizum_header"/>
+
+        <include
+            android:id="@+id/toolbar_superior_acc"
+            layout="@layout/toolbar_superior"
+            app:layout_constraintTop_toTopOf="parent" />
+
 
         <!-- CONTENIDO -->
         <androidx.core.widget.NestedScrollView

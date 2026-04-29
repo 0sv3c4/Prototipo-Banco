@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PrototipoBanco">
         <activity
+            android:name=".BalanceGeneral"
+            android:exported="false" />
+        <activity
             android:name=".Movimientos"
             android:exported="false" />
         <activity
