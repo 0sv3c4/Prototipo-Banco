@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PrototipoBanco">
         <activity
+            android:name=".Movimientos"
+            android:exported="false" />
+        <activity
             android:name=".ContratacionServicios"
             android:exported="false" />
         <activity
@@ -43,9 +46,6 @@
             android:exported="false" />
         <activity
             android:name=".Transferencias"
-            android:exported="false" />
-        <activity
-            android:name=".Bizum"
             android:exported="false" />
         <activity
             android:name=".todosUsu.Inicio_Sesion"

@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -24,7 +23,7 @@ public class InformacionClientes extends BaseActivityClientes {
         });
 
         // Configuración de la Toolbar y Drawer heredados
-        configuracionDrawerToolbar("Información");
+        configuracionDrawerToolbar(getString(R.string.informacion));
         marchaAtras();
 
         // Lógica específica de la pantalla
@@ -43,10 +42,10 @@ public class InformacionClientes extends BaseActivityClientes {
         TextView tvVerMas = findViewById(R.id.tv_ver_mas);
         if (tvVerMas != null) {
             tvVerMas.setOnClickListener(v -> {
-                Toast.makeText(this, "Cargando más movimientos...", Toast.LENGTH_SHORT).show();
+                // Navegar a la pantalla de Movimientos
+                Intent intent = new Intent(this, Movimientos.class);
+                startActivity(intent);
             });
         }
-        
-        // Se pueden añadir más listeners para Transferir, Balance, etc.
     }
 }

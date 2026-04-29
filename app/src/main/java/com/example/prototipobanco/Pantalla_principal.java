@@ -1,13 +1,16 @@
 package com.example.prototipobanco;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.materialswitch.MaterialSwitch;
 import com.google.android.material.navigation.NavigationView;
 
@@ -35,6 +38,15 @@ public class Pantalla_principal extends BaseActivityClientes {
         tvSaldo = findViewById(R.id.tv_saldo);
         tvIban = findViewById(R.id.tv_iban);
         switchVisibilidad = findViewById(R.id.switch_visibilidad);
+
+        // Tarjeta Cuenta Principal funcional (lleva a Información Clientes)
+        MaterialCardView cardCuenta = findViewById(R.id.card_cuenta_principal);
+        if (cardCuenta != null) {
+            cardCuenta.setOnClickListener(v -> {
+                Intent intent = new Intent(this, InformacionClientes.class);
+                startActivity(intent);
+            });
+        }
 
         NavigationView navView = findViewById(R.id.nav_view);
         View headerView = navView.getHeaderView(0);

@@ -76,10 +76,14 @@
 
             <!-- Tarjeta Cuenta Principal - MÁS ESTRECHA ARRIBA Y ABAJO -->
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_cuenta_principal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="24dp"
                 android:layout_marginVertical="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
                 app:cardCornerRadius="32dp"
                 app:cardElevation="4dp"
                 app:strokeWidth="0dp">
@@ -148,14 +152,12 @@
                     android:layout_weight="1"
                     android:orientation="vertical"
                     android:gravity="center">
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:layout_width="72dp"
-                        android:layout_height="72dp"
-                        android:padding="18dp"
-                        android:src="@drawable/ic_launcher_foreground"
-                        android:background="@color/mas_claro"
-                        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
-                        app:tint="@color/black" />
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:padding="6dp"
+                        android:src="@drawable/ic_bizum"
+                        android:background="@drawable/bg_circle_light_purple" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -172,14 +174,12 @@
                     android:layout_weight="1"
                     android:orientation="vertical"
                     android:gravity="center">
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:layout_width="72dp"
-                        android:layout_height="72dp"
-                        android:padding="18dp"
-                        android:src="@drawable/ic_config"
-                        android:background="@color/mas_claro"
-                        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
-                        app:tint="@color/black" />
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:padding="6dp"
+                        android:src="@drawable/ic_balance"
+                        android:background="@drawable/bg_circle_light_purple" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -196,14 +196,12 @@
                     android:layout_weight="1"
                     android:orientation="vertical"
                     android:gravity="center">
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:layout_width="72dp"
-                        android:layout_height="72dp"
-                        android:padding="18dp"
-                        android:src="@drawable/ic_send_white"
-                        android:background="@color/mas_claro"
-                        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
-                        app:tint="@color/black" />
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:padding="6dp"
+                        android:src="@drawable/ic_transferir"
+                        android:background="@drawable/bg_circle_light_purple" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -326,6 +324,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!-- Navigation Drawer -->
+
     <com.google.android.material.navigation.NavigationView
         android:layout_width="290dp"
         android:layout_height="match_parent"
