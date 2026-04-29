@@ -74,11 +74,12 @@
                         android:orientation="vertical"
                         android:gravity="center">
                         <ImageView
+                            android:id="@+id/iv_enviar_dinero"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:background="@drawable/bg_circle_light_purple"
                             android:padding="15dp"
-                            android:src="@android:drawable/ic_menu_send"
+                            android:src="@drawable/ic_enviar_dinero"
                             app:tint="@color/oscuro" />
                         <TextView
                             android:layout_width="wrap_content"
@@ -96,11 +97,12 @@
                         android:orientation="vertical"
                         android:gravity="center">
                         <ImageView
+                            android:id="@+id/iv_solicitar_dinero"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:background="@drawable/bg_circle_light_purple"
                             android:padding="15dp"
-                            android:src="@android:drawable/ic_input_add"
+                            android:src="@drawable/ic_pedir_dinero"
                             app:tint="@color/oscuro" />
                         <TextView
                             android:layout_width="wrap_content"
@@ -293,6 +295,17 @@
                     android:fontFamily="@font/inter_bold"
                     android:textSize="18sp" />
 
+                <!-- Mensaje de error/éxito -->
+                <TextView
+                    android:id="@+id/tv_mensaje_bizum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
 
@@ -306,7 +319,6 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!--
     <com.google.android.material.navigation.NavigationView
         android:layout_width="290dp"
         android:layout_height="match_parent"
@@ -317,5 +329,5 @@
         android:foregroundGravity="center"
         app:itemTextColor="@color/oscuro"
         app:itemTextAppearance="@style/boton_llamativo"/>
--->
+
 </androidx.drawerlayout.widget.DrawerLayout>

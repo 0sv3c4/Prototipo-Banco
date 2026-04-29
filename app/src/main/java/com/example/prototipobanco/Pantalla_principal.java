@@ -39,6 +39,15 @@ public class Pantalla_principal extends BaseActivityClientes {
         tvIban = findViewById(R.id.tv_iban);
         switchVisibilidad = findViewById(R.id.switch_visibilidad);
 
+        // Botón Bizum funcional
+        LinearLayout btnBizum = findViewById(R.id.btn_bizum_principal);
+        if (btnBizum != null) {
+            btnBizum.setOnClickListener(v -> {
+                Intent intent = new Intent(this, Bizum.class);
+                startActivity(intent);
+            });
+        }
+
         // Tarjeta Cuenta Principal funcional (lleva a Información Clientes)
         MaterialCardView cardCuenta = findViewById(R.id.card_cuenta_principal);
         if (cardCuenta != null) {

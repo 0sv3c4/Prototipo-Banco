@@ -21,6 +21,9 @@
             android:name=".ContratacionServicios"
             android:exported="false" />
         <activity
+            android:name=".Bizum"
+            android:exported="false" />
+        <activity
             android:name=".Pantalla_principal"
             android:exported="false" />
         <activity
