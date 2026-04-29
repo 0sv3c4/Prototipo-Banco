@@ -1,23 +1,23 @@
 package com.example.prototipobanco;
 
+import android.app.AlertDialog;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.google.android.material.button.MaterialButton;
-
 public class Bizum extends BaseActivityClientes {
 
     private ImageView btnEnviar, btnSolicitar;
     private EditText etDestinatario, etCantidad, etConcepto;
-    private MaterialButton btnConfirmar;
+    private Button btnConfirmar;
     private boolean isEnviarSelected = false;
     private boolean isSolicitarSelected = false;
 
@@ -39,9 +39,6 @@ public class Bizum extends BaseActivityClientes {
     }
 
     private void initViews() {
-        // Obtenemos los ImageViews dentro de sus respectivos contenedores
-        // Como no tienen ID propio, los buscamos por su posición o añadimos IDs en el XML si es necesario.
-        // He actualizado el XML para que tengan IDs: iv_enviar_dinero y iv_solicitar_dinero
         btnEnviar = findViewById(R.id.iv_enviar_dinero);
         btnSolicitar = findViewById(R.id.iv_solicitar_dinero);
         etDestinatario = findViewById(R.id.et_destinatario_bizum);
@@ -54,31 +51,34 @@ public class Bizum extends BaseActivityClientes {
         btnEnviar.setOnClickListener(v -> toggleOption(true));
         btnSolicitar.setOnClickListener(v -> toggleOption(false));
 
-        View.OnFocusChangeListener focusListener = (v, hasFocus) -> {
+        View.OnFocusChangeListener selectionCheckListener = (v, hasFocus) -> {
             if (hasFocus && !isEnviarSelected && !isSolicitarSelected) {
-                showError("Selecciona primero una opción: Enviar dinero / Solicitar dinero");
-                v.clearFocus();
+                v.clearFocus(); // Evita que se abra el teclado
+                mostrarDialogo(R.layout.mensaje_error_bizum_seleccion);
             }
         };
 
-        etDestinatario.setOnFocusChangeListener(focusListener);
-        etCantidad.setOnFocusChangeListener(focusListener);
-        etConcepto.setOnFocusChangeListener(focusListener);
+        etDestinatario.setOnFocusChangeListener(selectionCheckListener);
+        etCantidad.setOnFocusChangeListener(selectionCheckListener);
+        etConcepto.setOnFocusChangeListener(selectionCheckListener);
 
         btnConfirmar.setOnClickListener(v -> {
             if (!isEnviarSelected && !isSolicitarSelected) {
-                showError("Selecciona primero una opción: Enviar dinero / Solicitar dinero");
+                mostrarDialogo(R.layout.mensaje_error_bizum_seleccion);
                 return;
             }
 
-            String destinatario = etDestinatario.getText().toString().trim();
-            String cantidad = etCantidad.getText().toString().trim();
+            String dest = etDestinatario.getText().toString().trim();
+            String cant = etCantidad.getText().toString().trim();
 
-            if (destinatario.isEmpty() || cantidad.isEmpty()) {
-                showError("Debes rellenar el destinatario y la cantidad");
+            if (dest.isEmpty() || cant.isEmpty()) {
+                mostrarDialogo(R.layout.mensaje_error_bizum_campos);
             } else {
-                String mensaje = isEnviarSelected ? "Dinero enviado con éxito" : "Dinero solicitado con éxito";
-                showSuccess(mensaje);
+                if (isEnviarSelected) {
+                    mostrarDialogo(R.layout.mensaje_exito_envio);
+                } else {
+                    mostrarDialogo(R.layout.mensaje_exito_recibir);
+                }
             }
         });
     }
@@ -95,24 +95,37 @@ public class Bizum extends BaseActivityClientes {
     }
 
     private void updateVisualState() {
-        // Cambiamos el fondo para indicar selección
-        btnEnviar.setBackgroundResource(isEnviarSelected ? R.drawable.bg_circle_purple : R.drawable.bg_circle_light_purple);
-        btnSolicitar.setBackgroundResource(isSolicitarSelected ? R.drawable.bg_circle_purple : R.drawable.bg_circle_light_purple);
+        // Seleccionado -> color oscuro con icono blanco, No seleccionado -> color claro con icono oscuro
+        if (isEnviarSelected) {
+            btnEnviar.setBackgroundResource(R.drawable.bg_circle_purple);
+            btnEnviar.setColorFilter(getResources().getColor(R.color.white));
+        } else {
+            btnEnviar.setBackgroundResource(R.drawable.bg_circle_light_purple);
+            btnEnviar.setColorFilter(getResources().getColor(R.color.oscuro));
+        }
+
+        if (isSolicitarSelected) {
+            btnSolicitar.setBackgroundResource(R.drawable.bg_circle_purple);
+            btnSolicitar.setColorFilter(getResources().getColor(R.color.white));
+        } else {
+            btnSolicitar.setBackgroundResource(R.drawable.bg_circle_light_purple);
+            btnSolicitar.setColorFilter(getResources().getColor(R.color.oscuro));
+        }
+    }
+
+    private void mostrarDialogo(int layoutId) {
+        View view = LayoutInflater.from(this).inflate(layoutId, null);
+        Button btnAceptar = view.findViewById(R.id.btn_aceptar_alerta);
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(view);
+        AlertDialog alertDialog = builder.create();
         
-        // También podemos cambiar el tinte del icono para mejor contraste
-        btnEnviar.setColorFilter(getResources().getColor(isEnviarSelected ? R.color.white : R.color.oscuro));
-        btnSolicitar.setColorFilter(getResources().getColor(isSolicitarSelected ? R.color.white : R.color.oscuro));
-    }
+        if (alertDialog.getWindow() != null) {
+            alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+        }
 
-    private void showError(String message) {
-        // Simulando el comportamiento de error de Inicio_Sesion
-        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
-        // Podrías inflar un layout personalizado aquí si tienes uno específico para errores
-    }
-
-    private void showSuccess(String message) {
-        // Simulando el comportamiento de éxito de promociones_banco
-        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
-        // Podrías inflar un layout personalizado aquí si tienes uno específico para éxito
+        btnAceptar.setOnClickListener(v -> alertDialog.dismiss());
+        alertDialog.show();
     }
 }
