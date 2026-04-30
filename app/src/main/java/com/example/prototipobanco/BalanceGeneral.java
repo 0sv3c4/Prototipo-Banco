@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -17,7 +18,7 @@ public class BalanceGeneral extends BaseActivityClientes {
 
     private Spinner spinnerMesDesde, spinnerAnioDesde, spinnerMesHasta, spinnerAnioHasta;
     private ImageView ivGrafico;
-    private View btnAnual, btnMensual, btnSemanal;
+    private TextView btnAnual, btnMensual, btnSemanal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,24 +47,39 @@ public class BalanceGeneral extends BaseActivityClientes {
         spinnerAnioHasta = findViewById(R.id.spinner_anio_hasta);
         ivGrafico = findViewById(R.id.iv_grafico_balance);
         
-        btnAnual = findViewById(R.id.view_click_anual);
-        btnMensual = findViewById(R.id.view_click_mensual);
-        btnSemanal = findViewById(R.id.view_click_semanal);
+        btnAnual = findViewById(R.id.btn_anual);
+        btnMensual = findViewById(R.id.btn_mensual);
+        btnSemanal = findViewById(R.id.btn_semanal);
     }
 
     private void setupPeriodSelectors() {
         btnAnual.setOnClickListener(v -> {
-            ivGrafico.setImageResource(R.drawable.Gráfico_ano);
-            // Aquí se podría añadir lógica para marcar visualmente si hubiera assets separados
+            ivGrafico.setImageResource(R.drawable.grafico_ano);
+            marcarBoton(btnAnual);
         });
 
         btnMensual.setOnClickListener(v -> {
-            ivGrafico.setImageResource(R.drawable.Gráfico_mes);
+            ivGrafico.setImageResource(R.drawable.grafico_mes);
+            marcarBoton(btnMensual);
         });
 
         btnSemanal.setOnClickListener(v -> {
-            ivGrafico.setImageResource(R.drawable.Gráfico_sem);
+            ivGrafico.setImageResource(R.drawable.grafico_sem);
+            marcarBoton(btnSemanal);
         });
+
+        // Por defecto marcamos mensual para coincidir con la imagen inicial
+        marcarBoton(btnMensual);
+    }
+
+    private void marcarBoton(TextView seleccionado) {
+        // Resetear todos al estado por defecto (blanco/transparente)
+        btnAnual.setBackgroundTintList(null);
+        btnMensual.setBackgroundTintList(null);
+        btnSemanal.setBackgroundTintList(null);
+
+        // Aplicar el color de marcado al seleccionado (usando mas_claro de tu proyecto)
+        seleccionado.setBackgroundTintList(android.content.res.ColorStateList.valueOf(getResources().getColor(R.color.mas_claro)));
     }
 
     private void setupSpinners() {
