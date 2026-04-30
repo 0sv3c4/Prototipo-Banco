@@ -3,6 +3,7 @@ package com.example.prototipobanco;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -44,6 +45,24 @@ public class Pantalla_principal extends BaseActivityClientes {
         if (btnBizum != null) {
             btnBizum.setOnClickListener(v -> {
                 Intent intent = new Intent(this, Bizum.class);
+                startActivity(intent);
+            });
+        }
+
+        // Botón Balance funcional
+        LinearLayout btnBalance = findViewById(R.id.btn_balance_principal);
+        if (btnBalance != null) {
+            btnBalance.setOnClickListener(v -> {
+                Intent intent = new Intent(this, BalanceGeneral.class);
+                startActivity(intent);
+            });
+        }
+
+        // Botón Transferir funcional
+        LinearLayout btnTransferir = findViewById(R.id.btn_transferir_principal);
+        if (btnTransferir != null) {
+            btnTransferir.setOnClickListener(v -> {
+                Intent intent = new Intent(this, Transferencias.class);
                 startActivity(intent);
             });
         }

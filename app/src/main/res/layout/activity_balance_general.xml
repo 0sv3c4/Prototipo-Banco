@@ -14,7 +14,7 @@
         android:layout_height="match_parent"
         android:background="@color/white">
 
-        <!-- HEADER OVALADO (Estilo Bizum) -->
+        <!-- HEADER OVALADO -->
         <LinearLayout
             android:id="@+id/balance_header_container"
             android:layout_width="match_parent"
@@ -80,58 +80,60 @@
                 android:paddingTop="16dp"
                 android:paddingBottom="24dp">
 
-                <!-- Tabs -->
-                <LinearLayout
+                <!-- Selector de Periodo con Imagen -->
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:background="@drawable/bg_rellenables"
-                    android:backgroundTint="@color/mas_claro"
-                    android:padding="4dp">
+                    android:layout_height="60dp"
+                    android:layout_marginTop="16dp">
 
-                    <TextView
-                        android:id="@+id/tab_anual"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Anual"
-                        android:gravity="center"
-                        android:padding="10dp"
-                        android:textColor="@color/oscuro"
-                        android:textStyle="bold"/>
+                    <ImageView
+                        android:id="@+id/iv_periodo_selector"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_anual_mensual_semanal"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
 
-                    <TextView
-                        android:id="@+id/tab_mensual"
+                    <!-- Zonas de clic transparentes -->
+                    <View
+                        android:id="@+id/view_click_anual"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Mensual"
-                        android:gravity="center"
-                        android:padding="10dp"
-                        android:background="@drawable/bg_rellenables"
-                        android:backgroundTint="@color/mas_claro"
-                        android:textColor="@color/oscuro"
-                        android:textStyle="bold"/>
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/view_click_mensual"
+                        app:layout_constraintHorizontal_weight="1" />
 
-                    <TextView
-                        android:id="@+id/tab_semanal"
+                    <View
+                        android:id="@+id/view_click_mensual"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Semanal"
-                        android:gravity="center"
-                        android:padding="10dp"
-                        android:textColor="@color/oscuro"
-                        android:textStyle="bold"/>
-                </LinearLayout>
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        app:layout_constraintStart_toEndOf="@+id/view_click_anual"
+                        app:layout_constraintEnd_toStartOf="@+id/view_click_semanal"
+                        app:layout_constraintHorizontal_weight="1" />
+
+                    <View
+                        android:id="@+id/view_click_semanal"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        app:layout_constraintStart_toEndOf="@+id/view_click_mensual"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_weight="1" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <!-- Tarjeta Gráfico -->
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
-                    android:layout_height="280dp"
-                    android:layout_marginTop="32dp"
+                    android:layout_height="320dp"
+                    android:layout_marginTop="24dp"
                     app:cardCornerRadius="24dp"
-                    app:cardElevation="0dp"
+                    app:cardElevation="4dp"
                     app:cardBackgroundColor="@color/mas_claro"
                     app:strokeWidth="0dp">
 
@@ -184,14 +186,14 @@
                             </LinearLayout>
                         </RelativeLayout>
 
-                        <!-- Imagen del gráfico -->
+                        <!-- Imagen del gráfico (Cambiará según la selección) -->
                         <ImageView
+                            android:id="@+id/iv_grafico_balance"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginTop="8dp"
-                            android:alpha="0.3"
                             android:scaleType="fitCenter"
-                            android:src="@drawable/logo_bizum" />
+                            android:src="@drawable/Gráfico_mes" />
 
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
@@ -202,8 +204,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
                     app:cardCornerRadius="24dp"
-                    app:cardElevation="0dp"
-                    app:cardBackgroundColor="@color/mas_claro">
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="@color/mas_claro"
+                    app:strokeWidth="0dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -280,7 +283,6 @@
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
 
-        <!-- TOOLBAR INFERIOR -->
         <include
             android:id="@+id/include_bottom_toolbar"
             layout="@layout/toolbar_inferior_clientes"
@@ -289,7 +291,7 @@
             app:layout_constraintBottom_toBottomOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-<!--
+
     <com.google.android.material.navigation.NavigationView
         android:layout_width="290dp"
         android:layout_height="match_parent"
@@ -300,5 +302,5 @@
         android:foregroundGravity="center"
         app:itemTextColor="@color/oscuro"
         app:itemTextAppearance="@style/boton_llamativo"/>
--->
+
 </androidx.drawerlayout.widget.DrawerLayout>

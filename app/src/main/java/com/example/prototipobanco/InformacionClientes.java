@@ -31,6 +31,7 @@ public class InformacionClientes extends BaseActivityClientes {
     }
 
     private void setupListeners() {
+        // Botón Bizum
         ImageView btnBizum = findViewById(R.id.btn_bizum_info);
         if (btnBizum != null) {
             btnBizum.setOnClickListener(v -> {
@@ -39,10 +40,19 @@ public class InformacionClientes extends BaseActivityClientes {
             });
         }
 
+        // Botón Balance (Añadido para corregir el error del usuario)
+        ImageView btnBalance = findViewById(R.id.btn_balance_info);
+        if (btnBalance != null) {
+            btnBalance.setOnClickListener(v -> {
+                Intent intent = new Intent(this, BalanceGeneral.class);
+                startActivity(intent);
+            });
+        }
+
+        // Botón "Ver más" para movimientos
         TextView tvVerMas = findViewById(R.id.tv_ver_mas);
         if (tvVerMas != null) {
             tvVerMas.setOnClickListener(v -> {
-                // Navegar a la pantalla de Movimientos
                 Intent intent = new Intent(this, Movimientos.class);
                 startActivity(intent);
             });
