@@ -25,7 +25,7 @@
             <androidx.core.widget.NestedScrollView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                app:layout_constraintBottom_toTopOf="@+id/include_bottom_toolbar"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/toolbar_superior_acc">
 
                 <LinearLayout
@@ -33,7 +33,12 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:padding="24dp">
+                    <!-- INSERTAR AQUÍ EL CONTENIDO -->
 
+                    <!-- Para que se pueda ver todas las opciones-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"/>
 
                 </LinearLayout>
             </androidx.core.widget.NestedScrollView>
