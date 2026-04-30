@@ -2,7 +2,7 @@ package com.example.prototipobanco;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ImageView;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.core.graphics.Insets;
@@ -31,8 +31,8 @@ public class InformacionClientes extends BaseActivityClientes {
     }
 
     private void setupListeners() {
-        // Botón Bizum
-        ImageView btnBizum = findViewById(R.id.btn_bizum_info);
+        // Botón Bizum (ahora buscado como View para evitar ClassCastException)
+        View btnBizum = findViewById(R.id.btn_bizum_info);
         if (btnBizum != null) {
             btnBizum.setOnClickListener(v -> {
                 Intent intent = new Intent(this, Bizum.class);
@@ -40,11 +40,20 @@ public class InformacionClientes extends BaseActivityClientes {
             });
         }
 
-        // Botón Balance (Añadido para corregir el error del usuario)
-        ImageView btnBalance = findViewById(R.id.btn_balance_info);
+        // Botón Balance
+        View btnBalance = findViewById(R.id.btn_balance_info);
         if (btnBalance != null) {
             btnBalance.setOnClickListener(v -> {
                 Intent intent = new Intent(this, BalanceGeneral.class);
+                startActivity(intent);
+            });
+        }
+
+        // Botón Transferir
+        View btnTransferir = findViewById(R.id.btn_transferir_info);
+        if (btnTransferir != null) {
+            btnTransferir.setOnClickListener(v -> {
+                Intent intent = new Intent(this, Transferencias.class);
                 startActivity(intent);
             });
         }

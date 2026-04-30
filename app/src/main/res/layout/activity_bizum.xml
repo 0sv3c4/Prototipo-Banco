@@ -138,12 +138,15 @@
                         android:textSize="20sp"
                         android:textColor="@color/oscuro" />
                     <TextView
+                        android:id="@+id/btn_ver_todos"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Ver todos \u2192"
                         android:layout_alignParentEnd="true"
                         android:textColor="@color/oscuro"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:clickable="true"
+                        android:focusable="true"/>
                 </RelativeLayout>
 
                 <!-- Lista de contactos horizontales -->
@@ -153,13 +156,16 @@
                     android:orientation="horizontal"
                     android:layout_marginTop="16dp"
                     android:weightSum="4">
-                    <!-- Ejemplo Contacto -->
+                    <!-- Contactos con IDs para funcionalidad -->
                     <LinearLayout
+                        android:id="@+id/btn_contacto_m"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical"
-                        android:gravity="center">
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:focusable="true">
                         <TextView
                             android:layout_width="60dp"
                             android:layout_height="60dp"
@@ -176,11 +182,14 @@
                             android:layout_marginTop="4dp" />
                     </LinearLayout>
                     <LinearLayout
+                        android:id="@+id/btn_contacto_c"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical"
-                        android:gravity="center">
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:focusable="true">
                         <TextView
                             android:layout_width="60dp"
                             android:layout_height="60dp"
@@ -197,11 +206,14 @@
                             android:layout_marginTop="4dp" />
                     </LinearLayout>
                     <LinearLayout
+                        android:id="@+id/btn_contacto_j"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical"
-                        android:gravity="center">
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:focusable="true">
                         <TextView
                             android:layout_width="60dp"
                             android:layout_height="60dp"
@@ -218,11 +230,14 @@
                             android:layout_marginTop="4dp" />
                     </LinearLayout>
                     <LinearLayout
+                        android:id="@+id/btn_contacto_o"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical"
-                        android:gravity="center">
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:focusable="true">
                         <TextView
                             android:layout_width="60dp"
                             android:layout_height="60dp"
