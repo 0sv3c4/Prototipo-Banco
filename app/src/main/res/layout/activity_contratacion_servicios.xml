@@ -26,7 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:fillViewport="true"
-            app:layout_constraintBottom_toTopOf="@+id/include_bottom_toolbar"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/toolbar_superior_acc">
 
             <LinearLayout
@@ -305,7 +305,14 @@
                         app:backgroundTint="@color/mas_claro"
                         app:cornerRadius="20dp" />
                 </LinearLayout>
+
+                <!-- Para que se pueda ver todas las opciones-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"/>
+
             </LinearLayout>
+
         </androidx.core.widget.NestedScrollView>
 
         <!-- TOOLBAR INFERIOR, BOTÓN DE VOLVER -->
