@@ -158,18 +158,18 @@ public class Bizum extends BaseActivityClientes {
     private void updateVisualState() {
         if (isEnviarSelected) {
             btnEnviar.setBackgroundResource(R.drawable.bg_circle_purple);
-            btnEnviar.setColorFilter(getResources().getColor(R.color.white));
+            btnEnviar.setColorFilter(ContextCompat.getColor(this, R.color.white));
         } else {
             btnEnviar.setBackgroundResource(R.drawable.bg_circle_light_purple);
-            btnEnviar.setColorFilter(getResources().getColor(R.color.oscuro));
+            btnEnviar.setColorFilter(ContextCompat.getColor(this, R.color.oscuro));
         }
 
         if (isSolicitarSelected) {
             btnSolicitar.setBackgroundResource(R.drawable.bg_circle_purple);
-            btnSolicitar.setColorFilter(getResources().getColor(R.color.white));
+            btnSolicitar.setColorFilter(ContextCompat.getColor(this, R.color.white));
         } else {
             btnSolicitar.setBackgroundResource(R.drawable.bg_circle_light_purple);
-            btnSolicitar.setColorFilter(getResources().getColor(R.color.oscuro));
+            btnSolicitar.setColorFilter(ContextCompat.getColor(this, R.color.oscuro));
         }
     }
 
