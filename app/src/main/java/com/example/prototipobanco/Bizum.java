@@ -60,7 +60,7 @@ public class Bizum extends BaseActivityClientes {
             return insets;
         });
 
-        configuracionDrawerToolbar("Bizum");
+        configuracionDrawerToolbar("");
         marchaAtras();
         initViews();
         setupListeners();

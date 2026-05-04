@@ -14,63 +14,19 @@
         android:layout_height="match_parent"
         android:background="@color/white">
 
-        <!-- HEADER OVALADO -->
-        <LinearLayout
-            android:id="@+id/balance_header_container"
-            android:layout_width="match_parent"
-            android:layout_height="130dp"
-            android:gravity="bottom|center"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar_superior_acc">
-
-            <View
-                android:id="@+id/fondo_redondo"
-                android:layout_width="600dp"
-                android:layout_height="510dp"
-                android:background="@drawable/bg_cabecera_drawer"
-                android:backgroundTint="@color/ultra_claro"
-                tools:ignore="VisualLintBounds" />
-        </LinearLayout>
 
         <include
             android:id="@+id/toolbar_superior_acc"
             layout="@layout/toolbar_superior"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- TITULOS -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            app:layout_constraintBottom_toBottomOf="@+id/balance_header_container"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar_superior_acc">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Balance General"
-                android:textAppearance="@style/titulo"
-                android:textSize="38sp"
-                android:textColor="@color/oscuro" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Comparativa Financiera"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="@color/neutro"
-                android:layout_marginTop="-4dp"/>
-        </LinearLayout>
 
         <!-- CONTENIDO -->
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@+id/include_bottom_toolbar"
-            app:layout_constraintTop_toBottomOf="@id/balance_header_container">
+            app:layout_constraintBottom_toBottomOf="@+id/include_bottom_toolbar"
+            app:layout_constraintTop_toTopOf="@id/balance_header_container">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -79,6 +35,11 @@
                 android:paddingHorizontal="24dp"
                 android:paddingTop="16dp"
                 android:paddingBottom="24dp">
+
+                <!-- Para que se pueda ver todas las opciones-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"/>
 
                 <!-- Botones Separados (Anual, Mensual, Semanal) -->
                 <LinearLayout
@@ -280,8 +241,59 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
+                <!-- Para que se pueda ver todas las opciones-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"/>
+
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
+
+        <!-- TITULOS -->
+        <!-- HEADER OVALADO -->
+        <LinearLayout
+            android:id="@+id/balance_header_container"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:gravity="bottom|center"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_superior_acc">
+
+            <View
+                android:id="@+id/fondo_redondo"
+                android:layout_width="600dp"
+                android:layout_height="510dp"
+                android:background="@drawable/bg_cabecera_drawer"
+                android:backgroundTint="@color/ultra_claro"
+                tools:ignore="VisualLintBounds" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@+id/balance_header_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_superior_acc">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Balance General"
+                android:textAppearance="@style/titulo"
+                android:textSize="38sp"
+                android:textColor="@color/oscuro" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comparativa Financiera"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/neutro"
+                android:layout_marginTop="-4dp"/>
+        </LinearLayout>
 
         <include
             android:id="@+id/include_bottom_toolbar"
@@ -291,7 +303,7 @@
             app:layout_constraintBottom_toBottomOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
+<!--
     <com.google.android.material.navigation.NavigationView
         android:layout_width="290dp"
         android:layout_height="match_parent"
@@ -302,5 +314,5 @@
         android:foregroundGravity="center"
         app:itemTextColor="@color/oscuro"
         app:itemTextAppearance="@style/boton_llamativo"/>
-
+-->
 </androidx.drawerlayout.widget.DrawerLayout>
