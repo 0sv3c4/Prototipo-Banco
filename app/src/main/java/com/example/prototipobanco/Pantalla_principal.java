@@ -67,6 +67,15 @@ public class Pantalla_principal extends BaseActivityClientes {
             });
         }
 
+        // Botón Servicios funcional
+        LinearLayout btnServicios = findViewById(R.id.btn_servicios_principal);
+        if (btnServicios != null) {
+            btnServicios.setOnClickListener(v -> {
+                Intent intent = new Intent(this, ContratacionServicios.class);
+                startActivity(intent);
+            });
+        }
+
         // Tarjeta Cuenta Principal funcional (lleva a Información Clientes)
         MaterialCardView cardCuenta = findViewById(R.id.card_cuenta_principal);
         if (cardCuenta != null) {
