@@ -32,7 +32,7 @@ public class BalanceGeneral extends BaseActivityClientes {
         });
 
         // Configuración de la Toolbar y Drawer heredados
-        configuracionDrawerToolbar("Balance");
+        configuracionDrawerToolbar("");
         marchaAtras();
 
         initViews();
