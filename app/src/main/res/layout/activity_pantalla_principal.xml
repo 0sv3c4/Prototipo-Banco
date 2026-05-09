@@ -212,7 +212,7 @@
                         android:layout_width="70dp"
                         android:layout_height="70dp"
                         android:padding="6dp"
-                        android:src="@drawable/ic_send_white"
+                        android:src="@drawable/ic_transferir"
                         android:background="@drawable/bg_circle_light_purple" />
                     <TextView
                         android:layout_width="wrap_content"
@@ -238,7 +238,7 @@
                         android:layout_width="70dp"
                         android:layout_height="70dp"
                         android:padding="6dp"
-                        android:src="@drawable/ic_map"
+                        android:src="@drawable/ic_servicios"
                         android:background="@drawable/bg_circle_light_purple" />
                     <TextView
                         android:layout_width="wrap_content"

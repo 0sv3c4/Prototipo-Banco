@@ -186,7 +186,7 @@
                             <ImageView
                                 android:layout_width="28dp"
                                 android:layout_height="28dp"
-                                android:src="@drawable/ic_launcher_foreground"
+                                android:src="@drawable/ic_agenda"
                                 app:tint="@color/black" />
 
                             <com.google.android.material.button.MaterialButton
@@ -215,7 +215,7 @@
                             <ImageView
                                 android:layout_width="28dp"
                                 android:layout_height="28dp"
-                                android:src="@android:drawable/ic_input_add"
+                                android:src="@drawable/ic_mas"
                                 app:tint="@color/black" />
 
                             <com.google.android.material.button.MaterialButton
@@ -297,7 +297,7 @@
                             <ImageView
                                 android:layout_width="28dp"
                                 android:layout_height="28dp"
-                                android:src="@drawable/ic_config"
+                                android:src="@drawable/ic_importe"
                                 app:tint="@color/black" />
 
                             <EditText
@@ -323,7 +323,7 @@
                             <ImageView
                                 android:layout_width="28dp"
                                 android:layout_height="28dp"
-                                android:src="@drawable/ic_launcher_foreground"
+                                android:src="@drawable/ic_concepto"
                                 app:tint="@color/black" />
 
                             <EditText
