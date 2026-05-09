@@ -2,7 +2,10 @@ package com.example.prototipobanco;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -19,11 +22,13 @@ public class Pantalla_principal extends BaseActivityClientes {
 
     private TextView tvSaldo, tvIban;
     private MaterialSwitch switchVisibilidad;
+    private ImageView ivTarjetaNfc;
+    private View layoutNfcBottom;
+    private GestureDetector gestureDetector;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // Establecemos el layout específico que incluye el contenido de la imagen
         setContentView(R.layout.activity_pantalla_principal);
         
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -32,64 +37,47 @@ public class Pantalla_principal extends BaseActivityClientes {
             return insets;
         });
 
-        // Configuramos el Drawer y Toolbar de la clase base (título vacío según la imagen)
         configuracionDrawerToolbar("");
 
-        // Inicializar componentes de la UI
+        // Inicializar componentes
         tvSaldo = findViewById(R.id.tv_saldo);
         tvIban = findViewById(R.id.tv_iban);
         switchVisibilidad = findViewById(R.id.switch_visibilidad);
+        ivTarjetaNfc = findViewById(R.id.iv_tarjeta_nfc_full);
+        layoutNfcBottom = findViewById(R.id.layout_nfc_bottom);
 
-        // Botón Bizum funcional
+        // Configurar botones de navegación
+        configurarNavegacion();
+
+        // Configurar lógica de visibilidad
+        configurarVisibilidad();
+
+        // Configurar gestos NFC
+        configurarGestosNfc();
+    }
+
+    private void configurarNavegacion() {
         LinearLayout btnBizum = findViewById(R.id.btn_bizum_principal);
-        if (btnBizum != null) {
-            btnBizum.setOnClickListener(v -> {
-                Intent intent = new Intent(this, Bizum.class);
-                startActivity(intent);
-            });
-        }
+        if (btnBizum != null) btnBizum.setOnClickListener(v -> startActivity(new Intent(this, Bizum.class)));
 
-        // Botón Balance funcional
         LinearLayout btnBalance = findViewById(R.id.btn_balance_principal);
-        if (btnBalance != null) {
-            btnBalance.setOnClickListener(v -> {
-                Intent intent = new Intent(this, BalanceGeneral.class);
-                startActivity(intent);
-            });
-        }
+        if (btnBalance != null) btnBalance.setOnClickListener(v -> startActivity(new Intent(this, BalanceGeneral.class)));
 
-        // Botón Transferir funcional
         LinearLayout btnTransferir = findViewById(R.id.btn_transferir_principal);
-        if (btnTransferir != null) {
-            btnTransferir.setOnClickListener(v -> {
-                Intent intent = new Intent(this, Transferencias.class);
-                startActivity(intent);
-            });
-        }
+        if (btnTransferir != null) btnTransferir.setOnClickListener(v -> startActivity(new Intent(this, Transferencias.class)));
 
-        // Botón Servicios funcional
         LinearLayout btnServicios = findViewById(R.id.btn_servicios_principal);
-        if (btnServicios != null) {
-            btnServicios.setOnClickListener(v -> {
-                Intent intent = new Intent(this, ContratacionServicios.class);
-                startActivity(intent);
-            });
-        }
+        if (btnServicios != null) btnServicios.setOnClickListener(v -> startActivity(new Intent(this, ContratacionServicios.class)));
 
-        // Tarjeta Cuenta Principal funcional (lleva a Información Clientes)
         MaterialCardView cardCuenta = findViewById(R.id.card_cuenta_principal);
-        if (cardCuenta != null) {
-            cardCuenta.setOnClickListener(v -> {
-                Intent intent = new Intent(this, InformacionClientes.class);
-                startActivity(intent);
-            });
-        }
+        if (cardCuenta != null) cardCuenta.setOnClickListener(v -> startActivity(new Intent(this, InformacionClientes.class)));
+    }
 
+    private void configurarVisibilidad() {
         NavigationView navView = findViewById(R.id.nav_view);
         View headerView = navView.getHeaderView(0);
         TextView tvSaldoNav = headerView.findViewById(R.id.tv_saldo_nav);
 
-        // Lógica para alternar la visibilidad de los datos sensibles
         if (switchVisibilidad != null) {
             switchVisibilidad.setOnCheckedChangeListener((buttonView, isChecked) -> {
                 if (isChecked) {
@@ -103,8 +91,64 @@ public class Pantalla_principal extends BaseActivityClientes {
                 }
             });
         }
-
     }
 
+    private void configurarGestosNfc() {
+        gestureDetector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener() {
+            private static final int SWIPE_THRESHOLD = 100;
+            private static final int SWIPE_VELOCITY_THRESHOLD = 100;
 
+            @Override
+            public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+                float diffY = e2.getY() - e1.getY();
+                if (Math.abs(diffY) > SWIPE_THRESHOLD && Math.abs(velocityY) > SWIPE_VELOCITY_THRESHOLD) {
+                    if (diffY < 0) {
+                        mostrarTarjeta();
+                    } else {
+                        ocultarTarjeta();
+                    }
+                    return true;
+                }
+                return false;
+            }
+        });
+
+        if (layoutNfcBottom != null) {
+            layoutNfcBottom.setOnTouchListener((v, event) -> {
+                gestureDetector.onTouchEvent(event);
+                return true;
+            });
+        }
+
+        if (ivTarjetaNfc != null) {
+            ivTarjetaNfc.setOnTouchListener((v, event) -> {
+                gestureDetector.onTouchEvent(event);
+                return true;
+            });
+        }
+    }
+
+    private void mostrarTarjeta() {
+        if (ivTarjetaNfc != null && ivTarjetaNfc.getVisibility() != View.VISIBLE) {
+            ivTarjetaNfc.setVisibility(View.VISIBLE);
+            ivTarjetaNfc.animate()
+                    .translationY(0)
+                    .alpha(1.0f)
+                    .setDuration(400)
+                    .setInterpolator(new AccelerateDecelerateInterpolator())
+                    .start();
+        }
+    }
+
+    private void ocultarTarjeta() {
+        if (ivTarjetaNfc != null && ivTarjetaNfc.getVisibility() == View.VISIBLE) {
+            ivTarjetaNfc.animate()
+                    .translationY(500)
+                    .alpha(0.0f)
+                    .setDuration(400)
+                    .setInterpolator(new AccelerateDecelerateInterpolator())
+                    .withEndAction(() -> ivTarjetaNfc.setVisibility(View.GONE))
+                    .start();
+        }
+    }
 }
