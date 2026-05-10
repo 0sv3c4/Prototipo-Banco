@@ -14,287 +14,293 @@
         android:layout_height="match_parent"
         android:background="@color/white">
 
-
-        <include
-            android:id="@+id/toolbar_superior_acc"
-            layout="@layout/toolbar_superior"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-        <!-- CONTENIDO -->
+        <!-- CONTENIDO SCROLLABLE (Va primero para quedar por debajo de las toolbars) -->
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="@+id/include_bottom_toolbar"
-            app:layout_constraintTop_toTopOf="@id/balance_header_container">
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_superior_acc">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:paddingHorizontal="24dp"
-                android:paddingTop="16dp"
-                android:paddingBottom="24dp">
+                android:paddingBottom="40dp">
 
-                <!-- Para que se pueda ver todas las opciones-->
-                <View
+                <!-- HEADER INTEGRADO EN EL SCROLL (Se esconde al subir) -->
+                <FrameLayout
+                    android:id="@+id/header_container_balance"
                     android:layout_width="match_parent"
-                    android:layout_height="120dp"/>
+                    android:layout_height="140dp">
 
-                <!-- Botones Separados (Anual, Mensual, Semanal) -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:layout_marginTop="-100dp"
+                        android:background="@drawable/bg_bottom_curve"
+                        android:backgroundTint="@color/ultra_claro" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Balance General"
+                            android:textAppearance="@style/titulo"
+                            android:textColor="@color/oscuro"
+                            android:textSize="38sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="-4dp"
+                            android:text="Comparativa Financiera"
+                            android:textColor="@color/neutro"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </FrameLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="16dp"
-                    android:weightSum="3">
+                    android:orientation="vertical"
+                    android:paddingHorizontal="24dp">
 
-                    <TextView
-                        android:id="@+id/btn_anual"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Anual"
-                        android:gravity="center"
-                        android:padding="12dp"
-                        android:textColor="@color/oscuro"
-                        android:textStyle="bold"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:background="@drawable/bg_rellenables"/>
-
-                    <TextView
-                        android:id="@+id/btn_mensual"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Mensual"
-                        android:gravity="center"
-                        android:padding="12dp"
-                        android:textColor="@color/oscuro"
-                        android:textStyle="bold"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:layout_marginHorizontal="4dp"
-                        android:background="@drawable/bg_rellenables"
-                        android:backgroundTint="@color/mas_claro"/>
-
-                    <TextView
-                        android:id="@+id/btn_semanal"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Semanal"
-                        android:gravity="center"
-                        android:padding="12dp"
-                        android:textColor="@color/oscuro"
-                        android:textStyle="bold"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:background="@drawable/bg_rellenables"/>
-                </LinearLayout>
-
-                <!-- Tarjeta Gráfico Completa -->
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="match_parent"
-                    android:layout_height="320dp"
-                    android:layout_marginTop="24dp"
-                    app:cardCornerRadius="24dp"
-                    app:cardElevation="4dp"
-                    app:cardBackgroundColor="@color/mas_claro"
-                    app:strokeWidth="0dp">
-
-                    <ImageView
-                        android:id="@+id/iv_grafico_balance"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/grafico_mes" />
-
-                </com.google.android.material.card.MaterialCardView>
-
-                <!-- Filtros con ic_flecha -->
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
-                    app:cardCornerRadius="24dp"
-                    app:cardElevation="4dp"
-                    app:cardBackgroundColor="@color/mas_claro"
-                    app:strokeWidth="0dp">
-
+                    <!-- Botones Separados (Anual, Mensual, Semanal) -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="24dp">
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/bg_rellenables"
+                        android:backgroundTint="@color/ultra_claro"
+                        android:orientation="horizontal"
+                        android:padding="4dp"
+                        android:weightSum="3">
 
-                        <!-- Desde -->
-                        <LinearLayout
-                            android:layout_width="match_parent"
+                        <TextView
+                            android:id="@+id/btn_anual"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:gravity="center_vertical">
-                            <TextView
-                                android:layout_width="80dp"
-                                android:layout_height="wrap_content"
-                                android:text="Desde:"
-                                android:textColor="@color/neutro"
-                                android:textSize="20sp"
-                                android:textStyle="bold"/>
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_rellenables"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:padding="12dp"
+                            android:text="Anual"
+                            android:textColor="@color/oscuro"
+                            android:textStyle="bold" />
 
-                            <FrameLayout
-                                android:layout_width="0dp"
-                                android:layout_height="45dp"
-                                android:layout_weight="1"
-                                android:layout_marginEnd="8dp">
-                                <Spinner
-                                    android:id="@+id/spinner_mes_desde"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="@drawable/bg_rellenables"
-                                    android:backgroundTint="@color/white" />
-                                <ImageView
-                                    android:layout_width="15dp"
-                                    android:layout_height="15dp"
-                                    android:layout_gravity="end|center_vertical"
-                                    android:layout_marginEnd="10dp"
-                                    android:src="@drawable/ic_flecha"
-                                    app:tint="@color/claro" />
-                            </FrameLayout>
-
-                            <FrameLayout
-                                android:layout_width="0dp"
-                                android:layout_height="45dp"
-                                android:layout_weight="1">
-                                <Spinner
-                                    android:id="@+id/spinner_anio_desde"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="@drawable/bg_rellenables"
-                                    android:backgroundTint="@color/white" />
-                                <ImageView
-                                    android:layout_width="15dp"
-                                    android:layout_height="15dp"
-                                    android:layout_gravity="end|center_vertical"
-                                    android:layout_marginEnd="10dp"
-                                    android:src="@drawable/ic_flecha"
-                                    app:tint="@color/claro" />
-                            </FrameLayout>
-                        </LinearLayout>
-
-                        <!-- Hasta -->
-                        <LinearLayout
-                            android:layout_width="match_parent"
+                        <TextView
+                            android:id="@+id/btn_mensual"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:gravity="center_vertical"
-                            android:layout_marginTop="20dp">
-                            <TextView
-                                android:layout_width="80dp"
-                                android:layout_height="wrap_content"
-                                android:text="Hasta:"
-                                android:textColor="@color/neutro"
-                                android:textSize="20sp"
-                                android:textStyle="bold"/>
+                            android:layout_marginHorizontal="4dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_rellenables"
+                            android:backgroundTint="@color/mas_claro"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:padding="12dp"
+                            android:text="Mensual"
+                            android:textColor="@color/oscuro"
+                            android:textStyle="bold" />
 
-                            <FrameLayout
-                                android:layout_width="0dp"
-                                android:layout_height="45dp"
-                                android:layout_weight="1"
-                                android:layout_marginEnd="8dp">
-                                <Spinner
-                                    android:id="@+id/spinner_mes_hasta"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="@drawable/bg_rellenables"
-                                    android:backgroundTint="@color/white" />
-                                <ImageView
-                                    android:layout_width="15dp"
-                                    android:layout_height="15dp"
-                                    android:layout_gravity="end|center_vertical"
-                                    android:layout_marginEnd="10dp"
-                                    android:src="@drawable/ic_flecha"
-                                    app:tint="@color/claro" />
-                            </FrameLayout>
-
-                            <FrameLayout
-                                android:layout_width="0dp"
-                                android:layout_height="45dp"
-                                android:layout_weight="1">
-                                <Spinner
-                                    android:id="@+id/spinner_anio_hasta"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="@drawable/bg_rellenables"
-                                    android:backgroundTint="@color/white" />
-                                <ImageView
-                                    android:layout_width="15dp"
-                                    android:layout_height="15dp"
-                                    android:layout_gravity="end|center_vertical"
-                                    android:layout_marginEnd="10dp"
-                                    android:src="@drawable/ic_flecha"
-                                    app:tint="@color/claro" />
-                            </FrameLayout>
-                        </LinearLayout>
-
+                        <TextView
+                            android:id="@+id/btn_semanal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_rellenables"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:padding="12dp"
+                            android:text="Semanal"
+                            android:textColor="@color/oscuro"
+                            android:textStyle="bold" />
                     </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
 
-                <!-- Para que se pueda ver todas las opciones-->
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"/>
+                    <!-- Tarjeta Gráfico -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="320dp"
+                        android:layout_marginTop="24dp"
+                        app:cardBackgroundColor="@color/mas_claro"
+                        app:cardCornerRadius="24dp"
+                        app:cardElevation="4dp"
+                        app:strokeWidth="0dp">
 
+                        <ImageView
+                            android:id="@+id/iv_grafico_balance"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/grafico_mes" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Filtros -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        app:cardBackgroundColor="@color/mas_claro"
+                        app:cardCornerRadius="24dp"
+                        app:cardElevation="4dp"
+                        app:strokeWidth="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="24dp">
+
+                            <!-- Desde -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="80dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Desde:"
+                                    android:textColor="@color/neutro"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="45dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:layout_weight="1">
+
+                                    <Spinner
+                                        android:id="@+id/spinner_mes_desde"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/bg_rellenables"
+                                        android:backgroundTint="@color/white" />
+
+                                    <ImageView
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="end|center_vertical"
+                                        android:layout_marginEnd="10dp"
+                                        android:src="@drawable/ic_flecha"
+                                        app:tint="@color/claro" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="45dp"
+                                    android:layout_weight="1">
+
+                                    <Spinner
+                                        android:id="@+id/spinner_anio_desde"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/bg_rellenables"
+                                        android:backgroundTint="@color/white" />
+
+                                    <ImageView
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="end|center_vertical"
+                                        android:layout_marginEnd="10dp"
+                                        android:src="@drawable/ic_flecha"
+                                        app:tint="@color/claro" />
+                                </FrameLayout>
+                            </LinearLayout>
+
+                            <!-- Hasta -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="80dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Hasta:"
+                                    android:textColor="@color/neutro"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="45dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:layout_weight="1">
+
+                                    <Spinner
+                                        android:id="@+id/spinner_mes_hasta"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/bg_rellenables"
+                                        android:backgroundTint="@color/white" />
+
+                                    <ImageView
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="end|center_vertical"
+                                        android:layout_marginEnd="10dp"
+                                        android:src="@drawable/ic_flecha"
+                                        app:tint="@color/claro" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="45dp"
+                                    android:layout_weight="1">
+
+                                    <Spinner
+                                        android:id="@+id/spinner_anio_hasta"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/bg_rellenables"
+                                        android:backgroundTint="@color/white" />
+
+                                    <ImageView
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="end|center_vertical"
+                                        android:layout_marginEnd="10dp"
+                                        android:src="@drawable/ic_flecha"
+                                        app:tint="@color/claro" />
+                                </FrameLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Espacio de seguridad final para que la media luna no tape contenido -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"/>
+
+                </LinearLayout>
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
 
-        <!-- TITULOS -->
-        <!-- HEADER OVALADO -->
-        <LinearLayout
-            android:id="@+id/balance_header_container"
-            android:layout_width="match_parent"
-            android:layout_height="130dp"
-            android:gravity="bottom|center"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar_superior_acc">
+        <!-- TOOLBAR SUPERIOR FIJA -->
+        <include
+            android:id="@+id/toolbar_superior_acc"
+            layout="@layout/toolbar_superior"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <View
-                android:id="@+id/fondo_redondo"
-                android:layout_width="600dp"
-                android:layout_height="510dp"
-                android:background="@drawable/bg_cabecera_drawer"
-                android:backgroundTint="@color/ultra_claro"
-                tools:ignore="VisualLintBounds" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            app:layout_constraintBottom_toBottomOf="@+id/balance_header_container"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar_superior_acc">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Balance General"
-                android:textAppearance="@style/titulo"
-                android:textSize="38sp"
-                android:textColor="@color/oscuro" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Comparativa Financiera"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="@color/neutro"
-                android:layout_marginTop="-4dp"/>
-        </LinearLayout>
-
+        <!-- TOOLBAR INFERIOR FIJA (Media Luna) -->
         <include
             android:id="@+id/include_bottom_toolbar"
             layout="@layout/toolbar_inferior_clientes"
@@ -314,4 +320,5 @@
         android:foregroundGravity="center"
         app:itemTextColor="@color/oscuro"
         app:itemTextAppearance="@style/boton_llamativo"/>
+
 </androidx.drawerlayout.widget.DrawerLayout>

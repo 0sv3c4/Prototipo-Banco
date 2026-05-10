@@ -14,339 +14,330 @@
         android:layout_height="match_parent"
         android:background="@color/white">
 
-
-
-        <!-- CONTENIDO -->
-        <androidx.core.widget.NestedScrollView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="@id/bizum_header">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingHorizontal="24dp"
-                android:paddingTop="16dp"
-                android:paddingBottom="24dp">
-
-                <!-- Para que se pueda ver todas las opciones-->
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Acciones rápidas:"
-                    android:textAppearance="@style/titulo_seccion"
-                    android:textSize="20sp"
-                    android:textColor="@color/oscuro" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="16dp"
-                    android:gravity="center">
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:gravity="center">
-                        <ImageView
-                            android:id="@+id/iv_enviar_dinero"
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:background="@drawable/bg_circle_light_purple"
-                            android:padding="15dp"
-                            android:src="@drawable/ic_enviar_dinero"
-                            app:tint="@color/oscuro" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Enviar dinero"
-                            android:layout_marginTop="8dp"
-                            android:textColor="@color/oscuro"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:gravity="center">
-                        <ImageView
-                            android:id="@+id/iv_solicitar_dinero"
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:background="@drawable/bg_circle_light_purple"
-                            android:padding="15dp"
-                            android:src="@drawable/ic_pedir_dinero"
-                            app:tint="@color/oscuro" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Solicitar dinero"
-                            android:layout_marginTop="8dp"
-                            android:textColor="@color/oscuro"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-                </LinearLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Contactos recientes:"
-                        android:textAppearance="@style/titulo_seccion"
-                        android:textSize="20sp"
-                        android:textColor="@color/oscuro" />
-                    <TextView
-                        android:id="@+id/btn_ver_todos"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Ver todos \u2192"
-                        android:layout_alignParentEnd="true"
-                        android:textColor="@color/oscuro"
-                        android:textStyle="bold"
-                        android:clickable="true"
-                        android:focusable="true"/>
-                </RelativeLayout>
-
-                <!-- Lista de contactos horizontales -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="16dp"
-                    android:weightSum="4">
-                    <!-- Contactos con IDs para funcionalidad -->
-                    <LinearLayout
-                        android:id="@+id/btn_contacto_m"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:gravity="center"
-                        android:clickable="true"
-                        android:focusable="true">
-                        <TextView
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:background="@drawable/bg_circle_light_purple"
-                            android:gravity="center"
-                            android:text="M"
-                            android:textSize="24sp"
-                            android:textColor="@color/black" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Manuel A."
-                            android:textSize="12sp"
-                            android:layout_marginTop="4dp" />
-                    </LinearLayout>
-                    <LinearLayout
-                        android:id="@+id/btn_contacto_c"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:gravity="center"
-                        android:clickable="true"
-                        android:focusable="true">
-                        <TextView
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:background="@drawable/bg_circle_light_purple"
-                            android:gravity="center"
-                            android:text="C"
-                            android:textSize="24sp"
-                            android:textColor="@color/black" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Claudia C."
-                            android:textSize="12sp"
-                            android:layout_marginTop="4dp" />
-                    </LinearLayout>
-                    <LinearLayout
-                        android:id="@+id/btn_contacto_j"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:gravity="center"
-                        android:clickable="true"
-                        android:focusable="true">
-                        <TextView
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:background="@drawable/bg_circle_light_purple"
-                            android:gravity="center"
-                            android:text="J"
-                            android:textSize="24sp"
-                            android:textColor="@color/black" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Juan M."
-                            android:textSize="12sp"
-                            android:layout_marginTop="4dp" />
-                    </LinearLayout>
-                    <LinearLayout
-                        android:id="@+id/btn_contacto_o"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:gravity="center"
-                        android:clickable="true"
-                        android:focusable="true">
-                        <TextView
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:background="@drawable/bg_circle_light_purple"
-                            android:gravity="center"
-                            android:text="\u00d3"
-                            android:textSize="24sp"
-                            android:textColor="@color/black" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="\u00d3scar T."
-                            android:textSize="12sp"
-                            android:layout_marginTop="4dp" />
-                    </LinearLayout>
-                </LinearLayout>
-
-                <!-- Formulario -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Destinatario"
-                    android:layout_marginTop="24dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:textSize="18sp" />
-                <EditText
-                    android:id="@+id/et_destinatario_bizum"
-                    style="@style/cuadrado_rellenable"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="8dp"
-                    android:hint="Introduce un contacto"
-                    android:inputType="text"
-                    android:textColorHint="@color/claro" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Seleccionar cantidad"
-                    android:layout_marginTop="16dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:textSize="18sp" />
-                <EditText
-                    android:id="@+id/et_cantidad_bizum"
-                    style="@style/cuadrado_rellenable"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="8dp"
-                    android:hint="Saldo"
-                    android:inputType="numberDecimal"
-                    android:textColorHint="@color/claro" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Concepto (opcional)"
-                    android:layout_marginTop="16dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:textSize="18sp" />
-                <EditText
-                    android:id="@+id/et_concepto_bizum"
-                    style="@style/cuadrado_rellenable"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="8dp"
-                    android:hint="Escribe un mensaje..."
-                    android:inputType="text"
-                    android:textColorHint="@color/claro" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_confirmar_bizum"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="24dp"
-                    android:text="Confirmar"
-                    android:textColor="@color/white"
-                    app:backgroundTint="@color/oscuro"
-                    app:cornerRadius="30dp"
-                    android:fontFamily="@font/inter_bold"
-                    android:textSize="18sp" />
-
-                <!-- Mensaje de error/éxito -->
-                <TextView
-                    android:id="@+id/tv_mensaje_bizum"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:gravity="center"
-                    android:visibility="gone"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <!-- Para que se pueda ver todas las opciones-->
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"/>
-
-            </LinearLayout>
-        </androidx.core.widget.NestedScrollView>
-
-        <LinearLayout
-            android:id="@+id/bizum_header"
-            android:layout_width="match_parent"
-            android:layout_height="130dp"
-            android:gravity="bottom|center"
-            android:backgroundTint="@android:color/transparent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar_superior_acc">
-
-            <View
-                android:id="@+id/fondo_redondo"
-                android:layout_width="600dp"
-                android:layout_height="510dp"
-                android:background="@drawable/bg_cabecera_drawer"
-                android:backgroundTint="@color/ultra_claro"
-                tools:ignore="VisualLintBounds" />
-
-        </LinearLayout>
-
-        <ImageView
-            android:id="@+id/iv_logo_bizum"
-            android:layout_width="250dp"
-            android:layout_height="80dp"
-            android:src="@drawable/logo_bizum"
-            android:layout_marginTop="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/bizum_header"/>
-
+        <!-- TOOLBAR SUPERIOR FIJA -->
         <include
             android:id="@+id/toolbar_superior_acc"
             layout="@layout/toolbar_superior"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- TOOLBAR INFERIOR, BOTÓN DE VOLVER -->
+        <!-- CONTENIDO SCROLLABLE -->
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_superior_acc">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="40dp">
+
+                <!-- HEADER CON LOGO -->
+                <FrameLayout
+                    android:id="@+id/header_container_bizum"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:layout_marginTop="-100dp"
+                        android:background="@drawable/bg_bottom_curve"
+                        android:backgroundTint="@color/ultra_claro" />
+
+                    <ImageView
+                        android:id="@+id/iv_logo_bizum"
+                        android:layout_width="250dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/logo_bizum" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="24dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Acciones rápidas:"
+                        android:textAppearance="@style/titulo_seccion"
+                        android:textSize="20sp"
+                        android:textColor="@color/oscuro" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+                            <ImageView
+                                android:id="@+id/iv_enviar_dinero"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/bg_circle_light_purple"
+                                android:padding="15dp"
+                                android:src="@drawable/ic_enviar_dinero"
+                                app:tint="@color/oscuro" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Enviar dinero"
+                                android:layout_marginTop="8dp"
+                                android:textColor="@color/oscuro"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+                            <ImageView
+                                android:id="@+id/iv_solicitar_dinero"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/bg_circle_light_purple"
+                                android:padding="15dp"
+                                android:src="@drawable/ic_pedir_dinero"
+                                app:tint="@color/oscuro" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Solicitar dinero"
+                                android:layout_marginTop="8dp"
+                                android:textColor="@color/oscuro"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Contactos recientes:"
+                            android:textAppearance="@style/titulo_seccion"
+                            android:textSize="20sp"
+                            android:textColor="@color/oscuro" />
+                        <TextView
+                            android:id="@+id/btn_ver_todos"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ver todos \u2192"
+                            android:layout_alignParentEnd="true"
+                            android:textColor="@color/oscuro"
+                            android:textStyle="bold"
+                            android:clickable="true"
+                            android:focusable="true"/>
+                    </RelativeLayout>
+
+                    <!-- Lista de contactos horizontales -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="16dp"
+                        android:weightSum="4">
+                        <LinearLayout
+                            android:id="@+id/btn_contacto_m"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:clickable="true"
+                            android:focusable="true">
+                            <TextView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:background="@drawable/bg_circle_light_purple"
+                                android:gravity="center"
+                                android:text="M"
+                                android:textSize="24sp"
+                                android:textColor="@color/black" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Manuel A."
+                                android:textSize="12sp"
+                                android:layout_marginTop="4dp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/btn_contacto_c"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:clickable="true"
+                            android:focusable="true">
+                            <TextView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:background="@drawable/bg_circle_light_purple"
+                                android:gravity="center"
+                                android:text="C"
+                                android:textSize="24sp"
+                                android:textColor="@color/black" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Claudia C."
+                                android:textSize="12sp"
+                                android:layout_marginTop="4dp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/btn_contacto_j"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:clickable="true"
+                            android:focusable="true">
+                            <TextView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:background="@drawable/bg_circle_light_purple"
+                                android:gravity="center"
+                                android:text="J"
+                                android:textSize="24sp"
+                                android:textColor="@color/black" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Juan M."
+                                android:textSize="12sp"
+                                android:layout_marginTop="4dp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/btn_contacto_o"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:clickable="true"
+                            android:focusable="true">
+                            <TextView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:background="@drawable/bg_circle_light_purple"
+                                android:gravity="center"
+                                android:text="\u00d3"
+                                android:textSize="24sp"
+                                android:textColor="@color/black" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="\u00d3scar T."
+                                android:textSize="12sp"
+                                android:layout_marginTop="4dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Formulario -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Destinatario"
+                        android:layout_marginTop="24dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                    <EditText
+                        android:id="@+id/et_destinatario_bizum"
+                        style="@style/cuadrado_rellenable"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="8dp"
+                        android:hint="Introduce un contacto"
+                        android:inputType="text"
+                        android:textColorHint="@color/claro" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Seleccionar cantidad"
+                        android:layout_marginTop="16dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                    <EditText
+                        android:id="@+id/et_cantidad_bizum"
+                        style="@style/cuadrado_rellenable"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="8dp"
+                        android:hint="Saldo"
+                        android:inputType="numberDecimal"
+                        android:textColorHint="@color/claro" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Concepto (opcional)"
+                        android:layout_marginTop="16dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                    <EditText
+                        android:id="@+id/et_concepto_bizum"
+                        style="@style/cuadrado_rellenable"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="8dp"
+                        android:hint="Escribe un mensaje..."
+                        android:inputType="text"
+                        android:textColorHint="@color/claro" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_confirmar_bizum"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="24dp"
+                        android:text="Confirmar"
+                        android:textColor="@color/white"
+                        app:backgroundTint="@color/oscuro"
+                        app:cornerRadius="30dp"
+                        android:fontFamily="@font/inter_bold"
+                        android:textSize="18sp" />
+
+                    <!-- Mensaje de error/éxito -->
+                    <TextView
+                        android:id="@+id/tv_mensaje_bizum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <!-- TOOLBAR INFERIOR FIJA -->
         <include
             android:id="@+id/include_bottom_toolbar"
             layout="@layout/toolbar_inferior_clientes"
