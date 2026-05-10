@@ -15,6 +15,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PrototipoBanco">
+
+        <activity
+            android:name=".Seguridad"
+            android:exported="false" />
+        <activity
+            android:name=".Preferencias1"
+            android:exported="false" />
+        <activity
+            android:name=".Preferencias2"
+            android:exported="false" />
         <activity
             android:name=".BalanceGeneral"
             android:exported="false" />

@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:fitsSystemWindows="false"
+    tools:context=".Preferencias1">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <!-- TOOLBAR SUPERIOR -->
+        <include
+            android:id="@+id/toolbar_superior_acc"
+            layout="@layout/toolbar_superior"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- CONTENIDO SCROLLABLE -->
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            android:clipToPadding="false"
+            android:paddingBottom="180dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_superior_acc">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- HEADER CON FONDO CURVO -->
+                <FrameLayout
+                    android:id="@+id/header_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="-120dp"
+                        android:background="@drawable/bg_bottom_curve"
+                        android:backgroundTint="@color/ultra_claro" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/preferencias"
+                        android:fontFamily="@font/inter_black"
+                        android:textColor="@color/oscuro"
+                        android:textSize="32sp" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="24dp"
+                    android:layout_marginTop="16dp">
+
+                    <!-- ITEM CORREO -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="8dp">
+                        <ImageView
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:background="@drawable/bg_circle_light_purple"
+                            android:backgroundTint="@color/mas_claro"
+                            android:padding="10dp"
+                            android:src="@android:drawable/ic_dialog_email"
+                            app:tint="@color/black" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="@string/correo_elec"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:fontFamily="@font/inter_bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="20dp">
+                        <EditText
+                            android:id="@+id/et_correo"
+                            android:layout_width="0dp"
+                            android:layout_height="54dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_button_purple"
+                            android:paddingHorizontal="20dp"
+                            android:textColor="@color/white"
+                            android:hint="@string/nuevo_correo"
+                            android:textColorHint="#CCFFFFFF"
+                            android:inputType="textEmailAddress"
+                            android:textSize="16sp" />
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_aplicar_correo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="54dp"
+                            android:layout_marginStart="12dp"
+                            android:text="@string/aplicar"
+                            android:textColor="@color/oscuro"
+                            app:backgroundTint="@color/mas_claro"
+                            app:cornerRadius="27dp"
+                            android:textAllCaps="false"
+                            android:fontFamily="@font/inter_bold"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp" />
+                    </LinearLayout>
+
+                    <!-- ITEM TELEFONO -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="8dp">
+                        <ImageView
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:background="@drawable/bg_circle_light_purple"
+                            android:backgroundTint="@color/mas_claro"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_tfno"
+                            app:tint="@color/black" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="@string/num_tlf"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:fontFamily="@font/inter_bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp">
+                        <EditText
+                            android:id="@+id/et_tlf"
+                            android:layout_width="0dp"
+                            android:layout_height="54dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_button_purple"
+                            android:paddingHorizontal="20dp"
+                            android:textColor="@color/white"
+                            android:hint="@string/nuevo_tlf"
+                            android:textColorHint="#CCFFFFFF"
+                            android:inputType="phone"
+                            android:textSize="16sp" />
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_aplicar_tlf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="54dp"
+                            android:layout_marginStart="12dp"
+                            android:text="@string/aplicar"
+                            android:textColor="@color/oscuro"
+                            app:backgroundTint="@color/mas_claro"
+                            app:cornerRadius="27dp"
+                            android:textAllCaps="false"
+                            android:fontFamily="@font/inter_bold"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp" />
+                    </LinearLayout>
+
+                    <!-- ITEM PAIS -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="8dp">
+                        <ImageView
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:background="@drawable/bg_circle_light_purple"
+                            android:backgroundTint="@color/mas_claro"
+                            android:padding="10dp"
+                            android:src="@android:drawable/ic_menu_mapmode"
+                            app:tint="@color/black" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="@string/pais"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:fontFamily="@font/inter_bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="8dp">
+                        <LinearLayout
+                            android:id="@+id/selector_pais"
+                            android:layout_width="0dp"
+                            android:layout_height="54dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="12dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackground">
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@android:drawable/ic_menu_mapmode"
+                                app:tint="@color/black" />
+                            <TextView
+                                android:id="@+id/tv_pais_seleccionado"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="12dp"
+                                android:text="@string/selec_pais"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:fontFamily="@font/inter_medium" />
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@android:drawable/arrow_down_float"
+                                app:tint="@color/black" />
+                        </LinearLayout>
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_aplicar_pais"
+                            android:layout_width="wrap_content"
+                            android:layout_height="54dp"
+                            android:layout_marginStart="12dp"
+                            android:text="@string/aplicar"
+                            android:textColor="@color/oscuro"
+                            app:backgroundTint="@color/mas_claro"
+                            app:cornerRadius="27dp"
+                            android:textAllCaps="false"
+                            android:fontFamily="@font/inter_bold"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp" />
+                    </LinearLayout>
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#DDD" android:layout_marginBottom="20dp" />
+
+                    <!-- ITEM POBLACION -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="8dp">
+                        <ImageView
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:background="@drawable/bg_circle_light_purple"
+                            android:backgroundTint="@color/mas_claro"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_map"
+                            app:tint="@color/black" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="@string/poblacion"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:fontFamily="@font/inter_bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp">
+                        <EditText
+                            android:id="@+id/et_poblacion"
+                            android:layout_width="0dp"
+                            android:layout_height="54dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_button_purple"
+                            android:paddingHorizontal="20dp"
+                            android:textColor="@color/white"
+                            android:hint="@string/nueva_poblacion"
+                            android:textColorHint="#CCFFFFFF"
+                            android:textSize="16sp" />
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_aplicar_poblacion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="54dp"
+                            android:layout_marginStart="12dp"
+                            android:text="@string/aplicar"
+                            android:textColor="@color/oscuro"
+                            app:backgroundTint="@color/mas_claro"
+                            app:cornerRadius="27dp"
+                            android:textAllCaps="false"
+                            android:fontFamily="@font/inter_bold"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp" />
+                    </LinearLayout>
+
+                    <!-- ITEM IDIOMA -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="8dp">
+                        <ImageView
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:background="@drawable/bg_circle_light_purple"
+                            android:backgroundTint="@color/mas_claro"
+                            android:padding="10dp"
+                            android:src="@android:drawable/ic_menu_mylocation"
+                            app:tint="@color/black" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="@string/idioma"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:fontFamily="@font/inter_bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="8dp">
+                        <LinearLayout
+                            android:id="@+id/selector_idioma"
+                            android:layout_width="0dp"
+                            android:layout_height="54dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="12dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackground">
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@android:drawable/ic_menu_mylocation"
+                                app:tint="@color/black" />
+                            <TextView
+                                android:id="@+id/tv_idioma_seleccionado"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="12dp"
+                                android:text="@string/selec_idioma"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:fontFamily="@font/inter_medium" />
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@android:drawable/arrow_down_float"
+                                app:tint="@color/black" />
+                        </LinearLayout>
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_aplicar_idioma"
+                            android:layout_width="wrap_content"
+                            android:layout_height="54dp"
+                            android:layout_marginStart="12dp"
+                            android:text="@string/aplicar"
+                            android:textColor="@color/oscuro"
+                            app:backgroundTint="@color/mas_claro"
+                            app:cornerRadius="27dp"
+                            android:textAllCaps="false"
+                            android:fontFamily="@font/inter_bold"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp" />
+                    </LinearLayout>
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#DDD" android:layout_marginBottom="20dp" />
+
+                    <!-- ITEM ALIAS -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="8dp">
+                        <ImageView
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:background="@drawable/bg_circle_light_purple"
+                            android:backgroundTint="@color/mas_claro"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_cliente"
+                            app:tint="@color/black" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="@string/alias"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:fontFamily="@font/inter_bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp">
+                        <EditText
+                            android:id="@+id/et_alias"
+                            android:layout_width="0dp"
+                            android:layout_height="54dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_button_purple"
+                            android:paddingHorizontal="20dp"
+                            android:textColor="@color/white"
+                            android:hint="@string/nuevo_alias"
+                            android:textColorHint="#CCFFFFFF"
+                            android:textSize="16sp" />
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_aplicar_alias"
+                            android:layout_width="wrap_content"
+                            android:layout_height="54dp"
+                            android:layout_marginStart="12dp"
+                            android:text="@string/aplicar"
+                            android:textColor="@color/oscuro"
+                            app:backgroundTint="@color/mas_claro"
+                            app:cornerRadius="27dp"
+                            android:textAllCaps="false"
+                            android:fontFamily="@font/inter_bold"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <!-- BARRA INFERIOR -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:gravity="top|center"
+                app:layout_constraintBottom_toBottomOf="parent">
+                <View
+                    android:layout_width="500dp"
+                    android:layout_height="225dp"
+                    android:background="@drawable/bg_bottom_curve" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="45dp"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_volver"
+                    android:layout_width="160dp"
+                    android:layout_height="64dp"
+                    android:text="@string/volver"
+                    android:textColor="@color/white"
+                    app:backgroundTint="@color/claro"
+                    app:cornerRadius="32dp"
+                    android:layout_marginEnd="8dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_siguiente"
+                    android:layout_width="160dp"
+                    android:layout_height="64dp"
+                    android:text="@string/siguiente"
+                    android:textColor="@color/white"
+                    app:backgroundTint="@color/claro"
+                    app:cornerRadius="32dp"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="290dp"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_view"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_cabecera"
+        app:menu="@menu/nav_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>
