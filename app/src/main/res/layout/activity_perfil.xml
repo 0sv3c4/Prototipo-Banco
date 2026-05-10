@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    tools:context=".Perfil">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <include
+            android:id="@+id/toolbar_superior_perfil"
+            layout="@layout/toolbar_superior"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:clipToPadding="false"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toTopOf="@+id/include_bottom_toolbar"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_superior_perfil">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="20dp">
+
+
+                <FrameLayout
+                    android:id="@+id/header_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="280dp"
+                        android:layout_marginTop="-100dp"
+                        android:background="@drawable/bg_bottom_curve"
+                        android:backgroundTint="@color/ultra_claro" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/iv_perfil_grande"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:background="@drawable/bg_titulo"
+                            android:backgroundTint="@color/mas_claro"
+                            android:padding="4dp"
+                            android:src="@drawable/ic_cliente"
+                            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+                            app:strokeColor="@color/grisaceo"
+                            app:strokeWidth="1dp" />
+
+                        <TextView
+                            android:id="@+id/tv_nombre_usuario"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/inter_black"
+                            android:text="@string/nombre_cliente"
+                            android:textColor="@color/oscuro"
+                            android:textSize="28sp" />
+                    </LinearLayout>
+                </FrameLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="40dp"
+                    android:layout_marginTop="8dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_configurar_perfil"
+                        style="@style/BotonBase"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:text="@string/configurar_perfil"
+                        app:backgroundTint="@color/claro"
+                        app:cornerRadius="16dp"
+                        app:icon="@drawable/ic_config"
+                        app:iconGravity="textStart" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_cerrar_sesion_perfil"
+                        style="@style/BotonBase"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/cerrar_sesion"
+                        app:backgroundTint="@color/neutro"
+                        app:cornerRadius="16dp"
+                        app:icon="@android:drawable/ic_menu_close_clear_cancel"
+                        app:iconGravity="textStart" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="48dp"
+                    android:layout_marginTop="24dp">
+
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:layout_marginBottom="16dp">
+                        <ImageView android:layout_width="36dp" android:layout_height="36dp" android:background="@drawable/bg_circle_light_purple" android:padding="8dp" android:src="@android:drawable/ic_dialog_email" app:tint="@color/oscuro" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:fontFamily="@font/inter_medium" android:text="@string/correo_elec" android:textColor="@color/black" android:textSize="16sp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:layout_marginBottom="16dp">
+                        <ImageView android:layout_width="36dp" android:layout_height="36dp" android:background="@drawable/bg_circle_light_purple" android:padding="8dp" android:src="@drawable/ic_tfno" app:tint="@color/oscuro" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:fontFamily="@font/inter_medium" android:text="@string/num_tlf" android:textColor="@color/black" android:textSize="16sp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:layout_marginBottom="16dp">
+                        <ImageView android:layout_width="36dp" android:layout_height="36dp" android:background="@drawable/bg_circle_light_purple" android:padding="8dp" android:src="@android:drawable/ic_menu_mapmode" app:tint="@color/oscuro" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:fontFamily="@font/inter_medium" android:text="@string/pais" android:textColor="@color/black" android:textSize="16sp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:layout_marginBottom="16dp">
+                        <ImageView android:layout_width="36dp" android:layout_height="36dp" android:background="@drawable/bg_circle_light_purple" android:padding="8dp" android:src="@drawable/ic_map" app:tint="@color/oscuro" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:fontFamily="@font/inter_medium" android:text="@string/poblacion" android:textColor="@color/black" android:textSize="16sp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:layout_marginBottom="16dp">
+                        <ImageView android:layout_width="36dp" android:layout_height="36dp" android:background="@drawable/bg_circle_light_purple" android:padding="8dp" android:src="@android:drawable/ic_menu_mylocation" app:tint="@color/oscuro" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:fontFamily="@font/inter_medium" android:text="@string/idioma" android:textColor="@color/black" android:textSize="16sp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="top" android:layout_marginBottom="16dp">
+                        <ImageView android:layout_width="36dp" android:layout_height="36dp" android:background="@drawable/bg_circle_light_purple" android:padding="8dp" android:src="@android:drawable/ic_menu_preferences" app:tint="@color/oscuro" />
+                        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="16dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/inter_bold" android:text="@string/permisos_habilitados" android:textColor="@color/black" android:textSize="16sp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/inter" android:text="• Face ID\n• Accesos directos\n• Bizum\n• Geolocalización" android:textColor="@color/black" android:textSize="14sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="top" android:layout_marginBottom="16dp">
+                        <ImageView android:layout_width="36dp" android:layout_height="36dp" android:background="@drawable/bg_circle_light_purple" android:padding="8dp" android:src="@drawable/ic_cliente" app:tint="@color/oscuro" />
+                        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="16dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/inter_bold" android:text="@string/falta_personalizar" android:textColor="@color/black" android:textSize="16sp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/inter" android:text="• Alias\n• Permisos de notificaciones\n• Foto de perfil" android:textColor="@color/black" android:textSize="14sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+        <include
+            android:id="@+id/include_bottom_toolbar"
+            layout="@layout/toolbar_inferior_clientes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="290dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_cabecera"
+        app:menu="@menu/nav_menu"
+        app:itemTextColor="@color/oscuro"
+        app:itemTextAppearance="@style/boton_llamativo" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -52,19 +52,21 @@ public class BaseActivityClientes extends AppCompatActivity implements Navigatio
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        //Acceso a perfil
+
         View headerView = navigationView.getHeaderView(0);
-        headerView.setOnClickListener(v->{
-            Intent intent = new Intent(this, Preferencias1.class);
-            startActivity(intent);
-        });
+        if (headerView != null) {
+            headerView.setOnClickListener(v -> {
+                Intent intent = new Intent(this, Perfil.class);
+                startActivity(intent);
+            });
+        }
 
         TextView tituloToolbar = findViewById(R.id.titulo_toolbar);
         if (tituloToolbar != null) {
             tituloToolbar.setText(titulo);
         }
 
-        //Botón para acceder a las notificaciones (CAMPANA)
+
         FrameLayout btnNotif = findViewById(R.id.btn_notificaciones);
         if (btnNotif != null) {
             btnNotif.setOnClickListener(v -> {
@@ -73,16 +75,16 @@ public class BaseActivityClientes extends AppCompatActivity implements Navigatio
             });
         }
 
-        //Botón para acceder al perfil
+
         ShapeableImageView btnPerfil = findViewById(R.id.btn_perfil);
         if (btnPerfil != null) {
             btnPerfil.setOnClickListener(v -> {
-                Intent intent = new Intent(this, Preferencias1.class);
+                Intent intent = new Intent(this, Perfil.class);
                 startActivity(intent);
             });
         }
 
-        // Buscamos el ImageView del menú hamburguesa
+
         ImageView btnMenu = findViewById(R.id.btn_menu);
         if (btnMenu != null) {
             btnMenu.setOnClickListener(v -> {

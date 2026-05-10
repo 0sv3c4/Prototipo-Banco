@@ -17,6 +17,9 @@
         android:theme="@style/Theme.PrototipoBanco">
 
         <activity
+            android:name=".Perfil"
+            android:exported="false" />
+        <activity
             android:name=".Notificaciones"
             android:exported="false" />
         <activity

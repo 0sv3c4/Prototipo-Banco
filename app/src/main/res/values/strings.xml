@@ -51,7 +51,7 @@
     <string name="IBAN">ES13 0230 7800 8394 0948 8129</string>
     <string name="informacion">Información</string>
 
-    <!-- Preferencias -->
+
     <string name="siguiente">Siguiente</string>
     <string name="aplicar">Aplicar</string>
     <string name="preferencias">Preferencias</string>
@@ -68,7 +68,7 @@
     <string name="alias">Alias</string>
     <string name="nuevo_alias">Nuevo alias</string>
 
-    <!-- Notificaciones -->
+
     <string name="buzon_notificaciones">Buzón de\nnotificaciones</string>
     <string name="notificaciones_sin_leer">7 notificaciones sin leer</string>
     <string name="notificaciones_leidas">Notificaciones ya leídas</string>
@@ -110,5 +110,19 @@
 
     <string name="notif_bizum_federico_titulo">Bizum recibido</string>
     <string name="notif_bizum_federico_desc">+3,50€ de: Federico G. L.</string>
+
+
+
+    <string name="perfil">Perfil</string>
+    <string name="perfil_usuario">Perfil de Usuario</string>
+    <string name="configurar_perfil">Configurar perfil</string>
+    <string name="cerrar_sesion">Cerrar Sesión</string>
+    <string name="permisos_habilitados">Permisos habilitados:</string>
+    <string name="falta_personalizar">Falta por personalizar:</string>
+    <string name="face_id">Face ID</string>
+    <string name="accesos_directos">Accesos directos</string>
+    <string name="geolocalizacion">Geolocalización</string>
+    <string name="permisos_notif">Permisos de notificaciones</string>
+    <string name="foto_perfil">Foto de perfil</string>
 
 </resources>

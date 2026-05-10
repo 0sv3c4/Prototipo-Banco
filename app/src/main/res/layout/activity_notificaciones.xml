@@ -19,7 +19,7 @@
             layout="@layout/toolbar_superior"
             app:layout_constraintTop_toTopOf="parent" />
 
-
+        <!-- CONTENIDO SCROLLABLE (Llega hasta el fondo para pasar por detrás del botón) -->
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -32,7 +32,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:paddingBottom="180dp"> <!-- Padding para que la última notif no quede tapada por el botón -->
+                android:paddingBottom="180dp">
 
                 <!-- HEADER CON FONDO CURVO -->
                 <FrameLayout
@@ -74,7 +74,7 @@
                     </LinearLayout>
                 </FrameLayout>
 
-                <!-- LISTA DE NOTIFICACIONES (Cuerpo de la pantalla) -->
+                <!-- LISTA DE NOTIFICACIONES -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -82,7 +82,6 @@
                     android:paddingHorizontal="24dp"
                     android:layout_marginTop="-10dp">
 
-                    <!-- He puesto todas las tarjetas para que las veas en el editor -->
                     <include layout="@layout/item_notificacion" android:id="@+id/n1" />
                     <include layout="@layout/item_notificacion" android:id="@+id/n2" />
                     <include layout="@layout/item_notificacion" android:id="@+id/n3" />
@@ -117,11 +116,10 @@
                     <include layout="@layout/item_notificacion" android:id="@+id/nl3" />
 
                 </LinearLayout>
-
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
 
-        <!-- TOOLBAR INFERIOR (Ahora flota encima del listado sin cortarlo) -->
+        <!-- TOOLBAR INFERIOR (Flotando encima del scroll) -->
         <include
             android:id="@+id/include_bottom_toolbar"
             layout="@layout/toolbar_inferior_clientes"
@@ -131,6 +129,7 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <!-- NAVIGATION VIEW -->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="290dp"
