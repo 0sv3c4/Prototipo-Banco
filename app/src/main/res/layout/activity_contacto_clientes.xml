@@ -66,122 +66,127 @@
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <LinearLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="24dp"
         app:layout_constraintTop_toBottomOf="@+id/header_oficina">
-
-        <!-- Atención al cliente -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/inter_bold"
-            android:text="Atención al cliente"
-            android:textColor="@color/neutro"
-            android:textSize="24sp" />
-
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:fontFamily="@font/inter_medium"
-            android:text="@string/def_atencion_cliente"
-            android:textColor="@color/black"
-            android:textSize="14sp" />
+            android:orientation="vertical"
+            android:padding="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/header_oficina">
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_tel_atencion"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="24dp"
-            android:fontFamily="@font/inter_extrabold"
-            android:text="900 000 000"
-            android:textColor="@color/black"
-            android:textSize="24sp"
-            app:backgroundTint="@color/mas_claro"
-            app:cornerRadius="35dp"
-            app:icon="@drawable/ic_tfno"
-            app:iconGravity="textStart"
-            app:iconPadding="12dp"
-            app:iconSize="32dp"
-            app:iconTint="@color/black" />
+            <!-- Atención al cliente -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_bold"
+                android:text="Atención al cliente"
+                android:textColor="@color/neutro"
+                android:textSize="24sp" />
 
-        <!-- Urgencias -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/inter_bold"
-            android:text="Urgencias"
-            android:textColor="@color/neutro"
-            android:textSize="24sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/def_atencion_cliente"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:fontFamily="@font/inter_medium"
-            android:text="@string/def_urgencias"
-            android:textColor="@color/black"
-            android:textSize="14sp" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_tel_atencion"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="@font/inter_extrabold"
+                android:text="900 000 000"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:backgroundTint="@color/mas_claro"
+                app:cornerRadius="35dp"
+                app:icon="@drawable/ic_tfno"
+                app:iconGravity="textStart"
+                app:iconPadding="12dp"
+                app:iconSize="32dp"
+                app:iconTint="@color/black" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_tel_urgencias"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="24dp"
-            android:fontFamily="@font/inter_extrabold"
-            android:text="900 000 001"
-            android:textColor="@color/black"
-            android:textSize="24sp"
-            app:backgroundTint="@color/mas_claro"
-            app:cornerRadius="35dp"
-            app:icon="@drawable/ic_tfno"
-            app:iconGravity="textStart"
-            app:iconPadding="12dp"
-            app:iconSize="32dp"
-            app:iconTint="@color/black" />
+            <!-- Urgencias -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_bold"
+                android:text="Urgencias"
+                android:textColor="@color/neutro"
+                android:textSize="24sp" />
 
-        <!-- Seguros -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/inter_bold"
-            android:text="Seguros"
-            android:textColor="@color/neutro"
-            android:textSize="24sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/def_urgencias"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:fontFamily="@font/inter_medium"
-            android:text="@string/def_seguros"
-            android:textColor="@color/black"
-            android:textSize="14sp" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_tel_urgencias"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="@font/inter_extrabold"
+                android:text="900 000 001"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:backgroundTint="@color/mas_claro"
+                app:cornerRadius="35dp"
+                app:icon="@drawable/ic_tfno"
+                app:iconGravity="textStart"
+                app:iconPadding="12dp"
+                app:iconSize="32dp"
+                app:iconTint="@color/black" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_tel_seguros"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="24dp"
-            android:fontFamily="@font/inter_extrabold"
-            android:text="910 000 000"
-            android:textColor="@color/black"
-            android:textSize="24sp"
-            app:backgroundTint="@color/mas_claro"
-            app:cornerRadius="35dp"
-            app:icon="@drawable/ic_tfno"
-            app:iconGravity="textStart"
-            app:iconPadding="12dp"
-            app:iconSize="32dp"
-            app:iconTint="@color/black" />
+            <!-- Seguros -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_bold"
+                android:text="Seguros"
+                android:textColor="@color/neutro"
+                android:textSize="24sp" />
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/def_seguros"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_tel_seguros"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="@font/inter_extrabold"
+                android:text="910 000 000"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:backgroundTint="@color/mas_claro"
+                app:cornerRadius="35dp"
+                app:icon="@drawable/ic_tfno"
+                app:iconGravity="textStart"
+                app:iconPadding="12dp"
+                app:iconSize="32dp"
+                app:iconTint="@color/black" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
     <!-- Toolbar Inferior -->
     <include
