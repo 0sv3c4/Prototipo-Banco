@@ -25,7 +25,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class Bizum extends BaseActivityClientes {
 
-    private ImageView btnEnviar, btnSolicitar;
+    private ImageView btnEnviar, btnSolicitar, tooltipCantidad;
     private EditText etDestinatario, etCantidad, etConcepto;
     private Button btnConfirmar;
     private LinearLayout btnM, btnC, btnJ, btnO;
@@ -43,10 +43,10 @@ public class Bizum extends BaseActivityClientes {
                 }
             });
 
-    // Lanzador para abrir la agenda y recibir el contacto seleccionado (opcional, por ahora solo abrimos)
+    // Lanzador para abrir la agenda
     private final ActivityResultLauncher<Intent> pickContactLauncher =
             registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
-                // Aquí se podría procesar el contacto elegido si fuera necesario
+                // Aquí se podría procesar el contacto elegido
             });
 
     @Override
@@ -69,13 +69,13 @@ public class Bizum extends BaseActivityClientes {
     private void initViews() {
         btnEnviar = findViewById(R.id.iv_enviar_dinero);
         btnSolicitar = findViewById(R.id.iv_solicitar_dinero);
+        tooltipCantidad = findViewById(R.id.tooltip_cantidad);
         etDestinatario = findViewById(R.id.et_destinatario_bizum);
         etCantidad = findViewById(R.id.et_cantidad_bizum);
         etConcepto = findViewById(R.id.et_concepto_bizum);
         btnConfirmar = findViewById(R.id.btn_confirmar_bizum);
         btnVerTodos = findViewById(R.id.btn_ver_todos);
 
-        // Inicializar botones de contactos recientes
         btnM = findViewById(R.id.btn_contacto_m);
         btnC = findViewById(R.id.btn_contacto_c);
         btnJ = findViewById(R.id.btn_contacto_j);
@@ -85,21 +85,24 @@ public class Bizum extends BaseActivityClientes {
     private void setupListeners() {
         btnEnviar.setOnClickListener(v -> toggleOption(true));
         btnSolicitar.setOnClickListener(v -> toggleOption(false));
+        
+        // Tooltip de cantidad
+        if (tooltipCantidad != null) {
+            tooltipCantidad.setOnClickListener(v -> mostrarDialogoTooltip(R.layout.mensaje_tootip_cantidad));
+        }
 
-        // Listeners para autocompletar destinatario
         if (btnM != null) btnM.setOnClickListener(v -> etDestinatario.setText("Manuel Aylón"));
         if (btnC != null) btnC.setOnClickListener(v -> etDestinatario.setText("Claudia Carracedo"));
         if (btnJ != null) btnJ.setOnClickListener(v -> etDestinatario.setText("Juan Monzón"));
         if (btnO != null) btnO.setOnClickListener(v -> etDestinatario.setText("Óscar Torres"));
 
-        // Listener para Ver todos (Agenda de contactos)
         if (btnVerTodos != null) {
             btnVerTodos.setOnClickListener(v -> comprobarPermisoAgenda());
         }
 
         View.OnFocusChangeListener selectionCheckListener = (v, hasFocus) -> {
             if (hasFocus && !isEnviarSelected && !isSolicitarSelected) {
-                v.clearFocus(); // Evita que se abra el teclado
+                v.clearFocus();
                 mostrarDialogo(R.layout.mensaje_error_bizum_seleccion);
             }
         };
@@ -129,12 +132,23 @@ public class Bizum extends BaseActivityClientes {
         });
     }
 
+    private void mostrarDialogoTooltip(int layoutId) {
+        View view = LayoutInflater.from(this).inflate(layoutId, null);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(view);
+        AlertDialog alertDialog = builder.create();
+        
+        if (alertDialog.getWindow() != null) {
+            alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+        }
+        alertDialog.show();
+    }
+
     private void comprobarPermisoAgenda() {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_CONTACTS)
                 == PackageManager.PERMISSION_GRANTED) {
             abrirAgendaContactos();
         } else {
-            // Pedimos el permiso directamente (el sistema muestra la pestaña de permiso)
             requestPermissionLauncher.launch(Manifest.permission.READ_CONTACTS);
         }
     }
@@ -156,20 +170,23 @@ public class Bizum extends BaseActivityClientes {
     }
 
     private void updateVisualState() {
+        int colorWhite = ContextCompat.getColor(this, R.color.white);
+        int colorOscuro = ContextCompat.getColor(this, R.color.oscuro);
+
         if (isEnviarSelected) {
             btnEnviar.setBackgroundResource(R.drawable.bg_circle_purple);
-            btnEnviar.setColorFilter(ContextCompat.getColor(this, R.color.white));
+            btnEnviar.setColorFilter(colorWhite);
         } else {
             btnEnviar.setBackgroundResource(R.drawable.bg_circle_light_purple);
-            btnEnviar.setColorFilter(ContextCompat.getColor(this, R.color.oscuro));
+            btnEnviar.setColorFilter(colorOscuro);
         }
 
         if (isSolicitarSelected) {
             btnSolicitar.setBackgroundResource(R.drawable.bg_circle_purple);
-            btnSolicitar.setColorFilter(ContextCompat.getColor(this, R.color.white));
+            btnSolicitar.setColorFilter(colorWhite);
         } else {
             btnSolicitar.setBackgroundResource(R.drawable.bg_circle_light_purple);
-            btnSolicitar.setColorFilter(ContextCompat.getColor(this, R.color.oscuro));
+            btnSolicitar.setColorFilter(colorOscuro);
         }
     }
 
@@ -185,7 +202,9 @@ public class Bizum extends BaseActivityClientes {
             alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
         }
 
-        btnAceptar.setOnClickListener(v -> alertDialog.dismiss());
+        if (btnAceptar != null) {
+            btnAceptar.setOnClickListener(v -> alertDialog.dismiss());
+        }
         alertDialog.show();
     }
 }

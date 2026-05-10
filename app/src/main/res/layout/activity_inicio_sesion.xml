@@ -124,9 +124,24 @@
         app:layout_constraintBottom_toTopOf="@+id/introduzca_NIF"
         app:layout_constraintStart_toStartOf="@+id/introduzca_NIF" />
 
+    <ImageView
+        android:id="@+id/tooltip_nif"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_tooltip"
+        app:tint="@color/black"
+        android:tooltipText="Se necesitará un DNI o NIF válido para el acceso"
+        app:layout_constraintBottom_toBottomOf="@+id/NIF"
+        app:layout_constraintStart_toEndOf="@+id/NIF"
+        app:layout_constraintTop_toTopOf="@+id/NIF" />
+
+
 
     <EditText
-        android:id="@id/introduzca_contra"
+        android:id="@+id/introduzca_contra"
         style="@style/cuadrado_rellenable"
         android:layout_width="280dp"
         android:layout_height="50dp"
@@ -164,6 +179,20 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/introduzca_contra"
         app:layout_constraintStart_toStartOf="@+id/introduzca_contra" />
+
+    <ImageView
+        android:id="@+id/tooltip_contra"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_tooltip"
+        app:tint="@color/black"
+        android:tooltipText="La contraseña debe tener 7 dígitos como mínimo"
+        app:layout_constraintBottom_toBottomOf="@+id/contraseña"
+        app:layout_constraintStart_toEndOf="@+id/contraseña"
+        app:layout_constraintTop_toTopOf="@+id/contraseña" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_iniciar_sesion"

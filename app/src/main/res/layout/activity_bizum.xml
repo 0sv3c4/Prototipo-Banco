@@ -271,14 +271,32 @@
                         android:inputType="text"
                         android:textColorHint="@color/claro" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Seleccionar cantidad"
                         android:layout_marginTop="16dp"
-                        android:textStyle="bold"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Seleccionar cantidad"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/tooltip_cantidad"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="8dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:src="@drawable/ic_tooltip"
+                            app:tint="@color/black" />
+                    </LinearLayout>
+
                     <EditText
                         android:id="@+id/et_cantidad_bizum"
                         style="@style/cuadrado_rellenable"
