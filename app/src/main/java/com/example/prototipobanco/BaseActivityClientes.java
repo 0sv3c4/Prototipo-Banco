@@ -98,10 +98,10 @@ public class BaseActivityClientes extends AppCompatActivity implements Navigatio
         Intent intent;
         //traté de usar un switch, pero al orgnaizarse de manera dinámica no deja...
         if (id == R.id.nav_seguridad) {
-            intent = new Intent(this, Contacto_clientes.class); //TODO
+            intent = new Intent(this, Seguridad.class);
             startActivity(intent);
         } else if (id == R.id.nav_config) {
-            intent = new Intent(this, Contacto_clientes.class); //TODO
+            intent = new Intent(this, Preferencias1.class);
             startActivity(intent);
         } else if (id == R.id.nav_atencion_cl) {
             intent = new Intent(this, Contacto_clientes.class);
