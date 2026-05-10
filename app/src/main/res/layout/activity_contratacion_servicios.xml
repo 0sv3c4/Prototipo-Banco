@@ -86,7 +86,7 @@
                         <ImageView
                             android:layout_width="24dp"
                             android:layout_height="24dp"
-                            android:src="@drawable/ic_config"
+                            android:src="@drawable/ic_flecha_arriba"
                             app:tint="@color/neutro" />
 
                         <TextView
@@ -189,7 +189,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:scaleType="centerInside"
-                            android:src="@drawable/ic_launcher_foreground" />
+                            android:src="@drawable/ic_grafica_servicios" />
                     </com.google.android.material.card.MaterialCardView>
 
                     <LinearLayout
