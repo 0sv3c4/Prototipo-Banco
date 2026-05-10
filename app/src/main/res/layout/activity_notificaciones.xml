@@ -19,7 +19,7 @@
             layout="@layout/toolbar_superior"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- CONTENIDO SCROLLABLE (Llega hasta el fondo para pasar por detrás del botón) -->
+        <!-- Contenido para deslizar -->
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -34,7 +34,7 @@
                 android:orientation="vertical"
                 android:paddingBottom="180dp">
 
-                <!-- HEADER CON FONDO CURVO -->
+                <!-- Fondito crema -->
                 <FrameLayout
                     android:id="@+id/header_container"
                     android:layout_width="match_parent"
@@ -74,7 +74,7 @@
                     </LinearLayout>
                 </FrameLayout>
 
-                <!-- LISTA DE NOTIFICACIONES -->
+                <!-- Notificaciones -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -129,7 +129,7 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- NAVIGATION VIEW -->
+    <!-- Navegación -->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="290dp"

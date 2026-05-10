@@ -14,13 +14,13 @@
         android:layout_height="match_parent"
         android:background="@color/white">
 
-        <!-- TOOLBAR SUPERIOR -->
+        <!-- Barra superior -->
         <include
             android:id="@+id/toolbar_superior_acc"
             layout="@layout/toolbar_superior"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- CONTENIDO SCROLLABLE -->
+        <!-- Contenido deslizable -->
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <!-- HEADER CON FONDO CURVO -->
+                <!-- Fondo redondo crema -->
                 <FrameLayout
                     android:id="@+id/header_container"
                     android:layout_width="match_parent"
@@ -66,7 +66,7 @@
                     android:paddingHorizontal="40dp"
                     android:layout_marginTop="16dp">
 
-                    <!-- SECCIÓN PERMISOS -->
+                    <!-- Permisos -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -213,7 +213,7 @@
                         </LinearLayout>
                     </LinearLayout>
 
-                    <!-- SECCIÓN FOTO DE PERFIL -->
+                    <!-- Selección de foto de perfiL -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -290,7 +290,7 @@
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
 
-        <!-- BARRA INFERIOR -->
+        <!-- Barra inferior -->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
