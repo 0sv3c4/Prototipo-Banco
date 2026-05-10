@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,6 +26,7 @@ public class Transferencias extends BaseActivityClientes {
 
     private EditText etDestinatario, etImporte, etConcepto;
     private View btnHacerTransferencia, btnAgenda;
+    private ImageView tooltipTransferencia;
 
     // Lanzador para pedir permiso de contactos
     private final ActivityResultLauncher<String> requestPermissionLauncher =
@@ -66,9 +68,15 @@ public class Transferencias extends BaseActivityClientes {
         etConcepto = findViewById(R.id.et_concepto_transferencia);
         btnHacerTransferencia = findViewById(R.id.btn_hacer_transferencia);
         btnAgenda = findViewById(R.id.btn_agenda_transferencia);
+        tooltipTransferencia = findViewById(R.id.tooltip_transferencia);
     }
 
     private void setupListeners() {
+        // Listener para el tooltip del importe
+        if (tooltipTransferencia != null) {
+            tooltipTransferencia.setOnClickListener(v -> mostrarDialogoTooltip(R.layout.mensaje_tooltip_transferencia));
+        }
+
         // Listener para abrir la agenda de contactos (igual que en Bizum)
         if (btnAgenda != null) {
             btnAgenda.setOnClickListener(v -> comprobarPermisoAgenda());
@@ -88,6 +96,18 @@ public class Transferencias extends BaseActivityClientes {
                 }
             });
         }
+    }
+
+    private void mostrarDialogoTooltip(int layoutId) {
+        View view = LayoutInflater.from(this).inflate(layoutId, null);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(view);
+        AlertDialog alertDialog = builder.create();
+        
+        if (alertDialog.getWindow() != null) {
+            alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+        }
+        alertDialog.show();
     }
 
     private void comprobarPermisoAgenda() {
