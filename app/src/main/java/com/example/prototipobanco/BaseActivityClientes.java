@@ -110,7 +110,7 @@ public class BaseActivityClientes extends AppCompatActivity implements Navigatio
             intent = new Intent(this, Mapa_cajeros.class);
             startActivity(intent);
         } else if (id == R.id.nav_servicios){
-            intent = new Intent(this, Contacto_clientes.class);//TODO
+            intent = new Intent(this, ContratacionServicios.class);
             startActivity(intent);
         } else if (id == R.id.nav_menu) {
             intent = new Intent(this, Pantalla_principal.class);
