@@ -55,48 +55,58 @@ public class BaseActivityClientes extends AppCompatActivity implements Navigatio
         //Acceso a perfil
         View headerView = navigationView.getHeaderView(0);
         headerView.setOnClickListener(v->{
-            Intent intent = new Intent(this, Accesibilidad.class); //TODO
+            Intent intent = new Intent(this, Preferencias1.class);
             startActivity(intent);
         });
 
         TextView tituloToolbar = findViewById(R.id.titulo_toolbar);
-        tituloToolbar.setText(titulo);
+        if (tituloToolbar != null) {
+            tituloToolbar.setText(titulo);
+        }
 
-        //Botón para acceder a las notificaciones
+        //Botón para acceder a las notificaciones (CAMPANA)
         FrameLayout btnNotif = findViewById(R.id.btn_notificaciones);
-        btnNotif.setOnClickListener(v -> {
-            Intent intent = new Intent(this, Contacto_clientes.class); //TODO
-            startActivity(intent);
-        });
+        if (btnNotif != null) {
+            btnNotif.setOnClickListener(v -> {
+                Intent intent = new Intent(this, Notificaciones.class);
+                startActivity(intent);
+            });
+        }
 
         //Botón para acceder al perfil
         ShapeableImageView btnPerfil = findViewById(R.id.btn_perfil);
-        btnPerfil.setOnClickListener(v -> {
-            Intent intent = new Intent(this, Contacto_clientes.class); //TODO
-            startActivity(intent);
-        });
+        if (btnPerfil != null) {
+            btnPerfil.setOnClickListener(v -> {
+                Intent intent = new Intent(this, Preferencias1.class);
+                startActivity(intent);
+            });
+        }
 
-        // Buscamos el ImageView que definiste en ic_menu_hamburguesa.xml dentro de la toolbar
+        // Buscamos el ImageView del menú hamburguesa
         ImageView btnMenu = findViewById(R.id.btn_menu);
-        btnMenu.setOnClickListener(v -> {
-            if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
-                drawerLayout.closeDrawer(GravityCompat.START);
-            } else {
-                drawerLayout.openDrawer(GravityCompat.START);
-            }
-        });
+        if (btnMenu != null) {
+            btnMenu.setOnClickListener(v -> {
+                if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                } else {
+                    drawerLayout.openDrawer(GravityCompat.START);
+                }
+            });
+        }
     }
 
     protected void marchaAtras(){
         MaterialButton btnVolver = findViewById(R.id.btn_volver);
-        btnVolver.setOnClickListener(v -> finish());
+        if (btnVolver != null) {
+            btnVolver.setOnClickListener(v -> finish());
+        }
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         Intent intent;
-        //traté de usar un switch, pero al orgnaizarse de manera dinámica no deja...
+        
         if (id == R.id.nav_seguridad) {
             intent = new Intent(this, Seguridad.class);
             startActivity(intent);
@@ -115,10 +125,10 @@ public class BaseActivityClientes extends AppCompatActivity implements Navigatio
         } else if (id == R.id.nav_menu) {
             intent = new Intent(this, Pantalla_principal.class);
             startActivity(intent);
-        } else if (id==R.id.nav_logout) {
+        } else if (id == R.id.nav_logout) {
             intent = new Intent(this, Inicio_Sesion.class);
             startActivity(intent);
-        } else if (id==R.id.nav_accesibilidad) {
+        } else if (id == R.id.nav_accesibilidad) {
             intent = new Intent(this, Accesibilidad.class);
             startActivity(intent);
         }

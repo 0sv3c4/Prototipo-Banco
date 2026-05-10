@@ -51,7 +51,7 @@
     <string name="IBAN">ES13 0230 7800 8394 0948 8129</string>
     <string name="informacion">Información</string>
 
-//Preferencias
+    <!-- Preferencias -->
     <string name="siguiente">Siguiente</string>
     <string name="aplicar">Aplicar</string>
     <string name="preferencias">Preferencias</string>
@@ -67,5 +67,48 @@
     <string name="selec_idioma">Selecciona idioma</string>
     <string name="alias">Alias</string>
     <string name="nuevo_alias">Nuevo alias</string>
+
+    <!-- Notificaciones -->
+    <string name="buzon_notificaciones">Buzón de\nnotificaciones</string>
+    <string name="notificaciones_sin_leer">7 notificaciones sin leer</string>
+    <string name="notificaciones_leidas">Notificaciones ya leídas</string>
+
+    <string name="notif_multa_titulo">Multa de tráfico</string>
+    <string name="notif_multa_desc">Asunto: Exceso de velocidad.</string>
+    <string name="notif_multa_hora">20:50</string>
+
+    <string name="notif_pago_game_titulo">Pago exitoso</string>
+    <string name="notif_pago_game_desc">Pago completado en: Game.</string>
+    <string name="notif_pago_game_hora">19:27</string>
+
+    <string name="notif_bizum_walter_titulo">Bizum recibido</string>
+    <string name="notif_bizum_walter_desc">+10€ de: Walter W.</string>
+    <string name="notif_bizum_walter_hora">18:58</string>
+
+    <string name="notif_renta_titulo">Declaración de la renta</string>
+    <string name="notif_renta_desc">¡No olvides la cita anual!</string>
+    <string name="notif_renta_hora">15:23</string>
+
+    <string name="notif_nomina_titulo">Ingreso de nómina</string>
+    <string name="notif_nomina_desc">Ingreso mensual: +1900€.</string>
+    <string name="notif_nomina_hora">13:53</string>
+
+    <string name="notif_becas_titulo">Becas para estudiantes</string>
+    <string name="notif_becas_desc">Consulta cómo pedir una beca.</string>
+    <string name="notif_becas_hora">11:21</string>
+
+    <string name="notif_transf_oscar_titulo">Transferencia exitosa</string>
+    <string name="notif_transf_oscar_desc">A Óscar T. N. por: Viaje verano</string>
+    <string name="notif_transf_oscar_hora">9:41</string>
+
+    <string name="notif_pago_aliexpress_titulo">Pago exitoso</string>
+    <string name="notif_pago_aliexpress_desc">Pago completado en: Aliexpress.</string>
+    <string name="notif_ayer">Ayer</string>
+
+    <string name="notif_domiciliado_spotify_titulo">Cobro de pago domiciliado</string>
+    <string name="notif_domiciliado_spotify_desc">-5,99€ por: Spotify.</string>
+
+    <string name="notif_bizum_federico_titulo">Bizum recibido</string>
+    <string name="notif_bizum_federico_desc">+3,50€ de: Federico G. L.</string>
 
 </resources>
