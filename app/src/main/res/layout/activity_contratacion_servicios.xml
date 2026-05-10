@@ -59,8 +59,6 @@
                         android:textSize="32sp" />
                 </FrameLayout>
 
-                <!-- Para que se pueda ver todas las opciones-->
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -128,6 +126,7 @@
                             android:orientation="horizontal">
 
                             <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btn_apple"
                                 android:layout_width="wrap_content"
                                 android:layout_height="36dp"
                                 android:paddingHorizontal="10dp"
@@ -139,9 +138,10 @@
                                 app:cornerRadius="18dp" />
 
                             <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btn_amazon"
                                 android:layout_width="wrap_content"
                                 android:layout_height="36dp"
-                                android:layout_marginStart="6dp"
+                                android:layout_marginStart="2dp"
                                 android:paddingHorizontal="10dp"
                                 android:text="Amazon"
                                 android:textAllCaps="false"
@@ -151,9 +151,10 @@
                                 app:cornerRadius="18dp" />
 
                             <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btn_tesla"
                                 android:layout_width="wrap_content"
                                 android:layout_height="36dp"
-                                android:layout_marginStart="6dp"
+                                android:layout_marginStart="2dp"
                                 android:paddingHorizontal="10dp"
                                 android:text="Tesla"
                                 android:textAllCaps="false"
@@ -163,9 +164,10 @@
                                 app:cornerRadius="18dp" />
 
                             <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btn_microsoft"
                                 android:layout_width="wrap_content"
                                 android:layout_height="36dp"
-                                android:layout_marginStart="6dp"
+                                android:layout_marginStart="2dp"
                                 android:paddingHorizontal="10dp"
                                 android:text="Microsoft"
                                 android:textAllCaps="false"
@@ -212,12 +214,13 @@
                                 android:textStyle="bold" />
 
                             <EditText
+                                android:id="@+id/et_num_acciones"
                                 android:layout_width="match_parent"
                                 android:layout_height="48dp"
                                 android:layout_marginTop="8dp"
                                 android:background="@drawable/bg_rellenables"
                                 android:hint="Num. acciones"
-                                android:inputType="number"
+                                android:inputType="numberDecimal"
                                 android:paddingHorizontal="12dp"
                                 android:textSize="14sp" />
                         </LinearLayout>
@@ -240,6 +243,7 @@
                                 android:textStyle="bold" />
 
                             <EditText
+                                android:id="@+id/et_precio_actual"
                                 android:layout_width="match_parent"
                                 android:layout_height="48dp"
                                 android:layout_marginTop="8dp"
@@ -275,6 +279,7 @@
                                 android:textStyle="bold" />
 
                             <TextView
+                                android:id="@+id/tv_precio_final"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/inter_black"
@@ -321,12 +326,12 @@
                         android:paddingVertical="12dp"
                         android:text="Acceda al servicio al cliente\n¡Contáctanos! 📞"
                         android:textAllCaps="false"
-                        android:textColor="@color/white"
                         android:textSize="16sp"
                         app:backgroundTint="@color/mas_claro"
                         app:cornerRadius="20dp" />
                 </LinearLayout>
 
+                <!-- Para que se pueda ver todas las opciones-->
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="150dp"/>
