@@ -21,17 +21,13 @@ public class InformacionClientes extends BaseActivityClientes {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
-        // Configuración de la Toolbar y Drawer heredados
         configuracionDrawerToolbar(getString(R.string.informacion));
         marchaAtras();
 
-        // Lógica específica de la pantalla
         setupListeners();
     }
 
     private void setupListeners() {
-        // Botón Bizum (ahora buscado como View para evitar ClassCastException)
         View btnBizum = findViewById(R.id.btn_bizum_info);
         if (btnBizum != null) {
             btnBizum.setOnClickListener(v -> {
@@ -40,7 +36,6 @@ public class InformacionClientes extends BaseActivityClientes {
             });
         }
 
-        // Botón Balance
         View btnBalance = findViewById(R.id.btn_balance_info);
         if (btnBalance != null) {
             btnBalance.setOnClickListener(v -> {
@@ -49,7 +44,6 @@ public class InformacionClientes extends BaseActivityClientes {
             });
         }
 
-        // Botón Transferir
         View btnTransferir = findViewById(R.id.btn_transferir_info);
         if (btnTransferir != null) {
             btnTransferir.setOnClickListener(v -> {
@@ -58,7 +52,6 @@ public class InformacionClientes extends BaseActivityClientes {
             });
         }
 
-        // Botón "Ver más" para movimientos
         TextView tvVerMas = findViewById(R.id.tv_ver_mas);
         if (tvVerMas != null) {
             tvVerMas.setOnClickListener(v -> {

@@ -130,7 +130,7 @@
                     android:layout_marginTop="24dp"
                     android:textSize="20sp"/>
 
-                <!-- Tarjeta Actualizada -->
+                <!-- Tarjeta -->
                 <ImageView
                     android:id="@+id/iv_tarjeta"
                     android:layout_width="match_parent"
@@ -223,7 +223,7 @@
                     android:layout_marginTop="24dp"
                     android:textSize="20sp"/>
 
-                <!-- Movimientos (Ejemplos) -->
+                <!-- Movimientos-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -296,7 +296,6 @@
                     android:layout_marginTop="8dp"/>
 
 
-                <!-- Para que se pueda ver todas las opciones-->
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="150dp"/>

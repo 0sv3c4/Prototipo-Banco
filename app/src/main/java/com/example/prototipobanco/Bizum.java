@@ -45,10 +45,8 @@ public class Bizum extends BaseActivityClientes {
                 }
             });
 
-    // Lanzador para abrir la agenda
     private final ActivityResultLauncher<Intent> pickContactLauncher =
             registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
-                // Aquí se podría procesar el contacto elegido
             });
 
     @Override
@@ -87,8 +85,7 @@ public class Bizum extends BaseActivityClientes {
     private void setupListeners() {
         btnEnviar.setOnClickListener(v -> toggleOption(true));
         btnSolicitar.setOnClickListener(v -> toggleOption(false));
-        
-        // Tooltip de cantidad
+
         if (tooltipCantidad != null) {
             tooltipCantidad.setOnClickListener(v -> mostrarDialogoTooltip(R.layout.mensaje_tootip_cantidad));
         }
@@ -131,7 +128,6 @@ public class Bizum extends BaseActivityClientes {
             }
         });
 
-        // Restricción reactiva para el máximo de 500 euros
         etCantidad.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
@@ -165,7 +161,6 @@ public class Bizum extends BaseActivityClientes {
             } else {
                 try {
                     double cantidadVal = Double.parseDouble(cant.replace(',', '.'));
-                    // Doble verificación de seguridad al confirmar
                     if (cantidadVal < 0.5 || cantidadVal > 500) {
                         Toast.makeText(this, "La cantidad debe estar entre 0,5€ y 500€", Toast.LENGTH_SHORT).show();
                         return;

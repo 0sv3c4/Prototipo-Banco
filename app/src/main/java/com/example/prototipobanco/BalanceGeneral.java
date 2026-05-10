@@ -31,7 +31,6 @@ public class BalanceGeneral extends BaseActivityClientes {
             return insets;
         });
 
-        // Configuración de la Toolbar y Drawer heredados
         configuracionDrawerToolbar("");
         marchaAtras();
 
@@ -67,23 +66,18 @@ public class BalanceGeneral extends BaseActivityClientes {
             ivGrafico.setImageResource(R.drawable.grafico_sem);
             marcarBoton(btnSemanal);
         });
-
-        // Por defecto marcamos mensual para coincidir con la imagen inicial
         marcarBoton(btnMensual);
     }
 
     private void marcarBoton(TextView seleccionado) {
-        // Resetear todos al estado por defecto (blanco/transparente)
         btnAnual.setBackgroundTintList(null);
         btnMensual.setBackgroundTintList(null);
         btnSemanal.setBackgroundTintList(null);
 
-        // Aplicar el color de marcado al seleccionado (usando mas_claro de tu proyecto)
         seleccionado.setBackgroundTintList(android.content.res.ColorStateList.valueOf(getResources().getColor(R.color.mas_claro)));
     }
 
     private void setupSpinners() {
-        // Datos de los meses
         String[] meses = {"Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"};
         ArrayAdapter<String> adapterMeses = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, meses);
         adapterMeses.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -91,7 +85,6 @@ public class BalanceGeneral extends BaseActivityClientes {
         spinnerMesDesde.setAdapter(adapterMeses);
         spinnerMesHasta.setAdapter(adapterMeses);
 
-        // Años para "Desde" (2026 a 2006 descendente)
         List<String> aniosDesde = new ArrayList<>();
         for (int i = 2026; i >= 2006; i--) {
             aniosDesde.add(String.valueOf(i));
@@ -100,7 +93,6 @@ public class BalanceGeneral extends BaseActivityClientes {
         adapterAniosDesde.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerAnioDesde.setAdapter(adapterAniosDesde);
 
-        // Años para "Hasta" (2026 a 2036)
         List<String> aniosHasta = new ArrayList<>();
         for (int i = 2026; i <= 2036; i++) {
             aniosHasta.add(String.valueOf(i));

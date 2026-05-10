@@ -27,7 +27,6 @@ public class Movimientos extends BaseActivityClientes {
             return insets;
         });
 
-        // Configuración de la Toolbar y Drawer heredados
         configuracionDrawerToolbar("Movimientos");
         marchaAtras();
 
@@ -40,7 +39,6 @@ public class Movimientos extends BaseActivityClientes {
     }
 
     private void setupDatePicker() {
-        // Detectar clic en el icono del calendario (drawableEnd)
         etFechaFiltro.setOnTouchListener((v, event) -> {
             if (event.getAction() == MotionEvent.ACTION_UP) {
                 // El índice 2 corresponde al drawableEnd (derecha)
@@ -66,7 +64,7 @@ public class Movimientos extends BaseActivityClientes {
                     etFechaFiltro.setText(selectedDate);
                 }, year, month, day);
 
-        // Establecer fecha mínima: 1 de Enero de 2022
+        // Establecer fecha mínima
         Calendar minDate = Calendar.getInstance();
         minDate.set(2022, Calendar.JANUARY, 1);
         datePickerDialog.getDatePicker().setMinDate(minDate.getTimeInMillis());

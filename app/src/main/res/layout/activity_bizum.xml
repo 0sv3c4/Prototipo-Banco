@@ -20,7 +20,7 @@
             layout="@layout/toolbar_superior"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- CONTENIDO SCROLLABLE -->
+        <!-- CONTENIDO SCROLEABLE -->
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
