@@ -19,20 +19,20 @@
             layout="@layout/toolbar_superior"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- CONTENIDO SCROLLABLE -->
+        <!-- CONTENIDO SCROLLABLE (Ahora va hasta el fondo 'parent' para pasar por debajo de la curva) -->
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:clipToPadding="false"
             android:fillViewport="true"
-            app:layout_constraintBottom_toTopOf="@+id/include_bottom_toolbar"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/toolbar_superior_notif">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:paddingBottom="20dp">
+                android:paddingBottom="180dp"> <!-- Padding para que la última notif no quede tapada por el botón -->
 
                 <!-- HEADER CON FONDO CURVO -->
                 <FrameLayout
@@ -74,7 +74,7 @@
                     </LinearLayout>
                 </FrameLayout>
 
-                <!-- LISTA DE NOTIFICACIONES NUEVAS -->
+                <!-- LISTA DE NOTIFICACIONES (Cuerpo de la pantalla) -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -82,93 +82,17 @@
                     android:paddingHorizontal="24dp"
                     android:layout_marginTop="-10dp">
 
-                    <!-- 1. Multa de tráfico -->
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp"
-                        app:cardCornerRadius="18dp" app:cardElevation="0dp" app:cardBackgroundColor="@color/claro">
-                        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp">
-                            <ImageView android:id="@+id/icon1" android:layout_width="44dp" android:layout_height="44dp" android:src="@drawable/ic_error" android:background="@drawable/bg_circle_light_purple" android:backgroundTint="#40FFFFFF" android:padding="10dp" app:tint="@color/white" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-                            <TextView android:id="@+id/t1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:fontFamily="@font/inter_bold" android:text="@string/notif_multa_titulo" android:textColor="@color/white" android:textSize="18sp" app:layout_constraintEnd_toStartOf="@+id/h1" app:layout_constraintStart_toEndOf="@id/icon1" app:layout_constraintTop_toTopOf="parent" />
-                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:fontFamily="@font/inter" android:text="@string/notif_multa_desc" android:textColor="@color/white" android:textSize="14sp" app:layout_constraintStart_toStartOf="@+id/t1" app:layout_constraintTop_toBottomOf="@id/t1" app:layout_constraintEnd_toEndOf="parent" />
-                            <TextView android:id="@+id/h1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/notif_multa_hora" android:textColor="@color/white" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-                    </com.google.android.material.card.MaterialCardView>
-
-                    <!-- 2. Pago Game -->
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp"
-                        app:cardCornerRadius="18dp" app:cardElevation="0dp" app:cardBackgroundColor="@color/claro">
-                        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp">
-                            <ImageView android:id="@+id/icon2" android:layout_width="44dp" android:layout_height="44dp" android:src="@drawable/ic_exito" android:background="@drawable/bg_circle_light_purple" android:backgroundTint="#40FFFFFF" android:padding="10dp" app:tint="@color/white" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-                            <TextView android:id="@+id/t2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:fontFamily="@font/inter_bold" android:text="@string/notif_pago_game_titulo" android:textColor="@color/white" android:textSize="18sp" app:layout_constraintEnd_toStartOf="@+id/h2" app:layout_constraintStart_toEndOf="@id/icon2" app:layout_constraintTop_toTopOf="parent" />
-                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:fontFamily="@font/inter" android:text="@string/notif_pago_game_desc" android:textColor="@color/white" android:textSize="14sp" app:layout_constraintStart_toStartOf="@+id/t2" app:layout_constraintTop_toBottomOf="@id/t2" app:layout_constraintEnd_toEndOf="parent" />
-                            <TextView android:id="@+id/h2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/notif_pago_game_hora" android:textColor="@color/white" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-                    </com.google.android.material.card.MaterialCardView>
-
-                    <!-- 3. Bizum Walter -->
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp"
-                        app:cardCornerRadius="18dp" app:cardElevation="0dp" app:cardBackgroundColor="@color/claro">
-                        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp">
-                            <ImageView android:id="@+id/icon3" android:layout_width="44dp" android:layout_height="44dp" android:src="@drawable/ic_info" android:background="@drawable/bg_circle_light_purple" android:backgroundTint="#40FFFFFF" android:padding="10dp" app:tint="@color/white" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-                            <TextView android:id="@+id/t3" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:fontFamily="@font/inter_bold" android:text="@string/notif_bizum_walter_titulo" android:textColor="@color/white" android:textSize="18sp" app:layout_constraintEnd_toStartOf="@+id/h3" app:layout_constraintStart_toEndOf="@id/icon3" app:layout_constraintTop_toTopOf="parent" />
-                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:fontFamily="@font/inter" android:text="@string/notif_bizum_walter_desc" android:textColor="@color/white" android:textSize="14sp" app:layout_constraintStart_toStartOf="@+id/t3" app:layout_constraintTop_toBottomOf="@id/t3" app:layout_constraintEnd_toEndOf="parent" />
-                            <TextView android:id="@+id/h3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/notif_bizum_walter_hora" android:textColor="@color/white" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-                    </com.google.android.material.card.MaterialCardView>
-
-                    <!-- 4. Renta -->
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp"
-                        app:cardCornerRadius="18dp" app:cardElevation="0dp" app:cardBackgroundColor="@color/claro">
-                        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp">
-                            <ImageView android:id="@+id/icon4" android:layout_width="44dp" android:layout_height="44dp" android:src="@drawable/ic_info" android:background="@drawable/bg_circle_light_purple" android:backgroundTint="#40FFFFFF" android:padding="10dp" app:tint="@color/white" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-                            <TextView android:id="@+id/t4" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:fontFamily="@font/inter_bold" android:text="@string/notif_renta_titulo" android:textColor="@color/white" android:textSize="18sp" app:layout_constraintEnd_toStartOf="@+id/h4" app:layout_constraintStart_toEndOf="@id/icon4" app:layout_constraintTop_toTopOf="parent" />
-                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:fontFamily="@font/inter" android:text="@string/notif_renta_desc" android:textColor="@color/white" android:textSize="14sp" app:layout_constraintStart_toStartOf="@+id/t4" app:layout_constraintTop_toBottomOf="@id/t4" app:layout_constraintEnd_toEndOf="parent" />
-                            <TextView android:id="@+id/h4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/notif_renta_hora" android:textColor="@color/white" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-                    </com.google.android.material.card.MaterialCardView>
-
-                    <!-- 5. Nómina -->
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp"
-                        app:cardCornerRadius="18dp" app:cardElevation="0dp" app:cardBackgroundColor="@color/claro">
-                        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp">
-                            <ImageView android:id="@+id/icon5" android:layout_width="44dp" android:layout_height="44dp" android:src="@drawable/ic_exito" android:background="@drawable/bg_circle_light_purple" android:backgroundTint="#40FFFFFF" android:padding="10dp" app:tint="@color/white" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-                            <TextView android:id="@+id/t5" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:fontFamily="@font/inter_bold" android:text="@string/notif_nomina_titulo" android:textColor="@color/white" android:textSize="18sp" app:layout_constraintEnd_toStartOf="@+id/h5" app:layout_constraintStart_toEndOf="@id/icon5" app:layout_constraintTop_toTopOf="parent" />
-                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:fontFamily="@font/inter" android:text="@string/notif_nomina_desc" android:textColor="@color/white" android:textSize="14sp" app:layout_constraintStart_toStartOf="@+id/t5" app:layout_constraintTop_toBottomOf="@id/t5" app:layout_constraintEnd_toEndOf="parent" />
-                            <TextView android:id="@+id/h5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/notif_nomina_hora" android:textColor="@color/white" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-                    </com.google.android.material.card.MaterialCardView>
-
-                    <!-- 6. Becas -->
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp"
-                        app:cardCornerRadius="18dp" app:cardElevation="0dp" app:cardBackgroundColor="@color/claro">
-                        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp">
-                            <ImageView android:id="@+id/icon6" android:layout_width="44dp" android:layout_height="44dp" android:src="@drawable/ic_info" android:background="@drawable/bg_circle_light_purple" android:backgroundTint="#40FFFFFF" android:padding="10dp" app:tint="@color/white" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-                            <TextView android:id="@+id/t6" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:fontFamily="@font/inter_bold" android:text="@string/notif_becas_titulo" android:textColor="@color/white" android:textSize="18sp" app:layout_constraintEnd_toStartOf="@+id/h6" app:layout_constraintStart_toEndOf="@id/icon6" app:layout_constraintTop_toTopOf="parent" />
-                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:fontFamily="@font/inter" android:text="@string/notif_becas_desc" android:textColor="@color/white" android:textSize="14sp" app:layout_constraintStart_toStartOf="@+id/t6" app:layout_constraintTop_toBottomOf="@id/t6" app:layout_constraintEnd_toEndOf="parent" />
-                            <TextView android:id="@+id/h6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/notif_becas_hora" android:textColor="@color/white" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-                    </com.google.android.material.card.MaterialCardView>
-
-                    <!-- 7. Transferencia Oscar -->
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp"
-                        app:cardCornerRadius="18dp" app:cardElevation="0dp" app:cardBackgroundColor="@color/claro">
-                        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp">
-                            <ImageView android:id="@+id/icon7" android:layout_width="44dp" android:layout_height="44dp" android:src="@drawable/ic_exito" android:background="@drawable/bg_circle_light_purple" android:backgroundTint="#40FFFFFF" android:padding="10dp" app:tint="@color/white" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-                            <TextView android:id="@+id/t7" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:fontFamily="@font/inter_bold" android:text="@string/notif_transf_oscar_titulo" android:textColor="@color/white" android:textSize="18sp" app:layout_constraintEnd_toStartOf="@+id/h7" app:layout_constraintStart_toEndOf="@id/icon7" app:layout_constraintTop_toTopOf="parent" />
-                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:fontFamily="@font/inter" android:text="@string/notif_transf_oscar_desc" android:textColor="@color/white" android:textSize="14sp" app:layout_constraintStart_toStartOf="@+id/t7" app:layout_constraintTop_toBottomOf="@id/t7" app:layout_constraintEnd_toEndOf="parent" />
-                            <TextView android:id="@+id/h7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/notif_transf_oscar_hora" android:textColor="@color/white" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-                    </com.google.android.material.card.MaterialCardView>
+                    <!-- He puesto todas las tarjetas para que las veas en el editor -->
+                    <include layout="@layout/item_notificacion" android:id="@+id/n1" />
+                    <include layout="@layout/item_notificacion" android:id="@+id/n2" />
+                    <include layout="@layout/item_notificacion" android:id="@+id/n3" />
+                    <include layout="@layout/item_notificacion" android:id="@+id/n4" />
+                    <include layout="@layout/item_notificacion" android:id="@+id/n5" />
+                    <include layout="@layout/item_notificacion" android:id="@+id/n6" />
+                    <include layout="@layout/item_notificacion" android:id="@+id/n7" />
 
                 </LinearLayout>
 
-                <!-- SECCIÓN LEÍDAS -->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -181,7 +105,6 @@
                     android:textColor="@color/claro"
                     android:textSize="18sp" />
 
-                <!-- LISTA DE NOTIFICACIONES LEÍDAS -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -189,51 +112,16 @@
                     android:paddingHorizontal="24dp"
                     android:layout_marginTop="16dp">
 
-                    <!-- L1. Pago Aliexpress -->
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp"
-                        app:cardCornerRadius="18dp" app:cardElevation="0dp" app:cardBackgroundColor="@color/claro">
-                        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp">
-                            <ImageView android:id="@+id/iL1" android:layout_width="44dp" android:layout_height="44dp" android:src="@drawable/ic_exito" android:background="@drawable/bg_circle_light_purple" android:backgroundTint="#40FFFFFF" android:padding="10dp" app:tint="@color/white" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-                            <TextView android:id="@+id/tL1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:fontFamily="@font/inter_bold" android:text="@string/notif_pago_aliexpress_titulo" android:textColor="@color/white" android:textSize="18sp" app:layout_constraintEnd_toStartOf="@+id/hL1" app:layout_constraintStart_toEndOf="@id/iL1" app:layout_constraintTop_toTopOf="parent" />
-                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:fontFamily="@font/inter" android:text="@string/notif_pago_aliexpress_desc" android:textColor="@color/white" android:textSize="14sp" app:layout_constraintStart_toStartOf="@+id/tL1" app:layout_constraintTop_toBottomOf="@id/tL1" app:layout_constraintEnd_toEndOf="parent" />
-                            <TextView android:id="@+id/hL1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/notif_ayer" android:textColor="@color/white" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-                    </com.google.android.material.card.MaterialCardView>
-
-                    <!-- L2. Spotify -->
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp"
-                        app:cardCornerRadius="18dp" app:cardElevation="0dp" app:cardBackgroundColor="@color/claro">
-                        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp">
-                            <ImageView android:id="@+id/iL2" android:layout_width="44dp" android:layout_height="44dp" android:src="@drawable/ic_error" android:background="@drawable/bg_circle_light_purple" android:backgroundTint="#40FFFFFF" android:padding="10dp" app:tint="@color/white" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-                            <TextView android:id="@+id/tL2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:fontFamily="@font/inter_bold" android:text="@string/notif_domiciliado_spotify_titulo" android:textColor="@color/white" android:textSize="18sp" app:layout_constraintEnd_toStartOf="@+id/hL2" app:layout_constraintStart_toEndOf="@id/iL2" app:layout_constraintTop_toTopOf="parent" />
-                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:fontFamily="@font/inter" android:text="@string/notif_domiciliado_spotify_desc" android:textColor="@color/white" android:textSize="14sp" app:layout_constraintStart_toStartOf="@+id/tL2" app:layout_constraintTop_toBottomOf="@id/tL2" app:layout_constraintEnd_toEndOf="parent" />
-                            <TextView android:id="@+id/hL2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/notif_ayer" android:textColor="@color/white" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-                    </com.google.android.material.card.MaterialCardView>
-
-                    <!-- L3. Bizum Federico -->
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp"
-                        app:cardCornerRadius="18dp" app:cardElevation="0dp" app:cardBackgroundColor="@color/claro">
-                        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp">
-                            <ImageView android:id="@+id/iL3" android:layout_width="44dp" android:layout_height="44dp" android:src="@drawable/ic_info" android:background="@drawable/bg_circle_light_purple" android:backgroundTint="#40FFFFFF" android:padding="10dp" app:tint="@color/white" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-                            <TextView android:id="@+id/tL3" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:fontFamily="@font/inter_bold" android:text="@string/notif_bizum_federico_titulo" android:textColor="@color/white" android:textSize="18sp" app:layout_constraintEnd_toStartOf="@+id/hL3" app:layout_constraintStart_toEndOf="@id/iL3" app:layout_constraintTop_toTopOf="parent" />
-                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:fontFamily="@font/inter" android:text="@string/notif_bizum_federico_desc" android:textColor="@color/white" android:textSize="14sp" app:layout_constraintStart_toStartOf="@+id/tL3" app:layout_constraintTop_toBottomOf="@id/tL3" app:layout_constraintEnd_toEndOf="parent" />
-                            <TextView android:id="@+id/hL3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/notif_ayer" android:textColor="@color/white" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-                    </com.google.android.material.card.MaterialCardView>
-
-                    <!-- Espacio final para que el scroll no tape el botón -->
-                    <View android:layout_width="match_parent" android:layout_height="100dp" />
+                    <include layout="@layout/item_notificacion" android:id="@+id/nl1" />
+                    <include layout="@layout/item_notificacion" android:id="@+id/nl2" />
+                    <include layout="@layout/item_notificacion" android:id="@+id/nl3" />
 
                 </LinearLayout>
 
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
 
-        <!-- TOOLBAR INFERIOR REUTILIZADA (Exactamente como en Contratación) -->
+        <!-- TOOLBAR INFERIOR (Ahora flota encima del listado sin cortarlo) -->
         <include
             android:id="@+id/include_bottom_toolbar"
             layout="@layout/toolbar_inferior_clientes"
