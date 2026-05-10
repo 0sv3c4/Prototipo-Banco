@@ -190,6 +190,7 @@
                                 app:tint="@color/black" />
 
                             <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btn_agenda_transferencia"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="12dp"
@@ -218,19 +219,17 @@
                                 android:src="@drawable/ic_mas"
                                 app:tint="@color/black" />
 
-                            <com.google.android.material.button.MaterialButton
+                            <EditText
+                                android:id="@+id/et_nuevo_destinatario"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_height="40dp"
                                 android:layout_marginStart="12dp"
-                                android:text="Nuevo destinatario"
-                                android:textAllCaps="false"
-                                android:textColor="@color/neutro"
-                                android:paddingVertical="4dp"
-                                android:textSize="14sp"
-                                app:backgroundTint="@color/ultra_claro"
-                                app:cornerRadius="20dp"
-                                app:strokeColor="@color/neutro"
-                                app:strokeWidth="1dp" />
+                                android:background="@drawable/bg_rellenables"
+                                android:hint="Nuevo destinatario"
+                                android:paddingHorizontal="16dp"
+                                android:textColorHint="@color/neutro"
+                                android:textSize="15sp"
+                                android:inputType="textPersonName" />
                         </LinearLayout>
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
@@ -301,6 +300,7 @@
                                 app:tint="@color/black" />
 
                             <EditText
+                                android:id="@+id/et_importe_transferencia"
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
                                 android:layout_marginStart="12dp"
@@ -327,6 +327,7 @@
                                 app:tint="@color/black" />
 
                             <EditText
+                                android:id="@+id/et_concepto_transferencia"
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
                                 android:layout_marginStart="12dp"
