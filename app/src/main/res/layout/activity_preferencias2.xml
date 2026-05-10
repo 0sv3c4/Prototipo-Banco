@@ -344,6 +344,8 @@
         android:id="@+id/nav_view"
         android:layout_gravity="start"
         app:headerLayout="@layout/nav_cabecera"
-        app:menu="@menu/nav_menu" />
+        app:menu="@menu/nav_menu"
+        app:itemTextColor="@color/oscuro"
+        app:itemTextAppearance="@style/boton_llamativo" />
 
 </androidx.drawerlayout.widget.DrawerLayout>
