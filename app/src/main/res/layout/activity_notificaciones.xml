@@ -40,13 +40,24 @@
                     android:layout_width="match_parent"
                     android:layout_height="180dp">
 
-                    <View
+                    <!-- ajustar el óvalo-->
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
                         android:layout_width="match_parent"
-                        android:layout_height="250dp"
-                        android:layout_marginTop="-100dp"
-                        android:background="@drawable/bg_bottom_curve"
-                        android:backgroundTint="@color/ultra_claro" />
+                        android:layout_height="200dp"
+                        android:gravity="bottom|end"
+                        app:layout_constraintTop_toTopOf="parent">
 
+                        <View
+                            android:id="@+id/fondo_redondo"
+                            android:layout_width="600dp"
+                            android:layout_height="510dp"
+                            android:layout_marginEnd="-10dp"
+                            android:background="@drawable/bg_cabecera_drawer"
+                            android:backgroundTint="@color/ultra_claro"
+                            tools:ignore="VisualLintBounds" />
+
+                    </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

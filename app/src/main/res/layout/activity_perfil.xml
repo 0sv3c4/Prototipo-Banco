@@ -41,8 +41,8 @@
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="280dp"
-                        android:layout_marginTop="-100dp"
+                        android:layout_height="350dp"
+                        android:layout_marginTop="-200dp"
                         android:background="@drawable/bg_bottom_curve"
                         android:backgroundTint="@color/ultra_claro" />
 
