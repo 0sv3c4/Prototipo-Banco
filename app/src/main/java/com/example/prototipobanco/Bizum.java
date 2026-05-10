@@ -7,6 +7,8 @@ import android.content.pm.PackageManager;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -108,8 +110,46 @@ public class Bizum extends BaseActivityClientes {
         };
 
         etDestinatario.setOnFocusChangeListener(selectionCheckListener);
-        etCantidad.setOnFocusChangeListener(selectionCheckListener);
         etConcepto.setOnFocusChangeListener(selectionCheckListener);
+
+        // Listener para la caja de cantidad con restricciones de rango
+        etCantidad.setOnFocusChangeListener((v, hasFocus) -> {
+            if (hasFocus && !isEnviarSelected && !isSolicitarSelected) {
+                v.clearFocus();
+                mostrarDialogo(R.layout.mensaje_error_bizum_seleccion);
+            } else if (!hasFocus) {
+                // Al perder el foco, validamos el mínimo de 0.5 euros
+                String text = etCantidad.getText().toString().trim();
+                if (!text.isEmpty()) {
+                    try {
+                        double val = Double.parseDouble(text.replace(',', '.'));
+                        if (val < 0.5) {
+                            etCantidad.setText("0.5");
+                        }
+                    } catch (NumberFormatException ignored) {}
+                }
+            }
+        });
+
+        // Restricción reactiva para el máximo de 500 euros
+        etCantidad.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {}
+            @Override
+            public void afterTextChanged(Editable s) {
+                if (s.length() > 0) {
+                    try {
+                        double val = Double.parseDouble(s.toString().replace(',', '.'));
+                        if (val > 500) {
+                            etCantidad.setText("500");
+                            etCantidad.setSelection(etCantidad.getText().length());
+                        }
+                    } catch (NumberFormatException ignored) {}
+                }
+            }
+        });
 
         btnConfirmar.setOnClickListener(v -> {
             if (!isEnviarSelected && !isSolicitarSelected) {
@@ -123,6 +163,18 @@ public class Bizum extends BaseActivityClientes {
             if (dest.isEmpty() || cant.isEmpty()) {
                 mostrarDialogo(R.layout.mensaje_error_bizum_campos);
             } else {
+                try {
+                    double cantidadVal = Double.parseDouble(cant.replace(',', '.'));
+                    // Doble verificación de seguridad al confirmar
+                    if (cantidadVal < 0.5 || cantidadVal > 500) {
+                        Toast.makeText(this, "La cantidad debe estar entre 0,5€ y 500€", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                } catch (NumberFormatException e) {
+                    mostrarDialogo(R.layout.mensaje_error_bizum_campos);
+                    return;
+                }
+
                 if (isEnviarSelected) {
                     mostrarDialogo(R.layout.mensaje_exito_envio);
                 } else {
