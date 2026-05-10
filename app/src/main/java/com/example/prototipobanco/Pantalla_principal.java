@@ -14,6 +14,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.prototipobanco.todosUsu.Promociones_banco;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.materialswitch.MaterialSwitch;
 import com.google.android.material.navigation.NavigationView;
@@ -71,8 +72,11 @@ public class Pantalla_principal extends BaseActivityClientes {
 
         MaterialCardView cardCuenta = findViewById(R.id.card_cuenta_principal);
         if (cardCuenta != null) cardCuenta.setOnClickListener(v -> startActivity(new Intent(this, InformacionClientes.class)));
-    }
 
+        MaterialCardView btnPromocion = findViewById(R.id.card_promocion);
+        if (btnPromocion != null) btnPromocion.setOnClickListener(v -> startActivity(new Intent(this, Promociones_banco.class)));
+    }
+    
     private void configurarVisibilidad() {
         NavigationView navView = findViewById(R.id.nav_view);
         View headerView = navView.getHeaderView(0);
