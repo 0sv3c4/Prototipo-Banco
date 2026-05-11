@@ -8,11 +8,13 @@ import android.widget.LinearLayout;
 import androidx.activity.EdgeToEdge;
 import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.prototipobanco.R;
+import com.google.android.material.button.MaterialButton;
 
 public class Pantalla_inicial extends AppCompatActivity {
     //otraprueba2
@@ -36,8 +38,8 @@ public class Pantalla_inicial extends AppCompatActivity {
         });
 
         //Atts a utilizar
-        ImageView btnIniciarSesion = findViewById(R.id.inicio_sesion);
-        ImageView btnContactanos = findViewById(R.id.contactanos);
+        MaterialButton btnIniciarSesion = findViewById(R.id.inicio_sesion);
+        ConstraintLayout btnContactanos = findViewById(R.id.contactanos);
 
         LinearLayout btnOfertas = findViewById(R.id.clicakble_ofertas);
         LinearLayout btnEventos = findViewById(R.id.clickable_eventos);

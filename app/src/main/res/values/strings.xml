@@ -124,5 +124,6 @@
     <string name="geolocalizacion">Geolocalización</string>
     <string name="permisos_notif">Permisos de notificaciones</string>
     <string name="foto_perfil">Foto de perfil</string>
+    <string name="btn_inicio_sesion">Iniciar Sesión</string>
 
 </resources>
