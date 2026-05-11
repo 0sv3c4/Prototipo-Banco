@@ -22,7 +22,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/inter_extrabold"
-            android:text="Tu oficina más\ncercana es:"
+            android:text="@string/tu_oficina_m_s_ncercana_es"
             android:textColor="@color/oscuro"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -44,7 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/inter_bold"
-                android:text="Río Vena (Burgos)"
+                android:text="@string/r_o_vena_burgos"
                 android:textColor="@color/neutro"
                 android:textSize="14sp" />
 
@@ -52,7 +52,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/inter_bold"
-                android:text="C/Melancolía, 7"
+                android:text="@string/c_melancolia_7"
                 android:textColor="@color/neutro"
                 android:textSize="14sp" />
 
@@ -60,7 +60,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/inter_bold"
-                android:text="947000000"
+                android:text="@string/_947000000"
                 android:textColor="@color/claro"
                 android:textSize="14sp" />
         </LinearLayout>
@@ -82,7 +82,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/inter_bold"
-                android:text="Atención al cliente"
+                android:text="@string/atencion_al_cliente"
                 android:textColor="@color/neutro"
                 android:textSize="24sp" />
 
@@ -102,7 +102,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="24dp"
                 android:fontFamily="@font/inter_extrabold"
-                android:text="900 000 000"
+                android:text="@string/_900_000_000"
                 android:textColor="@color/black"
                 android:textSize="24sp"
                 app:backgroundTint="@color/mas_claro"
@@ -118,7 +118,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/inter_bold"
-                android:text="Urgencias"
+                android:text="@string/urgencias"
                 android:textColor="@color/neutro"
                 android:textSize="24sp" />
 
@@ -138,7 +138,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="24dp"
                 android:fontFamily="@font/inter_extrabold"
-                android:text="900 000 001"
+                android:text="@string/_900_000_001"
                 android:textColor="@color/black"
                 android:textSize="24sp"
                 app:backgroundTint="@color/mas_claro"
@@ -154,7 +154,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/inter_bold"
-                android:text="Seguros"
+                android:text="@string/seguros"
                 android:textColor="@color/neutro"
                 android:textSize="24sp" />
 
@@ -174,7 +174,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="24dp"
                 android:fontFamily="@font/inter_extrabold"
-                android:text="910 000 000"
+                android:text="@string/_910_000_000"
                 android:textColor="@color/black"
                 android:textSize="24sp"
                 app:backgroundTint="@color/mas_claro"

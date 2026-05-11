@@ -24,7 +24,7 @@
             android:layout_marginEnd="20dp"
             android:layout_marginStart="20dp"
             android:gravity="center_horizontal"
-            android:text="Mínimo: 100€\nMáximo: 10.000€"
+            android:text="@string/m_nimo_100_nm_ximo_10_000"
             android:textColor="#757575"
             android:textSize="16sp"
             app:layout_constraintTop_toTopOf="parent" />

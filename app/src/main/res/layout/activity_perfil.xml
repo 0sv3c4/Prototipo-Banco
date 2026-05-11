@@ -152,7 +152,7 @@
                         <ImageView android:layout_width="36dp" android:layout_height="36dp" android:background="@drawable/bg_circle_light_purple" android:padding="8dp" android:src="@android:drawable/ic_menu_preferences" app:tint="@color/oscuro" />
                         <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="16dp">
                             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/inter_bold" android:text="@string/permisos_habilitados" android:textColor="@color/black" android:textSize="16sp" />
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/inter" android:text="• Face ID\n• Accesos directos\n• Bizum\n• Geolocalización" android:textColor="@color/black" android:textSize="14sp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/inter" android:text="@string/face_id_n_accesos_directos_n_bizum_n_geolocalizaci_n" android:textColor="@color/black" android:textSize="14sp" />
                         </LinearLayout>
                     </LinearLayout>
 
@@ -161,7 +161,7 @@
                         <ImageView android:layout_width="36dp" android:layout_height="36dp" android:background="@drawable/bg_circle_light_purple" android:padding="8dp" android:src="@drawable/ic_cliente" app:tint="@color/oscuro" />
                         <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="16dp">
                             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/inter_bold" android:text="@string/falta_personalizar" android:textColor="@color/black" android:textSize="16sp" />
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/inter" android:text="• Alias\n• Permisos de notificaciones\n• Foto de perfil" android:textColor="@color/black" android:textSize="14sp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/inter" android:text="@string/alias_n_permisos_de_notificaciones_n_foto_de_perfil" android:textColor="@color/black" android:textSize="14sp" />
                         </LinearLayout>
                     </LinearLayout>
 

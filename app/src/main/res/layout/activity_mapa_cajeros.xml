@@ -29,14 +29,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cajeros y oficinas por su zona"
+                android:text="@string/cajeros_y_oficinas_por_su_zona"
                 android:textAppearance="@style/subtitulo"
                 android:textSize="24sp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Encuentra tu cajero más cercano"
+                android:text="@string/encuentra_tu_cajero_m_s_cercano"
                 android:textAppearance="@style/titulo_seccion"
                 android:textColor="@color/claro"/>
         </LinearLayout>
@@ -58,7 +58,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="30dp"
-            android:text="Activar la ubicación"
+            android:text="@string/activar_la_ubicaci_n"
             android:textAppearance="@style/subtitulo"
             android:textSize="24sp" />
 
@@ -83,7 +83,7 @@
         android:drawableStart="@drawable/ic_map"
         android:drawablePadding="10dp"
         android:fontFamily="@font/inter_medium"
-        android:hint="Inserte para filtrar por ciudad o CP..."
+        android:hint="@string/inserte_para_filtrar_por_ciudad_o_cp"
         android:inputType="text"
         android:maxLines="1"
         android:paddingHorizontal="20dp"

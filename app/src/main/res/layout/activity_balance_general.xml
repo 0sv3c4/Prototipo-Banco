@@ -51,7 +51,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Balance General"
+                            android:text="@string/balance_generall"
                             android:textAppearance="@style/titulo"
                             android:textColor="@color/oscuro"
                             android:textSize="38sp" />
@@ -60,7 +60,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="-4dp"
-                            android:text="Comparativa Financiera"
+                            android:text="@string/comparativa_financieraa"
                             android:textColor="@color/neutro"
                             android:textSize="20sp"
                             android:textStyle="bold" />
@@ -94,7 +94,7 @@
                             android:focusable="true"
                             android:gravity="center"
                             android:padding="12dp"
-                            android:text="Anual"
+                            android:text="@string/anual"
                             android:textColor="@color/oscuro"
                             android:textStyle="bold" />
 
@@ -110,7 +110,7 @@
                             android:focusable="true"
                             android:gravity="center"
                             android:padding="12dp"
-                            android:text="Mensual"
+                            android:text="@string/mensual"
                             android:textColor="@color/oscuro"
                             android:textStyle="bold" />
 
@@ -124,7 +124,7 @@
                             android:focusable="true"
                             android:gravity="center"
                             android:padding="12dp"
-                            android:text="Semanal"
+                            android:text="@string/semanal"
                             android:textColor="@color/oscuro"
                             android:textStyle="bold" />
                     </LinearLayout>
@@ -174,7 +174,7 @@
                                 <TextView
                                     android:layout_width="80dp"
                                     android:layout_height="wrap_content"
-                                    android:text="Desde:"
+                                    android:text="@string/desde"
                                     android:textColor="@color/neutro"
                                     android:textSize="20sp"
                                     android:textStyle="bold" />
@@ -234,7 +234,7 @@
                                 <TextView
                                     android:layout_width="80dp"
                                     android:layout_height="wrap_content"
-                                    android:text="Hasta:"
+                                    android:text="@string/hasta"
                                     android:textColor="@color/neutro"
                                     android:textSize="20sp"
                                     android:textStyle="bold" />

@@ -80,7 +80,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/inter_medium"
-            android:text="¿No eres cliente todavía?"
+            android:text="@string/no_eres_cliente_todavia"
             android:textColor="@color/white"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -124,7 +124,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="376dp"
         android:gravity="center_horizontal|top"
-        android:text="Nuestras mejores ofertas:"
+        android:text="@string/nuestras_mejores_ofertas"
         android:textAppearance="@style/titulo_seccion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.144"
@@ -137,7 +137,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="624dp"
         android:gravity="center_horizontal|top"
-        android:text="Proximos Eventos:"
+        android:text="@string/proximos_eventos"
         android:textAppearance="@style/titulo_seccion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.11"
@@ -151,7 +151,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="400dp"
-        android:contentDescription="contenedor de fotos para ofertas"
+        android:contentDescription="@string/contenedor_de_fotos_para_ofertas"
         android:src="@drawable/fondo_mostrador"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
@@ -180,7 +180,7 @@
                 android:id="@+id/img_oferta_1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:contentDescription="DK Finance Day"
+                android:contentDescription="@string/dk_finance_day"
                 android:scaleType="centerCrop"
                 android:src="@drawable/promo1" />
 
@@ -199,7 +199,7 @@
                 android:id="@+id/img_oferta_2"
                 android:layout_width="match_parent"
                 android:layout_height="147dp"
-                android:contentDescription="Feria del Ahorro"
+                android:contentDescription="@string/feria_del_ahorro"
                 android:scaleType="centerCrop"
                 android:src="@drawable/promo2" />
 
@@ -217,7 +217,7 @@
                 android:id="@+id/img_oferta_3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:contentDescription="Kong Tech Talk"
+                android:contentDescription="@string/kong_tech_talk"
                 android:scaleType="centerCrop"
                 android:src="@drawable/promo3" />
 
@@ -233,7 +233,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="650dp"
-        android:contentDescription="contenedor de fotos para eventos"
+        android:contentDescription="@string/contenedor_de_fotos_para_eventos"
         android:src="@drawable/fondo_mostrador"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"

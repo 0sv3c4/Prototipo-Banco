@@ -89,7 +89,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Transferir"
+                            android:text="@string/transferir"
                             android:layout_marginTop="4dp"
                             android:textColor="@color/claro"
                             android:textStyle="bold" />
@@ -115,7 +115,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Balance"
+                            android:text="@string/balance"
                             android:layout_marginTop="4dp"
                             android:textColor="@color/claro"
                             android:textStyle="bold" />
@@ -125,7 +125,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tus tarjetas:"
+                    android:text="@string/tus_tarjetas"
                     android:textAppearance="@style/titulo_seccion"
                     android:layout_marginTop="24dp"
                     android:textSize="20sp"/>
@@ -142,7 +142,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Gestión de carteras:"
+                    android:text="@string/gestion_de_carteras"
                     android:textAppearance="@style/titulo_seccion"
                     android:layout_marginTop="24dp"
                     android:textSize="20sp"/>
@@ -170,7 +170,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Cartera 1"
+                            android:text="@string/cartera_1"
                             android:textColor="@color/oscuro" />
                     </LinearLayout>
 
@@ -189,7 +189,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Cartera 2"
+                            android:text="@string/cartera_2"
                             android:textColor="@color/oscuro" />
                     </LinearLayout>
 
@@ -210,7 +210,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Añadir"
+                            android:text="@string/anadir"
                             android:textColor="@color/oscuro" />
                     </LinearLayout>
                 </LinearLayout>
@@ -218,7 +218,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Últimos movimientos:"
+                    android:text="@string/ltimos_movimientos"
                     android:textAppearance="@style/titulo_seccion"
                     android:layout_marginTop="24dp"
                     android:textSize="20sp"/>
@@ -244,13 +244,13 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Cafetería Politécnica UBU"
+                                android:text="@string/cafeter_a_polit_cnica_ubu"
                                 android:textColor="@color/black" />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentEnd="true"
-                                android:text="-4,99€"
+                                android:text="@string/_4_99"
                                 android:textColor="@color/error"
                                 android:textStyle="bold" />
                         </RelativeLayout>
@@ -270,13 +270,13 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Bizum from: Walter White"
+                                android:text="@string/bizum_from_walter_white"
                                 android:textColor="@color/black" />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentEnd="true"
-                                android:text="+10€"
+                                android:text="@string/_10"
                                 android:textColor="@color/exito"
                                 android:textStyle="bold" />
                         </RelativeLayout>
@@ -288,7 +288,7 @@
                     android:id="@+id/tv_ver_mas"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Ver más"
+                    android:text="@string/ver_m_s"
                     android:layout_gravity="center"
                     android:textColor="@color/oscuro"
                     android:textStyle="bold"

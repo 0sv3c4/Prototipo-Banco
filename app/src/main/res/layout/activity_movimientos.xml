@@ -45,7 +45,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="16dp"
                         android:lineSpacingExtra="2dp"
-                        android:text="Últimos\nmovimientos:"
+                        android:text="@string/ltimos_nmovimientos"
                         android:textAppearance="@style/titulo"
                         android:textColor="@color/oscuro"
                         android:textSize="28sp"
@@ -95,7 +95,7 @@
                             android:digits="0123456789/"
                             android:drawableEnd="@android:drawable/ic_menu_my_calendar"
                             android:drawableTint="@color/oscuro"
-                            android:hint="dd/mm/yyyy"
+                            android:hint="@string/dd_mm_yyyy"
                             android:inputType="text"
                             android:paddingEnd="10dp"
                             android:textColorHint="@color/claro"
@@ -108,7 +108,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
-                    android:text="14 MAR 2026"
+                    android:text="@string/_14_mar_2026"
                     android:textColor="@color/oscuro"
                     android:textStyle="bold" />
 
@@ -194,14 +194,14 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Tienda Game: Expedition 33"
+                            android:text="@string/tienda_game_expedition_33"
                             android:textColor="@color/black" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
-                            android:text="-49,99€"
+                            android:text="@string/_49_99"
                             android:textColor="@color/error"
                             android:textStyle="bold" />
                     </RelativeLayout>
@@ -223,14 +223,14 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Prácticas autoescuela"
+                            android:text="@string/pr_cticas_autoescuela"
                             android:textColor="@color/black" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
-                            android:text="-100€"
+                            android:text="@string/_100"
                             android:textColor="@color/error"
                             android:textStyle="bold" />
                     </RelativeLayout>
@@ -240,7 +240,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="28 FEB 2026"
+                    android:text="@string/_28_feb_2026"
                     android:textColor="@color/oscuro"
                     android:textStyle="bold" />
 
@@ -267,14 +267,14 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Transferencia: Nómina"
+                            android:text="@string/transferencia_n_mina"
                             android:textColor="@color/black" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
-                            android:text="+1900€"
+                            android:text="@string/_1900"
                             android:textColor="@color/exito"
                             android:textStyle="bold" />
                     </RelativeLayout>
@@ -284,7 +284,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="23 FEB 2026"
+                    android:text="@string/_23_feb_2026"
                     android:textColor="@color/oscuro"
                     android:textStyle="bold" />
 
@@ -311,14 +311,14 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Propina de la abuela"
+                            android:text="@string/propina_de_la_abuela"
                             android:textColor="@color/black" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
-                            android:text="+5,00€"
+                            android:text="@string/_5_00"
                             android:textColor="@color/exito"
                             android:textStyle="bold" />
                     </RelativeLayout>
@@ -340,14 +340,14 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="PC Componentes: M. RAM"
+                            android:text="@string/pc_componentes_m_ram"
                             android:textColor="@color/black" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
-                            android:text="-194,99€"
+                            android:text="@string/_194_99"
                             android:textColor="@color/error"
                             android:textStyle="bold" />
                     </RelativeLayout>
@@ -367,7 +367,7 @@
                         android:layout_marginEnd="8dp"
                         android:background="@drawable/bg_circle_purple"
                         android:gravity="center"
-                        android:text="1"
+                        android:text="@string/_1"
                         android:textColor="@color/white" />
 
                     <TextView
@@ -375,7 +375,7 @@
                         android:layout_height="32dp"
                         android:layout_marginEnd="8dp"
                         android:gravity="center"
-                        android:text="2"
+                        android:text="@string/_2"
                         android:textColor="@color/oscuro" />
 
                     <TextView
@@ -383,7 +383,7 @@
                         android:layout_height="32dp"
                         android:layout_marginEnd="8dp"
                         android:gravity="center"
-                        android:text="3"
+                        android:text="@string/_3"
                         android:textColor="@color/oscuro" />
 
                     <TextView
@@ -399,14 +399,14 @@
                         android:layout_height="32dp"
                         android:layout_marginEnd="8dp"
                         android:gravity="center"
-                        android:text="66"
+                        android:text="@string/_66"
                         android:textColor="@color/oscuro" />
 
                     <TextView
                         android:layout_width="32dp"
                         android:layout_height="32dp"
                         android:gravity="center"
-                        android:text="67"
+                        android:text="@string/_67"
                         android:textColor="@color/oscuro" />
 
                 </LinearLayout>

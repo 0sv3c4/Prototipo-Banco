@@ -24,7 +24,7 @@
             android:layout_marginEnd="20dp"
             android:layout_marginStart="20dp"
             android:gravity="center_horizontal"
-            android:text="Se necesitará un DNI o NIF válido para el acceso"
+            android:text="@string/se_necesitar_un_dni_o_nif_v_lido_para_el_acceso"
             android:textColor="#757575"
             android:textSize="16sp"
             app:layout_constraintTop_toTopOf="parent"

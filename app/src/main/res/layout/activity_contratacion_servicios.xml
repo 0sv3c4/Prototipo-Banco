@@ -52,7 +52,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:text="Contratación de\nServicios"
+                        android:text="@string/contratacion_de_nservicios"
                         android:gravity="center"
                         android:textAppearance="@style/titulo"
                         android:textColor="@color/oscuro"
@@ -70,7 +70,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        android:text="Acciones"
+                        android:text="@string/acciones"
                         android:textAppearance="@style/subtitulo"
                         android:textColor="@color/oscuro" />
 
@@ -92,7 +92,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
                             android:layout_weight="1"
-                            android:text="Seleccione su activo"
+                            android:text="@string/seleccione_su_activo"
                             android:textColor="@color/neutro"
                             android:textSize="18sp" />
 
@@ -110,7 +110,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:text="Populares:"
+                        android:text="@string/populares"
                         android:textColor="@color/claro"
                         android:textStyle="bold" />
 
@@ -130,7 +130,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="36dp"
                                 android:paddingHorizontal="10dp"
-                                android:text="Apple"
+                                android:text="@string/apple"
                                 android:textAllCaps="false"
                                 android:textColor="@color/black"
                                 android:textSize="12sp"
@@ -143,7 +143,7 @@
                                 android:layout_height="36dp"
                                 android:layout_marginStart="2dp"
                                 android:paddingHorizontal="10dp"
-                                android:text="Amazon"
+                                android:text="@string/amazon"
                                 android:textAllCaps="false"
                                 android:textColor="@color/black"
                                 android:textSize="12sp"
@@ -156,7 +156,7 @@
                                 android:layout_height="36dp"
                                 android:layout_marginStart="2dp"
                                 android:paddingHorizontal="10dp"
-                                android:text="Tesla"
+                                android:text="@string/tesla"
                                 android:textAllCaps="false"
                                 android:textColor="@color/black"
                                 android:textSize="12sp"
@@ -169,7 +169,7 @@
                                 android:layout_height="36dp"
                                 android:layout_marginStart="2dp"
                                 android:paddingHorizontal="10dp"
-                                android:text="Microsoft"
+                                android:text="@string/microsoft"
                                 android:textAllCaps="false"
                                 android:textColor="@color/black"
                                 android:textSize="12sp"
@@ -209,7 +209,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Cantidad deseada"
+                                android:text="@string/cantidad_deseada"
                                 android:textColor="@color/black"
                                 android:textStyle="bold" />
 
@@ -219,7 +219,7 @@
                                 android:layout_height="48dp"
                                 android:layout_marginTop="8dp"
                                 android:background="@drawable/bg_rellenables"
-                                android:hint="Num. acciones"
+                                android:hint="@string/num_acciones"
                                 android:inputType="numberDecimal"
                                 android:paddingHorizontal="12dp"
                                 android:textSize="14sp" />
@@ -238,7 +238,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Precio de acción"
+                                android:text="@string/precio_de_accion"
                                 android:textColor="@color/black"
                                 android:textStyle="bold" />
 
@@ -248,7 +248,7 @@
                                 android:layout_height="48dp"
                                 android:layout_marginTop="8dp"
                                 android:background="@drawable/bg_rellenables"
-                                android:hint="Precio actual"
+                                android:hint="@string/precio_actual"
                                 android:inputType="numberDecimal"
                                 android:paddingHorizontal="12dp"
                                 android:textSize="14sp" />
@@ -274,7 +274,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="PRECIO FINAL"
+                                android:text="@string/precio_final"
                                 android:textColor="@color/black"
                                 android:textStyle="bold" />
 
@@ -283,7 +283,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/inter_black"
-                                android:text="00.0€"
+                                android:text="@string/_00_0"
                                 android:textColor="@color/claro"
                                 android:textSize="48sp" />
                         </LinearLayout>
@@ -294,7 +294,7 @@
                         android:layout_height="60dp"
                         android:layout_marginTop="16dp"
                         android:fontFamily="@font/inter_bold"
-                        android:text="Confirmar pago"
+                        android:text="@string/confirmar_pago"
                         android:textAllCaps="false"
                         android:textSize="20sp"
                         app:backgroundTint="@color/neutro"
@@ -305,7 +305,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="32dp"
-                        android:text="Préstamos"
+                        android:text="@string/prestamos"
                         android:textAppearance="@style/subtitulo"
                         android:textColor="@color/oscuro" />
 
@@ -314,7 +314,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:gravity="center"
-                        android:text="Para realizar un préstamo es necesario que se ponga en contacto con su oficina más cercana"
+                        android:text="@string/para_realizar_un_pr_stamo_es_necesario_que_se_ponga_en_contacto_con_su_oficina_m_s_cercana"
                         android:textColor="@color/black"
                         android:textSize="14sp" />
 
@@ -324,7 +324,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:paddingVertical="12dp"
-                        android:text="Acceda al servicio al cliente\n¡Contáctanos! 📞"
+                        android:text="@string/acceda_al_servicio_al_cliente_n_cont_ctanos"
                         android:textAllCaps="false"
                         android:textSize="16sp"
                         app:backgroundTint="@color/mas_claro"

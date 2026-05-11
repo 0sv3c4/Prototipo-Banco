@@ -35,7 +35,7 @@
             android:layout_marginEnd="20dp"
             android:layout_marginStart="20dp"
             android:gravity="center_horizontal"
-            android:text="Debes rellenar los siguientes campos: destinatario y cantidad"
+            android:text="@string/debes_rellenar_los_siguientes_campos_destinatario_y_cantidad"
             android:textColor="#757575"
             android:textSize="16sp"
             app:layout_constraintTop_toBottomOf="@id/titulo_alerta"

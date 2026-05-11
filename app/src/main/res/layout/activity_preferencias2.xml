@@ -85,7 +85,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
-                            android:text="Permisos"
+                            android:text="@string/permisos"
                             android:textColor="@color/oscuro"
                             android:textSize="22sp"
                             android:fontFamily="@font/inter_bold" />
@@ -176,7 +176,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Geolocalización"
+                                android:text="@string/geolocalizaci_n"
                                 android:textSize="18sp"
                                 android:fontFamily="@font/inter_medium"
                                 android:textColor="@color/black" />
@@ -199,7 +199,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Notificaciones"
+                                android:text="@string/notificaciones"
                                 android:textSize="18sp"
                                 android:fontFamily="@font/inter_medium"
                                 android:textColor="@color/black" />
@@ -233,7 +233,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
-                            android:text="Foto de perfil"
+                            android:text="@string/foto_de_perfil"
                             android:textColor="@color/oscuro"
                             android:textSize="22sp"
                             android:fontFamily="@font/inter_bold" />
@@ -265,7 +265,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
-                            android:text="Importar imagen"
+                            android:text="@string/importar_imagen"
                             android:textColor="@color/oscuro"
                             android:textSize="18sp"
                             android:fontFamily="@font/inter_bold" />

@@ -53,7 +53,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="top|center_horizontal"
                         android:layout_marginTop="15dp"
-                        android:text="Seguridad"
+                        android:text="@string/seguridad"
                         android:fontFamily="@font/inter_black"
                         android:textColor="@color/oscuro"
                         android:textSize="32sp" />
@@ -70,7 +70,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Acceso"
+                        android:text="@string/acceso"
                         android:textColor="@color/black"
                         android:textSize="22sp"
                         android:fontFamily="@font/inter_bold"
@@ -97,7 +97,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Contraseña de acceso"
+                                android:text="@string/contrase_a_de_acceso"
                                 android:textColor="@color/neutro"
                                 android:textSize="18sp"
                                 android:fontFamily="@font/inter_bold" />
@@ -110,7 +110,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Modifica tu contraseña"
+                            android:text="@string/modifica_tu_contrase_a"
                             android:textColor="@color/grisaceo"
                             android:textSize="14sp" />
                     </LinearLayout>
@@ -146,7 +146,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Activa el reconocimiento facial de acceso"
+                            android:text="@string/activa_el_reconocimiento_facial_de_acceso"
                             android:textColor="@color/grisaceo"
                             android:textSize="14sp" />
                     </LinearLayout>
@@ -167,7 +167,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Huella dactilar"
+                                android:text="@string/huella_dactilar"
                                 android:textColor="@color/neutro"
                                 android:textSize="18sp"
                                 android:fontFamily="@font/inter_bold" />
@@ -182,7 +182,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Activa la lectura de huella de acceso"
+                            android:text="@string/activa_la_lectura_de_huella_de_acceso"
                             android:textColor="@color/grisaceo"
                             android:textSize="14sp" />
                     </LinearLayout>
@@ -207,7 +207,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Bloqueo automático"
+                                android:text="@string/bloqueo_autom_tico"
                                 android:textColor="@color/neutro"
                                 android:textSize="18sp"
                                 android:fontFamily="@font/inter_bold" />
@@ -221,7 +221,7 @@
                             android:id="@+id/tv_bloqueo_estado"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Bloqueo de la aplicación tras 1 minuto de inactividad"
+                            android:text="@string/bloqueo_de_la_aplicaci_n_tras_1_minuto_de_inactividad"
                             android:textColor="@color/grisaceo"
                             android:textSize="14sp" />
                     </LinearLayout>
@@ -230,7 +230,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Alertas de seguridad"
+                        android:text="@string/alertas_de_seguridad"
                         android:textColor="@color/black"
                         android:textSize="22sp"
                         android:fontFamily="@font/inter_bold"
@@ -254,7 +254,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Alerta de movimientos"
+                                android:text="@string/alerta_de_movimientos"
                                 android:textColor="@color/neutro"
                                 android:textSize="18sp"
                                 android:fontFamily="@font/inter_bold" />
@@ -269,7 +269,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Notifica cada vez que se aprueba una transferencia"
+                            android:text="@string/notifica_cada_vez_que_se_aprueba_una_transferencia"
                             android:textColor="@color/grisaceo"
                             android:textSize="14sp" />
                     </LinearLayout>
@@ -290,7 +290,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Acceso sospechoso"
+                                android:text="@string/acceso_sospechoso"
                                 android:textColor="@color/neutro"
                                 android:textSize="18sp"
                                 android:fontFamily="@font/inter_bold" />
@@ -305,7 +305,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Detección de fraude"
+                            android:text="@string/detecci_n_de_fraude"
                             android:textColor="@color/grisaceo"
                             android:textSize="14sp" />
                     </LinearLayout>
@@ -314,7 +314,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Sesión"
+                        android:text="@string/sesi_n"
                         android:textColor="@color/black"
                         android:textSize="22sp"
                         android:fontFamily="@font/inter_bold"
@@ -341,7 +341,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Sesiones activas"
+                                android:text="@string/sesiones_activas"
                                 android:textColor="@color/neutro"
                                 android:textSize="18sp"
                                 android:fontFamily="@font/inter_bold" />
@@ -354,7 +354,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Nº de dispositivos conectados"
+                            android:text="@string/n_de_dispositivos_conectados"
                             android:textColor="@color/grisaceo"
                             android:textSize="14sp" />
                     </LinearLayout>
@@ -378,7 +378,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Cerrar sesión"
+                                android:text="@string/cerrar_sesi_n"
                                 android:textColor="@color/neutro"
                                 android:textSize="18sp"
                                 android:fontFamily="@font/inter_bold" />
@@ -391,7 +391,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Desconexión de la sesión actual"
+                            android:text="@string/desconexi_n_de_la_sesi_n_actual"
                             android:textColor="@color/grisaceo"
                             android:textSize="14sp" />
                     </LinearLayout>
@@ -401,7 +401,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="56dp"
                         android:layout_marginTop="24dp"
-                        android:text="Reestablecer ajustes predeterminados"
+                        android:text="@string/reestablecer_ajustes_predeterminados"
                         android:textAllCaps="false"
                         android:fontFamily="@font/inter_bold"
                         android:textColor="@color/white"

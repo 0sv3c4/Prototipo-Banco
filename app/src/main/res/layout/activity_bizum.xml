@@ -139,7 +139,7 @@
                             android:id="@+id/btn_ver_todos"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Ver todos \u2192"
+                            android:text="@string/ver_todos_u2192"
                             android:layout_alignParentEnd="true"
                             android:textColor="@color/oscuro"
                             android:textStyle="bold"
@@ -168,7 +168,7 @@
                                 android:layout_height="60dp"
                                 android:background="@drawable/bg_circle_light_purple"
                                 android:gravity="center"
-                                android:text="M"
+                                android:text="@string/m"
                                 android:textSize="24sp"
                                 android:textColor="@color/black" />
                             <TextView
@@ -192,7 +192,7 @@
                                 android:layout_height="60dp"
                                 android:background="@drawable/bg_circle_light_purple"
                                 android:gravity="center"
-                                android:text="C"
+                                android:text="@string/c"
                                 android:textSize="24sp"
                                 android:textColor="@color/black" />
                             <TextView
@@ -216,7 +216,7 @@
                                 android:layout_height="60dp"
                                 android:background="@drawable/bg_circle_light_purple"
                                 android:gravity="center"
-                                android:text="J"
+                                android:text="@string/j"
                                 android:textSize="24sp"
                                 android:textColor="@color/black" />
                             <TextView
@@ -240,13 +240,13 @@
                                 android:layout_height="60dp"
                                 android:background="@drawable/bg_circle_light_purple"
                                 android:gravity="center"
-                                android:text="\u00d3"
+                                android:text="@string/u00d3"
                                 android:textSize="24sp"
                                 android:textColor="@color/black" />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="\u00d3scar T."
+                                android:text="@string/u00d3scar_t"
                                 android:textSize="12sp"
                                 android:layout_marginTop="4dp" />
                         </LinearLayout>
@@ -267,7 +267,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:layout_marginTop="8dp"
-                        android:hint="Introduce un contacto"
+                        android:hint="@string/introduce_un_contacto"
                         android:inputType="text"
                         android:textColorHint="@color/claro" />
 
@@ -321,7 +321,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:layout_marginTop="8dp"
-                        android:hint="Escribe un mensaje..."
+                        android:hint="@string/escribe_un_mensaje"
                         android:inputType="text"
                         android:textColorHint="@color/claro" />
 

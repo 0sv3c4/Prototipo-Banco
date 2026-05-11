@@ -20,7 +20,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Accesibilidad"
+                android:text="@string/accesibilidadd"
                 android:textAppearance="@style/titulo"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -46,7 +46,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/inter_extrabold"
-                android:text="Visión"
+                android:text="@string/vision"
                 android:textColor="@color/black"
                 android:textSize="24sp" />
 
@@ -78,7 +78,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:fontFamily="@font/inter_extrabold"
-                android:text="Audición"
+                android:text="@string/audicion"
                 android:textColor="@color/black"
                 android:textSize="24sp" />
 
@@ -101,7 +101,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:fontFamily="@font/inter_extrabold"
-                android:text="Interacción"
+                android:text="@string/interaccion"
                 android:textColor="@color/black"
                 android:textSize="24sp" />
 
@@ -119,7 +119,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="64dp"
                 android:layout_marginTop="32dp"
-                android:text="Reestablecer ajustes predeterminados"
+                android:text="@string/reestablecer_ajustes_predeterminadoss"
                 android:textAllCaps="false"
                 android:textSize="18sp"
                 android:gravity="center"
