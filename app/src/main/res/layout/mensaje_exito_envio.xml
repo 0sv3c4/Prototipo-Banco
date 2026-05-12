@@ -23,7 +23,7 @@
             android:layout_marginTop="10dp"
             android:gravity="center_horizontal"
             android:paddingTop="28dp"
-            android:text="@string/dinero_enviado_con_xito"
+            android:text="@string/exito_envio"
             android:textAppearance="@style/mensajeFaillido"
             android:textColor="#007700"
             app:layout_constraintEnd_toEndOf="parent"

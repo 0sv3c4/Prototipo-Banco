@@ -24,7 +24,7 @@
             android:layout_marginEnd="20dp"
             android:layout_marginStart="20dp"
             android:gravity="center_horizontal"
-            android:text="@string/la_contrase_a_debe_tener_7_d_gitos_como_m_nimo"
+            android:text="@string/info_contra"
             android:textColor="#757575"
             android:textSize="16sp"
             app:layout_constraintTop_toTopOf="parent"

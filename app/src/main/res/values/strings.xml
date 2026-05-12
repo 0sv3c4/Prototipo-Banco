@@ -18,7 +18,7 @@
     <string name="contra_olvidada">¿Olvidaste tu contraseña?</string>
     <string name="funcion_ojo">Revelar contraseña</string>
     <string name="def_seguros">Consulta/Contrata seguros con un asesor personal (L-V 9:00-21:00)</string>
-    <string name="def_urgencias">Solicita ayuda gratuita ante robos de tarjetas, emergencias con cuentas bancarias... (L-D, 24h, también disponible desde el extranjero)</string>
+    <string name="def_urgencias">Solicita ayuda gratuita ante robos de tarjetas, emergencias con cuentas bancarias… (L-D, 24h, también disponible desde el extranjero)</string>
     <string name="def_atencion_cliente">Resuelve tus dudas con este número gratuito (L-V 8:00-22:00)</string>
 
     <!-- Bizum strings -->
@@ -128,7 +128,6 @@
     <string name="vision">Visión</string>
     <string name="audicion">Audición</string>
     <string name="interaccion">Interacción</string>
-    <string name="reestablecer_ajustes_predeterminadoss">Reestablecer ajustes predeterminados</string>
     <string name="balance_generall">Balance General</string>
     <string name="comparativa_financieraa">Comparativa Financiera</string>
     <string name="anual">Anual</string>
@@ -187,7 +186,7 @@
     <string name="cajeros_y_oficinas_por_su_zona">Cajeros y oficinas por su zona</string>
     <string name="encuentra_tu_cajero_m_s_cercano">Encuentra tu cajero más cercano</string>
     <string name="activar_la_ubicaci_n">Activar la ubicación</string>
-    <string name="inserte_para_filtrar_por_ciudad_o_cp">Inserte para filtrar por ciudad o CP...</string>
+    <string name="inserte_para_filtrar_por_ciudad_o_cp">Inserte para filtrar por ciudad o CP…</string>
     <string name="ltimos_nmovimientos">Últimos\nmovimientos:</string>
     <string name="dd_mm_yyyy">dd/mm/yyyy</string>
     <string name="_14_mar_2026">14 MAR 2026</string>
@@ -266,7 +265,7 @@
     <string name="sesiones_activas">Sesiones activas</string>
     <string name="n_de_dispositivos_conectados">Nº de dispositivos conectados</string>
     <string name="cerrar_sesi_n">Cerrar sesión</string>
-    <string name="desconexi_n_de_la_sesi_n_actual">Desconexión de la sesión actual</string>
+    <string name="desconectar_sesion">Desconexión de la sesión actual</string>
     <string name="reestablecer_ajustes_predeterminados">Reestablecer ajustes predeterminados</string>
     <string name="transferencias">Transferencias</string>
     <string name="cuenta_de_origen">Cuenta de origen</string>
@@ -291,17 +290,17 @@
     <string name="enhorabuena">¡Enhorabuena!</string>
     <string name="entendido">¡Entendido!</string>
     <string name="error">Error</string>
-    <string name="el_formato_del_dni_es_incorrecto_introduzca_un_dni_v_lido">El formato del DNI es incorrecto, introduzca un DNI válido</string>
+    <string name="error_DNI">El formato del DNI es incorrecto, introduzca un DNI válido</string>
     <string name="aceptar">Aceptar</string>
-    <string name="debes_rellenar_los_siguientes_campos_destinatario_y_cantidad">Debes rellenar los siguientes campos: destinatario y cantidad</string>
-    <string name="selecciona_primero_una_opci_n_enviar_dinero_solicitar_dinero">Selecciona primero una opción: Enviar dinero / Solicitar dinero</string>
-    <string name="dinero_enviado_con_xito">Dinero enviado con éxito</string>
-    <string name="introduce_tu_dni_o_nif_y_te_enviaremos_un_enlace_para_restablecer_tu_contrase_a">Introduce tu DNI o NIF y te enviaremos un enlace para restablecer tu contraseña</string>
+    <string name="eror_bizum">Debes rellenar los siguientes campos: destinatario y cantidad</string>
+    <string name="error_bizum2">Selecciona primero una opción: Enviar dinero / Solicitar dinero</string>
+    <string name="exito_envio">Dinero enviado con éxito</string>
+    <string name="msj_recupera_contra">Introduce tu DNI o NIF y te enviaremos un enlace para restablecer tu contraseña</string>
     <string name="solicitar">Solicitar</string>
-    <string name="m_nimo_100_nm_ximo_10_000">Mínimo: 100€\nMáximo: 10.000€</string>
-    <string name="m_nimo_0_5_nm_ximo_500">Mínimo: 0,5€\nMáximo: 500€</string>
-    <string name="la_contrase_a_debe_tener_7_d_gitos_como_m_nimo">La contraseña debe tener 7 dígitos como mínimo</string>
-    <string name="se_necesitar_un_dni_o_nif_v_lido_para_el_acceso">Se necesitará un DNI o NIF válido para el acceso</string>
+    <string name="rango_transf">Mínimo: 100€\nMáximo: 10.000€</string>
+    <string name="rango_bizum">Mínimo: 0,5€\nMáximo: 500€</string>
+    <string name="info_contra">La contraseña debe tener 7 dígitos como mínimo</string>
+    <string name="msj_error_DNI">Se necesitará un DNI o NIF válido para el acceso</string>
     <string name="menu">Menú</string>
     <string name="mi_perfil">Mi perfil</string>
 
