@@ -139,7 +139,7 @@
                             android:id="@+id/btn_ver_todos"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/ver_todos_u2192"
+                            android:text="@string/ver_todos"
                             android:layout_alignParentEnd="true"
                             android:textColor="@color/oscuro"
                             android:textStyle="bold"

@@ -9,7 +9,7 @@
     <string name="cajeros">Mapa de cajeros</string>
     <string name="acceso_bio">Acceso biométrico</string>
     <string name="pedir_dni">Introduzca su NIF o DNI</string>
-    <string name="nif">NIF</string>
+    <string name="nif" translatable="false">NIF</string>
     <string name="contra">Contraseña</string>
     <string name="bienvenido">Bienvenido</string>
     <string name="descrip_biometria">Acceso por biometría</string>
@@ -33,7 +33,7 @@
     <string name="seleccionar_cantidad">Seleccionar cantidad</string>
     <string name="saldo">Saldo</string>
     <string name="concepto_opcional">Concepto (opcional)</string>
-    <string name="escribe_mensaje">Escribe un mensaje...</string>
+    <string name="escribe_mensaje">Escribe un mensaje…</string>
     <string name="confirmar">Confirmar</string>
     <string name="volver">Volver</string>
     <string name="manuel_a" translatable="false">Manuel A.</string>
@@ -89,7 +89,7 @@
     <string name="notif_renta_hora">15:23</string>
 
     <string name="notif_nomina_titulo">Ingreso de nómina</string>
-    <string name="notif_nomina_desc">Ingreso mensual: +1900€.</string>
+    <string name="notif_nomina_desc">Ingreso mensual: +1.900€.</string>
     <string name="notif_nomina_hora">13:53</string>
 
     <string name="notif_becas_titulo">Becas para estudiantes</string>
@@ -124,7 +124,6 @@
     <string name="permisos_notif">Permisos de notificaciones</string>
     <string name="foto_perfil">Foto de perfil</string>
     <string name="btn_inicio_sesion">Iniciar Sesión</string>
-    <string name="accesibilidadd">Accesibilidad</string>
     <string name="vision">Visión</string>
     <string name="audicion">Audición</string>
     <string name="interaccion">Interacción</string>
@@ -135,7 +134,6 @@
     <string name="semanal">Semanal</string>
     <string name="desde">Desde:</string>
     <string name="hasta">Hasta:</string>
-    <string name="ver_todos_u2192">Ver todos →</string>
     <string name="m" translatable="false">M</string>
     <string name="c" translatable="false">C</string>
     <string name="j" translatable="false">J</string>
