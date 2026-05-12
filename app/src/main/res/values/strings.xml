@@ -169,7 +169,7 @@
     <string name="siguiente_paso_prestamo">Para realizar un préstamo es necesario que se ponga en contacto con su oficina más cercana</string>
     <string name="acceda_al_servicio_al_cliente_n_cont_ctanos">Acceda al servicio al cliente\n¡Contáctanos! 📞</string>
     <string name="transferir">Transferir</string>
-    <string name="balance">Balance</string>
+    <string name="balance" translatable="false">Balance</string>
     <string name="tus_tarjetas">Tus tarjetas:</string>
     <string name="gestion_de_carteras">Gestión de carteras:</string>
     <string name="cartera_1">Cartera 1</string>
@@ -178,7 +178,7 @@
     <string name="ltimos_movimientos">Últimos movimientos:</string>
     <string name="cafeter_a_polit_cnica_ubu">Cafetería Politécnica UBU</string>
     <string name="_4_99">-4,99€</string>
-    <string name="bizum_from_walter_white">Bizum from: Walter White</string>
+    <string name="bizum_from_walter_white" translatable="false">Bizum from: Walter White</string>
     <string name="_10">+10€</string>
     <string name="ver_m_s">Ver más</string>
     <string name="cajeros_y_oficinas_por_su_zona">Cajeros y oficinas por su zona</string>
@@ -186,16 +186,16 @@
     <string name="activar_la_ubicaci_n">Activar la ubicación</string>
     <string name="inserte_para_filtrar_por_ciudad_o_cp">Inserte para filtrar por ciudad o CP…</string>
     <string name="ltimos_nmovimientos">Últimos\nmovimientos:</string>
-    <string name="dd_mm_yyyy">dd/mm/yyyy</string>
-    <string name="_14_mar_2026">14 MAR 2026</string>
+    <string name="dd_mm_yyyy" translatable="false">dd/mm/yyyy</string>
+    <string name="_14_mar_2026" translatable="false">14 MAR 2026</string>
     <string name="tienda_game_expedition_33">Tienda Game: Expedition 33</string>
     <string name="_49_99">-49,99€</string>
     <string name="pr_cticas_autoescuela">Prácticas autoescuela</string>
     <string name="_100">-100€</string>
-    <string name="_28_feb_2026">28 FEB 2026</string>
+    <string name="_28_feb_2026" translatable="false">28 FEB 2026</string>
     <string name="transferencia_n_mina">Transferencia: Nómina</string>
     <string name="_1900">+1900€</string>
-    <string name="_23_feb_2026">23 FEB 2026</string>
+    <string name="_23_feb_2026" translatable="false">23 FEB 2026</string>
     <string name="propina_de_la_abuela">Propina de la abuela</string>
     <string name="_5_00">+5,00€</string>
     <string name="pc_componentes_m_ram">PC Componentes: M. RAM</string>
@@ -220,7 +220,7 @@
     <string name="servicios">Servicios</string>
     <string name="banner_0a2463" translatable="false">Banner (@0a2463)</string>
     <string name="promoci_n_temporal">¡ Promoción temporal !</string>
-    <string name="_1e6fcf">1e6fcf</string>
+    <string name="_1e6fcf" translatable="false">1e6fcf</string>
     <string name="hasta_5_de_cashback">¡Hasta 5% de cashback!</string>
     <string name="en_todas_tus_compras_este_mes">En todas tus compras este mes</string>
     <string name="activar_ahora">Activar ahora</string>
