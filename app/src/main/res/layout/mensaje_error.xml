@@ -35,7 +35,7 @@
             android:layout_marginEnd="20dp"
             android:layout_marginStart="20dp"
             android:gravity="center_horizontal"
-            android:text="@string/el_formato_del_dni_es_incorrecto_introduzca_un_dni_v_lido"
+            android:text="@string/error_DNI"
             android:textColor="#757575"
             android:textSize="16sp"
             app:layout_constraintTop_toBottomOf="@id/titulo_alerta"

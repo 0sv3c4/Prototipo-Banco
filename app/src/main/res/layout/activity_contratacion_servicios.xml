@@ -84,6 +84,7 @@
                         <ImageView
                             android:layout_width="24dp"
                             android:layout_height="24dp"
+                            android:importantForAccessibility="no"
                             android:src="@drawable/ic_flecha_arriba"
                             app:tint="@color/neutro" />
 
@@ -190,6 +191,7 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:contentDescription="gráfica"
                             android:scaleType="centerInside"
                             android:src="@drawable/ic_grafica_servicios" />
                     </com.google.android.material.card.MaterialCardView>
@@ -220,6 +222,7 @@
                                 android:layout_marginTop="8dp"
                                 android:background="@drawable/bg_rellenables"
                                 android:hint="@string/num_acciones"
+                                android:importantForAutofill="no"
                                 android:inputType="numberDecimal"
                                 android:paddingHorizontal="12dp"
                                 android:textSize="14sp" />
@@ -249,7 +252,7 @@
                                 android:layout_marginTop="8dp"
                                 android:background="@drawable/bg_rellenables"
                                 android:hint="@string/precio_actual"
-                                android:inputType="numberDecimal"
+                                android:importantForAutofill="no" android:inputType="numberDecimal"
                                 android:paddingHorizontal="12dp"
                                 android:textSize="14sp" />
                         </LinearLayout>
@@ -314,7 +317,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:gravity="center"
-                        android:text="@string/para_realizar_un_pr_stamo_es_necesario_que_se_ponga_en_contacto_con_su_oficina_m_s_cercana"
+                        android:text="@string/siguiente_paso_prestamo"
                         android:textColor="@color/black"
                         android:textSize="14sp" />
 

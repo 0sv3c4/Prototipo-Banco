@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="false"
-    tools:openDrawer="start"
     tools:context=".Bizum">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -53,6 +52,7 @@
                         android:layout_height="80dp"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="10dp"
+                        android:contentDescription="logo"
                         android:src="@drawable/logo_bizum" />
                 </FrameLayout>
 
@@ -174,7 +174,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Manuel A."
+                                android:text="@string/manuel_a"
                                 android:textSize="12sp"
                                 android:layout_marginTop="4dp" />
                         </LinearLayout>
@@ -198,7 +198,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Claudia C."
+                                android:text="@string/claudia_c"
                                 android:textSize="12sp"
                                 android:layout_marginTop="4dp" />
                         </LinearLayout>
@@ -222,7 +222,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Juan M."
+                                android:text="@string/juan_m"
                                 android:textSize="12sp"
                                 android:layout_marginTop="4dp" />
                         </LinearLayout>
@@ -246,7 +246,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/u00d3scar_t"
+                                android:text="@string/oscar_t"
                                 android:textSize="12sp"
                                 android:layout_marginTop="4dp" />
                         </LinearLayout>
@@ -304,6 +304,7 @@
                         android:layout_height="50dp"
                         android:layout_marginTop="8dp"
                         android:hint="Saldo"
+                        android:importantForAutofill="no"
                         android:inputType="numberDecimal"
                         android:textColorHint="@color/claro" />
 
@@ -322,6 +323,7 @@
                         android:layout_height="50dp"
                         android:layout_marginTop="8dp"
                         android:hint="@string/escribe_un_mensaje"
+                        android:importantForAutofill="no"
                         android:inputType="text"
                         android:textColorHint="@color/claro" />
 

@@ -391,7 +391,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/desconexi_n_de_la_sesi_n_actual"
+                            android:text="@string/desconectar_sesion"
                             android:textColor="@color/grisaceo"
                             android:textSize="14sp" />
                     </LinearLayout>
