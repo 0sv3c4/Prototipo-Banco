@@ -1,8 +1,7 @@
 <resources>
     <string name="app_name">Prototipo Banco</string>
-    <string name="fondo_superior0" />
     <string name="fondo_superior_promociones">promociones</string>
-    <string name="dk_capital_">DK Capital Bank</string>
+    <string name="dk_capital_" translatable="false">DK Capital Bank</string>
     <string name="subitulo_inicio">Tus ingresos, tu capital</string>
     <string name="mej_ofertas">Nuestras mejores ofertas:</string>
     <string name="accesibilidad">Accesibilidad</string>
@@ -23,7 +22,7 @@
     <string name="def_atencion_cliente">Resuelve tus dudas con este número gratuito (L-V 8:00-22:00)</string>
 
     <!-- Bizum strings -->
-    <string name="bizum">Bizum</string>
+    <string name="bizum" translatable="false">Bizum</string>
     <string name="acciones_rapidas">Acciones rápidas:</string>
     <string name="enviar_dinero">Enviar dinero</string>
     <string name="solicitar_dinero">Solicitar dinero</string>
@@ -37,18 +36,18 @@
     <string name="escribe_mensaje">Escribe un mensaje...</string>
     <string name="confirmar">Confirmar</string>
     <string name="volver">Volver</string>
-    <string name="manuel_a">Manuel A.</string>
-    <string name="claudia_c">Claudia C.</string>
-    <string name="juan_m">Juan M.</string>
-    <string name="oscar_t">Óscar T.</string>
-    <string name="nombre_cliente">Eufrasio Martínez</string>
+    <string name="manuel_a" translatable="false">Manuel A.</string>
+    <string name="claudia_c" translatable="false">Claudia C.</string>
+    <string name="juan_m" translatable="false">Juan M.</string>
+    <string name="oscar_t" translatable="false">Óscar T.</string>
+    <string name="nombre_cliente" translatable="false">Eufrasio Martínez</string>
     <string name="valor_saldo">5.777,23€</string>
-    <string name="titulo_toolbar_base">Prueba</string>
-    <string name="vacio">\0</string>
+    <string name="titulo_toolbar_base" translatable="false">Prueba</string>
+    <string name="vacio" translatable="false">\0</string>
     <string name="descripción_contrato">Has contratado este servicio correctamente, en breve nos pondremos en contacto contigo</string>
     <string name="Contraseña_olvidada">¿Has olvidado tu contraseña?</string>
     <string name="fondos">5.777,23€</string>
-    <string name="IBAN">ES13 0230 7800 8394 0948 8129</string>
+    <string name="IBAN" translatable="false">ES13 0230 7800 8394 0948 8129</string>
     <string name="informacion">Información</string>
 
 
@@ -138,31 +137,30 @@
     <string name="desde">Desde:</string>
     <string name="hasta">Hasta:</string>
     <string name="ver_todos_u2192">Ver todos →</string>
-    <string name="m">M</string>
-    <string name="c">C</string>
-    <string name="j">J</string>
-    <string name="u00d3">Ó</string>
-    <string name="u00d3scar_t">Óscar T.</string>
+    <string name="m" translatable="false">M</string>
+    <string name="c" translatable="false">C</string>
+    <string name="j" translatable="false">J</string>
+    <string name="u00d3" translatable="false">Ó</string>
     <string name="introduce_un_contacto">Introduce un contacto</string>
     <string name="escribe_un_mensaje">Escribe un mensaje...</string>
     <string name="tu_oficina_m_s_ncercana_es">Tu oficina más\ncercana es:</string>
-    <string name="r_o_vena_burgos">Río Vena (Burgos)</string>
+    <string name="r_o_vena_burgos" translatable="false">Río Vena (Burgos)</string>
     <string name="c_melancolia_7">C/Melancolía, 7</string>
-    <string name="_947000000">947000000</string>
+    <string name="_947000000" translatable="false">947000000</string>
     <string name="atencion_al_cliente">Atención al cliente</string>
-    <string name="_900_000_000">900 000 000</string>
+    <string name="_900_000_000" translatable="false">900 000 000</string>
     <string name="urgencias">Urgencias</string>
-    <string name="_900_000_001">900 000 001</string>
+    <string name="_900_000_001" translatable="false">900 000 001</string>
     <string name="seguros">Seguros</string>
     <string name="_910_000_000">910 000 000</string>
     <string name="contratacion_de_nservicios">Contratación de\nServicios</string>
     <string name="acciones">Acciones</string>
     <string name="seleccione_su_activo">Seleccione su activo</string>
     <string name="populares">Populares:</string>
-    <string name="apple">Apple</string>
-    <string name="amazon">Amazon</string>
-    <string name="tesla">Tesla</string>
-    <string name="microsoft">Microsoft</string>
+    <string name="apple" translatable="false">Apple</string>
+    <string name="amazon" translatable="false">Amazon</string>
+    <string name="tesla" translatable="false">Tesla</string>
+    <string name="microsoft" translatable="false">Microsoft</string>
     <string name="cantidad_deseada">Cantidad deseada</string>
     <string name="num_acciones">Num. acciones</string>
     <string name="precio_de_accion">Precio de acción</string>
@@ -171,7 +169,7 @@
     <string name="_00_0">00.0€</string>
     <string name="confirmar_pago">Confirmar pago</string>
     <string name="prestamos">Préstamos</string>
-    <string name="para_realizar_un_pr_stamo_es_necesario_que_se_ponga_en_contacto_con_su_oficina_m_s_cercana">Para realizar un préstamo es necesario que se ponga en contacto con su oficina más cercana</string>
+    <string name="siguiente_paso_prestamo">Para realizar un préstamo es necesario que se ponga en contacto con su oficina más cercana</string>
     <string name="acceda_al_servicio_al_cliente_n_cont_ctanos">Acceda al servicio al cliente\n¡Contáctanos! 📞</string>
     <string name="transferir">Transferir</string>
     <string name="balance">Balance</string>
@@ -205,25 +203,25 @@
     <string name="_5_00">+5,00€</string>
     <string name="pc_componentes_m_ram">PC Componentes: M. RAM</string>
     <string name="_194_99">-194,99€</string>
-    <string name="_1">1</string>
-    <string name="_2">2</string>
-    <string name="_3">3</string>
-    <string name="_66">66</string>
-    <string name="_67">67</string>
+    <string name="_1" translatable="false">1</string>
+    <string name="_2" translatable="false">2</string>
+    <string name="_3" translatable="false">3</string>
+    <string name="_66" translatable="false">66</string>
+    <string name="_67" translatable="false">67</string>
     <string name="no_eres_cliente_todavia">¿No eres cliente todavía?</string>
     <string name="nuestras_mejores_ofertas">Nuestras mejores ofertas:</string>
     <string name="proximos_eventos">Proximos Eventos:</string>
     <string name="contenedor_de_fotos_para_ofertas">contenedor de fotos para ofertas</string>
-    <string name="dk_finance_day">DK Finance Day</string>
+    <string name="dk_finance_day" translatable="false">DK Finance Day</string>
     <string name="feria_del_ahorro">Feria del Ahorro</string>
-    <string name="kong_tech_talk">Kong Tech Talk</string>
+    <string name="kong_tech_talk" translatable="false">Kong Tech Talk</string>
     <string name="contenedor_de_fotos_para_eventos">contenedor de fotos para eventos</string>
     <string name="visibilidad_de_datos">Visibilidad de datos</string>
     <string name="cuenta_corriente">Cuenta corriente:</string>
     <string name="saldo_disponible">Saldo disponible:</string>
     <string name="_5_777_23">5.777,23€</string>
     <string name="servicios">Servicios</string>
-    <string name="banner_0a2463">Banner (@0a2463)</string>
+    <string name="banner_0a2463" translatable="false">Banner (@0a2463)</string>
     <string name="promoci_n_temporal">¡ Promoción temporal !</string>
     <string name="_1e6fcf">1e6fcf</string>
     <string name="hasta_5_de_cashback">¡Hasta 5% de cashback!</string>
