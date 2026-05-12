@@ -52,7 +52,7 @@
                         android:layout_height="80dp"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="10dp"
-                        android:contentDescription="logo"
+                        android:contentDescription="@string/logo"
                         android:src="@drawable/logo_bizum" />
                 </FrameLayout>
 
@@ -65,7 +65,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Acciones rápidas:"
+                        android:text="@string/acciones_rapidas"
                         android:textAppearance="@style/titulo_seccion"
                         android:textSize="20sp"
                         android:textColor="@color/oscuro" />
@@ -94,7 +94,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Enviar dinero"
+                                android:text="@string/enviar_dinero"
                                 android:layout_marginTop="8dp"
                                 android:textColor="@color/oscuro"
                                 android:textStyle="bold" />
@@ -117,7 +117,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Solicitar dinero"
+                                android:text="@string/solicitar_dinero"
                                 android:layout_marginTop="8dp"
                                 android:textColor="@color/oscuro"
                                 android:textStyle="bold" />
@@ -131,7 +131,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Contactos recientes:"
+                            android:text="@string/contactos_recientes"
                             android:textAppearance="@style/titulo_seccion"
                             android:textSize="20sp"
                             android:textColor="@color/oscuro" />
@@ -256,7 +256,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Destinatario"
+                        android:text="@string/destinatario"
                         android:layout_marginTop="24dp"
                         android:textStyle="bold"
                         android:textColor="@color/black"
@@ -281,7 +281,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Seleccionar cantidad"
+                            android:text="@string/seleccionar_cantidad"
                             android:textStyle="bold"
                             android:textColor="@color/black"
                             android:textSize="18sp" />
@@ -303,7 +303,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:layout_marginTop="8dp"
-                        android:hint="Saldo"
+                        android:hint="@string/saldo"
                         android:importantForAutofill="no"
                         android:inputType="numberDecimal"
                         android:textColorHint="@color/claro" />
@@ -311,7 +311,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Concepto (opcional)"
+                        android:text="@string/concepto_opcional"
                         android:layout_marginTop="16dp"
                         android:textStyle="bold"
                         android:textColor="@color/black"
@@ -332,7 +332,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
                         android:layout_marginTop="24dp"
-                        android:text="Confirmar"
+                        android:text="@string/confirmar"
                         android:textColor="@color/white"
                         app:backgroundTint="@color/oscuro"
                         app:cornerRadius="30dp"

@@ -45,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Confirmar"
+        android:text="@string/confirmar"
         android:textAllCaps="false"
         app:backgroundTint="@color/oscuro"
         app:cornerRadius="10dp"

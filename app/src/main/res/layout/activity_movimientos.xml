@@ -74,7 +74,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginEnd="4dp"
-                                android:text="Fecha"
+                                android:text="@string/fecha"
                                 android:textColor="@color/oscuro"
                                 android:textSize="18sp"
                                 android:textStyle="bold" />
@@ -136,14 +136,14 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Cafetería Politécnica UBU"
+                            android:text="@string/cafeter_a_polit_cnica_ubu"
                             android:textColor="@color/black" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
-                            android:text="-4,99€"
+                            android:text="@string/_4_99€"
                             android:textColor="@color/error"
                             android:textStyle="bold" />
                     </RelativeLayout>
@@ -165,14 +165,14 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Bizum from: Walter White"
+                            android:text="@string/bizum_from_walter_white"
                             android:textColor="@color/black" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
-                            android:text="+10€"
+                            android:text="@string/_10"
                             android:textColor="@color/exito"
                             android:textStyle="bold" />
                     </RelativeLayout>
@@ -391,7 +391,7 @@
                         android:layout_height="32dp"
                         android:layout_marginEnd="8dp"
                         android:gravity="center"
-                        android:text="..."
+                        android:text="@string/__"
                         android:textColor="@color/oscuro" />
 
                     <TextView

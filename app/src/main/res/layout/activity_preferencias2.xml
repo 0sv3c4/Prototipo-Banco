@@ -107,7 +107,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Face ID"
+                                android:text="@string/face_id"
                                 android:textSize="18sp"
                                 android:fontFamily="@font/inter_medium"
                                 android:textColor="@color/black" />
@@ -130,7 +130,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Accesos directos"
+                                android:text="@string/accesos_directos"
                                 android:textSize="18sp"
                                 android:fontFamily="@font/inter_medium"
                                 android:textColor="@color/black" />
@@ -153,7 +153,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Bizum"
+                                android:text="@string/bizum"
                                 android:textSize="18sp"
                                 android:fontFamily="@font/inter_medium"
                                 android:textColor="@color/black" />

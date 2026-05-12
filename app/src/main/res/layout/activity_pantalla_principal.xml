@@ -164,7 +164,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Bizum"
+                        android:text="@string/bizum"
                         android:textColor="@color/claro"
                         android:fontFamily="@font/inter_bold"
                         android:layout_marginTop="8dp"/>
@@ -190,7 +190,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Balance"
+                        android:text="@string/balance"
                         android:textColor="@color/claro"
                         android:fontFamily="@font/inter_bold"
                         android:layout_marginTop="8dp"/>
@@ -216,7 +216,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Transferir"
+                        android:text="@string/transferir"
                         android:textColor="@color/claro"
                         android:fontFamily="@font/inter_bold"
                         android:layout_marginTop="8dp"/>

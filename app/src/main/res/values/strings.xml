@@ -303,5 +303,11 @@
     <string name="msj_error_DNI">Se necesitará un DNI o NIF válido para el acceso</string>
     <string name="menu">Menú</string>
     <string name="mi_perfil">Mi perfil</string>
+    <string name="logo">logo</string>
+    <string name="grafica">gráfica</string>
+    <string name="fecha">Fecha</string>
+    <string name="__">...</string>
+    <string name="dinero_solicitado_con_xito">Dinero solicitado con éxito</string>
+    <string name="men">Menú</string>
 
 </resources>

@@ -191,7 +191,7 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:contentDescription="gráfica"
+                            android:contentDescription="@string/grafica"
                             android:scaleType="centerInside"
                             android:src="@drawable/ic_grafica_servicios" />
                     </com.google.android.material.card.MaterialCardView>
