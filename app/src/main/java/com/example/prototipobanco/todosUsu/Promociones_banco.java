@@ -34,7 +34,7 @@ public class Promociones_banco extends BaseActivityTodos {
         btnAtras.setOnClickListener(v -> finish());
         btnChat.setOnClickListener(v -> generarChat());
         for (int i=1; i<=4; i++){
-            TextView boton = findViewById(getResources().getIdentifier("boton_contratar"+i, "id", getPackageName()));
+            TextView boton = findViewById(getResources().getIdentifier(getString(R.string.boton_contratar)+i, "id", getPackageName()));
             boton.setOnClickListener(v -> mensajeExitoContrato());
         }
     }

@@ -69,7 +69,7 @@ public class BaseActivityTodos extends AppCompatActivity {
 
         ImageButton envioMensaje = view.findViewById(R.id.btn_enviar);
 
-        envioMensaje.setOnClickListener(v -> Toast.makeText(this, "Mensaje Enviado", Toast.LENGTH_SHORT).show());
+        envioMensaje.setOnClickListener(v -> Toast.makeText(this, R.string.mensaje_enviado, Toast.LENGTH_SHORT).show());
 
     }
 }

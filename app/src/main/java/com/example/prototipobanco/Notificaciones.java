@@ -10,7 +10,7 @@ public class Notificaciones extends BaseActivityClientes {
         setContentView(R.layout.activity_notificaciones);
 
         // configuracionDrawerToolbar configura el menú lateral y el título
-        configuracionDrawerToolbar("Notificaciones");
+        configuracionDrawerToolbar(R.string.notificaciones);
         
         // marchaAtras() busca automáticamente el botón "btn_volver" 
         // de la barra inferior y le asigna la función de cerrar la pantalla.

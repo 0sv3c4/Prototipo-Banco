@@ -41,7 +41,7 @@ public class Bizum extends BaseActivityClientes {
                 if (isGranted) {
                     abrirAgendaContactos();
                 } else {
-                    Toast.makeText(this, "Permiso de contactos denegado", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, R.string.permiso_de_contactos_denegado, Toast.LENGTH_SHORT).show();
                 }
             });
 
@@ -162,7 +162,7 @@ public class Bizum extends BaseActivityClientes {
                 try {
                     double cantidadVal = Double.parseDouble(cant.replace(',', '.'));
                     if (cantidadVal < 0.5 || cantidadVal > 500) {
-                        Toast.makeText(this, "La cantidad debe estar entre 0,5€ y 500€", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, R.string.la_cantidad_debe_estar_entre_0_5_y_500, Toast.LENGTH_SHORT).show();
                         return;
                     }
                 } catch (NumberFormatException e) {

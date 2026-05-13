@@ -21,7 +21,7 @@ public class Preferencias1 extends BaseActivityClientes {
 
     private final String[] listaPaises = {getString(R.string.espana), getString(R.string.francia), getString(R.string.portugal),
             getString(R.string.italia), getString(R.string.alemania), getString(R.string.reino_unido), getString(R.string.estados_unidos)};
-    private final String[] listaIdiomas = {getString(R.string.espanol), getString(R.string.ingles), "Francés", "Portugués", "Alemán", "Italiano"};
+    private final String[] listaIdiomas = {getString(R.string.espanol), getString(R.string.ingles), getString(R.string.frances), getString(R.string.portugues), getString(R.string.aleman), getString(R.string.italiano)};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

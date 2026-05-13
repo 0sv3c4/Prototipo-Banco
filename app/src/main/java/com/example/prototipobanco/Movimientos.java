@@ -27,7 +27,7 @@ public class Movimientos extends BaseActivityClientes {
             return insets;
         });
 
-        configuracionDrawerToolbar("Movimientos");
+        configuracionDrawerToolbar(getString(R.string.movimientos));
         marchaAtras();
 
         initViews();

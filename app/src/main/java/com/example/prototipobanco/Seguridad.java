@@ -19,7 +19,7 @@ import com.google.android.material.materialswitch.MaterialSwitch;
 public class Seguridad extends BaseActivityClientes {
 
     private TextView tvBloqueoEstado;
-    private final String[] opcionesBloqueo = {"30 segundos", "1 minuto", "5 minutos", "Nunca"};
+    private final String[] opcionesBloqueo = {getString(R.string._30_segundos), getString(R.string._1_minuto), getString(R.string._5_minutos), getString(R.string.nunca)};
     
     // Switches para poder resetearlos
     private MaterialSwitch swFaceId, swHuella, swMovimientos, swSospechoso;
@@ -73,9 +73,9 @@ public class Seguridad extends BaseActivityClientes {
         swSospechoso.setChecked(true);
         
         // Resetear texto de bloqueo
-        tvBloqueoEstado.setText("Bloqueo de la aplicación tras 1 minuto de inactividad");
+        tvBloqueoEstado.setText(R.string.bloqueo_de_la_aplicaci_n_tras_1_minuto_de_inactividad);
 
-        mostrarAlertaPersonalizada("Restablecido", "Se han recuperado los ajustes predeterminados del sistema.", R.drawable.ic_info);
+        mostrarAlertaPersonalizada(getString(R.string.restablecido), getString(R.string.se_han_recuperado_los_ajustes_predeterminados_del_sistema), R.drawable.ic_info);
     }
 
     private void mostrarDialogoCambiarContra() {
@@ -100,10 +100,10 @@ public class Seguridad extends BaseActivityClientes {
             if (anterior.isEmpty() || nueva.isEmpty()) {
                 Toast.makeText(this, R.string.Rellena_campos, Toast.LENGTH_SHORT).show();
             } else if (anterior.equals(nueva)) {
-                mostrarAlertaPersonalizada(getString(R.string.error), "La nueva contraseña no puede ser igual a la anterior.", R.drawable.ic_error);
+                mostrarAlertaPersonalizada(getString(R.string.error), getString(R.string.la_nueva_contrase_a_no_puede_ser_igual_a_la_anterior), R.drawable.ic_error);
             } else {
                 dialog.dismiss();
-                mostrarAlertaPersonalizada(getString(R.string.exito), "Tu contraseña ha sido actualizada correctamente.", R.drawable.ic_exito);
+                mostrarAlertaPersonalizada(getString(R.string.exito), getString(R.string.tu_contrase_a_ha_sido_actualizada_correctamente), R.drawable.ic_exito);
             }
         });
 
@@ -112,11 +112,11 @@ public class Seguridad extends BaseActivityClientes {
 
     private void mostrarSeleccionBloqueo() {
         new AlertDialog.Builder(this)
-                .setTitle("Tiempo de bloqueo automático")
+                .setTitle(R.string.tiempo_de_bloqueo_autom_tico)
                 .setItems(opcionesBloqueo, (dialog, which) -> {
                     String seleccion = opcionesBloqueo[which];
-                    tvBloqueoEstado.setText("Bloqueo de la aplicación: " + seleccion);
-                    Toast.makeText(this, "Tiempo ajustado a " + seleccion, Toast.LENGTH_SHORT).show();
+                    tvBloqueoEstado.setText(getString(R.string.bloqueo_de_la_aplicacion) + seleccion);
+                    Toast.makeText(this, getString(R.string.tiempo_ajustado_a) + seleccion, Toast.LENGTH_SHORT).show();
                 })
                 .show();
     }

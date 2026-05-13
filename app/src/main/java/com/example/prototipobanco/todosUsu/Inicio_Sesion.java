@@ -133,7 +133,7 @@ public class Inicio_Sesion extends AppCompatActivity {
         if(!datoValido){
             mensajeError();
         } else {
-            Toast.makeText(this, "¡Bienvenido!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.bienvenido, Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(this, Pantalla_principal.class);
             startActivity(intent);
         }
@@ -146,9 +146,9 @@ public class Inicio_Sesion extends AppCompatActivity {
             datoValido=false;
         } else {
             switch (nifRevisar.charAt(0)){
-                case 'X': nifRevisar = nifRevisar.replaceFirst("X","0"); break;
-                case 'Y': nifRevisar = nifRevisar.replaceFirst("Y","1"); break;
-                case 'Z': nifRevisar = nifRevisar.replaceFirst("Z","2"); break;
+                case 'X': nifRevisar = nifRevisar.replaceFirst(getString(R.string.x),getString(R.string._0)); break;
+                case 'Y': nifRevisar = nifRevisar.replaceFirst(getString(R.string.y),R.string._1); break;
+                case 'Z': nifRevisar = nifRevisar.replaceFirst(getString(R.string.z),R.string._2); break;
             }
             try {
                 numeroDni = Integer.parseInt(nifRevisar.substring(0,8));
@@ -197,7 +197,7 @@ public class Inicio_Sesion extends AppCompatActivity {
 
         enviarSolicitud.setOnClickListener(v -> {
             if(comprobarNIF(nifRecuperar.getText().toString().trim().toUpperCase())){
-                Toast.makeText(this, "¡Solicitud enviada! Revisa tu correo", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, R.string.solicitud_enviada_revisa_tu_correo, Toast.LENGTH_LONG).show();
                 alertDialog.dismiss();
             } else {
                 mensajeError();

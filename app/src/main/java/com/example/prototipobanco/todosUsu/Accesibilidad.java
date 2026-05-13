@@ -31,16 +31,16 @@ public class Accesibilidad extends BaseActivityTodos {
         btnChat.setOnClickListener(v -> generarChat());
 
         // CONFIGURAR CADA ITEM DE ACCESIBILIDAD
-        configurarItemsAccesibilidad(R.id.item_alto_contraste, "Alto contraste", "Mejor legibilidad de los textos");
-        configurarItemsAccesibilidad(R.id.item_texto_grande, "Texto grande", "Aumenta el tamaño de la fuente");
-        configurarItemsAccesibilidad(R.id.item_reducir_movimiento, "Reducir movimiento", "Desactiva animaciones y efectos visuales");
-        configurarItemsAccesibilidad(R.id.item_modo_oscuro, "Modo oscuro", "Fondo oscuro para el cuidado de los ojos");
+        configurarItemsAccesibilidad(R.id.item_alto_contraste, getString(R.string.alto_contraste), getString(R.string.mejor_legibilidad_de_los_textos));
+        configurarItemsAccesibilidad(R.id.item_texto_grande, getString(R.string.texto_grande), getString(R.string.aumenta_el_tamano_de_la_fuente));
+        configurarItemsAccesibilidad(R.id.item_reducir_movimiento, getString(R.string.reducir_movimiento), getString(R.string.desactiva_animaciones_y_efectos_visuales));
+        configurarItemsAccesibilidad(R.id.item_modo_oscuro, getString(R.string.modo_oscuro), getString(R.string.fondo_oscuro_para_el_cuidado_de_los_ojos));
 
-        configurarItemsAccesibilidad(R.id.item_lectura_voz, "Lectura en voz alta", "Narra el contenido de la pantalla");
-        configurarItemsAccesibilidad(R.id.item_alertas_sonoras, "Alertas sonoras", "Notificaciones con sonido");
+        configurarItemsAccesibilidad(R.id.item_lectura_voz, getString(R.string.lectura_en_voz_alta), getString(R.string.narra_el_contenido_de_la_pantalla));
+        configurarItemsAccesibilidad(R.id.item_alertas_sonoras, getString(R.string.alertas_sonoras), getString(R.string.notificaciones_con_sonido));
 
-        configurarItemsAccesibilidad(R.id.item_botones_grandes, "Botones grandes", "Área de toque ampliada");
-        configurarItemsAccesibilidad(R.id.item_vibracion_tactil, "Vibración táctil", "Activa la vibración al pulsar");
+        configurarItemsAccesibilidad(R.id.item_botones_grandes, getString(R.string.botones_grandes), getString(R.string.area_de_toque_ampliada));
+        configurarItemsAccesibilidad(R.id.item_vibracion_tactil, getString(R.string.vibracion_tactil), getString(R.string.activa_la_vibracion_al_pulsar));
 
     }
 

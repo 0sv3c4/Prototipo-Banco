@@ -38,19 +38,19 @@ public class Contacto_clientes extends BaseActivityTodos {
 
         tfnoCliente.setOnClickListener(v ->{
             Intent intent = new Intent(Intent.ACTION_DIAL);
-            intent.setData(Uri.parse("tel:+34900000000"));
+            intent.setData(Uri.parse(getString(R.string.tel_34900000000)));
             startActivity(intent);
         });
 
         tfnoUrgencias.setOnClickListener(v ->{
             Intent intent = new Intent(Intent.ACTION_DIAL);
-            intent.setData(Uri.parse("tel:+34900000001"));
+            intent.setData(Uri.parse(getString(R.string.tel_34900000001)));
             startActivity(intent);
         });
 
         tfnoSeguros.setOnClickListener(v ->{
             Intent intent = new Intent(Intent.ACTION_DIAL);
-            intent.setData(Uri.parse("tel:+34910000000"));
+            intent.setData(Uri.parse(getString(R.string.tel_34910000000)ç));
             startActivity(intent);
         });
     }

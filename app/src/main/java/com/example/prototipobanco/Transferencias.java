@@ -34,7 +34,7 @@ public class Transferencias extends BaseActivityClientes {
                 if (isGranted) {
                     abrirAgendaContactos();
                 } else {
-                    Toast.makeText(this, "Permiso de contactos denegado", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, R.string.permiso_de_contactos_denegado, Toast.LENGTH_SHORT).show();
                 }
             });
 
@@ -90,9 +90,9 @@ public class Transferencias extends BaseActivityClientes {
                 String conc = (etConcepto != null) ? etConcepto.getText().toString().trim() : "";
 
                 if (dest.isEmpty() || imp.isEmpty() || conc.isEmpty()) {
-                    mostrarDialogo(R.layout.mensaje_error, "Transacción fallida", "Por favor, rellene todos los campos antes de continuar.");
+                    mostrarDialogo(R.layout.mensaje_error, getString(R.string.transaccion_fallida), getString(R.string.por_favor_rellene_todos_los_campos_antes_de_continuar));
                 } else {
-                    mostrarDialogo(R.layout.mensaje_exito_envio, "Transacción exitosa", "");
+                    mostrarDialogo(R.layout.mensaje_exito_envio, getString(R.string.transacci_n_exitosa), "");
                 }
             });
         }
