@@ -50,10 +50,10 @@ public class ContratacionServicios extends BaseActivityClientes {
         MaterialButton btnMicrosoft = findViewById(R.id.btn_microsoft);
 
         // Listeners para los botones de empresas populares para actualizar el precio actual
-        if (btnApple != null) btnApple.setOnClickListener(v -> etPrecioActual.setText("293,23"));
-        if (btnAmazon != null) btnAmazon.setOnClickListener(v -> etPrecioActual.setText("272,65"));
-        if (btnTesla != null) btnTesla.setOnClickListener(v -> etPrecioActual.setText("427,22"));
-        if (btnMicrosoft != null) btnMicrosoft.setOnClickListener(v -> etPrecioActual.setText("415,04"));
+        if (btnApple != null) btnApple.setOnClickListener(v -> etPrecioActual.setText(R.string.precio_Apple));
+        if (btnAmazon != null) btnAmazon.setOnClickListener(v -> etPrecioActual.setText(R.string.precio_Amazon));
+        if (btnTesla != null) btnTesla.setOnClickListener(v -> etPrecioActual.setText(R.string.precio_Tesla));
+        if (btnMicrosoft != null) btnMicrosoft.setOnClickListener(v -> etPrecioActual.setText(R.string.precio_Microsoft));
 
         // TextWatcher para calcular el precio final automáticamente al cambiar los valores
         TextWatcher calculationWatcher = new TextWatcher() {
@@ -102,9 +102,9 @@ public class ContratacionServicios extends BaseActivityClientes {
             double precio = Double.parseDouble(strPrecio);
             double total = acciones * precio;
             // Mostramos el resultado con dos decimales
-            tvPrecioFinal.setText(String.format(Locale.getDefault(), "%.2f€", total));
+            tvPrecioFinal.setText(String.format(Locale.getDefault(), getString(R.string.formato_precio), total));
         } catch (NumberFormatException e) {
-            tvPrecioFinal.setText("00.0€");
+            tvPrecioFinal.setText(R.string.valor_0);
         }
     }
 }

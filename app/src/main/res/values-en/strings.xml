@@ -117,7 +117,7 @@
     <string name="atencion_al_cliente">Customer service</string>
     <string name="urgencias">Emergencies</string>
     <string name="seguros">Insurance</string>
-    <string name="contratacion_de_nservicios">Service \nHiring</string>
+    <string name="contratacion_de_nservicios">Services \nHiring</string>
     <string name="acciones">Stock</string>
     <string name="seleccione_su_activo">Select your asset</string>
     <string name="populares">Popular:</string>
@@ -268,4 +268,10 @@
     <string name="alemania">Germany</string>
     <string name="reino_unido">UK</string>
     <string name="estados_unidos">USA</string>
+    <string name="precio_Apple">293.23</string>
+    <string name="precio_Amazon">272.65</string>
+    <string name="precio_Tesla">427.22</string>
+    <string name="precio_Microsoft">415.04</string>
+    <string name="formato_precio">£%.2f</string>
+    <string name="valor_0">£00.0</string>
 </resources>
