@@ -25,12 +25,12 @@ public class Preferencias2 extends BaseActivityClientes {
 
         // Botón Aplicar (Foto de perfil)
         findViewById(R.id.btn_aplicar_foto).setOnClickListener(v -> {
-            mostrarAlertaPersonalizada("¡Éxito!", "La foto de perfil se ha actualizado correctamente.", R.drawable.ic_exito);
+            mostrarAlertaPersonalizada(getString(R.string.exito), getString(R.string.foto_actualizada), R.drawable.ic_exito);
         });
 
         // Botón Importar Imagen
         findViewById(R.id.btn_importar).setOnClickListener(v -> {
-            Toast.makeText(this, "Abriendo galería...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.Abrir_galeria, Toast.LENGTH_SHORT).show();
         });
 
         // Navegación Siguiente -> Ahora va a la pantalla de Seguridad

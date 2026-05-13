@@ -30,7 +30,7 @@ public class Seguridad extends BaseActivityClientes {
         setContentView(R.layout.activity_seguridad);
 
         // Configuración de la base (Drawer, Toolbar y botón Volver)
-        configuracionDrawerToolbar("Seguridad");
+        configuracionDrawerToolbar(getString(R.string.seguridad));
         marchaAtras();
 
         // Inicializar vistas
@@ -98,12 +98,12 @@ public class Seguridad extends BaseActivityClientes {
             String nueva = etNueva.getText().toString();
 
             if (anterior.isEmpty() || nueva.isEmpty()) {
-                Toast.makeText(this, "Por favor, rellena todos los campos", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.Rellena_campos, Toast.LENGTH_SHORT).show();
             } else if (anterior.equals(nueva)) {
-                mostrarAlertaPersonalizada("Error", "La nueva contraseña no puede ser igual a la anterior.", R.drawable.ic_error);
+                mostrarAlertaPersonalizada(getString(R.string.error), "La nueva contraseña no puede ser igual a la anterior.", R.drawable.ic_error);
             } else {
                 dialog.dismiss();
-                mostrarAlertaPersonalizada("¡Éxito!", "Tu contraseña ha sido actualizada correctamente.", R.drawable.ic_exito);
+                mostrarAlertaPersonalizada(getString(R.string.exito), "Tu contraseña ha sido actualizada correctamente.", R.drawable.ic_exito);
             }
         });
 

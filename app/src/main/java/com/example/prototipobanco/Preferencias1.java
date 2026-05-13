@@ -19,8 +19,9 @@ public class Preferencias1 extends BaseActivityClientes {
     private TextView tvPais, tvIdioma;
     private LinearLayout selectorPais, selectorIdioma;
 
-    private final String[] listaPaises = {"España", "Francia", "Portugal", "Italia", "Alemania", "Reino Unido", "Estados Unidos"};
-    private final String[] listaIdiomas = {"Español", "Inglés", "Francés", "Portugués", "Alemán", "Italiano"};
+    private final String[] listaPaises = {getString(R.string.espana), getString(R.string.francia), getString(R.string.portugal),
+            getString(R.string.italia), getString(R.string.alemania), getString(R.string.reino_unido), getString(R.string.estados_unidos)};
+    private final String[] listaIdiomas = {getString(R.string.espanol), getString(R.string.ingles), "Francés", "Portugués", "Alemán", "Italiano"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +61,7 @@ public class Preferencias1 extends BaseActivityClientes {
     private void setupSelectors() {
         selectorPais.setOnClickListener(v -> {
             new AlertDialog.Builder(this)
-                .setTitle("Selecciona un país")
+                .setTitle(R.string.selec_pais)
                 .setItems(listaPaises, (dialog, which) -> {
                     tvPais.setText(listaPaises[which]);
                 })
@@ -69,7 +70,7 @@ public class Preferencias1 extends BaseActivityClientes {
 
         selectorIdioma.setOnClickListener(v -> {
             new AlertDialog.Builder(this)
-                .setTitle("Selecciona un idioma")
+                .setTitle(R.string.selec_idioma)
                 .setItems(listaIdiomas, (dialog, which) -> {
                     tvIdioma.setText(listaIdiomas[which]);
                 })
@@ -78,19 +79,19 @@ public class Preferencias1 extends BaseActivityClientes {
     }
 
     private void setupAplicarButtons() {
-        findViewById(R.id.btn_aplicar_correo).setOnClickListener(v -> validarYAplicar("Correo", etCorreo.getText().toString()));
-        findViewById(R.id.btn_aplicar_tlf).setOnClickListener(v -> validarYAplicar("Teléfono", etTlf.getText().toString()));
-        findViewById(R.id.btn_aplicar_pais).setOnClickListener(v -> validarYAplicar("País", tvPais.getText().toString()));
-        findViewById(R.id.btn_aplicar_poblacion).setOnClickListener(v -> validarYAplicar("Población", etPoblacion.getText().toString()));
-        findViewById(R.id.btn_aplicar_idioma).setOnClickListener(v -> validarYAplicar("Idioma", tvIdioma.getText().toString()));
-        findViewById(R.id.btn_aplicar_alias).setOnClickListener(v -> validarYAplicar("Alias", etAlias.getText().toString()));
+        findViewById(R.id.btn_aplicar_correo).setOnClickListener(v -> validarYAplicar(getString(R.string.correo), etCorreo.getText().toString()));
+        findViewById(R.id.btn_aplicar_tlf).setOnClickListener(v -> validarYAplicar(getString(R.string.telefono), etTlf.getText().toString()));
+        findViewById(R.id.btn_aplicar_pais).setOnClickListener(v -> validarYAplicar(getString(R.string.pais), tvPais.getText().toString()));
+        findViewById(R.id.btn_aplicar_poblacion).setOnClickListener(v -> validarYAplicar(getString(R.string.poblacion), etPoblacion.getText().toString()));
+        findViewById(R.id.btn_aplicar_idioma).setOnClickListener(v -> validarYAplicar(getString(R.string.idioma), tvIdioma.getText().toString()));
+        findViewById(R.id.btn_aplicar_alias).setOnClickListener(v -> validarYAplicar(getString(R.string.alias), etAlias.getText().toString()));
     }
 
     private void validarYAplicar(String campo, String valor) {
         if (valor.isEmpty() || valor.equals(getString(R.string.selec_pais)) || valor.equals(getString(R.string.selec_idioma))) {
-            mostrarAlertaPersonalizada("Atención", "Por favor, completa el campo " + campo, R.drawable.ic_error);
+            mostrarAlertaPersonalizada(getString(R.string.atencion), getString(R.string.completar_campo) + campo, R.drawable.ic_error);
         } else {
-            mostrarAlertaPersonalizada("¡Actualizado!", campo + " se ha cambiado a: " + valor, R.drawable.ic_exito);
+            mostrarAlertaPersonalizada(getString(R.string.actualizado), campo + getString(R.string.se_ha_cambiado_a) + valor, R.drawable.ic_exito);
         }
     }
 

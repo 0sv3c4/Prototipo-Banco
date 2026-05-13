@@ -85,13 +85,13 @@ public class Pantalla_principal extends BaseActivityClientes {
         if (switchVisibilidad != null) {
             switchVisibilidad.setOnCheckedChangeListener((buttonView, isChecked) -> {
                 if (isChecked) {
-                    tvSaldo.setText(R.string.fondos);
+                    tvSaldo.setText(R.string.valor_saldo);
                     tvIban.setText(R.string.IBAN);
                     if (tvSaldoNav != null) tvSaldoNav.setText(R.string.valor_saldo);
                 } else {
-                    tvSaldo.setText("*******€");
+                    tvSaldo.setText(R.string.dinero_oculto);
                     tvIban.setText("ES13 **** **** **** **** 8129");
-                    if (tvSaldoNav != null) tvSaldoNav.setText("*******€");
+                    if (tvSaldoNav != null) tvSaldoNav.setText(R.string.dinero_oculto);
                 }
             });
         }

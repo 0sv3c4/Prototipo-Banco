@@ -9,7 +9,7 @@
     <string name="cajeros">Mapa de cajeros</string>
     <string name="acceso_bio">Acceso biométrico</string>
     <string name="pedir_dni">Introduzca su NIF o DNI</string>
-    <string name="nif" translatable="false">NIF</string>
+    <string name="nif">NIF</string>
     <string name="contra">Contraseña</string>
     <string name="bienvenido">Bienvenido</string>
     <string name="descrip_biometria">Acceso por biometría</string>
@@ -33,20 +33,18 @@
     <string name="seleccionar_cantidad">Seleccionar cantidad</string>
     <string name="saldo">Saldo</string>
     <string name="concepto_opcional">Concepto (opcional)</string>
-    <string name="escribe_mensaje">Escribe un mensaje…</string>
     <string name="confirmar">Confirmar</string>
     <string name="volver">Volver</string>
     <string name="manuel_a" translatable="false">Manuel A.</string>
     <string name="claudia_c" translatable="false">Claudia C.</string>
     <string name="juan_m" translatable="false">Juan M.</string>
-    <string name="oscar_t" translatable="false">Óscar T.</string>
+    <string name="oscar_t">Óscar T.</string>
     <string name="nombre_cliente" translatable="false">Eufrasio Martínez</string>
     <string name="valor_saldo">5.777,23€</string>
     <string name="titulo_toolbar_base" translatable="false">Prueba</string>
     <string name="vacio" translatable="false">\0</string>
     <string name="descripción_contrato">Has contratado este servicio correctamente, en breve nos pondremos en contacto contigo</string>
     <string name="Contraseña_olvidada">¿Has olvidado tu contraseña?</string>
-    <string name="fondos">5.777,23€</string>
     <string name="IBAN" translatable="false">ES13 0230 7800 8394 0948 8129</string>
     <string name="informacion">Información</string>
 
@@ -56,14 +54,15 @@
     <string name="preferencias">Preferencias</string>
     <string name="correo_elec">Correo electrónico</string>
     <string name="nuevo_correo">Nuevo correo electrónico</string>
+    <string name="correo">Correo</string>
     <string name="num_tlf">Número de teléfono</string>
     <string name="nuevo_tlf">Nuevo número de teléfono</string>
     <string name="pais">País</string>
-    <string name="selec_pais">Selecciona el país</string>
+    <string name="selec_pais">Selecciona un país</string>
     <string name="poblacion">Población</string>
     <string name="nueva_poblacion">Nueva población</string>
     <string name="idioma">Idioma</string>
-    <string name="selec_idioma">Selecciona idioma</string>
+    <string name="selec_idioma">Selecciona un idioma</string>
     <string name="alias">Alias</string>
     <string name="nuevo_alias">Nuevo alias</string>
 
@@ -139,7 +138,7 @@
     <string name="j" translatable="false">J</string>
     <string name="u00d3" translatable="false">Ó</string>
     <string name="introduce_un_contacto">Introduce un contacto</string>
-    <string name="escribe_un_mensaje">Escribe un mensaje...</string>
+    <string name="escribe_un_mensaje">Escribe un mensaje…</string>
     <string name="tu_oficina_m_s_ncercana_es">Tu oficina más\ncercana es:</string>
     <string name="r_o_vena_burgos" translatable="false">Río Vena (Burgos)</string>
     <string name="c_melancolia_7">C/Melancolía, 7</string>
@@ -149,7 +148,7 @@
     <string name="urgencias">Urgencias</string>
     <string name="_900_000_001" translatable="false">900 000 001</string>
     <string name="seguros">Seguros</string>
-    <string name="_910_000_000">910 000 000</string>
+    <string name="_910_000_000" translatable="false">910 000 000</string>
     <string name="contratacion_de_nservicios">Contratación de\nServicios</string>
     <string name="acciones">Acciones</string>
     <string name="seleccione_su_activo">Seleccione su activo</string>
@@ -163,7 +162,7 @@
     <string name="precio_de_accion">Precio de acción</string>
     <string name="precio_actual">Precio actual</string>
     <string name="precio_final">PRECIO FINAL</string>
-    <string name="_00_0">00.0€</string>
+    <string name="_00_0">00,0€</string>
     <string name="confirmar_pago">Confirmar pago</string>
     <string name="prestamos">Préstamos</string>
     <string name="siguiente_paso_prestamo">Para realizar un préstamo es necesario que se ponga en contacto con su oficina más cercana</string>
@@ -186,7 +185,7 @@
     <string name="activar_la_ubicaci_n">Activar la ubicación</string>
     <string name="inserte_para_filtrar_por_ciudad_o_cp">Inserte para filtrar por ciudad o CP…</string>
     <string name="ltimos_nmovimientos">Últimos\nmovimientos:</string>
-    <string name="dd_mm_yyyy" translatable="false">dd/mm/yyyy</string>
+    <string name="dd_mm_yyyy">dd/mm/aaaa</string>
     <string name="_14_mar_2026" translatable="false">14 MAR 2026</string>
     <string name="tienda_game_expedition_33">Tienda Game: Expedition 33</string>
     <string name="_49_99">-49,99€</string>
@@ -194,7 +193,7 @@
     <string name="_100">-100€</string>
     <string name="_28_feb_2026" translatable="false">28 FEB 2026</string>
     <string name="transferencia_n_mina">Transferencia: Nómina</string>
-    <string name="_1900">+1900€</string>
+    <string name="_1900">+1.900€</string>
     <string name="_23_feb_2026" translatable="false">23 FEB 2026</string>
     <string name="propina_de_la_abuela">Propina de la abuela</string>
     <string name="_5_00">+5,00€</string>
@@ -240,9 +239,9 @@
     <string name="_5_de_cashback_en_todas_tus_compras">5% de cashback en todas tus compras.</string>
     <string name="ejemplo_de_tarjeta">ejemplo de tarjeta</string>
     <string name="cuenta_joven">Cuenta Joven</string>
-    <string name="sin_comisiones_n_hasta_26_a_os">Sin comisiones.\n Hasta 26 años.</string>
+    <string name="sin_comisiones_n_hasta_26_a_os">Sin comisiones.\nHasta 26 años.</string>
     <string name="ahorro_plus">Ahorro Plus</string>
-    <string name="_3_5_tae_nsin_permanencia">3,5% TAE \nsin permanencia.</string>
+    <string name="_3_5_tae_nsin_permanencia">3,5% TAE,\nSin permanencia.</string>
     <string name="seguro_de_viaje">Seguro de viaje</string>
     <string name="viaja_protegido_ndesde_2_99_mes">Viaja protegido.\nDesde 2,99€/mes</string>
     <string name="seguridad">Seguridad</string>
@@ -276,7 +275,7 @@
     <string name="concepto">Concepto</string>
     <string name="hacer_transferencia">Hacer Transferencia</string>
     <string name="en_qu_podemos_ayudarte">¿En qué podemos ayudarte?</string>
-    <string name="exp_n_aqu_tu_duda">Expón aquí tu duda...</string>
+    <string name="exp_n_aqu_tu_duda">Expón aquí tu duda…</string>
     <string name="enviar_duda">enviar duda</string>
     <string name="chat_de_atenci_n_al_cliente">Chat de atención al cliente</string>
     <string name="cambiar_contrase_a">Cambiar contraseña</string>
@@ -290,22 +289,42 @@
     <string name="error">Error</string>
     <string name="error_DNI">El formato del DNI es incorrecto, introduzca un DNI válido</string>
     <string name="aceptar">Aceptar</string>
-    <string name="eror_bizum">Debes rellenar los siguientes campos: destinatario y cantidad</string>
+    <string name="error_bizum">Debes rellenar los siguientes campos: destinatario y cantidad</string>
     <string name="error_bizum2">Selecciona primero una opción: Enviar dinero / Solicitar dinero</string>
     <string name="exito_envio">Dinero enviado con éxito</string>
     <string name="msj_recupera_contra">Introduce tu DNI o NIF y te enviaremos un enlace para restablecer tu contraseña</string>
     <string name="solicitar">Solicitar</string>
-    <string name="rango_transf">Mínimo: 100€\nMáximo: 10.000€</string>
+    <string name="rango_transf">Mínimo: 10€\nMáximo: 10.000€</string>
     <string name="rango_bizum">Mínimo: 0,5€\nMáximo: 500€</string>
     <string name="info_contra">La contraseña debe tener 7 dígitos como mínimo</string>
     <string name="msj_error_DNI">Se necesitará un DNI o NIF válido para el acceso</string>
     <string name="menu">Menú</string>
     <string name="mi_perfil">Mi perfil</string>
-    <string name="logo">logo</string>
-    <string name="grafica">gráfica</string>
+    <string name="logo">Logo</string>
+    <string name="grafica">Gráfica</string>
     <string name="fecha">Fecha</string>
-    <string name="__">...</string>
+    <string name="__" translatable="false">...</string>
     <string name="dinero_solicitado_con_xito">Dinero solicitado con éxito</string>
     <string name="men">Menú</string>
+    <string name="dinero_oculto">*******€</string>
+    <string name="telefono">Teléfono</string>
+    <string name="Abrir_galeria">Abriendo galería...</string>
+    <string name="exito">¡Éxito!</string>
+    <string name="foto_actualizada">La foto de perfil se ha actualizado correctamente.</string>
+    <string name="actualizado">¡Actualizado!</string>
+    <string name="atencion">Atención</string>
+    <string name="Rellena_campos">Por favor, rellena todos los campos</string>
+    <string name="completar_campo">"Por favor, completa el campo "</string>
+    <string name="se_ha_cambiado_a">" se ha cambiado a: "</string>
+
+    <string name="espana">España</string>
+    <string name="francia">Francia</string>
+    <string name="portugal">Portugal</string>
+    <string name="italia">Italia</string>
+    <string name="alemania">Alemania</string>
+    <string name="reino_unido">Reino Unido</string>
+    <string name="estados_unidos">Estados Unidos</string>
+    <string name="espanol" translatable="false">Español</string>
+    <string name="ingles" translatable="false">English</string>
 
 </resources>

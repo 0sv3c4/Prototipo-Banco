@@ -466,8 +466,10 @@
                     android:layout_width="160dp"
                     android:layout_height="64dp"
                     android:text="@string/volver"
-                    android:textColor="@color/white"
+                    android:fontFamily="@font/inter_semibold"
                     app:backgroundTint="@color/claro"
+                    android:textColor="@color/ultra_claro"
+                    android:textSize="24sp"
                     app:cornerRadius="32dp"
                     android:layout_marginEnd="8dp" />
 
@@ -476,7 +478,9 @@
                     android:layout_width="160dp"
                     android:layout_height="64dp"
                     android:text="@string/siguiente"
-                    android:textColor="@color/white"
+                    android:textColor="@color/ultra_claro"
+                    android:textSize="24sp"
+                    android:fontFamily="@font/inter_semibold"
                     app:backgroundTint="@color/claro"
                     app:cornerRadius="32dp"
                     android:layout_marginStart="8dp" />
