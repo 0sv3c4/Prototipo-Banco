@@ -27,7 +27,7 @@ import java.util.Locale;
 public class Pantalla_inicial extends AppCompatActivity {
 
     Spinner spinner;
-    public static final String[] languages = {"Lang","Español", "English"}; //NO EXTRAER STRINGS
+    public static final String[] languages = {"Idioma","Español", "English"}; //NO EXTRAER STRINGS
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

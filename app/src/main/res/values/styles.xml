@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="titulo">
-        <item name="android:textSize">40sp</item>
+        <item name="android:textSize">38sp</item>
         <item name="android:fontFamily">@font/inter_black</item>
         <item name="android:letterSpacing">-0.01</item>
         <item name="android:textColor">@color/oscuro</item>
