@@ -50,7 +50,7 @@ public class Contacto_clientes extends BaseActivityTodos {
 
         tfnoSeguros.setOnClickListener(v ->{
             Intent intent = new Intent(Intent.ACTION_DIAL);
-            intent.setData(Uri.parse(getString(R.string.tel_34910000000)ç));
+            intent.setData(Uri.parse(getString(R.string.tel_34910000000)));
             startActivity(intent);
         });
     }

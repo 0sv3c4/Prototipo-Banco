@@ -147,8 +147,8 @@ public class Inicio_Sesion extends AppCompatActivity {
         } else {
             switch (nifRevisar.charAt(0)){
                 case 'X': nifRevisar = nifRevisar.replaceFirst(getString(R.string.x),getString(R.string._0)); break;
-                case 'Y': nifRevisar = nifRevisar.replaceFirst(getString(R.string.y),R.string._1); break;
-                case 'Z': nifRevisar = nifRevisar.replaceFirst(getString(R.string.z),R.string._2); break;
+                case 'Y': nifRevisar = nifRevisar.replaceFirst(getString(R.string.y),getString(R.string._1)); break;
+                case 'Z': nifRevisar = nifRevisar.replaceFirst(getString(R.string.z),getString(R.string._2)); break;
             }
             try {
                 numeroDni = Integer.parseInt(nifRevisar.substring(0,8));

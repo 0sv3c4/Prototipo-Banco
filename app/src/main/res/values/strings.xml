@@ -349,15 +349,15 @@
     <string name="activa_la_vibracion_al_pulsar">Activa la vibración al pulsar</string>
     <string name="area_de_toque_ampliada">Área de toque ampliada</string>
     <string name="mensaje_enviado">Mensaje Enviado</string>
-    <string name="tel_34900000000">tel:+34900000000</string>
-    <string name="tel_34900000001">tel:+34900000001</string>
-    <string name="tel_34910000000">tel:+34910000000</string>
-    <string name="x">X</string>
-    <string name="y">Y</string>
-    <string name="z">Z</string>
-    <string name="_0">0</string>
+    <string name="tel_34900000000" translatable="false">tel:+34900000000</string>
+    <string name="tel_34900000001" translatable="false">tel:+34900000001</string>
+    <string name="tel_34910000000" translatable="false">tel:+34910000000</string>
+    <string name="x" translatable="false">X</string>
+    <string name="y" translatable="false">Y</string>
+    <string name="z" translatable="false">Z</string>
+    <string name="_0" translatable="false">0</string>
     <string name="solicitud_enviada_revisa_tu_correo">¡Solicitud enviada! Revisa tu correo</string>
-    <string name="boton_contratar">boton_contratar</string>
+    <string name="boton_contratar" translatable="false">boton_contratar</string>
     <string name="permiso_de_contactos_denegado">Permiso de contactos denegado</string>
     <string name="la_cantidad_debe_estar_entre_0_5_y_500">La cantidad debe estar entre 0,5€ y 500€</string>
     <string name="movimientos">Movimientos</string>
