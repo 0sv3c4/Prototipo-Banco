@@ -3,7 +3,7 @@
     <background android:drawable="@color/white" />
     <foreground>
         <inset
-            android:drawable="@drawable/ic_app_round"
+            android:drawable="@drawable/ic_app"
             android:inset="15%"/>
     </foreground>
     <monochrome android:drawable="@drawable/ic_app_round" />

@@ -1,379 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Bank Prototype</string>
-    <string name="fondo_superior_promociones">promotions</string>
-    <string name="dk_capital_" translatable="false">DK Capital Bank</string>
-    <string name="subitulo_inicio">Your income, your capital</string>
+    <string name="fondo_superior_promociones">Promotions</string>
+    <string name="subitulo_inicio">Your income, your wealth</string>
     <string name="mej_ofertas">Our best offers:</string>
-    <string name="accesibilidad">Accessibility</string>
-    <string name="contactanos">Contact Us</string>
-    <string name="cajeros">ATM Map</string>
-    <string name="acceso_bio">Biometric Access</string>
-    <string name="pedir_dni">Enter your NIF or DNI</string>
-    <string name="nif">NIF</string>
+    <string name="accesibilidad">Accesibility</string>
+    <string name="contactanos">Contact us</string>
+    <string name="cajeros">ATM map</string>
+    <string name="acceso_bio">Biometric access</string>
+    <string name="pedir_dni">Enter your TIN or ID</string>
+    <string name="nif">TIN</string>
     <string name="contra">Password</string>
     <string name="bienvenido">Welcome</string>
-    <string name="descrip_biometria">Biometric access</string>
+    <string name="descrip_biometria">Access by biometrics</string>
     <string name="pedir_contra">Enter your password</string>
-    <string name="iniciar_sesion">Log In</string>
-    <string name="contra_olvidada">Forgot your password?</string>
-    <string name="funcion_ojo">Reveal password</string>
-    <string name="def_seguros">Consult/Contract insurance with a personal advisor (M-F 9:00-21:00)</string>
-    <string name="def_urgencias">Request free help for card theft, bank account emergencies... (M-S, 24h, also available from abroad)</string>
-    <string name="def_atencion_cliente">Resolve your doubts with this free number (M-F 8:00-22:00)</string>
-
-    <!-- Bizum strings -->
-    <string name="bizum" translatable="false">Bizum</string>
-    <string name="acciones_rapidas">Quick actions:</string>
+    <string name="iniciar_sesion">Log in</string>
+    <string name="contra_olvidada">Forgot password?</string>
+    <string name="funcion_ojo">Show password</string>
+    <string name="def_seguros">Look up/Take out insurance with a personal advisor (M-F 9:00-21:00)</string>
+    <string name="def_urgencias">Request free help in case of card theft, bank account emergencies…   (M-S, 24h, also available from abroad)</string>
+    <string name="def_atencion_cliente">Solve your questions on this free number (M-F 8:00-22:00)</string>
+    <string name="acciones_rapidas">Options:</string>
     <string name="enviar_dinero">Send money</string>
-    <string name="solicitar_dinero">Request money</string>
-    <string name="contactos_recientes">Recent contacts:</string>
-    <string name="ver_todos">See all -></string>
-    <string name="destinatario">Recipient</string>
+    <string name="solicitar_dinero">Claim money</string>
+    <string name="contactos_recientes">Frequently used contacts:</string>
+    <string name="ver_todos">Search all -></string>
+    <string name="destinatario">Addressee</string>
     <string name="introduce_contacto">Enter a contact</string>
     <string name="seleccionar_cantidad">Select amount</string>
     <string name="saldo">Balance</string>
-    <string name="concepto_opcional">Reference (optional)</string>
+    <string name="concepto_opcional">Payment reason</string>
     <string name="confirmar">Confirm</string>
-    <string name="volver">Back</string>
-    <string name="manuel_a" translatable="false">Manuel A.</string>
-    <string name="claudia_c" translatable="false">Claudia C.</string>
-    <string name="juan_m" translatable="false">Juan M.</string>
-    <string name="oscar_t">Oscar T.</string>
-    <string name="nombre_cliente" translatable="false">Eufrasio Martínez</string>
-    <string name="valor_saldo">€5,777.23</string>
-    <string name="titulo_toolbar_base" translatable="false">Test</string>
-    <string name="vacio" translatable="false">\0</string>
-    <string name="descripción_contrato">You have contracted this service correctly, we will contact you shortly</string>
-    <string name="Contraseña_olvidada">Have you forgotten your password?</string>
-    <string name="IBAN" translatable="false">ES13 0230 7800 8394 0948 8129</string>
+    <string name="volver">Go back</string>
+    <string name="valor_saldo">£5,777.23</string>
+    <string name="descripción_contrato">You have successfully hired this service, we will contact you as soon as possible</string>
+    <string name="Contraseña_olvidada">Forgot password?</string>
     <string name="informacion">Information</string>
-
     <string name="siguiente">Next</string>
     <string name="aplicar">Apply</string>
     <string name="preferencias">Preferences</string>
-    <string name="correo_elec">Email</string>
-    <string name="nuevo_correo">New email address</string>
+    <string name="correo_elec">E-mail</string>
+    <string name="nuevo_correo">New E-mail</string>
     <string name="correo">Mail</string>
-    <string name="num_tlf">Phone number</string>
-    <string name="nuevo_tlf">New phone number</string>
+    <string name="num_tlf">Telephone number</string>
+    <string name="nuevo_tlf">New Telephone Number</string>
     <string name="pais">Country</string>
     <string name="selec_pais">Select a country</string>
-    <string name="poblacion">Town/City</string>
-    <string name="nueva_poblacion">New town/city</string>
+    <string name="poblacion">Location</string>
+    <string name="nueva_poblacion">New location</string>
     <string name="idioma">Language</string>
-    <string name="selec_idioma">Select a language</string>
+    <string name="selec_idioma">Select Language</string>
     <string name="alias">Alias</string>
-    <string name="nuevo_alias">New alias</string>
-
-    <string name="buzon_notificaciones">Notification\nInbox</string>
+    <string name="nuevo_alias">New Alias</string>
+    <string name="buzon_notificaciones">Notification \ninbox</string>
     <string name="notificaciones_sin_leer">7 unread notifications</string>
-    <string name="notificaciones_leidas">Read notifications</string>
-
-    <string name="notif_multa_titulo">Traffic fine</string>
-    <string name="notif_multa_desc">Subject: Speeding.</string>
-    <string name="notif_multa_hora">20:50</string>
-
+    <string name="notificaciones_leidas">Already read notifications</string>
+    <string name="notif_multa_titulo">Speeding ticket</string>
+    <string name="notif_multa_desc">Issue: Speeding ticket</string>
+    <string name="notif_multa_hora">8:50 p.m.</string>
     <string name="notif_pago_game_titulo">Successful payment</string>
-    <string name="notif_pago_game_desc">Payment completed at: Game.</string>
-    <string name="notif_pago_game_hora">19:27</string>
-
+    <string name="notif_pago_game_desc">Successful payment at: Game</string>
+    <string name="notif_pago_game_hora">7:27 p.m.</string>
     <string name="notif_bizum_walter_titulo">Bizum received</string>
-    <string name="notif_bizum_walter_desc">€10 from: Walter W.</string>
-    <string name="notif_bizum_walter_hora">18:58</string>
-
+    <string name="notif_bizum_walter_desc">+£8 from: Walter W.</string>
+    <string name="notif_bizum_walter_hora">6:58 p.m.</string>
     <string name="notif_renta_titulo">Income tax return</string>
-    <string name="notif_renta_desc">Don\'t forget the annual appointment!</string>
-    <string name="notif_renta_hora">15:23</string>
-
-    <string name="notif_nomina_titulo">Payroll deposit</string>
-    <string name="notif_nomina_desc">Monthly income: +€1,900.</string>
-    <string name="notif_nomina_hora">13:53</string>
-
-    <string name="notif_becas_titulo">Student scholarships</string>
-    <string name="notif_becas_desc">Check how to apply for a scholarship.</string>
-    <string name="notif_becas_hora">11:21</string>
-
+    <string name="notif_renta_desc">¡Do not forget you annual appointment!</string>
+    <string name="notif_renta_hora">3:23 p.m.</string>
+    <string name="notif_nomina_titulo">Salary income</string>
+    <string name="notif_nomina_desc">Montly income: +£1,900</string>
+    <string name="notif_nomina_hora">1:53 p.m.</string>
+    <string name="notif_becas_titulo">Student\'s scholarship</string>
+    <string name="notif_becas_desc">Find out how to apply for an scholarship</string>
+    <string name="notif_becas_hora">11:21 a.m.</string>
     <string name="notif_transf_oscar_titulo">Successful transfer</string>
-    <string name="notif_transf_oscar_desc">To Oscar T. N. for: Summer trip</string>
-    <string name="notif_transf_oscar_hora">9:41</string>
-
+    <string name="notif_transf_oscar_desc">To Oscar T.N. for: Summer Holidays</string>
+    <string name="notif_transf_oscar_hora">9:41 a.m.</string>
     <string name="notif_pago_aliexpress_titulo">Successful payment</string>
-    <string name="notif_pago_aliexpress_desc">Payment completed at: Aliexpress.</string>
+    <string name="notif_pago_aliexpress_desc">Successful payment at: Aliexpress</string>
     <string name="notif_ayer">Yesterday</string>
-
-    <string name="notif_domiciliado_spotify_titulo">Direct debit payment</string>
-    <string name="notif_domiciliado_spotify_desc">-€5.99 for: Spotify.</string>
-
+    <string name="notif_domiciliado_spotify_titulo">Automatic monthly charge</string>
+    <string name="notif_domiciliado_spotify_desc">-£4.99 for: Spotify</string>
     <string name="notif_bizum_federico_titulo">Bizum received</string>
-    <string name="notif_bizum_federico_desc">+€3.50 from: Federico G. L.</string>
-
+    <string name="notif_bizum_federico_desc">+ £3.15 from: Federico G. L.</string>
     <string name="perfil">Profile</string>
-    <string name="perfil_usuario">User Profile</string>
-    <string name="configurar_perfil">Set up profile</string>
-    <string name="cerrar_sesion">Log Out</string>
-    <string name="permisos_habilitados">Enabled permissions:</string>
-    <string name="falta_personalizar">To be customized:</string>
+    <string name="perfil_usuario">User profile</string>
+    <string name="configurar_perfil">Profile settings</string>
+    <string name="cerrar_sesion">Sign out</string>
+    <string name="permisos_habilitados">Authorized permissions:</string>
+    <string name="falta_personalizar">Missing from personalise:</string>
     <string name="face_id">Face ID</string>
     <string name="accesos_directos">Shortcuts</string>
-    <string name="geolocalizacion">Geolocation</string>
-    <string name="permisos_notif">Notification permissions</string>
-    <string name="foto_perfil">Profile picture</string>
-    <string name="btn_inicio_sesion">Log In</string>
-    <string name="vision">Vision</string>
+    <string name="geolocalizacion">Geolocalization</string>
+    <string name="permisos_notif">Notification permission</string>
+    <string name="foto_perfil">Profile photo</string>
+    <string name="btn_inicio_sesion">Log in</string>
+    <string name="vision">Appearance</string>
     <string name="audicion">Hearing</string>
     <string name="interaccion">Interaction</string>
-    <string name="balance_generall">General Balance</string>
-    <string name="comparativa_financieraa">Financial Comparison</string>
+    <string name="balance_generall">Balance sheet</string>
+    <string name="comparativa_financieraa">Financial comparison</string>
     <string name="anual">Annual</string>
     <string name="mensual">Monthly</string>
     <string name="semanal">Weekly</string>
-    <string name="desde">From:</string>
+    <string name="desde">Since:</string>
     <string name="hasta">To:</string>
-    <string name="m" translatable="false">M</string>
-    <string name="c" translatable="false">C</string>
-    <string name="j" translatable="false">J</string>
-    <string name="u00d3" translatable="false">Ó</string>
+    <string name="c_melancolia_7">"Melancolia St., 7 "</string>
+    <string name="mi_perfil">My profile</string>
+    <string name="logo">Logo</string>
+    <string name="grafica">Graph</string>
+    <string name="fecha">Date</string>
+    <string name="anadir">Add</string>
+    <string name="ltimos_movimientos">"Last activities: "</string>
     <string name="introduce_un_contacto">Enter a contact</string>
-    <string name="escribe_un_mensaje">Type a message...</string>
-    <string name="tu_oficina_m_s_ncercana_es">Your nearest\noffice is:</string>
-    <string name="r_o_vena_burgos" translatable="false">Río Vena (Burgos)</string>
-    <string name="c_melancolia_7">7 Melancholy St.</string>
-    <string name="_947000000" translatable="false">947000000</string>
-    <string name="atencion_al_cliente">Customer Service</string>
-    <string name="_900_000_000" translatable="false">900 000 000</string>
+    <string name="escribe_un_mensaje">Enter a message…</string>
+    <string name="atencion_al_cliente">Customer service</string>
     <string name="urgencias">Emergencies</string>
-    <string name="_900_000_001" translatable="false">900 000 001</string>
     <string name="seguros">Insurance</string>
-    <string name="_910_000_000" translatable="false">910 000 000</string>
-    <string name="contratacion_de_nservicios">Contract\nServices</string>
-    <string name="acciones">Stocks</string>
+    <string name="contratacion_de_nservicios">Service \nHiring</string>
+    <string name="acciones">Stock</string>
     <string name="seleccione_su_activo">Select your asset</string>
     <string name="populares">Popular:</string>
-    <string name="apple" translatable="false">Apple</string>
-    <string name="amazon" translatable="false">Amazon</string>
-    <string name="tesla" translatable="false">Tesla</string>
-    <string name="microsoft" translatable="false">Microsoft</string>
-    <string name="cantidad_deseada">Desired amount</string>
-    <string name="num_acciones">Num. of shares</string>
-    <string name="precio_de_accion">Share price</string>
-    <string name="precio_actual">Current price</string>
+    <string name="cantidad_deseada">Desired quantity</string>
+    <string name="num_acciones">Number of actions</string>
+    <string name="precio_de_accion">Stock Price</string>
+    <string name="precio_actual">Current Price</string>
     <string name="precio_final">FINAL PRICE</string>
-    <string name="_00_0">€00.0</string>
+    <string name="_00_0">£00.0</string>
     <string name="confirmar_pago">Confirm payment</string>
     <string name="prestamos">Loans</string>
-    <string name="siguiente_paso_prestamo">To apply for a loan, please contact your nearest office</string>
-    <string name="acceda_al_servicio_al_cliente_n_cont_ctanos">Access customer service\nContact us! 📞</string>
+    <string name="siguiente_paso_prestamo">To obtain a loan, you will have to get in contact with your nearest branch.</string>
+    <string name="acceda_al_servicio_al_cliente_n_cont_ctanos">Access to custom service\nContact us! 📞</string>
     <string name="transferir">Transfer</string>
-    <string name="balance" translatable="false">Balance</string>
-    <string name="tus_tarjetas">Your cards:</string>
-    <string name="gestion_de_carteras">Wallet management:</string>
+    <string name="tus_tarjetas">Your credit cards:</string>
+    <string name="gestion_de_carteras">Wallet manegement:</string>
     <string name="cartera_1">Wallet 1</string>
     <string name="cartera_2">Wallet 2</string>
-    <string name="anadir">Add</string>
-    <string name="ltimos_movimientos">Recent transactions:</string>
-    <string name="cafeter_a_polit_cnica_ubu">UBU Polytechnic Cafeteria</string>
-    <string name="_4_99">-€4.99</string>
-    <string name="bizum_from_walter_white" translatable="false">Bizum from: Walter White</string>
-    <string name="_10">+€10</string>
+    <string name="cafeter_a_polit_cnica_ubu">UBU Technical College Cafeteria</string>
+    <string name="_10">+£10</string>
     <string name="ver_m_s">See more</string>
     <string name="cajeros_y_oficinas_por_su_zona">ATMs and offices in your area</string>
     <string name="encuentra_tu_cajero_m_s_cercano">Find your nearest ATM</string>
-    <string name="activar_la_ubicaci_n">Turn on location</string>
-    <string name="inserte_para_filtrar_por_ciudad_o_cp">Enter city or zip code to filter...</string>
-    <string name="ltimos_nmovimientos">Recent\ntransactions:</string>
-    <string name="dd_mm_yyyy">dd/mm/yyyy</string>
-    <string name="_14_mar_2026" translatable="false">MAR 14 2026</string>
+    <string name="activar_la_ubicaci_n">Turn on geolocalization</string>
+    <string name="inserte_para_filtrar_por_ciudad_o_cp">Enter to filter by city or postal code…</string>
     <string name="tienda_game_expedition_33">Game Store: Expedition 33</string>
-    <string name="_49_99">-€49.99</string>
-    <string name="pr_cticas_autoescuela">Driving school practices</string>
-    <string name="_100">-€100</string>
-    <string name="_28_feb_2026" translatable="false">FEB 28 2026</string>
-    <string name="transferencia_n_mina">Transfer: Payroll</string>
-    <string name="_1900">+€1,900</string>
-    <string name="_23_feb_2026" translatable="false">FEB 23 2026</string>
+    <string name="_49_99">-£49.99</string>
+    <string name="pr_cticas_autoescuela">Driving school practice</string>
+    <string name="transferencia_n_mina">Transfer: salary</string>
     <string name="propina_de_la_abuela">Grandma\'s tip</string>
-    <string name="_5_00">+€5.00</string>
-    <string name="pc_componentes_m_ram">PC Components: RAM M.</string>
-    <string name="_194_99">-€194.99</string>
-    <string name="_1" translatable="false">1</string>
-    <string name="_2" translatable="false">2</string>
-    <string name="_3" translatable="false">3</string>
-    <string name="_66" translatable="false">66</string>
-    <string name="_67" translatable="false">67</string>
+    <string name="_5_00">+£5.00</string>
+    <string name="pc_componentes_m_ram">PC Componentes: RAM Memory</string>
     <string name="no_eres_cliente_todavia">Not a customer yet?</string>
     <string name="nuestras_mejores_ofertas">Our best offers:</string>
     <string name="proximos_eventos">Upcoming Events:</string>
     <string name="contenedor_de_fotos_para_ofertas">photo container for offers</string>
-    <string name="dk_finance_day" translatable="false">DK Finance Day</string>
     <string name="feria_del_ahorro">Savings Fair</string>
-    <string name="kong_tech_talk" translatable="false">Kong Tech Talk</string>
     <string name="contenedor_de_fotos_para_eventos">photo container for events</string>
     <string name="visibilidad_de_datos">Data visibility</string>
     <string name="cuenta_corriente">Current account:</string>
     <string name="saldo_disponible">Available balance:</string>
-    <string name="_5_777_23">€5,777.23</string>
+    <string name="_5_777_23">£5,777.23</string>
     <string name="servicios">Services</string>
-    <string name="banner_0a2463" translatable="false">Banner (@0a2463)</string>
-    <string name="promoci_n_temporal">Temporary promotion!</string>
-    <string name="_1e6fcf" translatable="false">1e6fcf</string>
+    <string name="promoci_n_temporal">Limited-time offer!</string>
     <string name="hasta_5_de_cashback">Up to 5% cashback!</string>
     <string name="en_todas_tus_compras_este_mes">On all your purchases this month</string>
     <string name="activar_ahora">Activate now</string>
     <string name="v_lido_hasta_el_31_de_marzo">Valid until March 31st</string>
     <string name="desliza_para_activar_el_pago_nfc">Swipe to activate NFC payment</string>
-    <string name="face_id_n_accesos_directos_n_bizum_n_geolocalizaci_n">• Face ID\n• Shortcuts\n• Bizum\n• Geolocation</string>
-    <string name="alias_n_permisos_de_notificaciones_n_foto_de_perfil">• Alias\n• Notification permissions\n• Profile picture</string>
+    <string name="face_id_n_accesos_directos_n_bizum_n_geolocalizaci_n">• Face ID\n• Shortcuts\n• Bizum\n• Geolocalization</string>
+    <string name="alias_n_permisos_de_notificaciones_n_foto_de_perfil">• Alias\n• Notifications permission\n• Profile photo</string>
     <string name="permisos">Permissions</string>
-    <string name="geolocalizaci_n">Geolocation</string>
+    <string name="geolocalizaci_n">Geolocalization</string>
     <string name="notificaciones">Notifications</string>
-    <string name="foto_de_perfil">Profile picture</string>
+    <string name="foto_de_perfil">Profile photo</string>
     <string name="importar_imagen">Import image</string>
     <string name="promociones">Promotions</string>
     <string name="encuentra_la_que_m_s_te_guste">Find the one you like best!</string>
     <string name="tarjeta_especial">Special card</string>
-    <string name="contratar">Apply</string>
+    <string name="contratar">Hire</string>
     <string name="_5_de_cashback_en_todas_tus_compras">5% cashback on all your purchases.</string>
-    <string name="ejemplo_de_tarjeta">card example</string>
+    <string name="ejemplo_de_tarjeta">Credict card eg</string>
     <string name="cuenta_joven">Young Account</string>
-    <string name="sin_comisiones_n_hasta_26_a_os">No fees.\nUp to 26 years old.</string>
-    <string name="ahorro_plus">Savings Plus</string>
-    <string name="_3_5_tae_nsin_permanencia">3.5% APR,\nNo commitment.</string>
+    <string name="sin_comisiones_n_hasta_26_a_os">No extra charges.\nUp to 26 years old.</string>
+    <string name="ahorro_plus">Saving Plus</string>
+    <string name="_3_5_tae_nsin_permanencia">3,5% APR, \nNo mandatory term</string>
     <string name="seguro_de_viaje">Travel insurance</string>
-    <string name="viaja_protegido_ndesde_2_99_mes">Travel protected.\nFrom €2.99/month</string>
+    <string name="viaja_protegido_ndesde_2_99_mes">Travel insurance.\nFrom £2.49/month</string>
     <string name="seguridad">Security</string>
     <string name="acceso">Access</string>
     <string name="contrase_a_de_acceso">Access password</string>
     <string name="modifica_tu_contrase_a">Change your password</string>
-    <string name="activa_el_reconocimiento_facial_de_acceso">Activate facial recognition access</string>
+    <string name="activa_el_reconocimiento_facial_de_acceso">Activate facial recognition for access</string>
     <string name="huella_dactilar">Fingerprint</string>
-    <string name="activa_la_lectura_de_huella_de_acceso">Activate fingerprint reading access</string>
-    <string name="bloqueo_autom_tico">Automatic lock</string>
-    <string name="bloqueo_de_la_aplicaci_n_tras_1_minuto_de_inactividad">Lock app after 1 minute of inactivity</string>
+    <string name="activa_la_lectura_de_huella_de_acceso">Activate fingerprint access reading</string>
+    <string name="bloqueo_autom_tico">Auto lock</string>
+    <string name="bloqueo_de_la_aplicaci_n_tras_1_minuto_de_inactividad">Application block after 1 minute of inactivity</string>
     <string name="alertas_de_seguridad">Security alerts</string>
-    <string name="alerta_de_movimientos">Transaction alert</string>
-    <string name="notifica_cada_vez_que_se_aprueba_una_transferencia">Notifies whenever a transfer is approved</string>
+    <string name="alerta_de_movimientos">Movement alerts</string>
+    <string name="notifica_cada_vez_que_se_aprueba_una_transferencia">Notifies you each time a transfer is approved.</string>
     <string name="acceso_sospechoso">Suspicious access</string>
     <string name="detecci_n_de_fraude">Fraud detection</string>
     <string name="sesi_n">Session</string>
     <string name="sesiones_activas">Active sessions</string>
-    <string name="n_de_dispositivos_conectados">No. of connected devices</string>
-    <string name="desconectar_sesion">Log out from current session</string>
+    <string name="n_de_dispositivos_conectados">Number of connected devices</string>
+    <string name="desconectar_sesion">Disconnect from current session</string>
     <string name="reestablecer_ajustes_predeterminados">Reset to default settings</string>
+    <string name="multa_de_tr_fico">Speeding ticket</string>
+    <string name="asunto_exceso_de_velocidad">Issue: Speeding ticket</string>
+    <string name="_20_50">8:50 p.m.</string>
+    <string name="enhorabuena">Congrats!</string>
+    <string name="entendido">Done!</string>
+    <string name="hacer_transferencia">Confirm transfer</string>
+    <string name="en_qu_podemos_ayudarte">How can we assist you?</string>
+    <string name="_1900">+£1,900</string>
+    <string name="_100">-£100</string>
+    <string name="_194_99">-£184.99</string>
+    <string name="_4_99">-£4.99</string>
+    <string name="error">Error</string>
+    <string name="error_DNI">ID\'s format is wrong, enter a valid ID</string>
+    <string name="aceptar">Accept</string>
     <string name="transferencias">Transfers</string>
-    <string name="cuenta_de_origen">Source account</string>
-    <string name="c_cte_n3923_6783">C.CTE:\n3923 6783 **** **** ****</string>
-    <string name="cuenta_de_destino">Destination account</string>
-    <string name="destinatario_de_la_agenda">Recipient from contacts</string>
-    <string name="nuevo_destinatario">New recipient</string>
-    <string name="importe_y_concepto">Amount and Concept</string>
-    <string name="importe">Amount</string>
-    <string name="concepto">Concept</string>
-    <string name="hacer_transferencia">Make Transfer</string>
-    <string name="en_qu_podemos_ayudarte">How can we help you?</string>
-    <string name="exp_n_aqu_tu_duda">Explain your doubt here...</string>
-    <string name="enviar_duda">send doubt</string>
+    <string name="cuenta_de_origen">Origin account:</string>
+    <string name="c_cte_n3923_6783">C/A: \n3923 6783 **** **** ****</string>
+    <string name="exp_n_aqu_tu_duda">Explain your doubt here…</string>
+    <string name="enviar_duda">Send question</string>
     <string name="chat_de_atenci_n_al_cliente">Customer service chat</string>
     <string name="cambiar_contrase_a">Change password</string>
-    <string name="contrase_a_anterior">Old password</string>
+    <string name="oscar_t">Oscar T.</string>
+    <string name="nuevo_destinatario">New addressee</string>
+    <string name="importe_y_concepto">Amount and Reason</string>
+    <string name="importe">Amount</string>
+    <string name="concepto">Reason</string>
+    <string name="contrase_a_anterior">Actual Password</string>
     <string name="contrase_a_nueva">New password</string>
-    <string name="multa_de_tr_fico">Traffic fine</string>
-    <string name="asunto_exceso_de_velocidad">Subject: Speeding.</string>
-    <string name="_20_50">20:50</string>
-    <string name="enhorabuena">Congratulations!</string>
-    <string name="entendido">Got it!</string>
-    <string name="error">Error</string>
-    <string name="error_DNI">DNI format is incorrect, please enter a valid DNI</string>
-    <string name="aceptar">Accept</string>
-    <string name="error_bizum">You must fill in the following fields: recipient and amount</string>
-    <string name="error_bizum2">Select an option first: Send money / Request money</string>
-    <string name="exito_envio">Money sent successfully</string>
-    <string name="msj_recupera_contra">Enter your DNI or NIF and we will send you a link to reset your password</string>
+    <string name="cuenta_de_destino">Destination account:</string>
+    <string name="ltimos_nmovimientos">"Last \nactivities: "</string>
+    <string name="dd_mm_yyyy">dd/mm/yyyy</string>
+    <string name="error_bizum">You must fill the following values: Addressee and amount</string>
+    <string name="destinatario_de_la_agenda">Book\'s Addressee</string>
+    <string name="error_bizum2">You must select an option: Send Money / Claim Money</string>
+    <string name="exito_envio">Money successfully sent</string>
+    <string name="dinero_solicitado_con_xito">Money successfully claimed</string>
+    <string name="msj_recupera_contra">"Enter your TIN or ID, we will send you an e-mail to reset your password "</string>
     <string name="solicitar">Request</string>
-    <string name="rango_transf">Minimum: €10\nMaximum: €10,000</string>
-    <string name="rango_bizum">Minimum: €0.5\nMaximum: €500</string>
-    <string name="info_contra">The password must have at least 7 digits</string>
-    <string name="msj_error_DNI">A valid DNI or NIF is required for access</string>
+    <string name="rango_transf">Min: £10\nMax: £10,000</string>
+    <string name="rango_bizum">Min: £0.5\nMax: £500</string>
+    <string name="info_contra">The password must contain at least 7 digits</string>
+    <string name="msj_error_DNI">You will need a valid TIN or ID in order to gain access</string>
     <string name="menu">Menu</string>
-    <string name="mi_perfil">My profile</string>
-    <string name="logo">Logo</string>
-    <string name="grafica">Chart</string>
-    <string name="fecha">Date</string>
-    <string name="__" translatable="false">...</string>
-    <string name="dinero_solicitado_con_xito">Money requested successfully</string>
     <string name="men">Menu</string>
-    <string name="dinero_oculto">*******€</string>
+    <string name="tu_oficina_m_s_ncercana_es">Your nearest \noffice is:</string>
+    <string name="dinero_oculto">£*******</string>
     <string name="telefono">Phone</string>
-    <string name="Abrir_galeria">Opening gallery...</string>
+    <string name="Abrir_galeria">Opening gallery…</string>
     <string name="exito">Success!</string>
-    <string name="foto_actualizada">Profile picture has been updated correctly.</string>
+    <string name="foto_actualizada">Profile photo successfully updated</string>
     <string name="actualizado">Updated!</string>
-    <string name="atencion">Attention</string>
-    <string name="Rellena_campos">Please fill in all fields</string>
-    <string name="completar_campo">"Please complete the field "</string>
-    <string name="se_ha_cambiado_a">" has been changed to: "</string>
-
+    <string name="atencion">Warning</string>
+    <string name="Rellena_campos">Please, fill out all the fields</string>
+    <string name="completar_campo">Please, fill out the field: </string>
+    <string name="se_ha_cambiado_a">" has changed into:"</string>
     <string name="espana">Spain</string>
     <string name="francia">France</string>
     <string name="portugal">Portugal</string>
     <string name="italia">Italy</string>
     <string name="alemania">Germany</string>
-    <string name="reino_unido">United Kingdom</string>
-    <string name="estados_unidos">United States</string>
-    <string name="espanol" translatable="false">Español</string>
-    <string name="ingles" translatable="false">English</string>
+    <string name="reino_unido">UK</string>
+    <string name="estados_unidos">USA</string>
     <string name="precio_Apple">293.23</string>
     <string name="precio_Amazon">272.65</string>
     <string name="precio_Tesla">427.22</string>
     <string name="precio_Microsoft">415.04</string>
-    <string name="formato_precio">€%.2f</string>
-    <string name="valor_0">€00.0</string>
+    <string name="formato_precio">£%.2f</string>
+    <string name="valor_0">£00.0</string>
     <string name="alto_contraste">High contrast</string>
-    <string name="mejor_legibilidad_de_los_textos">Better text readability</string>
+    <string name="mejor_legibilidad_de_los_textos">Better text legibility</string>
     <string name="texto_grande">Large text</string>
     <string name="aumenta_el_tamano_de_la_fuente">Increases font size</string>
-    <string name="reducir_movimiento">Reduce motion</string>
-    <string name="desactiva_animaciones_y_efectos_visuales">Disables animations and visual effects</string>
+    <string name="reducir_movimiento">Reduce movement</string>
+    <string name="desactiva_animaciones_y_efectos_visuales">Disable effects and animations</string>
     <string name="modo_oscuro">Dark mode</string>
-    <string name="fondo_oscuro_para_el_cuidado_de_los_ojos">Dark background for eye care</string>
-    <string name="lectura_en_voz_alta">Read aloud</string>
-    <string name="narra_el_contenido_de_la_pantalla">Narrates screen content</string>
+    <string name="fondo_oscuro_para_el_cuidado_de_los_ojos">Dark background for eyes\' caring</string>
+    <string name="lectura_en_voz_alta">TTS mode</string>
+    <string name="narra_el_contenido_de_la_pantalla">Explain the screen\'s content</string>
     <string name="alertas_sonoras">Sound alerts</string>
-    <string name="notificaciones_con_sonido">Notifications with sound</string>
+    <string name="notificaciones_con_sonido">Turn on sound notifications</string>
     <string name="botones_grandes">Large buttons</string>
-    <string name="vibracion_tactil">Haptic vibration</string>
-    <string name="activa_la_vibracion_al_pulsar">Activates vibration when pressing</string>
-    <string name="area_de_toque_ampliada">Expanded touch area</string>
-    <string name="mensaje_enviado">Message Sent</string>
-    <string name="tel_34900000000" translatable="false">tel:+34900000000</string>
-    <string name="tel_34900000001" translatable="false">tel:+34900000001</string>
-    <string name="tel_34910000000" translatable="false">tel:+34910000000</string>
-    <string name="x" translatable="false">X</string>
-    <string name="y" translatable="false">Y</string>
-    <string name="z" translatable="false">Z</string>
-    <string name="_0" translatable="false">0</string>
-    <string name="solicitud_enviada_revisa_tu_correo">Request sent! Check your email</string>
-    <string name="boton_contratar" translatable="false">boton_contratar</string>
-    <string name="permiso_de_contactos_denegado">Contact permission denied</string>
-    <string name="la_cantidad_debe_estar_entre_0_5_y_500">Amount must be between €0.5 and €500</string>
-    <string name="movimientos">Transactions</string>
+    <string name="vibracion_tactil">Touch vibration</string>
+    <string name="activa_la_vibracion_al_pulsar">Turn on vibration by touching</string>
+    <string name="area_de_toque_ampliada">Enlarge touch space</string>
+    <string name="mensaje_enviado">Message sent</string>
+    <string name="solicitud_enviada_revisa_tu_correo">Request sent! Check your mail</string>
+    <string name="permiso_de_contactos_denegado">Contacts permission denied</string>
+    <string name="la_cantidad_debe_estar_entre_0_5_y_500">The amount must be between £0.5 and £500</string>
+    <string name="movimientos">Activities</string>
     <string name="_30_segundos">30 seconds</string>
     <string name="_1_minuto">1 minute</string>
     <string name="_5_minutos">5 minutes</string>
     <string name="nunca">Never</string>
     <string name="restablecido">Reset</string>
-    <string name="se_han_recuperado_los_ajustes_predeterminados_del_sistema">Default system settings have been restored.</string>
-    <string name="la_nueva_contrase_a_no_puede_ser_igual_a_la_anterior">The new password cannot be the same as the previous one.</string>
-    <string name="tu_contrase_a_ha_sido_actualizada_correctamente">Your password has been updated successfully.</string>
-    <string name="tiempo_de_bloqueo_autom_tico">Auto-lock time</string>
-    <string name="bloqueo_de_la_aplicacion">"App lock: "</string>
-    <string name="tiempo_ajustado_a">"Time set to "</string>
-    <string name="transaccion_fallida">Transaction failed</string>
-    <string name="por_favor_rellene_todos_los_campos_antes_de_continuar">Please fill in all fields before continuing.</string>
-    <string name="transacci_n_exitosa">Successful transaction</string>
-    <string name="frances">French</string>
+    <string name="se_han_recuperado_los_ajustes_predeterminados_del_sistema">System\'s preset configuration has been set</string>
+    <string name="la_nueva_contrase_a_no_puede_ser_igual_a_la_anterior">New password must be different</string>
+    <string name="tu_contrase_a_ha_sido_actualizada_correctamente">Your password has been succesfully updated</string>
+    <string name="tiempo_de_bloqueo_autom_tico">Auto-block time</string>
+    <string name="bloqueo_de_la_aplicacion">App block:</string>
+    <string name="tiempo_ajustado_a">Time adjusted to:</string>
+    <string name="transaccion_fallida">Failed transfer</string>
+    <string name="por_favor_rellene_todos_los_campos_antes_de_continuar">Please, fill out all the fields to continue</string>
+    <string name="transacci_n_exitosa">Successful transfer</string>
     <string name="portugues">Portuguese</string>
     <string name="aleman">German</string>
-    <string name="italiano">Italiano</string>
+    <string name="frances">French</string>
+    <string name="italiano">Italian</string>
     <string name="menu_principal">Main menu</string>
 
     <string name="preguntas_frecuentes">Frequently Asked Questions</string>
@@ -400,4 +338,5 @@
 
     <string name="faq_q7">How do I contact technical support?</string>
     <string name="faq_a7">You can call us at the free numbers listed in \"Contact Us\" or use the help chat available on most screens.</string>
+    <string name="contratacion_menu">Service Hiring</string>
 </resources>
