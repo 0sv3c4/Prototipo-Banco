@@ -65,7 +65,7 @@
     <string name="notif_bizum_walter_desc">+£8 from: Walter W.</string>
     <string name="notif_bizum_walter_hora">6:58 p.m.</string>
     <string name="notif_renta_titulo">Income tax return</string>
-    <string name="notif_renta_desc">¡Do not forget you anual appointment!</string>
+    <string name="notif_renta_desc">¡Do not forget you annual appointment!</string>
     <string name="notif_renta_hora">3:23 p.m.</string>
     <string name="notif_nomina_titulo">Salary income</string>
     <string name="notif_nomina_desc">Montly income: +£1,900</string>
@@ -203,7 +203,6 @@
     <string name="sesi_n">Session</string>
     <string name="sesiones_activas">Active sessions</string>
     <string name="n_de_dispositivos_conectados">Number of connected devices</string>
-    <string name="cerrar_sesi_n">Sign out</string>
     <string name="desconectar_sesion">Disconnect from current session</string>
     <string name="reestablecer_ajustes_predeterminados">Reset to default settings</string>
     <string name="multa_de_tr_fico">Speeding ticket</string>
@@ -259,7 +258,7 @@
     <string name="actualizado">Updated!</string>
     <string name="atencion">Warning</string>
     <string name="Rellena_campos">Please, fill out all the fields</string>
-    <string name="completar_campo">Please, fill out the field</string>
+    <string name="completar_campo">Please, fill out the field: </string>
     <string name="se_ha_cambiado_a">" has changed into:"</string>
     <string name="espana">Spain</string>
     <string name="francia">France</string>
@@ -313,4 +312,5 @@
     <string name="aleman">German</string>
     <string name="frances">French</string>
     <string name="italiano">Italian</string>
+    <string name="menu_principal">Main menu</string>
 </resources>

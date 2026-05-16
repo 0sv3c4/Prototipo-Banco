@@ -10,6 +10,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
 import com.google.android.material.button.MaterialButton;
 
 public class Preferencias2 extends BaseActivityClientes {
@@ -18,9 +22,15 @@ public class Preferencias2 extends BaseActivityClientes {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_preferencias2);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+
 
         // Configuración de la base
-        configuracionDrawerToolbar(getString(R.string.preferencias));
+        configuracionDrawerToolbar("");
         marchaAtras();
 
         // Botón Aplicar (Foto de perfil)
@@ -30,7 +40,7 @@ public class Preferencias2 extends BaseActivityClientes {
 
         // Botón Importar Imagen
         findViewById(R.id.btn_importar).setOnClickListener(v -> {
-            Toast.makeText(this, R.string.Abrir_galeria, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.Abrir_galeria), Toast.LENGTH_SHORT).show();
         });
 
         // Navegación Siguiente -> Ahora va a la pantalla de Seguridad

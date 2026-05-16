@@ -12,6 +12,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.core.content.ContextCompat;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import com.example.prototipobanco.todosUsu.Inicio_Sesion;
 import com.google.android.material.materialswitch.MaterialSwitch;
@@ -19,8 +22,7 @@ import com.google.android.material.materialswitch.MaterialSwitch;
 public class Seguridad extends BaseActivityClientes {
 
     private TextView tvBloqueoEstado;
-    private final String[] opcionesBloqueo = {getString(R.string._30_segundos), getString(R.string._1_minuto), getString(R.string._5_minutos), getString(R.string.nunca)};
-    
+    private String[] opcionesBloqueo;
     // Switches para poder resetearlos
     private MaterialSwitch swFaceId, swHuella, swMovimientos, swSospechoso;
 
@@ -28,10 +30,18 @@ public class Seguridad extends BaseActivityClientes {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seguridad);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+
 
         // Configuración de la base (Drawer, Toolbar y botón Volver)
-        configuracionDrawerToolbar(getString(R.string.seguridad));
+        configuracionDrawerToolbar("");
         marchaAtras();
+
+        opcionesBloqueo = new String[]{getString(R.string._30_segundos), getString(R.string._1_minuto), getString(R.string._5_minutos), getString(R.string.nunca)};
 
         // Inicializar vistas
         tvBloqueoEstado = findViewById(R.id.tv_bloqueo_estado);
@@ -73,7 +83,7 @@ public class Seguridad extends BaseActivityClientes {
         swSospechoso.setChecked(true);
         
         // Resetear texto de bloqueo
-        tvBloqueoEstado.setText(R.string.bloqueo_de_la_aplicaci_n_tras_1_minuto_de_inactividad);
+        tvBloqueoEstado.setText(getString(R.string.bloqueo_de_la_aplicaci_n_tras_1_minuto_de_inactividad));
 
         mostrarAlertaPersonalizada(getString(R.string.restablecido), getString(R.string.se_han_recuperado_los_ajustes_predeterminados_del_sistema), R.drawable.ic_info);
     }
@@ -98,7 +108,7 @@ public class Seguridad extends BaseActivityClientes {
             String nueva = etNueva.getText().toString();
 
             if (anterior.isEmpty() || nueva.isEmpty()) {
-                Toast.makeText(this, R.string.Rellena_campos, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getString(R.string.Rellena_campos), Toast.LENGTH_SHORT).show();
             } else if (anterior.equals(nueva)) {
                 mostrarAlertaPersonalizada(getString(R.string.error), getString(R.string.la_nueva_contrase_a_no_puede_ser_igual_a_la_anterior), R.drawable.ic_error);
             } else {
@@ -112,7 +122,7 @@ public class Seguridad extends BaseActivityClientes {
 
     private void mostrarSeleccionBloqueo() {
         new AlertDialog.Builder(this)
-                .setTitle(R.string.tiempo_de_bloqueo_autom_tico)
+                .setTitle(getString(R.string.tiempo_de_bloqueo_autom_tico))
                 .setItems(opcionesBloqueo, (dialog, which) -> {
                     String seleccion = opcionesBloqueo[which];
                     tvBloqueoEstado.setText(getString(R.string.bloqueo_de_la_aplicacion) + seleccion);

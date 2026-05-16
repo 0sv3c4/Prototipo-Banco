@@ -261,7 +261,6 @@
     <string name="sesi_n">Sesión</string>
     <string name="sesiones_activas">Sesiones activas</string>
     <string name="n_de_dispositivos_conectados">Nº de dispositivos conectados</string>
-    <string name="cerrar_sesi_n">Cerrar sesión</string>
     <string name="desconectar_sesion">Desconexión de la sesión actual</string>
     <string name="reestablecer_ajustes_predeterminados">Reestablecer ajustes predeterminados</string>
     <string name="transferencias">Transferencias</string>
@@ -379,5 +378,6 @@
     <string name="portugues">Portugués</string>
     <string name="aleman">Alemán</string>
     <string name="italiano">Italiano</string>
+    <string name="menu_principal">Menú principal</string>
 
 </resources>

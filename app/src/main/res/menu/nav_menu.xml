@@ -7,30 +7,30 @@
         android:checkableBehavior="single">
         <item
             android:id="@+id/nav_seguridad"
-            android:title="Seguridad" />
+            android:title="@string/seguridad" />
         <item
             android:id="@+id/nav_config"
-            android:title="Configurar perfil"/>
+            android:title="@string/configurar_perfil"/>
         <item
             android:id="@+id/nav_accesibilidad"
-            android:title="Accesibilidad"/>
+            android:title="@string/accesibilidad"/>
         <item
             android:id="@+id/nav_atencion_cl"
-            android:title="Atención al cliente"/>
+            android:title="@string/atencion_al_cliente"/>
 
         <item
             android:id="@+id/nav_mapa"
-            android:title="Mapa de cajeros"/>
+            android:title="@string/cajeros"/>
 
         <item
             android:id="@+id/nav_servicios"
-            android:title="Contratación de servicios"/>
+            android:title="@string/contratacion_de_nservicios"/>
 
         <item
             android:id="@+id/nav_menu"
-            android:title="Menú principal"/>
+            android:title="@string/menu_principal"/>
     </group>
     <item
         android:id="@+id/nav_logout"
-        android:title="Cerrar Sesión"/>
+        android:title="@string/cerrar_sesion"/>
 </menu>

@@ -1,7 +1,10 @@
 package com.example.prototipobanco;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +14,14 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.core.content.ContextCompat;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
+import com.example.prototipobanco.todosUsu.Pantalla_inicial;
 import com.google.android.material.button.MaterialButton;
+
+import java.util.Locale;
 
 public class Preferencias1 extends BaseActivityClientes {
 
@@ -19,18 +29,27 @@ public class Preferencias1 extends BaseActivityClientes {
     private TextView tvPais, tvIdioma;
     private LinearLayout selectorPais, selectorIdioma;
 
-    private final String[] listaPaises = {getString(R.string.espana), getString(R.string.francia), getString(R.string.portugal),
-            getString(R.string.italia), getString(R.string.alemania), getString(R.string.reino_unido), getString(R.string.estados_unidos)};
-    private final String[] listaIdiomas = {getString(R.string.espanol), getString(R.string.ingles), getString(R.string.frances), getString(R.string.portugues), getString(R.string.aleman), getString(R.string.italiano)};
+    private String[] listaPaises;
+    private String[] listaIdiomas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_preferencias1);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+
 
         // Configuración de la base (Drawer, Toolbar y botón Volver)
-        configuracionDrawerToolbar(getString(R.string.preferencias));
+        configuracionDrawerToolbar("");
         marchaAtras();
+
+        listaPaises = new String[]{getString(R.string.espana), getString(R.string.francia), getString(R.string.portugal),
+                getString(R.string.italia), getString(R.string.alemania), getString(R.string.reino_unido), getString(R.string.estados_unidos)};
+        listaIdiomas = new String[]{"Español","English"};
 
         // Inicializar vistas
         etCorreo = findViewById(R.id.et_correo);
@@ -91,7 +110,19 @@ public class Preferencias1 extends BaseActivityClientes {
         if (valor.isEmpty() || valor.equals(getString(R.string.selec_pais)) || valor.equals(getString(R.string.selec_idioma))) {
             mostrarAlertaPersonalizada(getString(R.string.atencion), getString(R.string.completar_campo) + campo, R.drawable.ic_error);
         } else {
-            mostrarAlertaPersonalizada(getString(R.string.actualizado), campo + getString(R.string.se_ha_cambiado_a) + valor, R.drawable.ic_exito);
+            if(campo.equals(getString(R.string.idioma))){
+                mostrarAlertaPersonalizada(getString(R.string.actualizado), campo + getString(R.string.se_ha_cambiado_a) + valor, R.drawable.ic_exito);
+                if (valor.equals("English")){
+                    setLocal(Preferencias1.this, "en");
+                    finish();
+                    startActivity(getIntent());
+                } else if (valor.equals("Español")){
+                    setLocal(Preferencias1.this, "es");
+                    finish();
+                    startActivity(getIntent());
+                }
+            }
+
         }
     }
 
@@ -126,5 +157,14 @@ public class Preferencias1 extends BaseActivityClientes {
         btnAceptar.setOnClickListener(v -> dialog.dismiss());
 
         dialog.show();
+    }
+
+    public void setLocal(Activity activity, String langCode){
+        Locale locale = new Locale(langCode);
+        locale.setDefault(locale);
+        Resources resources = activity.getResources();
+        Configuration config = resources.getConfiguration();
+        config.setLocale(locale);
+        resources.updateConfiguration(config, resources.getDisplayMetrics());
     }
 }
