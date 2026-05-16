@@ -27,6 +27,10 @@
             android:title="@string/contratacion_de_nservicios"/>
 
         <item
+            android:id="@+id/nav_faq"
+            android:title="@string/preguntas_frecuentes"/>
+
+        <item
             android:id="@+id/nav_menu"
             android:title="@string/menu_principal"/>
     </group>

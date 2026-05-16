@@ -124,6 +124,9 @@ public class BaseActivityClientes extends AppCompatActivity implements Navigatio
         } else if (id == R.id.nav_servicios){
             intent = new Intent(this, ContratacionServicios.class);
             startActivity(intent);
+        } else if (id == R.id.nav_faq) {
+            intent = new Intent(this, FAQ.class);
+            startActivity(intent);
         } else if (id == R.id.nav_menu) {
             intent = new Intent(this, Pantalla_principal.class);
             startActivity(intent);

@@ -380,4 +380,28 @@
     <string name="italiano">Italiano</string>
     <string name="menu_principal">Menú principal</string>
 
+    <string name="preguntas_frecuentes">Preguntas frecuentes</string>
+    <string name="faq_titulo">Preguntas Frecuentes (FAQ)</string>
+    <string name="faq_subtitulo">¿En qué podemos ayudarte?</string>
+
+    <string name="faq_q1">¿Cómo puedo enviar un Bizum?</string>
+    <string name="faq_a1">Para enviar un Bizum, accede a la sección "Bizum" desde el menú principal, selecciona "Enviar dinero", introduce el contacto y el importe deseado (entre 0,5€ y 500€) y pulsa "Confirmar".</string>
+
+    <string name="faq_q2">¿Cuál es el límite de mis transferencias?</string>
+    <string name="faq_a2">El importe mínimo para realizar una transferencia es de 10€ y el máximo permitido por operación es de 10.000€.</string>
+
+    <string name="faq_q3">¿Cómo cambio mi contraseña?</string>
+    <string name="faq_a3">Puedes cambiar tu contraseña en la sección "Seguridad" del menú de usuario. Recuerda que debe tener al menos 7 dígitos.</string>
+
+    <string name="faq_q4">He olvidado mi contraseña, ¿qué hago?</string>
+    <string name="faq_a4">En la pantalla de inicio de sesión, pulsa sobre "¿Olvidaste tu contraseña?". Introduce tu NIF y te enviaremos un enlace de recuperación a tu correo electrónico.</string>
+
+    <string name="faq_q5">¿Es seguro usar el acceso biométrico?</string>
+    <string name="faq_a5">Sí, el acceso por huella o reconocimiento facial utiliza los estándares de seguridad de Android para garantizar que solo tú puedas acceder a tus cuentas.</string>
+
+    <string name="faq_q6">¿Dónde encuentro el cajero más cercano?</string>
+    <string name="faq_a6">Utiliza la opción "Mapa de cajeros" en el menú. Recuerda activar el permiso de geolocalización para ver las oficinas cercanas a tu posición actual.</string>
+
+    <string name="faq_q7">¿Cómo contacto con soporte técnico?</string>
+    <string name="faq_a7">Puedes llamarnos a los números gratuitos indicados en "Contáctanos" o utilizar el chat de ayuda disponible en la mayoría de las pantallas.</string>
 </resources>
