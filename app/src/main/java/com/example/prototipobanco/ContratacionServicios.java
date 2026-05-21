@@ -93,7 +93,7 @@ public class ContratacionServicios extends BaseActivityClientes {
         String strPrecio = etPrecioActual.getText().toString().replace(",", ".");
 
         if (strAcciones.isEmpty() || strPrecio.isEmpty()) {
-            tvPrecioFinal.setText("00.0€");
+            tvPrecioFinal.setText(R.string.valor_0);
             return;
         }
 

@@ -301,7 +301,7 @@
     <string name="restablecido">Reset</string>
     <string name="se_han_recuperado_los_ajustes_predeterminados_del_sistema">System\'s preset configuration has been set</string>
     <string name="la_nueva_contrase_a_no_puede_ser_igual_a_la_anterior">New password must be different</string>
-    <string name="tu_contrase_a_ha_sido_actualizada_correctamente">Your password has been succesfully updated</string>
+    <string name="tu_contrase_a_ha_sido_actualizada_correctamente">Your password has been successfully updated</string>
     <string name="tiempo_de_bloqueo_autom_tico">Auto-block time</string>
     <string name="bloqueo_de_la_aplicacion">App block:</string>
     <string name="tiempo_ajustado_a">Time adjusted to:</string>
@@ -339,4 +339,8 @@
     <string name="faq_q7">How do I contact technical support?</string>
     <string name="faq_a7">You can call us at the free numbers listed in \"Contact Us\" or use the help chat available on most screens.</string>
     <string name="contratacion_menu">Service Hiring</string>
+    <string name="ayuda">Help</string>
+    <string name="pantalla_principal">Main page</string>
+    <string name="te_has_quedado_con_dudas_n_cont_ctanos">Still more questions?\nContact us!</string>
+    <string name="guias">Guides</string>
 </resources>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:fitsSystemWindows="false"
+    tools:context=".Ayuda">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+
+        <!-- TOOLBAR SUPERIOR -->
+        <include
+            android:id="@+id/toolbar_superior_acc"
+            layout="@layout/toolbar_superior"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <!-- CONTENIDO -->
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_superior_acc">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingBottom="30dp">
+
+                <FrameLayout
+                    android:id="@+id/header_container_bizum"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:layout_marginTop="-100dp"
+                        android:background="@drawable/bg_bottom_curve"
+                        android:backgroundTint="@color/ultra_claro" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/guias"
+                        android:textAppearance="@style/titulo"
+                        android:textSize="50sp"
+                        android:textColor="@color/oscuro"
+                        android:gravity="center" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center|top">
+                    <!-- INSERTAR AQUÍ EL CONTENIDO -->
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_ayuda_principal"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="30dp"
+                        android:text="@string/pantalla_principal"
+                        android:textAllCaps="true"
+                        android:textSize="18sp"
+                        android:textAppearance="@style/titulo_seccion"
+                        android:background="@drawable/bg_promocion"
+                        app:backgroundTint="@color/claro"
+                        app:cornerRadius="20dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_movimientos"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/movimientos"
+                        android:textAllCaps="true"
+                        android:textSize="18sp"
+                        android:textAppearance="@style/titulo_seccion"
+                        android:background="@drawable/bg_promocion"
+                        app:backgroundTint="@color/claro"
+                        app:cornerRadius="20dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center|top">
+                    <!-- INSERTAR AQUÍ EL CONTENIDO -->
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_transferencias"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:text="@string/transferencias"
+                        android:textAllCaps="true"
+                        android:textSize="18sp"
+                        android:textAppearance="@style/titulo_seccion"
+                        android:background="@drawable/bg_promocion"
+                        app:backgroundTint="@color/claro"
+                        app:cornerRadius="20dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_perfil_usuario"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="30dp"
+                        android:text="@string/perfil_usuario"
+                        android:textAllCaps="true"
+                        android:textSize="18sp"
+                        android:textAppearance="@style/titulo_seccion"
+                        android:background="@drawable/bg_promocion"
+                        app:backgroundTint="@color/claro"
+                        app:cornerRadius="20dp" />
+
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_bizum"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/bizum"
+                    android:textAllCaps="true"
+                    android:textSize="18sp"
+                    android:textAppearance="@style/titulo_seccion"
+                    android:background="@drawable/bg_promocion"
+                    app:backgroundTint="@color/claro"
+                    app:cornerRadius="20dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_contacto"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:paddingVertical="12dp"
+                    android:text="@string/te_has_quedado_con_dudas_n_cont_ctanos"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    app:icon="@drawable/ic_tfno"
+                    app:backgroundTint="@color/neutro"
+                    app:cornerRadius="20dp" />
+
+                <!-- Para que se pueda ver todas las opciones-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"/>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+        <!-- TOOLBAR INFERIOR, BOTÓN DE VOLVER -->
+        <include
+            android:id="@+id/include_bottom_toolbar"
+            layout="@layout/toolbar_inferior_clientes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="290dp"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_view"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_cabecera"
+        app:menu="@menu/nav_menu"
+        android:foregroundGravity="center"
+        app:itemTextColor="@color/oscuro"
+        app:itemTextAppearance="@style/boton_llamativo"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

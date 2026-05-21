@@ -13,12 +13,14 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
+import androidx.core.os.LocaleListCompat;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.prototipobanco.todosUsu.Pantalla_inicial;
 import com.google.android.material.button.MaterialButton;
 
 import java.util.Locale;
@@ -111,17 +113,15 @@ public class Preferencias1 extends BaseActivityClientes {
             mostrarAlertaPersonalizada(getString(R.string.atencion), getString(R.string.completar_campo) + campo, R.drawable.ic_error);
         } else {
             if(campo.equals(getString(R.string.idioma))){
-                mostrarAlertaPersonalizada(getString(R.string.actualizado), campo + getString(R.string.se_ha_cambiado_a) + valor, R.drawable.ic_exito);
-                if (valor.equals("English")){
-                    setLocal(Preferencias1.this, "en");
-                    finish();
-                    startActivity(getIntent());
-                } else if (valor.equals("Español")){
-                    setLocal(Preferencias1.this, "es");
-                    finish();
-                    startActivity(getIntent());
+                String codLang="es"; //default en español
+                if(valor.equals("English")){
+                    codLang = "en";
                 }
+                LocaleListCompat appLocales = LocaleListCompat.forLanguageTags(codLang);
+                AppCompatDelegate.setApplicationLocales(appLocales);
+                setLocal(Preferencias1.this, codLang);
             }
+            mostrarAlertaPersonalizada(getString(R.string.actualizado), campo + getString(R.string.se_ha_cambiado_a) + valor, R.drawable.ic_exito);
 
         }
     }

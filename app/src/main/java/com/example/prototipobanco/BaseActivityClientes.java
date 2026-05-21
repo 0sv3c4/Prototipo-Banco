@@ -136,6 +136,9 @@ public class BaseActivityClientes extends AppCompatActivity implements Navigatio
         } else if (id == R.id.nav_accesibilidad) {
             intent = new Intent(this, Accesibilidad.class);
             startActivity(intent);
+        } else if (id == R.id.nav_guia) {
+            intent = new Intent(this, Ayuda.class);
+            startActivity(intent);
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);

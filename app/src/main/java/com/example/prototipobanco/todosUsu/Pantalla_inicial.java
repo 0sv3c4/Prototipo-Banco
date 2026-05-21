@@ -14,8 +14,10 @@ import android.widget.Spinner;
 import androidx.activity.EdgeToEdge;
 import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.graphics.Insets;
+import androidx.core.os.LocaleListCompat;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
@@ -89,10 +91,16 @@ public class Pantalla_inicial extends AppCompatActivity {
                 String selectedLang = parent.getItemAtPosition(position).toString();
                 if (selectedLang.equals("English")){
                     setLocal(Pantalla_inicial.this, "en");
+                    //NO era necesario estos dos al principio, pero dado que se quiere también cambiar
+                    //desde preferencias, obliga también utilizarlo aquí, ya que en caso contrario NO actualizará
+                    LocaleListCompat appLocales = LocaleListCompat.forLanguageTags("en");
+                    AppCompatDelegate.setApplicationLocales(appLocales);
                     finish();
                     startActivity(getIntent());
                 } else if (selectedLang.equals("Español")){
                     setLocal(Pantalla_inicial.this, "es");
+                    LocaleListCompat appLocales = LocaleListCompat.forLanguageTags("es");
+                    AppCompatDelegate.setApplicationLocales(appLocales);
                     finish();
                     startActivity(getIntent());
                 }
@@ -108,7 +116,7 @@ public class Pantalla_inicial extends AppCompatActivity {
 
     public void setLocal(Activity activity, String langCode){
         Locale locale = new Locale(langCode);
-        locale.setDefault(locale);
+        Locale.setDefault(locale);
         Resources resources = activity.getResources();
         Configuration config = resources.getConfiguration();
         config.setLocale(locale);

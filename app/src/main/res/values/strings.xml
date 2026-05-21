@@ -110,7 +110,6 @@
     <string name="notif_bizum_federico_desc">+3,50€ de: Federico G. L.</string>
 
 
-
     <string name="perfil">Perfil</string>
     <string name="perfil_usuario">Perfil de Usuario</string>
     <string name="configurar_perfil">Configurar perfil</string>
@@ -405,4 +404,8 @@
     <string name="faq_q7">¿Cómo contacto con soporte técnico?</string>
     <string name="faq_a7">Puedes llamarnos a los números gratuitos indicados en "Contáctanos" o utilizar el chat de ayuda disponible en la mayoría de las pantallas.</string>
     <string name="contratacion_menu">Contratación de servicios</string>
+    <string name="ayuda">Ayuda</string>
+    <string name="pantalla_principal">Pantalla Principal</string>
+    <string name="te_has_quedado_con_dudas_n_cont_ctanos">¿Te has quedado con dudas? \n¡Contáctanos!</string>
+    <string name="guias">Guías</string>
 </resources>
