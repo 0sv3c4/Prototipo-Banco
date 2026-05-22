@@ -2,10 +2,8 @@ package com.example.prototipobanco.guias;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
+import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -28,8 +26,8 @@ public class AyudaBizum extends BaseAyudas {
         configurarPantallas(getString(R.string.bizum),"https://www.youtube.com/shorts/ko81RyagXgI");//TODO: Cambiar URL
 
 
-        Button accesoTransf = findViewById(R.id.acceso_transfer);
-        Button accesoFAQ = findViewById(R.id.acceso_faq);
+        TextView accesoTransf = findViewById(R.id.acceso_transfer);
+        TextView accesoFAQ = findViewById(R.id.acceso_faq);
 
         accesoTransf.setOnClickListener(v-> {
             Intent intent = new Intent(this, AyudaTransferencias.class);

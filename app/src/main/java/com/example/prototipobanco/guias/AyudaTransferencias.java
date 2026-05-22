@@ -2,10 +2,8 @@ package com.example.prototipobanco.guias;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
+import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -25,10 +23,10 @@ public class AyudaTransferencias extends BaseAyudas {
             return insets;
         });
 
-        configurarPantallas(getString(R.string.titulo_toolbar_base),"https://www.youtube.com/shorts/ko81RyagXgI"); //TODO: Cambiar URL
+        configurarPantallas(getString(R.string.transferencias),"https://www.youtube.com/watch?v=dwY7w0k3j2Y"); //TODO: Cambiar URL
 
-        Button accesoBizum = findViewById(R.id.acceso_bizum);
-        Button accesoFAQ = findViewById(R.id.acceso_faq);
+        TextView accesoBizum = findViewById(R.id.acceso_bizum);
+        TextView accesoFAQ = findViewById(R.id.acceso_faq);
 
         accesoBizum.setOnClickListener(v-> {
             Intent intent = new Intent(this, AyudaBizum.class);

@@ -8,7 +8,10 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.prototipobanco.guias.AyudaBizum;
+import com.example.prototipobanco.guias.AyudaMovimientos;
 import com.example.prototipobanco.guias.AyudaPantallaPrincipal;
+import com.example.prototipobanco.guias.AyudaTransferencias;
 import com.example.prototipobanco.todosUsu.Contacto_clientes;
 
 public class Ayuda extends BaseActivityClientes {
@@ -38,15 +41,15 @@ public class Ayuda extends BaseActivityClientes {
             startActivity(intent);
         });
         btnTransferencias.setOnClickListener(v -> {
-            Intent intent = new Intent(this, AyudaPantallaPrincipal.class); //TODO añadir pantalla
+            Intent intent = new Intent(this, AyudaTransferencias.class);
             startActivity(intent);
         });
         btnMovimientos.setOnClickListener(v -> {
-            Intent intent = new Intent(this, AyudaPantallaPrincipal.class); //TODO añadir pantalla
+            Intent intent = new Intent(this, AyudaMovimientos.class);
             startActivity(intent);
         });
         btnBizum.setOnClickListener(v -> {
-            Intent intent = new Intent(this, AyudaPantallaPrincipal.class); //TODO añadir pantalla
+            Intent intent = new Intent(this, AyudaBizum.class);
             startActivity(intent);
         });
 

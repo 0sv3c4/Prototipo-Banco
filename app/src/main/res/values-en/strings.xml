@@ -328,7 +328,7 @@
     <string name="faq_a3">You can change your password in the \"Security\" section of the user menu. Remember it must be at least 7 digits long.</string>
 
     <string name="faq_q4">I forgot my password, what should I do?</string>
-    <string name="faq_a4">On the login screen, tap on \"Forgot your password?\". Enter your NIF and we will send a recovery link to your email.</string>
+    <string name="faq_a4">On the login screen, tap on \"Forgot password?\". Enter your NIF and we will send a recovery link to your email.</string>
 
     <string name="faq_q5">Is biometric access safe?</string>
     <string name="faq_a5">Yes, fingerprint or facial recognition access uses Android security standards to ensure only you can access your accounts.</string>

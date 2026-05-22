@@ -2,10 +2,9 @@ package com.example.prototipobanco.guias;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
+import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
+
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -24,10 +23,10 @@ public class AyudaPantallaPrincipal extends BaseAyudas {
             return insets;
         });
 
-        configurarPantallas(getString(R.string.pantalla_principal),""); //TODO poner video
+        configurarPantallas(getString(R.string.pantalla_principal),"https://www.youtube.com/watch?v=3xotxtnAxiM"); //TODO poner video
 
-        Button accesoTransf = findViewById(R.id.acceso_transfer);
-        Button accesoMov = findViewById(R.id.acceso_movimientos);
+        TextView accesoTransf = findViewById(R.id.acceso_transfer);
+        TextView accesoMov = findViewById(R.id.acceso_movimientos);
 
         accesoTransf.setOnClickListener(v-> {
             Intent intent = new Intent(this, AyudaTransferencias.class);
