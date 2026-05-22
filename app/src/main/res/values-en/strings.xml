@@ -343,4 +343,6 @@
     <string name="pantalla_principal">Main page</string>
     <string name="te_has_quedado_con_dudas_n_cont_ctanos">Still more questions?\nContact us!</string>
     <string name="guias">Guides</string>
+    <string name="faq">FAQ</string>
+    <string name="ayudasguias">Help - Guides</string>
 </resources>

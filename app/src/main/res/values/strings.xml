@@ -408,4 +408,6 @@
     <string name="pantalla_principal">Pantalla Principal</string>
     <string name="te_has_quedado_con_dudas_n_cont_ctanos">¿Te has quedado con dudas? \n¡Contáctanos!</string>
     <string name="guias">Guías</string>
+    <string name="faq">FAQ</string>
+    <string name="ayudasguias">Ayuda - Guías</string>
 </resources>
