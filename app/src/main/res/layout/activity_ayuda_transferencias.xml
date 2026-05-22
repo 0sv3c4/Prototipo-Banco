@@ -63,7 +63,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp"
-                    android:text="\t - Guías: Bizum"
+                    android:text="@string/guias_bizum"
                     android:background="@drawable/bg_rellenables"
                     android:backgroundTint="@color/ultra_claro"
                     android:textColor="@color/claro"
@@ -94,7 +94,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp"
                     android:textSize="15sp"
-                    android:text="•\n"/>
+                    android:text="@string/acceso_desde_trasnferencias"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -109,7 +109,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp"
                     android:textSize="15sp"
-                    android:text="•\n"/>
+                    android:text="@string/acceso_a_transferencias"/>
 
                 <!-- Para que se pueda ver todas las opciones-->
                 <View

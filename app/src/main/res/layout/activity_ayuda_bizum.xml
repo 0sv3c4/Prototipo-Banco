@@ -95,7 +95,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp"
                     android:textSize="15sp"
-                    android:text="@string/accesible_a_bizum"/>
+                    android:text="@string/accesible_desde_bizum"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -110,7 +110,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp"
                     android:textSize="15sp"
-                    android:text="• Pantalla Principal\n• Información"/>
+                    android:text="@string/acceso_a_bizum"/>
 
                 <!-- Para que se pueda ver todas las opciones-->
                 <View

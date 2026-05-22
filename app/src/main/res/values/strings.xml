@@ -421,5 +421,9 @@
     <string name="guias_pantalla_principal">\t- Guias: Pantalla Principal</string>
     <string name="guias_faq">\t- Preguntas Frecuentes (FAQ)</string>
     <string name="acceso_a_informacion">• Pantalla principal</string>
-    <string name="accesible_a_bizum">• Pedir y enviar dinero (pantalla final)</string>
+    <string name="accesible_desde_bizum">• Pedir y enviar dinero (pantalla final)</string>
+    <string name="acceso_desde_trasnferencias">• Gestión de contactos a transferir (pantalla final)</string>
+    <string name="guias_bizum">\t - Guías: Bizum</string>
+    <string name="acceso_a_bizum">• Pantalla Principal\n• Información</string>
+    <string name="acceso_a_transferencias">• Pantalla Principal\n• Información</string>
 </resources>
