@@ -410,4 +410,16 @@
     <string name="guias">Guías</string>
     <string name="faq">FAQ</string>
     <string name="ayudasguias">Ayuda - Guías</string>
+    <string name="interesante">También te puede interesar:</string>
+    <string name="desde_donde">Permite el acceso a:</string>
+    <string name="a_donde">Se puede acceder desde:</string>
+    <string name="guias_transferencias">\t- Guias: Transferencias</string>
+    <string name="guias_informacion">\t- Guias: Información</string>
+    <string name="Acceso_a_principal">• Pantalla de inicio de sesión\n• Menú lateral</string>
+    <string name="accesible_desde_principal">Además del menú lateral:\n• Informacion y Movimientos\n• Transferencias\n• Balance\n• Bizum\n• Servicios\n• Promociones</string>
+    <string name="accesible_desde_informacion">Además del menú lateral:\n• Movimientos (detallados)\n• Gestión de carteras\n• Bizum\n• Balance General\n• Transferencias</string>
+    <string name="guias_pantalla_principal">\t- Guias: Pantalla Principal</string>
+    <string name="guias_faq">\t- Preguntas Frecuentes (FAQ)</string>
+    <string name="acceso_a_informacion">• Pantalla principal</string>
+    <string name="accesible_a_bizum">• Pedir y enviar dinero (pantalla final)</string>
 </resources>

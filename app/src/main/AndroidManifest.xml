@@ -16,6 +16,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PrototipoBanco">
         <activity
+            android:name=".guias.AyudaBizum"
+            android:exported="false" />
+        <activity
+            android:name=".guias.AyudaTransferencias"
+            android:exported="false" />
+        <activity
+            android:name=".guias.AyudaMovimientos"
+            android:exported="false" />
+        <activity
+            android:name=".guias.AyudaPantallaPrincipal"
+            android:exported="false" />
+        <activity
             android:name=".guias.BaseAyudas"
             android:exported="false" />
         <activity

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:id="@+id/main"
     android:fitsSystemWindows="false"
-    tools:context=".guias.BaseAyudas">
+    tools:context=".guias.AyudaPantallaPrincipal">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -58,12 +58,24 @@
                     android:textAppearance="@style/subtitulo" />
 
                 <TextView
+                    android:id="@+id/acceso_transfer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/guias_transferencias"
+                    android:background="@drawable/bg_rellenables"
+                    android:backgroundTint="@color/ultra_claro"
+                    android:textColor="@color/claro"
+                    android:textAppearance="@style/titulo_seccion" />
+
+                <TextView
                     android:id="@+id/acceso_movimientos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp"
-                    android:text="\t -"
+                    android:text="@string/guias_informacion"
                     android:background="@drawable/bg_rellenables"
                     android:backgroundTint="@color/ultra_claro"
                     android:textColor="@color/claro"
@@ -83,7 +95,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp"
                     android:textSize="15sp"
-                    android:text="•\n"/>
+                    android:text="@string/accesible_desde_principal"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -98,7 +110,8 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp"
                     android:textSize="15sp"
-                    android:text="•\n"/>
+                    android:text="@string/Acceso_a_principal"/>
+
 
                 <!-- Para que se pueda ver todas las opciones-->
                 <View

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:id="@+id/main"
     android:fitsSystemWindows="false"
-    tools:context=".guias.BaseAyudas">
+    tools:context=".guias.AyudaTransferencias">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -58,17 +58,28 @@
                     android:textAppearance="@style/subtitulo" />
 
                 <TextView
-                    android:id="@+id/acceso_movimientos"
+                    android:id="@+id/acceso_bizum"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp"
-                    android:text="\t -"
+                    android:text="\t - Guías: Bizum"
                     android:background="@drawable/bg_rellenables"
                     android:backgroundTint="@color/ultra_claro"
                     android:textColor="@color/claro"
                     android:textAppearance="@style/titulo_seccion" />
 
+                <TextView
+                    android:id="@+id/acceso_faq"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/guias_faq"
+                    android:background="@drawable/bg_rellenables"
+                    android:backgroundTint="@color/ultra_claro"
+                    android:textColor="@color/claro"
+                    android:textAppearance="@style/titulo_seccion" />
 
                 <TextView
                     android:layout_width="match_parent"

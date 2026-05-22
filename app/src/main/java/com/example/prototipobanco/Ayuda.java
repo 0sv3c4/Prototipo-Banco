@@ -8,7 +8,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.prototipobanco.guias.BaseAyudas;
+import com.example.prototipobanco.guias.AyudaPantallaPrincipal;
+import com.example.prototipobanco.todosUsu.Contacto_clientes;
 
 public class Ayuda extends BaseActivityClientes {
 
@@ -26,9 +27,37 @@ public class Ayuda extends BaseActivityClientes {
         marchaAtras();
 
         Button btnPantallaPrincipal = findViewById(R.id.btn_ayuda_principal);
+        Button btnTransferencias = findViewById(R.id.btn_transferencias);
+        Button btnMovimientos = findViewById(R.id.btn_movimientos);
+        Button btnBizum = findViewById(R.id.btn_bizum);
+        Button btnContacto = findViewById(R.id.btn_contacto);
+        Button btnFAQ = findViewById(R.id.btn_faq);
 
         btnPantallaPrincipal.setOnClickListener(v -> {
-            Intent intent = new Intent(this, BaseAyudas.class);//TODO
+            Intent intent = new Intent(this, AyudaPantallaPrincipal.class);
+            startActivity(intent);
+        });
+        btnTransferencias.setOnClickListener(v -> {
+            Intent intent = new Intent(this, AyudaPantallaPrincipal.class); //TODO añadir pantalla
+            startActivity(intent);
+        });
+        btnMovimientos.setOnClickListener(v -> {
+            Intent intent = new Intent(this, AyudaPantallaPrincipal.class); //TODO añadir pantalla
+            startActivity(intent);
+        });
+        btnBizum.setOnClickListener(v -> {
+            Intent intent = new Intent(this, AyudaPantallaPrincipal.class); //TODO añadir pantalla
+            startActivity(intent);
+        });
+
+        btnFAQ.setOnClickListener(v -> {
+            Intent intent = new Intent(this, FAQ.class);
+            startActivity(intent);
+        });
+
+
+        btnContacto.setOnClickListener(v->{
+            Intent intent = new Intent(this, Contacto_clientes.class);
             startActivity(intent);
         });
     }
