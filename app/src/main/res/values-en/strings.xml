@@ -345,4 +345,20 @@
     <string name="guias">Guides</string>
     <string name="faq">FAQ</string>
     <string name="ayudasguias">Help - Guides</string>
+    <string name="interesante">Could be of interest:</string>
+    <string name="desde_donde">Route to access:</string>
+    <string name="a_donde">Accessible from:</string>
+    <string name="guias_transferencias">"    - Guides. Transfers"</string>
+    <string name="guias_informacion">"    - Guides: Info"</string>
+    <string name="Acceso_a_principal">• Log in\n• Lateral Drawer</string>
+    <string name="accesible_desde_principal">In addition to lateral drawer:\n• Info and Activities\n• Transfers\n• Balance sheet\n• Bizum\n• Services\n• Promotions</string>
+    <string name="accesible_desde_informacion">In addition to lateral drawer:\n• Detailed activities\n• Pockets\' management\n• Bizum\n• Balance sheet\n• Transfers</string>
+    <string name="guias_pantalla_principal">\t- Guides: Main Page</string>
+    <string name="guias_faq">\t- Frequently Answered Questions (FAQ)</string>
+    <string name="acceso_a_informacion">• Main Page</string>
+    <string name="accesible_desde_bizum">• Ask / Request money</string>
+    <string name="acceso_desde_trasnferencias">• Transfer contacts management</string>
+    <string name="guias_bizum">"    - Guides: Bizum"</string>
+    <string name="acceso_a_bizum">• Main Page\n• Info</string>
+    <string name="acceso_a_transferencias">• Main Page\n• Info</string>
 </resources>
