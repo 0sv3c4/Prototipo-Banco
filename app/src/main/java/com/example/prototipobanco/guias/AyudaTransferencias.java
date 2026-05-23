@@ -11,6 +11,8 @@ import androidx.core.view.WindowInsetsCompat;
 import com.example.prototipobanco.FAQ;
 import com.example.prototipobanco.R;
 
+import java.util.Locale;
+
 public class AyudaTransferencias extends BaseAyudas {
 
     @Override
@@ -23,7 +25,11 @@ public class AyudaTransferencias extends BaseAyudas {
             return insets;
         });
 
-        configurarPantallas(getString(R.string.transferencias),R.raw.video_transferencia);
+        if(Locale.getDefault().getDisplayLanguage().equals("English")){
+            configurarPantallas(getString(R.string.transferencias),R.raw.video_transferencia_en);
+        } else {
+            configurarPantallas(getString(R.string.transferencias), R.raw.video_transferencia_es);
+        }
 
         TextView accesoBizum = findViewById(R.id.acceso_bizum);
         TextView accesoFAQ = findViewById(R.id.acceso_faq);

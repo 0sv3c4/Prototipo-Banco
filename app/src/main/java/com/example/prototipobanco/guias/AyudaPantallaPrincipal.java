@@ -11,6 +11,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.prototipobanco.R;
 
+import java.util.Locale;
+
 public class AyudaPantallaPrincipal extends BaseAyudas {
 
     @Override
@@ -23,7 +25,11 @@ public class AyudaPantallaPrincipal extends BaseAyudas {
             return insets;
         });
 
-        configurarPantallas(getString(R.string.pantalla_principal),R.raw.video_principal);
+        if(Locale.getDefault().getDisplayLanguage().equals("English")){
+            configurarPantallas(getString(R.string.pantalla_principal),R.raw.video_principal_en);
+        } else {
+            configurarPantallas(getString(R.string.pantalla_principal), R.raw.video_principal_es);
+        }
 
         TextView accesoTransf = findViewById(R.id.acceso_transfer);
         TextView accesoMov = findViewById(R.id.acceso_movimientos);

@@ -16,6 +16,8 @@ import androidx.core.view.WindowInsetsCompat;
 import com.example.prototipobanco.BaseActivityClientes;
 import com.example.prototipobanco.R;
 
+import java.util.Locale;
+
 public class BaseAyudas extends BaseActivityClientes {
 
     @Override
@@ -28,7 +30,11 @@ public class BaseAyudas extends BaseActivityClientes {
             return insets;
         });
 
-        configurarPantallas(getString(R.string.titulo_toolbar_base),R.raw.video_principal);
+        if(Locale.getDefault().getDisplayLanguage().equals("English")){
+            configurarPantallas(getString(R.string.titulo_toolbar_base),R.raw.video_principal_en);
+        } else {
+            configurarPantallas(getString(R.string.titulo_toolbar_base),R.raw.video_principal_es);
+        }
 
     }
 
