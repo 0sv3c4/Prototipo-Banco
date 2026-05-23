@@ -3,6 +3,7 @@ package com.example.prototipobanco.todosUsu;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.core.graphics.Insets;
@@ -28,6 +29,7 @@ public class Contacto_clientes extends BaseActivityTodos {
         MaterialButton tfnoCliente = findViewById(R.id.btn_tel_atencion);
         MaterialButton tfnoUrgencias = findViewById(R.id.btn_tel_urgencias);
         MaterialButton tfnoSeguros = findViewById(R.id.btn_tel_seguros);
+        TextView tfnoOficina = findViewById(R.id.tfno_oficina_cercana);
 
 
         btnChat = findViewById(R.id.btn_chat_bottom);
@@ -53,7 +55,11 @@ public class Contacto_clientes extends BaseActivityTodos {
             intent.setData(Uri.parse(getString(R.string.tel_34910000000)));
             startActivity(intent);
         });
+
+        tfnoOficina.setOnClickListener(v ->{
+            Intent intent = new Intent(Intent.ACTION_DIAL);
+            intent.setData(Uri.parse(getString(R.string.tel_34947000000)));
+            startActivity(intent);
+        });
     }
-
-
 }
