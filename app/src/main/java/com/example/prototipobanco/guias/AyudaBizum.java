@@ -23,7 +23,7 @@ public class AyudaBizum extends BaseAyudas {
             return insets;
         });
 
-        configurarPantallas(getString(R.string.bizum),"https://www.youtube.com/shorts/ko81RyagXgI");//TODO: Cambiar URL
+        configurarPantallas(getString(R.string.bizum),R.raw.video_bizum);
 
 
         TextView accesoTransf = findViewById(R.id.acceso_transfer);

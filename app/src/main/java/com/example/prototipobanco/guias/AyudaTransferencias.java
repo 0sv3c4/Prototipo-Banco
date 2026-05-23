@@ -23,7 +23,7 @@ public class AyudaTransferencias extends BaseAyudas {
             return insets;
         });
 
-        configurarPantallas(getString(R.string.transferencias),"https://www.youtube.com/watch?v=dwY7w0k3j2Y"); //TODO: Cambiar URL
+        configurarPantallas(getString(R.string.transferencias),R.raw.video_transferencia);
 
         TextView accesoBizum = findViewById(R.id.acceso_bizum);
         TextView accesoFAQ = findViewById(R.id.acceso_faq);

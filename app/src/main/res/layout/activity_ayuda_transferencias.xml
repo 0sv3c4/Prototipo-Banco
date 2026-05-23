@@ -29,7 +29,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
                 android:padding="24dp">
@@ -40,14 +40,16 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:text="@string/guias"
+                    android:background="@drawable/bg_formulario_inicio_sesion"
+                    android:backgroundTint="@color/ultra_claro"
                     android:textAppearance="@style/subtitulo"
                     android:textSize="35sp"
                     android:gravity="center" />
 
-                <WebView
+                <VideoView
                     android:id="@+id/video_demostrativo"
+                    android:layout_width="match_parent"
                     android:layout_marginTop="20dp"
-                    android:layout_width="300dp"
                     android:layout_height="600dp" />
 
                 <TextView

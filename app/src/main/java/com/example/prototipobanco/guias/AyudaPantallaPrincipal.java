@@ -23,7 +23,7 @@ public class AyudaPantallaPrincipal extends BaseAyudas {
             return insets;
         });
 
-        configurarPantallas(getString(R.string.pantalla_principal),"https://www.youtube.com/watch?v=3xotxtnAxiM"); //TODO poner video
+        configurarPantallas(getString(R.string.pantalla_principal),R.raw.video_principal);
 
         TextView accesoTransf = findViewById(R.id.acceso_transfer);
         TextView accesoMov = findViewById(R.id.acceso_movimientos);

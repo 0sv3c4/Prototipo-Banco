@@ -23,7 +23,7 @@ public class AyudaMovimientos extends BaseAyudas {
             return insets;
         });
 
-        configurarPantallas(getString(R.string.informacion),"https://www.youtube.com/watch?v=iyW4f5pONq0"); //TODO poner video
+        configurarPantallas(getString(R.string.informacion),R.raw.video_informacion);
 
         TextView accesoPrincipal = findViewById(R.id.acceso_principal);
         TextView accesoFAQ = findViewById(R.id.acceso_faq);

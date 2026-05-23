@@ -1,12 +1,13 @@
 package com.example.prototipobanco.guias;
 
 
+import android.annotation.SuppressLint;
+import android.net.Uri;
 import android.os.Bundle;
-import android.webkit.WebChromeClient;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
+import android.util.Log;
+import android.widget.MediaController;
 import android.widget.TextView;
+import android.widget.VideoView;
 
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -27,11 +28,12 @@ public class BaseAyudas extends BaseActivityClientes {
             return insets;
         });
 
-        configurarPantallas(getString(R.string.titulo_toolbar_base),"https://www.youtube.com/shorts/ko81RyagXgI");
+        configurarPantallas(getString(R.string.titulo_toolbar_base),R.raw.video_principal);
 
     }
 
-    protected void configurarPantallas(String titulo, String url){
+    @SuppressLint("ClickableViewAccessibility") //Tenemos para ello v.performClick, pero este es más estricto
+    protected void configurarPantallas(String titulo, int idVideo){
         configuracionDrawerToolbar(getString(R.string.ayudasguias));
         marchaAtras();
 
@@ -40,31 +42,18 @@ public class BaseAyudas extends BaseActivityClientes {
             tvTitulo.setText(titulo);
         }
 
-        WebView videoDemostrativo = findViewById(R.id.video_demostrativo);
-
-        // Configurar WebView
-        WebSettings configuracionWeb = videoDemostrativo.getSettings();
-        configuracionWeb.setJavaScriptEnabled(true); // Habilitar JavaScript si es necesario
-        configuracionWeb.setDomStorageEnabled(true);
-
-
-        videoDemostrativo.setWebViewClient(new WebViewClient());
-        videoDemostrativo.loadUrl(url);
-
-        /* //En caso de utilizar videoView (no sirve para internet...)
-        VideoView videoView = findViewById(R.id.video);
-        Uri videoUri = Uri.parse(url);
+        VideoView videoView = findViewById(R.id.video_demostrativo);
+        String ubicacionVideo = "android.resource://" + getPackageName() + "/" + idVideo;
+        Uri videoUri = Uri.parse(ubicacionVideo);
         videoView.setVideoURI(videoUri);
 
         MediaController mediaController = new MediaController(this);
         videoView.setMediaController(mediaController);
         mediaController.setAnchorView(videoView);
 
-        videoView.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            @Override
-            public void onCompletion(MediaPlayer mp) {
-                Log.d("videoView", "completed");
-            }
-        });*/
+        videoView.setOnPreparedListener(mp -> videoView.start());
+
+
+        videoView.setOnCompletionListener(mp -> Log.d("videoView", "completed"));
     }
 }
